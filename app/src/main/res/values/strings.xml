@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ImProvider Mikrotik</string>
+    <string name="hyperlink"><a href="https://itremedy.online/">by ITRemedy</a></string>
+    <string name="disconnect">Disconnect</string>
+    <string name="connect">CONNECT</string>
+    <string name="password">Password :</string>
+    <string name="username">Username :</string>
+    <string name="port">Port :</string>
+    <string name="host_or_ip">Host or IP :</string>
+    <string name="enter_username">Enter username</string>
+    <string name="enter_port_number">Enter port number</string>
+    <string name="enter_ip_or_hostname">Enter IP or hostname</string>
+    <string name="setup_new_router">SETUP NEW ROUTER</string>
+    <string name="works_only_after_new_router_setup">*Works only after new router setup. If you already setup your router, it is not necessary to repeat.</string>
+    <string name="set_connection_speed">SET CONNECTION SPEED</string>
+    <string name="in_premium_version">*IN PREMIUM VERSION :</string>
+    <string name="how_many_ethernet_ports">SELECT QUANTITY OF ETHERNET PORTS IN YOUR ROUTER</string>
+    <string name="attention">Please make sure that you connected to the router with default settings. After clicking \"I AGREE\" the app will divide ethernet ports of your router (from ETH2) to separate networks. Configuration will be possible only over WiFi. Please wait about two minutes. After closing the application by itself, reconnect to WiFi with password \"itremedy\", open the app again and connect to the router with password \"itremedy.online\". After that you could set the connection speed on ports of the router.  </string>
+    <string name="wait">WAIT UNTIL THE APP IS CLOSED</string>
+</resources>
