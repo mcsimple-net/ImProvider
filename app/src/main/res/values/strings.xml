@@ -17,4 +17,7 @@
     <string name="how_many_ethernet_ports">SELECT QUANTITY OF ETHERNET PORTS IN YOUR ROUTER</string>
     <string name="attention">Please make sure that you connected to the router with default settings. After clicking \"I AGREE\" the app will divide ethernet ports of your router (from ETH2) to separate networks. Configuration will be possible only over WiFi. Please wait about two minutes. After closing the application by itself, reconnect to WiFi with password \"itremedy\", open the app again and connect to the router with password \"itremedy.online\". After that you could set the connection speed on ports of the router.  </string>
     <string name="wait">DON\'T TOUCH ANYTHING!\n Wait until the app is closed (usually from 1 to 5 minutes) then reconnect to WiFi with password \"itremedy\" (without quotes), start the app and connect, using button CONNECT, to your router with password \"itremedy.online\" (without quotes). Print it in the Password field. IP, Port and username will stay the same. After that you could set the connection speed on ports of the router.</string>
+    <string name="guest_wi_fi_setup">GUEST Wi-Fi SETUP</string>
+    <string name="wi_fi_configuration">Wi-Fi CONFIGURATION</string>
+    <string name="change_admin_password">CHANGE ADMIN PASSWORD</string>
 </resources>
