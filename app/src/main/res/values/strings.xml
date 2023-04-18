@@ -20,4 +20,9 @@
     <string name="guest_wi_fi_setup">GUEST Wi-Fi SETUP</string>
     <string name="wi_fi_configuration">Wi-Fi CONFIGURATION</string>
     <string name="change_admin_password">CHANGE ADMIN PASSWORD</string>
+    <string name="quit">QUIT</string>
+    <string name="set">SET</string>
+    <string name="select_ports">Select Ports</string>
+    <string name="enter_new_speed">Enter maximum speed in Megabits</string>
+    <string name="_0_unlimited">0 - Unlimited</string>
 </resources>

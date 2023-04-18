@@ -2,6 +2,7 @@ package com.itremedy.improvidermtfree;
 
 import static com.itremedy.improvidermtfree.ConnectionManager.result;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -41,11 +42,19 @@ public class AttentionActivity extends AppCompatActivity {
             try {
                 ConnectionManager.runCommand("/system routerboard print");
                 if (!result.contains("routerboard: yes")) {
+                    Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Please check the address of your MikroTik router ", 8000);
+                    View snackbarView = snackbar.getView();
+                    TextView tv = snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
+                    tv.setMaxLines(5);
+                    snackbar.show();
+                    Thread.sleep(8000);
                     ConnectionManager.close();
-                }
+                    finishAffinity();
+                    }
+
                 Thread.sleep(1000);
 
-                ConnectionManager.runCommand("/interface bridge set [ find where bridge=bridge ] vlan-filtering=yes");
+                ConnectionManager.runCommand("/interface bridge set [find where bridge=bridge] vlan-filtering=yes");
                 Thread.sleep(10000);
 
                 ConnectionManager.runCommand("/interface vlan add interface=bridge name=bridge-vlan202 vlan-id=202");
@@ -111,16 +120,10 @@ public class AttentionActivity extends AppCompatActivity {
                 ConnectionManager.runCommand("/ip dhcp-server add address-pool=pool-205 interface=bridge-vlan205 lease-time=1d name=dhcp-205 server-address=198.18.205.1");
                 Thread.sleep(100);
 
-                ConnectionManager.runCommand("/queue simple add max-limit=10M/10M name=5 target=bridge-vlan202");
-                Thread.sleep(1000);
-                ConnectionManager.runCommand("/queue simple add max-limit=10M/10M name=5 target=bridge-vlan203");
-                Thread.sleep(1000);
-                ConnectionManager.runCommand("/queue simple add max-limit=10M/10M name=5 target=bridge-vlan204");
-                Thread.sleep(1000);
-                ConnectionManager.runCommand("/queue simple add max-limit=10M/10M name=5 target=bridge-vlan205");
-                Thread.sleep(1000);
 
-                ConnectionManager.runCommand("/ip firewall filter remove [find comment=\"defconf: drop all not coming from LAN\"]");
+                ConnectionManager.runCommand("/ip firewall filter remove [find where comment=\"defconf: drop all not coming from LAN\"]");
+                Thread.sleep(100);
+                ConnectionManager.runCommand("/ip firewall filter remove [find where comment=\"defconf: fasttrack\"]");
                 Thread.sleep(100);
                 ConnectionManager.runCommand("/ip firewall filter add chain=input protocol=tcp dst-port=53 action=accept in-interface=bridge-vlan202");
                 Thread.sleep(100);
@@ -144,11 +147,11 @@ public class AttentionActivity extends AppCompatActivity {
                 ConnectionManager.runCommand("/user set admin password=itremedy.online");
 
                 ConnectionManager.runCommand("/interface wireless security-profiles add name=itremedy authentication-types=wpa2-psk mode=dynamic-keys wpa2-pre-shared-key=itremedy");
-                Thread.sleep(1000);
+                Thread.sleep(100);
                 ConnectionManager.runCommand("/interface wireless set [ find default-name=wlan2 ] security-profile=itremedy");
-                Thread.sleep(1000);
+                Thread.sleep(100);
                 ConnectionManager.runCommand("/interface wireless set [ find default-name=wlan1 ] security-profile=itremedy");
-                Thread.sleep(1000);
+                Thread.sleep(100);
 
 
             } catch (JSchException | IOException e) {
@@ -167,8 +170,9 @@ public class AttentionActivity extends AppCompatActivity {
             }
 
         });
-        t.start();
+
         try {
+            t.start();
             t.join();
         } catch (InterruptedException e) {
             Snackbar.make(findViewById(android.R.id.content), "Sorry for all", Snackbar.LENGTH_SHORT).show();
@@ -176,6 +180,7 @@ public class AttentionActivity extends AppCompatActivity {
         ConnectionManager.close();
 
         finishAffinity();
+
         Log.d("Handler", "Running Handler");}, 1000);
         });
 

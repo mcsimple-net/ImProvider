@@ -103,7 +103,7 @@ public class ConnectionManager {
 
     }
 
-    private static String getChannelOutput(Channel channel, InputStream in) {
+    public static String getChannelOutput(Channel channel, InputStream in) {
         byte[] buffer = new byte[1024];
         StringBuilder res = new StringBuilder();
 
