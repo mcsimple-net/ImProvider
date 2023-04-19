@@ -4,7 +4,6 @@ import static com.itremedy.improvidermtfree.ConnectionManager.result;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -48,21 +47,23 @@ public class SpeedActivity extends AppCompatActivity  {
         });
 
         //threads for setting start limits
+
+        final Handler handler = new Handler();
+        handler.postDelayed(() -> {
         Thread limit = new Thread(() -> {
             Thread l2 = new Thread(() -> {
                 try {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
                     Thread.sleep(100);
+
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-
                 runOnUiThread(() -> {
                     textViewSpeed2.setText("");
                     textViewSpeed2.setText(result);
                 });
             });
-
 
             Thread l3 = new Thread(() -> {
                 try {
@@ -72,7 +73,7 @@ public class SpeedActivity extends AppCompatActivity  {
                     throw new RuntimeException(e);
                 }
                 runOnUiThread(() -> {
-                    textViewSpeed2.setText("");
+                    textViewSpeed3.setText("");
                     textViewSpeed3.setText(result);
                 });
             });
@@ -85,7 +86,7 @@ public class SpeedActivity extends AppCompatActivity  {
                     throw new RuntimeException(e);
                 }
                 runOnUiThread(() -> {
-                    textViewSpeed2.setText("");
+                    textViewSpeed4.setText("");
                     textViewSpeed4.setText(result);
                 });
             });
@@ -98,7 +99,7 @@ public class SpeedActivity extends AppCompatActivity  {
                     throw new RuntimeException(e);
                 }
                 runOnUiThread(() -> {
-                    textViewSpeed2.setText("");
+                    textViewSpeed5.setText("");
                     textViewSpeed5.setText(result);
                 });
             });
@@ -115,6 +116,7 @@ public class SpeedActivity extends AppCompatActivity  {
                 Snackbar.make(findViewById(android.R.id.content), "Sorry for all", Snackbar.LENGTH_SHORT).show();
             }
         });limit.start();
+        }, 100);
 
         set.setOnClickListener(v -> {
 
@@ -123,76 +125,86 @@ public class SpeedActivity extends AppCompatActivity  {
 
             Thread t = new Thread(() -> {
                 try {
-                    if (radio2.isChecked()){
-                        if (command.equals("0")){
-                            ConnectionManager.runCommand("/queue simple remove [find where name=2]" );
-                        }
-                        else{
-                            ConnectionManager.runCommand("/queue simple remove [find where name=2]");
-                            ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=2 target=bridge-vlan202");
-                        }
-                        runOnUiThread(() -> {
-                            textViewSpeed2.setText("");
-                            textViewSpeed2.setText(command +"M/" + command +"M");
-                        });
-                    }
-                    if (radio3.isChecked()){
-                        if (command.equals("0")){
-                            ConnectionManager.runCommand("/queue simple remove [find where name=3]" );
-
-                        }
-                        else{
-                            ConnectionManager.runCommand("/queue simple remove [find where name=3]");
-                            ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=3 target=bridge-vlan203");
-                        }
-                        runOnUiThread(() -> {
-                            textViewSpeed3.setText("");
-                            textViewSpeed3.setText(command +"M/" + command +"M");
-                        });
-                    }
-                    if (radio4.isChecked()){
-                        if (command.equals("0")){
-                            ConnectionManager.runCommand("/queue simple remove [find where name=4]" );
-
-                        }
-                        else{
-                            ConnectionManager.runCommand("/queue simple remove [find where name=4]");
-                            ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=4 target=bridge-vlan204");
-                        }
-                        runOnUiThread(() -> {
-                            textViewSpeed4.setText("");
-                            textViewSpeed4.setText(command +"M/" + command +"M");
-                        });
-                    }
-                    if (radio5.isChecked()){
-                        if (command.equals("0")){
-                            ConnectionManager.runCommand("/queue simple remove [find where name=5]" );
-
-                        }
-                        else{
-                            ConnectionManager.runCommand("/queue simple remove [find where name=5]");
-                            ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
-                        }
-                        runOnUiThread(() -> {
-                            textViewSpeed5.setText("");
-                            textViewSpeed5.setText(command +"M/" + command +"M");
-                        });
-
+                    if (command.equals(""))
+                    {
+                        Snackbar.make(findViewById(android.R.id.content),"Please Enter Limit",Snackbar.LENGTH_LONG).show();
                     }
                     else {
-                        Snackbar.make(findViewById(android.R.id.content),"Please Select Port",Snackbar.LENGTH_LONG).show();
-                    }
-                    runOnUiThread(() -> {
-                        radio2.setChecked(false);
-                        radio3.setChecked(false);
-                        radio4.setChecked(false);
-                        radio5.setChecked(false);
-                    });
+                        boolean b = command.equals("999");
+                        if (radio2.isChecked()){
+                            if (b) {
+                                ConnectionManager.runCommand("/queue simple remove [find where name=2]");
+                                runOnUiThread(() -> textViewSpeed2.setText(""));
+                            } else
+                            {
+                                ConnectionManager.runCommand("/queue simple remove [find where name=2]");
+                                ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=2 target=bridge-vlan202");
 
+                                runOnUiThread(() -> {
+                                    textViewSpeed2.setText("");
+                                    textViewSpeed2.setText(command + "M/" + command + "M");
+                                });
+                            }
+                        }
+                        if (radio3.isChecked()){
+                            if (b){
+                                ConnectionManager.runCommand("/queue simple remove [find where name=3]" );
+                                runOnUiThread(() -> textViewSpeed3.setText(""));
+                            }
+                            else
+                            {
+                                ConnectionManager.runCommand("/queue simple remove [find where name=3]");
+                                ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=3 target=bridge-vlan203");
+
+                                runOnUiThread(() -> {
+                                    textViewSpeed3.setText("");
+                                    textViewSpeed3.setText(command +"M/" + command +"M");
+                                });
+                            }
+                        }
+                        if (radio4.isChecked()){
+                            if (b){
+                                ConnectionManager.runCommand("/queue simple remove [find where name=4]" );
+                                runOnUiThread(() -> textViewSpeed4.setText(""));
+                            }
+                            else{
+                                ConnectionManager.runCommand("/queue simple remove [find where name=4]");
+                                ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=4 target=bridge-vlan204");
+
+                                runOnUiThread(() -> {
+                                    textViewSpeed4.setText("");
+                                    textViewSpeed4.setText(command +"M/" + command +"M");
+                                });
+                            }
+                        }
+                        if (radio5.isChecked()){
+                            if (b){
+                                ConnectionManager.runCommand("/queue simple remove [find where name=5]" );
+                                runOnUiThread(() -> textViewSpeed5.setText(""));
+                            }
+                            else{
+                                ConnectionManager.runCommand("/queue simple remove [find where name=5]");
+                                ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
+
+                                runOnUiThread(() -> {
+                                    textViewSpeed5.setText("");
+                                    textViewSpeed5.setText(command +"M/" + command +"M");
+                                });
+                            }
+                        }
+                        else {
+                            Snackbar.make(findViewById(android.R.id.content),"Please Select Port",Snackbar.LENGTH_LONG).show();
+                        }
+                        runOnUiThread(() -> {
+                            radio2.setChecked(false);
+                            radio3.setChecked(false);
+                            radio4.setChecked(false);
+                            radio5.setChecked(false);
+                        });
+                    }
                 } catch (JSchException | IOException e) {
                     throw new RuntimeException(e);
                 }
-
             });
             t.start();
             try {

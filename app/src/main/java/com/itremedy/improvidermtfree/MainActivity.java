@@ -1,16 +1,15 @@
 package com.itremedy.improvidermtfree;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.google.android.material.snackbar.Snackbar;
 import com.jcraft.jsch.JSchException;
 
@@ -24,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     EditText password;
     Button connect;
     Button setup;
+    TextView wait;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         connect = findViewById(R.id.connect);
         setup = findViewById(R.id.new_router_setup);
+        wait = findViewById(R.id.Wait);
 
 
         connect.setOnClickListener(v -> {
@@ -62,11 +63,14 @@ public class MainActivity extends AppCompatActivity {
             ConnectionManager.setPassword(password_input);
             ConnectionManager.setFlag(-1);
 
-            connect.setEnabled(false);
-            setup.setEnabled(false);
+            connect.setVisibility(View.INVISIBLE);
+            setup.setVisibility(View.INVISIBLE);
+            wait.setVisibility(View.VISIBLE);
 
-            t.start();
+            final Handler handler = new Handler();
+                    handler.postDelayed(() -> {
             try {
+                t.start();
                 t.join();
             } catch (InterruptedException e) {
                 Snackbar.make(findViewById(android.R.id.content), "Sorry, something went wrong. Try again later.", Snackbar.LENGTH_SHORT).show();
@@ -75,7 +79,9 @@ public class MainActivity extends AppCompatActivity {
                 password.getText().clear();
                 Intent intent = new Intent(this, SelectActionActivity.class);
                 startActivity(intent);
+                finish();
             }
+            }, 1000);
         });
 
         setup.setOnClickListener(v -> {
@@ -102,11 +108,14 @@ public class MainActivity extends AppCompatActivity {
             ConnectionManager.setPassword(password_input);
             ConnectionManager.setFlag(-1);
 
-            connect.setEnabled(false);
-            setup.setEnabled(false);
+            connect.setVisibility(View.INVISIBLE);
+            setup.setVisibility(View.INVISIBLE);
+            wait.setVisibility(View.VISIBLE);
 
-            t.start();
+            final Handler handler = new Handler();
+                    handler.postDelayed(() -> {
             try {
+                t.start();
                 t.join();
             } catch (InterruptedException e) {
                 Snackbar.make(findViewById(android.R.id.content), "Sorry, something went wrong. Try again later.", Snackbar.LENGTH_SHORT).show();
@@ -115,9 +124,12 @@ public class MainActivity extends AppCompatActivity {
                 password.getText().clear();
                 Intent intent = new Intent(this, PortsSelectActivity.class);
                 startActivity(intent);
+                finish();
             }
+            }, 1000);
         });
     }
+
    Thread t = new Thread(() -> {
         try {
             ConnectionManager.open();

@@ -1,7 +1,6 @@
 package com.itremedy.improvidermtfree;
 
 import com.jcraft.jsch.*;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -13,7 +12,7 @@ public class ConnectionManager {
     private static String username;
     private static String password;
     public static String result;
-    private static int flag = -1;
+    public static int flag = -1;
 
     public ConnectionManager() {
     }

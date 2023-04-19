@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">ImProvider Mikrotik</string>
     <string name="hyperlink"><a href="https://itremedy.online/">by ITRemedy</a></string>
-    <string name="disconnect">Disconnect</string>
     <string name="connect">CONNECT</string>
     <string name="password">Password :</string>
     <string name="username">Username :</string>
@@ -12,17 +11,21 @@
     <string name="enter_ip_or_hostname">Enter IP or hostname</string>
     <string name="setup_new_router">SETUP NEW ROUTER</string>
     <string name="works_only_after_new_router_setup">*Works only after new router setup. If you already setup your router, it is not necessary to repeat.</string>
-    <string name="set_connection_speed">SET CONNECTION SPEED</string>
+    <string name="set_connection_speed">SET SPEED LIMITS</string>
     <string name="in_premium_version">*IN PREMIUM VERSION :</string>
     <string name="how_many_ethernet_ports">SELECT QUANTITY OF ETHERNET PORTS IN YOUR ROUTER</string>
     <string name="attention">Please make sure that you connected to the router with default settings. After clicking \"I AGREE\" the app will divide ethernet ports of your router (from ETH2) to separate networks. Configuration will be possible only over WiFi. Please wait about two minutes. After closing the application by itself, reconnect to WiFi with password \"itremedy\", open the app again and connect to the router with password \"itremedy.online\". After that you could set the connection speed on ports of the router.  </string>
-    <string name="wait">DON\'T TOUCH ANYTHING!\n Wait until the app is closed (usually from 1 to 5 minutes) then reconnect to WiFi with password \"itremedy\" (without quotes), start the app and connect, using button CONNECT, to your router with password \"itremedy.online\" (without quotes). Print it in the Password field. IP, Port and username will stay the same. After that you could set the connection speed on ports of the router.</string>
+    <string name="wait">DON\'T TOUCH ANYTHING!\n Wait until the app is closed (usually from 1 to 5 minutes) then reconnect to WiFi with password \"itremedy\" (without quotes), start the app, enter password \"itremedy.online\" (without quotes) and connect, using button CONNECT, to your router. Print it in the Password field. IP, Port and username will stay the same. After that you could set the connection speed on ports of the router.</string>
     <string name="guest_wi_fi_setup">GUEST Wi-Fi SETUP</string>
     <string name="wi_fi_configuration">Wi-Fi CONFIGURATION</string>
-    <string name="change_admin_password">CHANGE ADMIN PASSWORD</string>
+    <string name="change_admin_password">CHANGE ADMIN\'S PASSWORD</string>
     <string name="quit">QUIT</string>
     <string name="set">SET</string>
     <string name="select_ports">Select Ports</string>
-    <string name="enter_new_speed">Enter maximum speed in Megabits</string>
-    <string name="_0_unlimited">0 - Unlimited</string>
+    <string name="enter_new_speed">Enter Speed Limit in Megabits</string>
+    <string name="_0_unlimited">999=unlimited</string>
+    <string name="please_wait">PLEASE WAIT</string>
+    <string name="login">\t This application is intended for controlling MikroTik routers. Using it you can control speed limits of the ethernet ports of the router.\n\t If you\'ve got new one turn it on, put the internet cable to the first port and connect to WiFi network that was created. Usually it calls MikroTik-*****. If you also have MikroTik-****A don\'t use it this time or you\'ll have no WiFi security.\n\t If you already use Mikrotik router, don\'t forget to backup configuration, do factory reset and read previous paragraph.\n\t We are not responsible for any harm that was done by using this application.</string>
+    <string name="header_attention">ATTENTION!</string>
+    <string name="i_agree">I AGREE</string>
 </resources>

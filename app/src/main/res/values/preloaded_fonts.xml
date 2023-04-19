@@ -2,5 +2,6 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/abhaya_libre_semibold</item>
+        <item>@font/orbitron_medium</item>
     </array>
 </resources>

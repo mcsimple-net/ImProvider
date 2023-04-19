@@ -7,38 +7,6 @@
     android:background="@color/black"
     tools:context="com.itremedy.improvidermtfree.SelectActionActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayoutConnectionSpeed"
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:background="@drawable/dark_background_card_view"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <Button
-            android:id="@+id/buttonConnectionSpeed"
-            android:layout_width="140dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:backgroundTint="#E2703A"
-            android:fontFamily="@font/abhaya_libre_semibold"
-            android:text="@string/set_connection_speed" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="@font/abhaya_libre_semibold"
-            android:gravity="start|center_vertical"
-            android:text="@string/works_only_after_new_router_setup"
-            android:textColor="#C8C8C8"
-            android:textSize="18sp" />
-    </LinearLayout>
-
     <Button
         android:id="@+id/button3"
         android:layout_width="300dp"
@@ -84,7 +52,19 @@
         android:text="@string/in_premium_version"
         android:textColor="#C8C8C8"
         android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConnectionSpeed" />
+
+    <Button
+        android:id="@+id/buttonConnectionSpeed"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#E2703A"
+        android:fontFamily="@font/abhaya_libre_semibold"
+        android:text="@string/set_connection_speed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutConnectionSpeed" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

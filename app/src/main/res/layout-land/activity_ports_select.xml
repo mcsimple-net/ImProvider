@@ -17,33 +17,23 @@
         android:text="@string/in_premium_version"
         android:textColor="@color/text_color"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout8ports"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5ports" />
 
-    <LinearLayout
-        android:id="@+id/linearLayoutHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/dark_background_card_view"
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="600dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/abhaya_libre_semibold"
         android:gravity="center"
-        android:orientation="horizontal"
+        android:text="@string/how_many_ethernet_ports"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/textViewHeader"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/abhaya_libre_semibold"
-            android:gravity="center"
-            android:text="@string/how_many_ethernet_ports"
-            android:textColor="@color/text_color"
-            android:textSize="20sp" />
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout5ports"
@@ -55,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutHeader">
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeader">
 
         <TextView
             android:id="@+id/textView5ports"
@@ -112,11 +102,13 @@
         android:id="@+id/linearLayout10ports"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginStart="111dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/dark_background_card_view"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout8ports"
         app:layout_constraintTop_toBottomOf="@+id/textViewInPremium">
 
         <TextView
@@ -174,11 +166,13 @@
         android:id="@+id/linearLayout16ports"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginStart="111dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/dark_background_card_view"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout12ports"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10ports">
 
         <TextView
