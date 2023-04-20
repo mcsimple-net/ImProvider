@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
             ConnectionManager.setPassword(password_input);
             ConnectionManager.setFlag(-1);
 
-
-
+            final Handler handler = new Handler();
+                    handler.postDelayed(() -> {
             try {
                 t.start();
                 t.join();
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
+            }, 100);
         });
 
         setup.setOnClickListener(v -> {
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             String username_input = username.getText().toString();
             String password_input = password.getText().toString();
             if (hostname_input.isEmpty() || username_input.isEmpty() || !password_input.isEmpty()) {
-                Snackbar.make(findViewById(android.R.id.content), "Some fields are empty or password is not empty", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(android.R.id.content), "Some fields are empty or password is not empty.", Snackbar.LENGTH_SHORT).show();
                 return;
             }
             String port_input = port.getText().toString();
@@ -95,7 +96,8 @@ public class MainActivity extends AppCompatActivity {
             ConnectionManager.setPassword(password_input);
             ConnectionManager.setFlag(-1);
 
-
+            final Handler handler = new Handler();
+                    handler.postDelayed(() -> {
             try {
                 t.start();
                 t.join();
@@ -108,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
+            }, 100);
         });
     }
 
@@ -126,5 +129,5 @@ public class MainActivity extends AppCompatActivity {
            setup.setVisibility(View.INVISIBLE);
            wait.setVisibility(View.VISIBLE);
         });
-    });
+   });
 }
