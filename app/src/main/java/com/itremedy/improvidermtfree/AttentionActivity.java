@@ -50,7 +50,6 @@ public class AttentionActivity extends AppCompatActivity {
                     finishAffinity();
                     }
 
-                Thread.sleep(1000);
 
                 ConnectionManager.runCommand("/interface bridge set [find where bridge=bridge] vlan-filtering=yes");
                 Thread.sleep(10000);

@@ -108,15 +108,20 @@ public class MainActivity extends AppCompatActivity {
             ConnectionManager.setPassword(password_input);
             ConnectionManager.setFlag(-1);
 
-            connect.setVisibility(View.INVISIBLE);
-            setup.setVisibility(View.INVISIBLE);
-            wait.setVisibility(View.VISIBLE);
+
 
             final Handler handler = new Handler();
                     handler.postDelayed(() -> {
             try {
                 t.start();
                 t.join();
+
+                runOnUiThread(() -> {
+                    connect.setVisibility(View.INVISIBLE);
+                    setup.setVisibility(View.INVISIBLE);
+                    wait.setVisibility(View.VISIBLE);
+                });
+
             } catch (InterruptedException e) {
                 Snackbar.make(findViewById(android.R.id.content), "Sorry, something went wrong. Try again later.", Snackbar.LENGTH_SHORT).show();
             }

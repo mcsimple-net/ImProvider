@@ -12,7 +12,7 @@ public class ConnectionManager {
     private static String username;
     private static String password;
     public static String result;
-    public static int flag = -1;
+    private static int flag = -1;
 
     public ConnectionManager() {
     }

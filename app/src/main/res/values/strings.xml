@@ -21,11 +21,11 @@
     <string name="change_admin_password">CHANGE ADMIN\'S PASSWORD</string>
     <string name="quit">QUIT</string>
     <string name="set">SET</string>
-    <string name="select_ports">Select Ports</string>
+    <string name="select_ports">Select Port</string>
     <string name="enter_new_speed">Enter Speed Limit in Megabits</string>
     <string name="_0_unlimited">999=unlimited</string>
     <string name="please_wait">PLEASE WAIT</string>
-    <string name="login">\t This application is intended for controlling MikroTik routers. Using it you can control speed limits of the ethernet ports of the router.\n\t If you\'ve got new one turn it on, put the internet cable to the first port and connect to WiFi network that was created. Usually it calls MikroTik-*****. If you also have MikroTik-****A don\'t use it this time or you\'ll have no WiFi security.\n\t If you already use Mikrotik router, don\'t forget to backup configuration, do factory reset and read previous paragraph.\n\t We are not responsible for any harm that was done by using this application.</string>
+    <string name="login">\t This application is intended for controlling MikroTik routers. Using it you can control speed limits of the ethernet ports of the router.\n\t If you\'ve got new one turn it on, put the internet cable to the first port and connect to WiFi network that was created. Usually it calls "MikroTik-*****". If you also have "MikroTik-****A" don\'t use it this time or you\'ll have no WiFi security.\n\t If you already use Mikrotik router, don\'t forget to backup configuration, do factory reset and read previous paragraph.\n\t We are not responsible for any harm that was done by using this application.</string>
     <string name="header_attention">ATTENTION!</string>
     <string name="i_agree">I AGREE</string>
 </resources>

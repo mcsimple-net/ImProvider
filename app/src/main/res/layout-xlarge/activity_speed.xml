@@ -46,13 +46,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8">
 
-        <RadioButton
+        <view class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:id="@+id/radio2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:text="ETH2"
+            android:buttonTint="@color/for_improvider"
             android:textColor="@color/text_color"
             android:textSize="30sp" />
 
@@ -81,13 +82,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-        <RadioButton
+        <view class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:id="@+id/radio3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:text="ETH3"
+            android:buttonTint="@color/for_improvider"
             android:textColor="@color/text_color"
             android:textSize="30sp" />
 
@@ -116,13 +118,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-        <RadioButton
+        <view class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:id="@+id/radio4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:text="ETH4"
+            android:buttonTint="@color/for_improvider"
             android:textColor="@color/text_color"
             android:textSize="30sp" />
 
@@ -151,13 +154,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-        <RadioButton
+        <view class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:id="@+id/radio5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:text="ETH5"
+            android:buttonTint="@color/for_improvider"
             android:textColor="@color/text_color"
             android:textSize="30sp" />
 
@@ -241,5 +245,7 @@
             android:fontFamily="@font/abhaya_libre_semibold"
             android:text="@string/set"
             android:textSize="42sp" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
