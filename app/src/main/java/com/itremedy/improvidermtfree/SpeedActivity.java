@@ -27,6 +27,9 @@ public class SpeedActivity extends AppCompatActivity  {
     Button set, quit;
     RadioButton radio5,radio2,radio3,radio4;
     TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5;
+    boolean flg;
+
+
 
 
     @Override
@@ -44,8 +47,7 @@ public class SpeedActivity extends AppCompatActivity  {
         textViewSpeed3 = findViewById(R.id.textViewSpeed3);
         textViewSpeed4 = findViewById(R.id.textViewSpeed4);
         textViewSpeed5 = findViewById(R.id.textViewSpeed5);
-
-
+        flg = false;
 
         quit.setOnClickListener(v -> {
             ConnectionManager.close();
@@ -55,7 +57,7 @@ public class SpeedActivity extends AppCompatActivity  {
 
         //threads for setting start limits
 
-
+        Thread lim = new Thread(() -> {
             Thread l2 = new Thread(() -> {
                 try {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
@@ -68,7 +70,8 @@ public class SpeedActivity extends AppCompatActivity  {
                     textViewSpeed2.setText("");
                     textViewSpeed2.setText(result);
                 });
-            });l2.start();
+            });
+
 
             Thread l3 = new Thread(() -> {
                 try {
@@ -81,7 +84,8 @@ public class SpeedActivity extends AppCompatActivity  {
                     textViewSpeed3.setText("");
                     textViewSpeed3.setText(result);
                 });
-            });l3.start();
+            });
+
 
             Thread l4 = new Thread(() -> {
                 try {
@@ -94,7 +98,8 @@ public class SpeedActivity extends AppCompatActivity  {
                     textViewSpeed4.setText("");
                     textViewSpeed4.setText(result);
                 });
-            });l4.start();
+            });
+
 
             Thread l5 = new Thread(() -> {
                 try {
@@ -107,7 +112,21 @@ public class SpeedActivity extends AppCompatActivity  {
                     textViewSpeed5.setText("");
                     textViewSpeed5.setText(result);
                 });
-            });l5.start();
+            });
+            try {
+            l2.start();
+            l2.join();
+            l3.start();
+            l3.join();
+            l4.start();
+            l4.join();
+            l5.start();
+            l5.join();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+            lim.start();
 
 
 
@@ -119,14 +138,15 @@ public class SpeedActivity extends AppCompatActivity  {
             String command = speed.getText().toString();
             speed.getText().clear();
 
-            if (command.equals(""))
+
+            if(command.equals(""))
             {
                 Snackbar.make(findViewById(android.R.id.content),"Please Enter Limit",Snackbar.LENGTH_LONG).show();
             }
             else {
                 boolean b = command.equals("999");
                 if (radio2.isChecked()) {
-
+                    flg = true;
                     Thread s2 = new Thread(() -> {
                         try {
                             if (b) {
@@ -150,8 +170,14 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s2.start();
+                    try {
+                        s2.join();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
                 if (radio3.isChecked()) {
+                    flg = true;
                     Thread s3 = new Thread(() -> {
                         try {
                             if (b) {
@@ -173,8 +199,14 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s3.start();
+                    try {
+                        s3.join();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
                 if (radio4.isChecked()) {
+                    flg = true;
                     Thread s4 = new Thread(() -> {
                         try {
                             if (b) {
@@ -195,8 +227,14 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s4.start();
+                    try {
+                        s4.join();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
                 if (radio5.isChecked()) {
+                    flg = true;
                     Thread s5 = new Thread(() -> {
                         try {
                             if (b) {
@@ -217,7 +255,14 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s5.start();
+                    try {
+                        s5.join();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
+            }if (!flg){
+                Snackbar.make(findViewById(android.R.id.content),"Please Set Port",Snackbar.LENGTH_LONG).show();
             }
         });
     }
@@ -248,5 +293,4 @@ public class SpeedActivity extends AppCompatActivity  {
         }
         return super.onKeyDown(keyCode, event);
     }
-
 }
