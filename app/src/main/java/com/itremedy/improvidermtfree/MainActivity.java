@@ -40,10 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         connect.setOnClickListener(v -> {
 
-            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-            if (getCurrentFocus() != null) {
-                imm.hideSoftInputFromWindow(getCurrentFocus().getApplicationWindowToken(), 0);
-            }
             String hostname_input = hostname.getText().toString();
             String username_input = username.getText().toString();
             String password_input = password.getText().toString();
@@ -63,12 +59,8 @@ public class MainActivity extends AppCompatActivity {
             ConnectionManager.setPassword(password_input);
             ConnectionManager.setFlag(-1);
 
-            connect.setVisibility(View.INVISIBLE);
-            setup.setVisibility(View.INVISIBLE);
-            wait.setVisibility(View.VISIBLE);
 
-            final Handler handler = new Handler();
-                    handler.postDelayed(() -> {
+
             try {
                 t.start();
                 t.join();
@@ -81,20 +73,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-            }, 1000);
         });
 
         setup.setOnClickListener(v -> {
 
-            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-            if (getCurrentFocus() != null) {
-                imm.hideSoftInputFromWindow(getCurrentFocus().getApplicationWindowToken(), 0);
-            }
             String hostname_input = hostname.getText().toString();
             String username_input = username.getText().toString();
             String password_input = password.getText().toString();
             if (hostname_input.isEmpty() || username_input.isEmpty() || !password_input.isEmpty()) {
-                Snackbar.make(findViewById(android.R.id.content), "Some fields are empty or password is not empty.", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(android.R.id.content), "Some fields are empty or password is not empty", Snackbar.LENGTH_SHORT).show();
                 return;
             }
             String port_input = port.getText().toString();
@@ -109,29 +96,18 @@ public class MainActivity extends AppCompatActivity {
             ConnectionManager.setFlag(-1);
 
 
-
-            final Handler handler = new Handler();
-                    handler.postDelayed(() -> {
             try {
                 t.start();
                 t.join();
-
-                runOnUiThread(() -> {
-                    connect.setVisibility(View.INVISIBLE);
-                    setup.setVisibility(View.INVISIBLE);
-                    wait.setVisibility(View.VISIBLE);
-                });
-
-            } catch (InterruptedException e) {
-                Snackbar.make(findViewById(android.R.id.content), "Sorry, something went wrong. Try again later.", Snackbar.LENGTH_SHORT).show();
-            }
-            if (ConnectionManager.getFlag() == 0) {
-                password.getText().clear();
-                Intent intent = new Intent(this, PortsSelectActivity.class);
-                startActivity(intent);
-                finish();
-            }
-            }, 1000);
+                } catch (InterruptedException e) {
+                    Snackbar.make(findViewById(android.R.id.content), "Sorry, something went wrong. Try again later.", Snackbar.LENGTH_SHORT).show();
+                }
+                if (ConnectionManager.getFlag() == 0) {
+                    password.getText().clear();
+                    Intent intent = new Intent(this, PortsSelectActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
         });
     }
 
@@ -145,5 +121,10 @@ public class MainActivity extends AppCompatActivity {
             tv.setMaxLines(5);
             snackbar.show();
         }
+        runOnUiThread(() -> {
+           connect.setVisibility(View.INVISIBLE);
+           setup.setVisibility(View.INVISIBLE);
+           wait.setVisibility(View.VISIBLE);
+        });
     });
 }

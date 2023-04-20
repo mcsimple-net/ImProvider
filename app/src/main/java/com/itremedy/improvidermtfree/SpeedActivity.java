@@ -27,7 +27,7 @@ public class SpeedActivity extends AppCompatActivity  {
     Button set, quit;
     RadioButton radio5,radio2,radio3,radio4;
     TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5;
-    boolean flg;
+    boolean flg = false;
 
 
 
@@ -47,7 +47,6 @@ public class SpeedActivity extends AppCompatActivity  {
         textViewSpeed3 = findViewById(R.id.textViewSpeed3);
         textViewSpeed4 = findViewById(R.id.textViewSpeed4);
         textViewSpeed5 = findViewById(R.id.textViewSpeed5);
-        flg = false;
 
         quit.setOnClickListener(v -> {
             ConnectionManager.close();
@@ -131,7 +130,7 @@ public class SpeedActivity extends AppCompatActivity  {
 
 
 
-  // on click SET Button
+        // on click SET Button
 
         set.setOnClickListener(v -> {
 
@@ -261,11 +260,16 @@ public class SpeedActivity extends AppCompatActivity  {
                         throw new RuntimeException(e);
                     }
                 }
-            }if (!flg){
+            }
+            if (!flg){
                 Snackbar.make(findViewById(android.R.id.content),"Please Set Port",Snackbar.LENGTH_LONG).show();
             }
         });
     }
+
+
+    //on-off switching radio buttons
+
     public static class ToggleableRadioButton extends androidx.appcompat.widget.AppCompatRadioButton { public ToggleableRadioButton(Context context) {
             super(context);
         }
@@ -285,6 +289,9 @@ public class SpeedActivity extends AppCompatActivity  {
             }
         }
     }
+
+    //refresh activity if open second time
+
     public boolean onKeyDown(int keyCode, KeyEvent event)
     {
         if (keyCode == KeyEvent.KEYCODE_BACK ) {
