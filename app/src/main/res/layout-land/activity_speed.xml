@@ -44,16 +44,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8">
 
-        <view class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
+        <view
             android:id="@+id/radio2"
+            class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
             android:text="ETH2"
-            android:buttonTint="@color/for_improvider"
             android:textColor="@color/text_color"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textViewSpeed2"
@@ -64,7 +65,7 @@
             android:gravity="center|start"
             android:text=""
             android:textColor="@color/text_color"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -78,16 +79,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-        <view class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
+        <view
             android:id="@+id/radio3"
+            class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
             android:text="ETH3"
-            android:buttonTint="@color/for_improvider"
             android:textColor="@color/text_color"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textViewSpeed3"
@@ -98,7 +100,7 @@
             android:gravity="center|start"
             android:text=""
             android:textColor="@color/text_color"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -112,16 +114,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-        <view class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
+        <view
             android:id="@+id/radio4"
+            class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
             android:text="ETH4"
-            android:buttonTint="@color/for_improvider"
             android:textColor="@color/text_color"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textViewSpeed4"
@@ -132,7 +135,7 @@
             android:gravity="center|start"
             android:text=""
             android:textColor="@color/text_color"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -146,16 +149,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-        <view class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
+        <view
             android:id="@+id/radio5"
+            class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
             android:text="ETH5"
-            android:buttonTint="@color/for_improvider"
             android:textColor="@color/text_color"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textViewSpeed5"
@@ -166,7 +170,7 @@
             android:gravity="center|start"
             android:text=""
             android:textColor="@color/text_color"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -197,7 +201,7 @@
                 android:gravity="center"
                 android:inputType="number|numberDecimal"
                 android:maxLength="3"
-                android:textSize="34sp" />
+                android:textSize="28sp" />
 
             <TextView
                 android:id="@+id/textView9"

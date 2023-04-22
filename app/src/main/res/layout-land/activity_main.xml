@@ -11,11 +11,11 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:text="@string/hyperlink"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/LayoutHostName"
@@ -33,10 +33,10 @@
             android:layout_width="70dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/host_or_ip"
             android:gravity="center|end"
+            android:text="@string/host_or_ip"
             android:textColor="#C8C8C8"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/hostname"
@@ -47,12 +47,14 @@
             android:ems="10"
             android:hint="@string/enter_ip_or_hostname"
             android:inputType="text"
-            android:text="192.168.88.1"
+            android:text="@string/_192_168_88_1"
             android:textColor="#C8C8C8"
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#464646"
             android:textColorLink="#000000"
-            android:textSize="18sp" />
+            android:textSize="16sp"
+            android:background="@null"
+            android:autofillHints="192.168.88.1" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,7 +76,7 @@
             android:gravity="center|right"
             android:text="@string/port"
             android:textColor="#C8C8C8"
-            android:textSize="18sp"
+            android:textSize="16sp"
             tools:ignore="RtlHardcoded" />
 
         <EditText
@@ -86,12 +88,14 @@
             android:ems="10"
             android:hint="@string/enter_port_number"
             android:inputType="number"
-            android:text="22"
+            android:text="@string/_22"
             android:textColor="#C8C8C8"
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#464646"
             android:textColorLink="#000000"
-            android:textSize="18sp" />
+            android:textSize="16sp"
+            android:background="@null"
+            android:autofillHints="22" />
     </LinearLayout>
 
     <LinearLayout
@@ -113,7 +117,7 @@
             android:gravity="center|right"
             android:text="@string/username"
             android:textColor="#C8C8C8"
-            android:textSize="18sp"
+            android:textSize="16sp"
             tools:ignore="RtlHardcoded" />
 
         <EditText
@@ -125,12 +129,14 @@
             android:ems="10"
             android:hint="@string/enter_username"
             android:inputType="text"
-            android:text="admin"
+            android:text="@string/admin"
             android:textColor="#C8C8C8"
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#464646"
             android:textColorLink="#000000"
-            android:textSize="18sp" />
+            android:textSize="16sp"
+            android:background="@null"
+            android:autofillHints="admin" />
     </LinearLayout>
 
     <LinearLayout
@@ -152,7 +158,7 @@
             android:gravity="center|right"
             android:text="@string/password"
             android:textColor="#C8C8C8"
-            android:textSize="18sp"
+            android:textSize="16sp"
             tools:ignore="RtlHardcoded" />
 
         <EditText
@@ -162,13 +168,15 @@
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="itremedy.online"
+            android:hint="@string/default_password"
             android:inputType="textPassword"
             android:textColor="#C8C8C8"
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#464646"
             android:textColorLink="#000000"
-            android:textSize="18sp" />
+            android:textSize="16sp"
+            android:background="@null"
+            android:autofillHints="itremedy.online" />
     </LinearLayout>
 
     <Button
@@ -176,12 +184,12 @@
         android:layout_width="200dp"
         android:layout_height="70dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="#E2703A"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/connect"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/LayoutPortNumber"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -190,28 +198,25 @@
         android:layout_width="200dp"
         android:layout_height="70dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:backgroundTint="#E2703A"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/setup_new_router"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/LayoutUserName"
         app:layout_constraintTop_toBottomOf="@+id/connect" />
 
     <TextView
-        android:id="@+id/Wait"
+        android:id="@+id/help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="150dp"
-        android:fontFamily="@font/abhaya_libre_semibold"
-        android:gravity="center_horizontal"
-        android:text="@string/please_wait"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/need_help"
         android:textColor="@color/text_color"
-        android:textSize="34sp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toEndOf="@+id/LayoutUserName"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

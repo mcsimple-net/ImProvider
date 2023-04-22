@@ -1,19 +1,18 @@
 package com.itremedy.improvidermtfree;
 
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
 import com.jcraft.jsch.JSchException;
+import com.tapadoo.alerter.Alerter;
 
-import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     EditText password;
     Button connect;
     Button setup;
-    TextView wait;
+    TextView help;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +34,39 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         connect = findViewById(R.id.connect);
         setup = findViewById(R.id.new_router_setup);
-        wait = findViewById(R.id.Wait);
+
+        help = findViewById(R.id.help);
+
+        help.setOnClickListener(v -> {
+
+
+
+            Alerter.create(this, R.layout.alerter_custom_layout)
+                    .setDuration(100000)
+                    .setIcon(R.drawable.help)
+                    .setBackgroundColorRes(R.color.for_improvider)
+                    .setTitleAppearance(R.style.AlertTextAppearance)
+                    .setTitleTypeface(android.graphics.Typeface.createFromAsset(getAssets(),"fonts/abhaya_libre_semibold.ttf"))
+                    .setTextAppearance(R.style.AlertTextAppearance)
+                    .setTextTypeface(android.graphics.Typeface.createFromAsset(getAssets(),"fonts/Castrolo.ttf"))
+                    .setIconColorFilter(0)
+                    .enableSwipeToDismiss()
+                    .setTitle(R.string.help)
+                    .show();
+
+        });
+
 
 
         connect.setOnClickListener(v -> {
+
+            Alerter.create(this,R.layout.alerter_custom_layout)
+                    .setTitle("PLEASE WAIT")
+                    .enableProgress(true)
+                    .setBackgroundColorRes(R.color.for_improvider)
+                    .show();
+
+
 
             String hostname_input = hostname.getText().toString();
             String username_input = username.getText().toString();
@@ -61,22 +89,31 @@ public class MainActivity extends AppCompatActivity {
 
             final Handler handler = new Handler();
                     handler.postDelayed(() -> {
-            try {
-                t.start();
-                t.join();
-            } catch (InterruptedException e) {
-                Snackbar.make(findViewById(android.R.id.content), "Sorry, something went wrong. Try again later.", Snackbar.LENGTH_SHORT).show();
-            }
-            if (ConnectionManager.getFlag() == 0) {
+
+
+                        t.start();
+                        try {
+                            t.join();
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+
+
+                        if (ConnectionManager.getFlag() == 0) {
                 password.getText().clear();
                 Intent intent = new Intent(this, SelectActionActivity.class);
                 startActivity(intent);
-                finish();
             }
             }, 100);
         });
 
         setup.setOnClickListener(v -> {
+
+            Alerter.create(this,R.layout.alerter_custom_layout)
+                    .setTitle("PLEASE WAIT")
+                    .enableProgress(true)
+                    .setBackgroundColorRes(R.color.for_improvider)
+                    .show();
 
             String hostname_input = hostname.getText().toString();
             String username_input = username.getText().toString();
@@ -98,36 +135,37 @@ public class MainActivity extends AppCompatActivity {
 
             final Handler handler = new Handler();
                     handler.postDelayed(() -> {
-            try {
-                t.start();
-                t.join();
-                } catch (InterruptedException e) {
-                    Snackbar.make(findViewById(android.R.id.content), "Sorry, something went wrong. Try again later.", Snackbar.LENGTH_SHORT).show();
-                }
-                if (ConnectionManager.getFlag() == 0) {
+
+                        t.start();
+                        try {
+                            t.join();
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+
+                        if (ConnectionManager.getFlag() == 0) {
                     password.getText().clear();
                     Intent intent = new Intent(this, PortsSelectActivity.class);
                     startActivity(intent);
-                    finish();
                 }
             }, 100);
         });
     }
 
+
    Thread t = new Thread(() -> {
+
         try {
             ConnectionManager.open();
         } catch (JSchException e) {
+            Alerter.hide();
             Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Check your connection, input data or router settings. An error occurred: " + e.getMessage(), 8000);
             View snackbarView = snackbar.getView();
             TextView tv = snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
             tv.setMaxLines(5);
             snackbar.show();
         }
-        runOnUiThread(() -> {
-           connect.setVisibility(View.INVISIBLE);
-           setup.setVisibility(View.INVISIBLE);
-           wait.setVisibility(View.VISIBLE);
-        });
    });
+
+
 }

@@ -24,8 +24,6 @@
         android:id="@+id/textViewHeader"
         android:layout_width="600dp"
         android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:layout_marginTop="10dp"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:gravity="center"
         android:text="@string/how_many_ethernet_ports"
