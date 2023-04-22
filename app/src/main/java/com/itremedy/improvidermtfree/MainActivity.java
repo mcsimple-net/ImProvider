@@ -13,6 +13,8 @@ import com.google.android.material.snackbar.Snackbar;
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
 
+import java.util.Objects;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,16 +44,16 @@ public class MainActivity extends AppCompatActivity {
 
 
             Alerter.create(this, R.layout.alerter_custom_layout)
-                    .setDuration(100000)
+                    .setDuration(30000)
                     .setIcon(R.drawable.help)
                     .setBackgroundColorRes(R.color.for_improvider)
+                    .setIconColorFilter(0)
+                    .enableSwipeToDismiss()
                     .setTitleAppearance(R.style.AlertTextAppearance)
                     .setTitleTypeface(android.graphics.Typeface.createFromAsset(getAssets(),"fonts/abhaya_libre_semibold.ttf"))
                     .setTextAppearance(R.style.AlertTextAppearance)
                     .setTextTypeface(android.graphics.Typeface.createFromAsset(getAssets(),"fonts/Castrolo.ttf"))
-                    .setIconColorFilter(0)
-                    .enableSwipeToDismiss()
-                    .setTitle(R.string.help)
+                    .setTitle(R.string.help_main)
                     .show();
 
         });
@@ -60,28 +62,27 @@ public class MainActivity extends AppCompatActivity {
 
         connect.setOnClickListener(v -> {
 
-            Alerter.create(this,R.layout.alerter_custom_layout)
-                    .setTitle("PLEASE WAIT")
-                    .enableProgress(true)
-                    .setBackgroundColorRes(R.color.for_improvider)
-                    .show();
-
-
-
             String hostname_input = hostname.getText().toString();
             String username_input = username.getText().toString();
             String password_input = password.getText().toString();
-
-            if (hostname_input.isEmpty() || username_input.isEmpty() || password_input.isEmpty()) {
-                Snackbar.make(findViewById(android.R.id.content), "Some fields are empty", Snackbar.LENGTH_SHORT).show();
-                return;
-            }
             String port_input = port.getText().toString();
             if (!port_input.isEmpty()) {
                 ConnectionManager.setPort(Integer.parseInt(port_input));
             } else {
                 ConnectionManager.setPort(22);
             }
+
+            if (hostname_input.isEmpty() || username_input.isEmpty() || password_input.isEmpty()) {
+
+                Alerter.create(this,R.layout.alerter_custom_layout)
+                        .setTitle(R.string.flds_empty)
+                        .setBackgroundColorRes(R.color.for_improvider)
+                        .setIconColorFilter(0)
+                        .enableSwipeToDismiss()
+                        .show();
+                return;
+            }
+
             ConnectionManager.setHostname(hostname_input);
             ConnectionManager.setUsername(username_input);
             ConnectionManager.setPassword(password_input);
@@ -89,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
 
             final Handler handler = new Handler();
                     handler.postDelayed(() -> {
+
+                        Alerter.create(this,R.layout.alerter_custom_layout)
+                                .setTitle("PLEASE WAIT")
+                                .enableProgress(true)
+                                .setBackgroundColorRes(R.color.for_improvider)
+                                .setIconColorFilter(0)
+                                .enableSwipeToDismiss()
+                                .show();
 
 
                         t.start();
@@ -113,21 +122,29 @@ public class MainActivity extends AppCompatActivity {
                     .setTitle("PLEASE WAIT")
                     .enableProgress(true)
                     .setBackgroundColorRes(R.color.for_improvider)
+                    .setIconColorFilter(0)
+                    .enableSwipeToDismiss()
                     .show();
 
             String hostname_input = hostname.getText().toString();
             String username_input = username.getText().toString();
             String password_input = password.getText().toString();
-            if (hostname_input.isEmpty() || username_input.isEmpty() || !password_input.isEmpty()) {
-                Snackbar.make(findViewById(android.R.id.content), "Some fields are empty or password is not empty.", Snackbar.LENGTH_SHORT).show();
-                return;
-            }
             String port_input = port.getText().toString();
             if (!port_input.isEmpty()) {
                 ConnectionManager.setPort(Integer.parseInt(port_input));
             } else {
                 ConnectionManager.setPort(22);
             }
+
+            if (hostname_input.isEmpty() || username_input.isEmpty() || !password_input.isEmpty()) {
+
+                Alerter.create(this,R.layout.alerter_custom_layout)
+                        .setTitle(R.string.empty_or_pswrd_not)
+                        .setBackgroundColorRes(R.color.for_improvider)
+                        .show();
+                return;
+            }
+
             ConnectionManager.setHostname(hostname_input);
             ConnectionManager.setUsername(username_input);
             ConnectionManager.setPassword(password_input);
@@ -135,6 +152,14 @@ public class MainActivity extends AppCompatActivity {
 
             final Handler handler = new Handler();
                     handler.postDelayed(() -> {
+
+                        Alerter.create(this,R.layout.alerter_custom_layout)
+                                .setTitle("PLEASE WAIT")
+                                .enableProgress(true)
+                                .setBackgroundColorRes(R.color.for_improvider)
+                                .setIconColorFilter(0)
+                                .enableSwipeToDismiss()
+                                .show();
 
                         t.start();
                         try {
@@ -159,11 +184,21 @@ public class MainActivity extends AppCompatActivity {
             ConnectionManager.open();
         } catch (JSchException e) {
             Alerter.hide();
-            Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Check your connection, input data or router settings. An error occurred: " + e.getMessage(), 8000);
+           /* Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Check your connection, input data or router settings. An error occurred: " + e.getMessage(), 8000);
             View snackbarView = snackbar.getView();
             TextView tv = snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
             tv.setMaxLines(5);
-            snackbar.show();
+            snackbar.show();*/
+
+            Alerter.create(this,R.layout.alerter_custom_layout)
+                    .setTitle(R.string.chk_connection)
+                    .setText(Objects.requireNonNull(e.getMessage()))
+                    .setDuration(10000)
+                    .enableProgress(true)
+                    .setBackgroundColorRes(R.color.for_improvider)
+                    .setIconColorFilter(0)
+                    .enableSwipeToDismiss()
+                    .show();
         }
    });
 

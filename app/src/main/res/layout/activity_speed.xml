@@ -24,23 +24,23 @@
         android:id="@+id/buttonQuit"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="39dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/quit"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="10dp"
         android:background="@drawable/dark_background_card_view"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +51,7 @@
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center|start"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
@@ -61,7 +62,9 @@
         <TextView
             android:id="@+id/textViewSpeed2"
             android:layout_width="match_parent"
-            android:layout_height="26dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:gravity="center|start"
@@ -74,11 +77,9 @@
         android:id="@+id/linearLayout3"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
         android:background="@drawable/dark_background_card_view"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,10 +89,11 @@
             android:id="@+id/radio3"
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
+            android:gravity="center|start"
             android:text="ETH3"
             android:textColor="@color/text_color"
             android:textSize="16sp" />
@@ -99,7 +101,9 @@
         <TextView
             android:id="@+id/textViewSpeed3"
             android:layout_width="match_parent"
-            android:layout_height="26dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:gravity="center|start"
@@ -112,10 +116,9 @@
         android:id="@+id/linearLayout4"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
         android:background="@drawable/dark_background_card_view"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,10 +128,11 @@
             android:id="@+id/radio4"
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
+            android:gravity="center|start"
             android:text="ETH4"
             android:textColor="@color/text_color"
             android:textSize="16sp" />
@@ -136,7 +140,9 @@
         <TextView
             android:id="@+id/textViewSpeed4"
             android:layout_width="match_parent"
-            android:layout_height="26dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:gravity="center|start"
@@ -149,10 +155,9 @@
         android:id="@+id/linearLayout5"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
         android:background="@drawable/dark_background_card_view"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,10 +167,11 @@
             android:id="@+id/radio5"
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
+            android:gravity="center|start"
             android:text="ETH5"
             android:textColor="@color/text_color"
             android:textSize="16sp" />
@@ -173,7 +179,9 @@
         <TextView
             android:id="@+id/textViewSpeed5"
             android:layout_width="match_parent"
-            android:layout_height="26dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14dp"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:gravity="center|start"
@@ -187,6 +195,7 @@
         android:layout_width="340dp"
         android:layout_height="100dp"
         android:layout_marginTop="40dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -194,9 +203,9 @@
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="5dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:fontFamily="@font/abhaya_libre_semibold"
             android:gravity="center"
@@ -204,34 +213,19 @@
             android:textColor="@color/text_color"
             android:textSize="18sp" />
 
-        <LinearLayout
-            android:layout_width="105dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="5dp"
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/EnterSpeed"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:ems="10"
-                android:fontFamily="@font/orbitron_medium"
-                android:gravity="center"
-                android:inputType="number|numberDecimal"
-                android:maxLength="3"
-                android:textSize="28sp" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/aldrich"
-                android:text="@string/_0_unlimited"
-                android:textColor="@color/text_color"
-                android:textSize="14sp" />
-        </LinearLayout>
+        <EditText
+            android:id="@+id/EnterSpeed"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:ems="10"
+            android:fontFamily="@font/orbitron_medium"
+            android:gravity="center"
+            android:inputType="number|numberDecimal"
+            android:maxLength="3"
+            android:textSize="28sp" />
 
         <Button
             android:id="@+id/buttonSet"
@@ -244,9 +238,19 @@
             android:backgroundTint="@color/for_improvider"
             android:fontFamily="@font/abhaya_libre_semibold"
             android:text="@string/set"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/for_unlimited"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

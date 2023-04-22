@@ -42,6 +42,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/dark_background_card_view"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8">
@@ -51,6 +52,7 @@
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center|start"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
@@ -61,7 +63,10 @@
         <TextView
             android:id="@+id/textViewSpeed2"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:gravity="center|start"
@@ -77,6 +82,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/dark_background_card_view"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
@@ -86,6 +92,7 @@
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center|start"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
@@ -96,7 +103,10 @@
         <TextView
             android:id="@+id/textViewSpeed3"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:gravity="center|start"
@@ -112,6 +122,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/dark_background_card_view"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
@@ -121,6 +132,7 @@
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center|start"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
@@ -131,7 +143,10 @@
         <TextView
             android:id="@+id/textViewSpeed4"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:gravity="center|start"
@@ -147,6 +162,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/dark_background_card_view"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
@@ -156,6 +172,7 @@
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center|start"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
@@ -166,7 +183,10 @@
         <TextView
             android:id="@+id/textViewSpeed5"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
             android:layout_weight="1"
             android:fontFamily="@font/aldrich"
             android:gravity="center|start"
@@ -198,6 +218,7 @@
         android:layout_marginStart="220dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="170dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/linearLayout2"
@@ -230,12 +251,11 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="20dp"
                 android:fontFamily="@font/aldrich"
+                android:gravity="center"
                 android:text="@string/_0_unlimited"
                 android:textColor="@color/text_color"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <Button
