@@ -3,20 +3,18 @@ package com.itremedy.improvidermtfree;
 import static com.itremedy.improvidermtfree.ConnectionManager.result;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
 import com.jcraft.jsch.JSchException;
+import com.tapadoo.alerter.Alerter;
+
 import java.io.IOException;
 
 
@@ -26,8 +24,10 @@ public class SpeedActivity extends AppCompatActivity  {
     EditText speed;
     Button set, quit;
     RadioButton radio5,radio2,radio3,radio4;
-    TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5;
+    TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5, help_s;
     boolean flg = false;
+
+
 
 
 
@@ -47,6 +47,18 @@ public class SpeedActivity extends AppCompatActivity  {
         textViewSpeed3 = findViewById(R.id.textViewSpeed3);
         textViewSpeed4 = findViewById(R.id.textViewSpeed4);
         textViewSpeed5 = findViewById(R.id.textViewSpeed5);
+        help_s = findViewById(R.id.help_m);
+
+        help_s.setOnClickListener(v -> {
+
+            Alerter.create(this, R.layout.alerter_custom_layout)
+                    .setDuration(5000)
+                    .setIcon(R.drawable.help)
+                    .setBackgroundColorRes(R.color.for_improvider)
+                    .enableSwipeToDismiss()
+                    .setTitle(R.string.for_unlimited)
+                    .show();
+        });
 
         quit.setOnClickListener(v -> {
             ConnectionManager.close();
@@ -135,12 +147,14 @@ public class SpeedActivity extends AppCompatActivity  {
         set.setOnClickListener(v -> {
 
             String command = speed.getText().toString();
-            speed.getText().clear();
-
 
             if(command.equals(""))
             {
-                Snackbar.make(findViewById(android.R.id.content),"Please Enter Limit",Snackbar.LENGTH_LONG).show();
+                Alerter.create(this,R.layout.alerter_custom_layout)
+                        .setTitle(R.string.please_enter_limit)
+                        .setBackgroundColorRes(R.color.for_improvider)
+                        .enableSwipeToDismiss()
+                        .show();
             }
             else {
                 boolean b = command.equals("999");
@@ -153,6 +167,7 @@ public class SpeedActivity extends AppCompatActivity  {
                                 runOnUiThread(() -> {
                                     textViewSpeed2.setText("");
                                     radio2.setChecked(false);
+                                    speed.setText(null);
                                 });
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=2]");
@@ -162,6 +177,7 @@ public class SpeedActivity extends AppCompatActivity  {
                                     textViewSpeed2.setText("");
                                     textViewSpeed2.setText(command + "M/" + command + "M");
                                     radio2.setChecked(false);
+                                    speed.setText(null);
                                 });
                             }
                         } catch (JSchException | IOException e) {
@@ -181,8 +197,11 @@ public class SpeedActivity extends AppCompatActivity  {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=3]");
-
-                                runOnUiThread(() -> textViewSpeed3.setText(""));
+                                runOnUiThread(() -> {
+                                    textViewSpeed3.setText("");
+                                    radio3.setChecked(false);
+                                    speed.setText(null);
+                                });
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=3]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=3 target=bridge-vlan203");
@@ -191,6 +210,7 @@ public class SpeedActivity extends AppCompatActivity  {
                                     textViewSpeed3.setText("");
                                     textViewSpeed3.setText(command + "M/" + command + "M");
                                     radio3.setChecked(false);
+                                    speed.setText(null);
                                 });
                             }
                         } catch (JSchException | IOException e) {
@@ -210,7 +230,11 @@ public class SpeedActivity extends AppCompatActivity  {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=4]");
-                                runOnUiThread(() -> textViewSpeed4.setText(""));
+                                runOnUiThread(() -> {
+                                    textViewSpeed4.setText("");
+                                    radio4.setChecked(false);
+                                    speed.setText(null);
+                                });
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=4]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=4 target=bridge-vlan204");
@@ -219,6 +243,7 @@ public class SpeedActivity extends AppCompatActivity  {
                                     textViewSpeed4.setText("");
                                     textViewSpeed4.setText(command + "M/" + command + "M");
                                     radio4.setChecked(false);
+                                    speed.setText(null);
                                 });
                             }
                         } catch (JSchException | IOException e) {
@@ -238,15 +263,19 @@ public class SpeedActivity extends AppCompatActivity  {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=5]");
-                                runOnUiThread(() -> textViewSpeed5.setText(""));
+                                runOnUiThread(() -> {
+                                    textViewSpeed5.setText("");
+                                    radio5.setChecked(false);
+                                    speed.setText(null);
+                                });
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=5]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
-
                                 runOnUiThread(() -> {
                                     textViewSpeed5.setText("");
                                     textViewSpeed5.setText(command + "M/" + command + "M");
                                     radio5.setChecked(false);
+                                    speed.setText(null);
                                 });
                             }
                         } catch (JSchException | IOException e) {
@@ -260,10 +289,16 @@ public class SpeedActivity extends AppCompatActivity  {
                         throw new RuntimeException(e);
                     }
                 }
+                if(!flg)
+                {
+                    Alerter.create(this,R.layout.alerter_custom_layout)
+                            .setTitle(R.string.please_select_port)
+                            .setBackgroundColorRes(R.color.for_improvider)
+                            .enableSwipeToDismiss()
+                            .show();
+                }
             }
-            if (!flg){
-                Snackbar.make(findViewById(android.R.id.content),"Please Set Port",Snackbar.LENGTH_LONG).show();
-            }
+
         });
     }
 

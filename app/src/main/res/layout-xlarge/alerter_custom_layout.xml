@@ -55,8 +55,9 @@
             android:layout_marginEnd="@dimen/alerter_padding_half"
             android:paddingStart="@dimen/alerter_padding_small"
             android:paddingEnd="@dimen/alerter_padding_small"
-            android:textAppearance="@style/AlertTextAppearance"
+            android:fontFamily="@font/abhaya_libre_semibold"
             android:textSize="32sp"
+            android:textColor="@color/white"
             android:visibility="gone"
             tools:text="Title"
             tools:visibility="visible" />
@@ -71,9 +72,10 @@
             android:paddingTop="@dimen/alerter_padding_small"
             android:paddingEnd="@dimen/alerter_padding_small"
             android:paddingBottom="@dimen/alerter_padding_small"
-            android:textAppearance="@style/AlertTextAppearance"
+            android:fontFamily="@font/abhaya_libre_semibold"
             android:visibility="gone"
-            android:textSize="32sp"
+            android:textSize="36sp"
+            android:textColor="@color/white"
             tools:text="Text"
             tools:visibility="visible" />
 

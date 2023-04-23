@@ -23,7 +23,6 @@
     <string name="set">SET</string>
     <string name="select_ports">Select Port</string>
     <string name="enter_new_speed">Enter Speed Limit</string>
-    <string name="_0_unlimited">999=unlimited</string>
     <string name="please_wait">PLEASE WAIT</string>
     <string name="login">ImProvider enables you to control MikroTik routers through controlling router users\' speed limits. The users won\'t be able to connect each other.\nHow to use:\n1. If you are using a Mikrotik router save its configuration using Winbox.\n2. Do factory reset and set it up as new.\n3. Turn on the router. \n4. Plug the internet cable into the first port. \n5. Connect your phone or tablet with ImProvider to WiFi network \t\"MikroTik-*****\".\n\n*If your router creates two networks, do not use \t\"MikroTik-****A\"\t due to WiFi security.\n\nWe are not responsible for any harm done by ImProvider.\nTo delete the app settings on your router do factory reset.</string>
     <string name="header_attention">ATTENTION!</string>
@@ -36,7 +35,9 @@
     <string name="_22">22</string>
     <string name="admin">admin</string>
     <string name="empty_or_pswrd_not">Some fields are empty or password is not empty.</string>
-    <string name="chk_connection">\"Check your connection, input data or router settings. An error occurred: \"</string>
+    <string name="chk_connection">Check your connection, input data or router settings. An error occurred: </string>
     <string name="flds_empty">Some fields are empty</string>
-    <string name="for_unlimited">*For unlimited speed enter 999\n*To turn the speed off enter 0</string>
+    <string name="for_unlimited">For unlimited speed enter 999\nTo turn the internet off enter 0</string>
+    <string name="please_enter_limit">Please Enter Limit</string>
+    <string name="please_select_port">Please Select Port</string>
 </resources>

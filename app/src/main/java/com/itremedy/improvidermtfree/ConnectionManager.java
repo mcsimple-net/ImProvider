@@ -14,7 +14,7 @@ public class ConnectionManager {
     public static String result;
     private static int flag = -1;
 
-    public ConnectionManager() {
+    /*public ConnectionManager() {
     }
 
     public ConnectionManager(String hostname, String username, String password) {
@@ -28,7 +28,7 @@ public class ConnectionManager {
         ConnectionManager.username = username;
         ConnectionManager.password = password;
         ConnectionManager.port = port;
-    }
+    }*/
 
     public static void setHostname(String hostname) {
         ConnectionManager.hostname = hostname;
@@ -71,7 +71,7 @@ public class ConnectionManager {
             session.setConfig(config);
             session.setPassword(password);
 
-            session.connect(5000);
+            session.connect(10000);
             flag = 0;
         } catch (JSchException e) {
             flag = 1;
