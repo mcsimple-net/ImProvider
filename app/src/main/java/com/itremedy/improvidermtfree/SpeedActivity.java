@@ -25,7 +25,7 @@ public class SpeedActivity extends AppCompatActivity  {
     Button set, quit;
     RadioButton radio5,radio2,radio3,radio4;
     TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5, help_s;
-    boolean flg = false;
+    int flg;
 
 
 
@@ -69,10 +69,15 @@ public class SpeedActivity extends AppCompatActivity  {
         //threads for setting start limits
 
         Thread lim = new Thread(() -> {
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
             Thread l2 = new Thread(() -> {
                 try {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(100);
+                    Thread.sleep(200);
 
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
@@ -87,7 +92,7 @@ public class SpeedActivity extends AppCompatActivity  {
             Thread l3 = new Thread(() -> {
                 try {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan203] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(100);
+                    Thread.sleep(200);
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -101,7 +106,7 @@ public class SpeedActivity extends AppCompatActivity  {
             Thread l4 = new Thread(() -> {
                 try {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan204] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(100);
+                    Thread.sleep(200);
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -115,7 +120,7 @@ public class SpeedActivity extends AppCompatActivity  {
             Thread l5 = new Thread(() -> {
                 try {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan205] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(100);
+                    Thread.sleep(200);
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -124,6 +129,7 @@ public class SpeedActivity extends AppCompatActivity  {
                     textViewSpeed5.setText(result);
                 });
             });
+
             try {
             l2.start();
             l2.join();
@@ -138,8 +144,6 @@ public class SpeedActivity extends AppCompatActivity  {
             }
         });
             lim.start();
-
-
 
 
         // on click SET Button
@@ -158,8 +162,9 @@ public class SpeedActivity extends AppCompatActivity  {
             }
             else {
                 boolean b = command.equals("999");
+                flg = 0;
                 if (radio2.isChecked()) {
-                    flg = true;
+                    flg = 1;
                     Thread s2 = new Thread(() -> {
                         try {
                             if (b) {
@@ -175,7 +180,7 @@ public class SpeedActivity extends AppCompatActivity  {
 
                                 runOnUiThread(() -> {
                                     textViewSpeed2.setText("");
-                                   // textViewSpeed2.setText(command + "M/" + command + "M");
+                                    textViewSpeed2.setText(command + "M/" + command + "M");
                                     radio2.setChecked(false);
                                     speed.setText(null);
                                 });
@@ -185,10 +190,9 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s2.start();
-                    //s2.interrupt();
                 }
                 if (radio3.isChecked()) {
-                    flg = true;
+                    flg = 1;
                     Thread s3 = new Thread(() -> {
                         try {
                             if (b) {
@@ -204,7 +208,7 @@ public class SpeedActivity extends AppCompatActivity  {
 
                                 runOnUiThread(() -> {
                                     textViewSpeed3.setText("");
-                                    //textViewSpeed3.setText(command + "M/" + command + "M");
+                                    textViewSpeed3.setText(command + "M/" + command + "M");
                                     radio3.setChecked(false);
                                     speed.setText(null);
                                 });
@@ -214,10 +218,9 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s3.start();
-                    //s3.interrupt();
                 }
                 if (radio4.isChecked()) {
-                    flg = true;
+                    flg = 1;
                     Thread s4 = new Thread(() -> {
                         try {
                             if (b) {
@@ -233,7 +236,7 @@ public class SpeedActivity extends AppCompatActivity  {
 
                                 runOnUiThread(() -> {
                                     textViewSpeed4.setText("");
-                                    //textViewSpeed4.setText(command + "M/" + command + "M");
+                                    textViewSpeed4.setText(command + "M/" + command + "M");
                                     radio4.setChecked(false);
                                     speed.setText(null);
                                 });
@@ -243,10 +246,9 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s4.start();
-                    //s4.interrupt();
                 }
                 if (radio5.isChecked()) {
-                    flg = true;
+                    flg = 1;
                     Thread s5 = new Thread(() -> {
                         try {
                             if (b) {
@@ -261,7 +263,7 @@ public class SpeedActivity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
                                 runOnUiThread(() -> {
                                     textViewSpeed5.setText("");
-                                    //textViewSpeed5.setText(command + "M/" + command + "M");
+                                    textViewSpeed5.setText(command + "M/" + command + "M");
                                     radio5.setChecked(false);
                                     speed.setText(null);
                                 });
@@ -271,16 +273,9 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s5.start();
-                    //s5.interrupt();
                 }
-                if(flg)
+                if(flg == 0)
                 {
-                    finish();
-                    overridePendingTransition(0, 0);
-                    startActivity(getIntent());
-                    overridePendingTransition(0, 0);
-                }
-                else {
                     Alerter.create(this,R.layout.alerter_custom_layout)
                             .setTitle(R.string.please_select_port)
                             .setBackgroundColorRes(R.color.for_improvider)
