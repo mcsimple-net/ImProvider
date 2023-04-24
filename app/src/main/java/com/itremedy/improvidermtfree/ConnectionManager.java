@@ -71,7 +71,7 @@ public class ConnectionManager {
             session.setConfig(config);
             session.setPassword(password);
 
-            session.connect(10000);
+            session.connect(20000);
             flag = 0;
         } catch (JSchException e) {
             flag = 1;

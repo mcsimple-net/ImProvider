@@ -175,7 +175,7 @@ public class SpeedActivity extends AppCompatActivity  {
 
                                 runOnUiThread(() -> {
                                     textViewSpeed2.setText("");
-                                    textViewSpeed2.setText(command + "M/" + command + "M");
+                                   // textViewSpeed2.setText(command + "M/" + command + "M");
                                     radio2.setChecked(false);
                                     speed.setText(null);
                                 });
@@ -185,11 +185,7 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s2.start();
-                    try {
-                        s2.join();
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+                    //s2.interrupt();
                 }
                 if (radio3.isChecked()) {
                     flg = true;
@@ -208,7 +204,7 @@ public class SpeedActivity extends AppCompatActivity  {
 
                                 runOnUiThread(() -> {
                                     textViewSpeed3.setText("");
-                                    textViewSpeed3.setText(command + "M/" + command + "M");
+                                    //textViewSpeed3.setText(command + "M/" + command + "M");
                                     radio3.setChecked(false);
                                     speed.setText(null);
                                 });
@@ -218,11 +214,7 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s3.start();
-                    try {
-                        s3.join();
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+                    //s3.interrupt();
                 }
                 if (radio4.isChecked()) {
                     flg = true;
@@ -241,7 +233,7 @@ public class SpeedActivity extends AppCompatActivity  {
 
                                 runOnUiThread(() -> {
                                     textViewSpeed4.setText("");
-                                    textViewSpeed4.setText(command + "M/" + command + "M");
+                                    //textViewSpeed4.setText(command + "M/" + command + "M");
                                     radio4.setChecked(false);
                                     speed.setText(null);
                                 });
@@ -251,11 +243,7 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s4.start();
-                    try {
-                        s4.join();
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+                    //s4.interrupt();
                 }
                 if (radio5.isChecked()) {
                     flg = true;
@@ -273,7 +261,7 @@ public class SpeedActivity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
                                 runOnUiThread(() -> {
                                     textViewSpeed5.setText("");
-                                    textViewSpeed5.setText(command + "M/" + command + "M");
+                                    //textViewSpeed5.setText(command + "M/" + command + "M");
                                     radio5.setChecked(false);
                                     speed.setText(null);
                                 });
@@ -283,14 +271,16 @@ public class SpeedActivity extends AppCompatActivity  {
                         }
                     });
                     s5.start();
-                    try {
-                        s5.join();
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+                    //s5.interrupt();
                 }
-                if(!flg)
+                if(flg)
                 {
+                    finish();
+                    overridePendingTransition(0, 0);
+                    startActivity(getIntent());
+                    overridePendingTransition(0, 0);
+                }
+                else {
                     Alerter.create(this,R.layout.alerter_custom_layout)
                             .setTitle(R.string.please_select_port)
                             .setBackgroundColorRes(R.color.for_improvider)
@@ -325,7 +315,7 @@ public class SpeedActivity extends AppCompatActivity  {
         }
     }
 
-    //refresh activity if open second time
+    //refresh activity if opened second time
 
     public boolean onKeyDown(int keyCode, KeyEvent event)
     {

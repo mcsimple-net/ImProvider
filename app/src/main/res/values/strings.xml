@@ -15,7 +15,7 @@
     <string name="in_premium_version">*IN PREMIUM VERSION :</string>
     <string name="how_many_ethernet_ports">SELECT QUANTITY OF ETHERNET PORTS IN YOUR ROUTER</string>
     <string name="attention">Please, make sure that you have connected the router with default settings.\nConfiguration will be possible with WiFi only.\nWhen the app closes automatically, reconnect to WiFi with the password \"itremedy\", open the app again, enter the new password \"itremedy.online\" and press \"CONNECT\". </string>
-    <string name="wait">WAIT…\n Configuration in process…</string>
+    <string name="wait">WAIT…\n Configuration in progress…</string>
     <string name="guest_wi_fi_setup">GUEST Wi-Fi SETUP</string>
     <string name="wi_fi_configuration">Wi-Fi CONFIGURATION</string>
     <string name="change_admin_password">CHANGE ADMIN\'S PASSWORD</string>
@@ -24,7 +24,7 @@
     <string name="select_ports">Select Port</string>
     <string name="enter_new_speed">Enter Speed Limit</string>
     <string name="please_wait">PLEASE WAIT</string>
-    <string name="login">ImProvider enables you to control MikroTik routers through controlling router users\' speed limits. The users won\'t be able to connect each other.\nHow to use:\n1. If you are using a Mikrotik router save its configuration using Winbox.\n2. Do factory reset and set it up as new.\n3. Turn on the router. \n4. Plug the internet cable into the first port. \n5. Connect your phone or tablet with ImProvider to WiFi network \t\"MikroTik-*****\".\n\n*If your router creates two networks, do not use \t\"MikroTik-****A\"\t due to WiFi security.\n\nWe are not responsible for any harm done by ImProvider.\nTo delete the app settings on your router do factory reset.</string>
+    <string name="login">ImProvider enables you to control MikroTik routers through controlling router users\' speed limits. The users won\'t be able to connect each other.\nHow to use:\n1. If you are using a Mikrotik router save its configuration using Winbox and reset it.\n2. Turn on the router. \n3. Plug the internet cable into the first port. \n4. Connect your phone or tablet with ImProvider to WiFi network \t\"MikroTik-*****\".\n\n*If your router creates two networks, do not use \t\"MikroTik-****A\"\t due to WiFi security.\n\nWe are not responsible for any harm done by ImProvider.\nTo delete the app settings on your router reset it.</string>
     <string name="header_attention">ATTENTION!</string>
     <string name="i_agree">I AGREE</string>
     <string name="improvider">ImProvider</string>

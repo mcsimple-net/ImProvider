@@ -99,13 +99,15 @@ public class AttentionActivity extends AppCompatActivity {
                 ConnectionManager.runCommand("/ip pool add name=pool-205 ranges=198.18.205.2-198.18.205.100");
                 Thread.sleep(100);
 
-                ConnectionManager.runCommand("/ip dhcp-server network add address=198.18.202.0/24 dns-server=192.168.88.1 gateway=198.18.202.1 netmask=24");
+                ConnectionManager.runCommand("/ip dhcp-server network set dns-server=1.1.1.1,8.8.8.8 0");
                 Thread.sleep(100);
-                ConnectionManager.runCommand("/ip dhcp-server network add address=198.18.203.0/24 dns-server=192.168.88.1 gateway=198.18.203.1 netmask=24");
+                ConnectionManager.runCommand("/ip dhcp-server network add address=198.18.202.0/24 dns-server=1.1.1.1,8.8.8.8 gateway=198.18.202.1 netmask=24");
                 Thread.sleep(100);
-                ConnectionManager.runCommand("/ip dhcp-server network add address=198.18.204.0/24 dns-server=192.168.88.1 gateway=198.18.204.1 netmask=24");
+                ConnectionManager.runCommand("/ip dhcp-server network add address=198.18.203.0/24 dns-server=1.1.1.1,8.8.8.8 gateway=198.18.203.1 netmask=24");
                 Thread.sleep(100);
-                ConnectionManager.runCommand("/ip dhcp-server network add address=198.18.205.0/24 dns-server=192.168.88.1 gateway=198.18.205.1 netmask=24");
+                ConnectionManager.runCommand("/ip dhcp-server network add address=198.18.204.0/24 dns-server=1.1.1.1,8.8.8.8 gateway=198.18.204.1 netmask=24");
+                Thread.sleep(100);
+                ConnectionManager.runCommand("/ip dhcp-server network add address=198.18.205.0/24 dns-server=1.1.1.1,8.8.8.8 gateway=198.18.205.1 netmask=24");
                 Thread.sleep(100);
 
                 ConnectionManager.runCommand("/ip dhcp-server add address-pool=pool-202 interface=bridge-vlan202 lease-time=1d name=dhcp-202 server-address=198.18.202.1");
@@ -118,30 +120,18 @@ public class AttentionActivity extends AppCompatActivity {
                 Thread.sleep(100);
 
 
-                ConnectionManager.runCommand("/ip firewall filter remove [find where comment=\"defconf: drop all not coming from LAN\"]");
+                ConnectionManager.runCommand("/ip firewall address-list add list=self_net address=192.168.88.0/24");
+                Thread.sleep(100);
+                ConnectionManager.runCommand("/ip firewall filter add action=accept chain=input src-address-list=self_net");
                 Thread.sleep(100);
                 ConnectionManager.runCommand("/ip firewall filter remove [find where comment=\"defconf: fasttrack\"]");
                 Thread.sleep(100);
-                ConnectionManager.runCommand("/ip firewall filter add chain=input protocol=tcp dst-port=53 action=accept in-interface=bridge-vlan202");
-                Thread.sleep(100);
-                ConnectionManager.runCommand("/ip firewall filter add chain=input protocol=udp dst-port=53 action=accept in-interface=bridge-vlan202");
-                Thread.sleep(100);
-                ConnectionManager.runCommand("/ip firewall filter add chain=input protocol=tcp dst-port=53 action=accept in-interface=bridge-vlan203");
-                Thread.sleep(100);
-                ConnectionManager.runCommand("/ip firewall filter add chain=input protocol=udp dst-port=53 action=accept in-interface=bridge-vlan203");
-                Thread.sleep(100);
-                ConnectionManager.runCommand("/ip firewall filter add chain=input protocol=tcp dst-port=53 action=accept in-interface=bridge-vlan204");
-                Thread.sleep(100);
-                ConnectionManager.runCommand("/ip firewall filter add chain=input protocol=udp dst-port=53 action=accept in-interface=bridge-vlan204");
-                Thread.sleep(100);
-                ConnectionManager.runCommand("/ip firewall filter add chain=input protocol=tcp dst-port=53 action=accept in-interface=bridge-vlan205");
-                Thread.sleep(100);
-                ConnectionManager.runCommand("/ip firewall filter add chain=input protocol=udp dst-port=53 action=accept in-interface=bridge-vlan205");
-                Thread.sleep(100);
-                ConnectionManager.runCommand("/ip firewall filter add action=drop chain=input comment=\"defconf: drop all not coming from LAN\" in-interface-list=!LAN");
+                ConnectionManager.runCommand("/ip firewall filter add action=drop chain=input comment=\"defconf: drop all\"");
                 Thread.sleep(100);
 
+
                 ConnectionManager.runCommand("/user set admin password=itremedy.online");
+                Thread.sleep(100);
 
                 ConnectionManager.runCommand("/interface wireless security-profiles add name=itremedy authentication-types=wpa2-psk mode=dynamic-keys wpa2-pre-shared-key=itremedy");
                 Thread.sleep(100);
