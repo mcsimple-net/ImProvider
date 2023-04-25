@@ -12,10 +12,11 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/abhaya_libre_semibold"
+        android:gravity="center_horizontal"
         android:paddingTop="20dp"
         android:text="@string/header_attention"
         android:textColor="#CF4646"
@@ -29,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/abhaya_libre_semibold"
+        android:fontFamily="@font/alata"
         android:paddingTop="10dp"
         android:text="@string/attention"
         android:textSize="20sp"
@@ -47,7 +48,7 @@
         android:gravity="center"
         android:paddingTop="10dp"
         android:text="@string/i_agree"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewWarning" />

@@ -16,7 +16,7 @@
         android:gravity="center"
         android:text="@string/in_premium_version"
         android:textColor="@color/text_color"
-        android:textSize="34sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5ports" />
@@ -31,7 +31,7 @@
         android:gravity="center"
         android:text="@string/how_many_ethernet_ports"
         android:textColor="@color/text_color"
-        android:textSize="34sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +40,7 @@
         android:id="@+id/linearLayout5ports"
         android:layout_width="500dp"
         android:layout_height="100dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/dark_background_card_view"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"

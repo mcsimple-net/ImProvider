@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ЯПровайдер</string>
+    <string name="connect">ПОДКЛЮЧЕНИЕ</string>
+    <string name="password">Пароль:</string>
+    <string name="username">Имя:</string>
+    <string name="port">Порт:</string>
+    <string name="host_or_ip">Адрес:</string>
+    <string name="enter_username">Введите имя пользователя</string>
+    <string name="enter_port_number">Введите номер порта</string>
+    <string name="enter_ip_or_hostname">Введите адрес</string>
+    <string name="setup_new_router">НАСТРОИТЬ НОВЫЙ РОУТЕР</string>
+    <string name="set_connection_speed">УСТАНОВИТЬ ОГРАНИЧЕНИЕ СКОРОСТИ</string>
+    <string name="in_premium_version">*В ПРЕМИУМ ВЕРСИИ</string>
+    <string name="how_many_ethernet_ports">ВЫБЕРИТЕ КОЛИЧЕСТВО ПОРТОВ ВАШЕГО РОУТЕРА</string>
+    <string name="attention">
+    <br>Пожалуйста убедитесь, что вы подключили роутер с настройками по умолчанию.\n</br>
+    <br>Настройка будет возможна только через WiFi.\n</br>
+    Когда приложение автоматически закроется, переподключитесь к WiFi с паролем \"itremedy\",
+    откройте приложение снова, введите в нижнее поле пароль \"itremedy.online\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
+    <string name="wait">ПОДОЖДИТЕ... ИДЁТ НАСТРОЙКА...</string>
+    <string name="guest_wi_fi_setup">НАСТРОЙКА ГОСТЕВОЙ WiFi СЕТИ</string>
+    <string name="wi_fi_configuration">НАСТРОЙКА WiFi СЕТИ</string>
+    <string name="change_admin_password">СМЕНА ПАРОЛЯ АДМИНИСТРАТОРА</string>
+    <string name="quit">ВЫХОД</string>
+    <string name="set">ВВОД</string>
+    <string name="select_ports">Выберите порт</string>
+    <string name="enter_new_speed">Введите ограничение скорости</string>
+    <string name="please_wait">ПОЖАЛУЙСТА ПОДОЖДИТЕ</string>
+    <string name="login">
+    <br>ЯПровайдер позволяет контролировать скорость
+    подключения пользователей роутеров MikroTik.
+    Также, после первоначальной настройки,
+    сетевой доступ между пользователями
+    будет отключён.\n</br>
+        <br>\n</br>
+    <br>Инструкция:\n</br>
+ <br>\n</br>
+    <br>1. Если вы уже пользуетесь роутером MikroTik,
+    сохраните конфигурацию с помощью Winbox и
+    выполните сброс настроек до начальных.\n</br>
+    <br>2. Включите роутер и подключите провод с интернет
+    в 1ый порт (ETH1).\n</br>
+    <br>3.Подключите ваш телефон или планшет с
+    ЯПровайдер к WiFi сети  \"MikroTik-*****\".\n</br>
+<br>\n</br>
+    <br>*Если ваш роутер создаёт 2 WiFi сети,
+    не подключайтесь к сети   \"MikroTik-****A\"  в этот раз,
+    так как возможны проблемы с настройкой
+    безопасности.\n</br>
+<br>\n</br>
+    <br>Мы не несём ответственность за ущерб
+    причинённый с помощью ЯПровайдер.
+    Чтобы удалить установленную программой
+    конфигурацию, выполните сброс настроек
+    до начальных.\n</br>
+<br>\n</br>
+    <br>Нажимая ПРОДОЛЖИТЬ вы соглашаетесь с тем,
+    что прочитали всё, что написано выше.\n</br></string>
+    <string name="header_attention">ВНИМАНИЕ!</string>
+    <string name="i_agree">ПРОДОЛЖИТЬ</string>
+    <string name="improvider">ЯПровайдер</string>
+    <string name="help_main"><br>Для настройки нового роутера нажмите НАСТРОИТЬ НОВЫЙ РОУТЕР.\n</br>
+    Для подключения к уже настроенному, наберите пароль \"itremedy.online\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
+    <string name="need_help">Нужна Помощь?</string>
+    <string name="empty_or_pswrd_not">Некоторые поля не заполнены или присутствует пароль.</string>
+    <string name="chk_connection">Проверьте подключение, введённые данные или настройки роутера. Произошла ошибка:</string>
+    <string name="flds_empty">Некоторые поля не заполнены</string>
+    <string name="for_unlimited"><br>Для снятия ограничения наберите 999 \n</br>
+        <br>Для отключения интернета наберите 0</br></string>
+    <string name="please_enter_limit">Пожалуйста введите максимальную скорость</string>
+    <string name="please_select_port">Пожалуйста выберите порт</string>
+</resources>

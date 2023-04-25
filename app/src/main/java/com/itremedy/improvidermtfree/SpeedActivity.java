@@ -25,7 +25,7 @@ public class SpeedActivity extends AppCompatActivity  {
     Button set, quit;
     RadioButton radio5,radio2,radio3,radio4;
     TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5, help_s;
-    int flg;
+
 
 
 
@@ -162,7 +162,7 @@ public class SpeedActivity extends AppCompatActivity  {
             }
             else {
                 boolean b = command.equals("999");
-                flg = 0;
+                int flg = 0;
                 if (radio2.isChecked()) {
                     flg = 1;
                     Thread s2 = new Thread(() -> {

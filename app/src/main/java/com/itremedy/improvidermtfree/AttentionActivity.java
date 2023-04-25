@@ -130,13 +130,15 @@ public class AttentionActivity extends AppCompatActivity {
                 Thread.sleep(100);
 
 
+                ConnectionManager.runCommand("/ipv6 settings set disable-ipv6=yes max-neighbor-entries=15360");
+                Thread.sleep(100);
+
                 ConnectionManager.runCommand("/user set admin password=itremedy.online");
                 Thread.sleep(100);
 
                 ConnectionManager.runCommand("/interface wireless security-profiles add name=itremedy authentication-types=wpa2-psk mode=dynamic-keys wpa2-pre-shared-key=itremedy");
                 Thread.sleep(100);
                 ConnectionManager.runCommand("/interface wireless set [ find default-name=wlan2 ] security-profile=itremedy");
-                Thread.sleep(100);
                 ConnectionManager.runCommand("/interface wireless set [ find default-name=wlan1 ] security-profile=itremedy");
                 Thread.sleep(100);
 

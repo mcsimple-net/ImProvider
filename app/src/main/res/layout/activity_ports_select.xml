@@ -22,10 +22,10 @@
     <TextView
         android:id="@+id/textViewHeader"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_margin="5dp"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/abhaya_libre_semibold"
+        android:fontFamily="@font/alata"
         android:gravity="center"
         android:text="@string/how_many_ethernet_ports"
         android:textColor="@color/text_color"

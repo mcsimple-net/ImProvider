@@ -28,7 +28,7 @@
         android:gravity="center"
         android:text="@string/how_many_ethernet_ports"
         android:textColor="@color/text_color"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
