@@ -6,25 +6,25 @@
     <string name="password">Пароль:</string>
     <string name="username">Имя:</string>
     <string name="port">Порт:</string>
-    <string name="host_or_ip">Адрес:</string>
+    <string name="host_or_ip">IP Адрес:</string>
     <string name="enter_username">Введите имя пользователя</string>
     <string name="enter_port_number">Введите номер порта</string>
-    <string name="enter_ip_or_hostname">Введите адрес</string>
+    <string name="enter_ip_or_hostname">Введите IP адрес</string>
     <string name="setup_new_router">НАСТРОИТЬ НОВЫЙ РОУТЕР</string>
-    <string name="set_connection_speed">УСТАНОВИТЬ ОГРАНИЧЕНИЕ СКОРОСТИ</string>
-    <string name="in_premium_version">*В ПРЕМИУМ ВЕРСИИ</string>
+    <string name="set_connection_speed">УСТАНОВИТЬ ЛИМИТЫ СКОРОСТИ</string>
+    <string name="in_premium_version">*В ПРЕМИУМ ВЕРСИИ:</string>
     <string name="how_many_ethernet_ports">ВЫБЕРИТЕ КОЛИЧЕСТВО ПОРТОВ ВАШЕГО РОУТЕРА</string>
     <string name="attention">
     <br>Пожалуйста убедитесь, что вы подключили роутер с настройками по умолчанию.\n</br>
     <br>Настройка будет возможна только через WiFi.\n</br>
     Когда приложение автоматически закроется, переподключитесь к WiFi с паролем \"itremedy\",
-    откройте приложение снова, введите в нижнее поле пароль \"itremedy.online\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
+    откройте приложение снова, введите в нижнее поле пароль \"itremedy.pro\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
     <string name="wait">ПОДОЖДИТЕ... ИДЁТ НАСТРОЙКА...</string>
     <string name="guest_wi_fi_setup">НАСТРОЙКА ГОСТЕВОЙ WiFi СЕТИ</string>
     <string name="wi_fi_configuration">НАСТРОЙКА WiFi СЕТИ</string>
     <string name="change_admin_password">СМЕНА ПАРОЛЯ АДМИНИСТРАТОРА</string>
     <string name="quit">ВЫХОД</string>
-    <string name="set">ВВОД</string>
+    <string name="set">OK</string>
     <string name="select_ports">Выберите порт</string>
     <string name="enter_new_speed">Введите ограничение скорости</string>
     <string name="please_wait">ПОЖАЛУЙСТА ПОДОЖДИТЕ</string>
@@ -62,13 +62,14 @@
     <string name="i_agree">ПРОДОЛЖИТЬ</string>
     <string name="improvider">ЯПровайдер</string>
     <string name="help_main"><br>Для настройки нового роутера нажмите НАСТРОИТЬ НОВЫЙ РОУТЕР.\n</br>
-    Для подключения к уже настроенному, наберите пароль \"itremedy.online\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
+    Для подключения к уже настроенному, наберите пароль \"itremedy.pro\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
     <string name="need_help">Нужна Помощь?</string>
-    <string name="empty_or_pswrd_not">Некоторые поля не заполнены или присутствует пароль.</string>
+    <string name="empty_or_pswrd_not">Некоторые поля не заполнены или заполнен пароль.</string>
     <string name="chk_connection">Проверьте подключение, введённые данные или настройки роутера. Произошла ошибка:</string>
     <string name="flds_empty">Некоторые поля не заполнены</string>
     <string name="for_unlimited"><br>Для снятия ограничения наберите 999 \n</br>
-        <br>Для отключения интернета наберите 0</br></string>
+        <br>Для отключения Интернет наберите 0</br></string>
     <string name="please_enter_limit">Пожалуйста введите максимальную скорость</string>
     <string name="please_select_port">Пожалуйста выберите порт</string>
+    <string name="setup_first">Требуется настройка роутера</string>
 </resources>

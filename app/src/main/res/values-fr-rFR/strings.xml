@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JesuisFournisseur</string>
+    <string name="connect">CONNECTER</string>
+
+    <string name="password">Mot de passe :</string>
+    <string name="username">nom :</string>
+    <string name="port">Port :</string>
+    <string name="host_or_ip">IP ou nom d\'hôte :</string>
+    <string name="enter_username">Saisissez votre nom d\'utilisateur</string>
+
+    <string name="enter_port_number">Entrez le numéro de port</string>
+
+    <string name="enter_ip_or_hostname">Entrez l\'IP ou le nom d\'hôte</string>
+    <string name="setup_new_router">CONFIGURER UN NOUVEAU ROUTEUR</string>
+    <string name="set_connection_speed">RÉGLER LES LIMITES DE VITESSE</string>
+
+    <string name="in_premium_version">*EN VERSION PREMIUM :</string>
+
+    <string name="how_many_ethernet_ports">SÉLECTIONNEZ LA QUANTITÉ DE PORTS ETHERNET DANS VOTRE ROUTEUR</string>
+
+    <string name="attention">Veuillez vous assurer que vous avez connecté le routeur avec les paramètres par défaut.
+        La configuration ne sera possible qu\'avec le WiFi. Lorsque l\'application se ferme automatiquement,
+        reconnectez-vous au WiFi avec le mot de passe \"itremedy\", ouvrez à nouveau l\'application, dans le champ du bas,
+        entrez le mot de passe \"itremedy.pro\" et appuyez sur CONNECTER.</string>
+    <string name="wait">ATTENDRE… Configuration en cours…</string>
+    <string name="guest_wi_fi_setup">CONFIGURATION WiFi INVITÉ</string>
+    <string name="wi_fi_configuration">CONFIGURATION WiFi</string>
+    <string name="change_admin_password">MODIFIER LE MOT DE PASSE DE L\'ADMINISTRATEUR</string>
+
+    <string name="quit">ARRÊTER</string>
+
+    <string name="set">OK</string>
+    <string name="select_ports">Sélectionnez Port</string>
+
+    <string name="enter_new_speed">Saisir la limite de vitesse</string>
+
+    <string name="please_wait">S\'IL VOUS PLAÎT, ATTENDEZ</string>
+    <string name="header_attention">ATTENTION!</string>
+    <string name="i_agree">CONTINUER</string>
+
+    <string name="improvider">JesuisFournisseur</string>
+
+    <string name="need_help">Besoin d\'aide?</string>
+    <string name="empty_or_pswrd_not">Certains champs sont vides ou le mot de passe n\'est pas vide.</string>
+    <string name="chk_connection">Vérifiez votre connexion, les données d\'entrée ou les paramètres du routeur. Une erreur s\'est produite :</string>
+    <string name="flds_empty">Certains champs sont vides</string>
+    <string name="for_unlimited">Pour une vitesse illimitée, entrez 999 Pour désactiver Internet, entrez 0</string>
+    <string name="please_enter_limit">Veuillez entrer la limite</string>
+    <string name="please_select_port">Veuillez sélectionner le port</string>
+    <string name="help_main">Pour la configuration du nouveau routeur, appuyez sur SETUP NEW ROUTER. Pour connecter un routeur déjà configuré,
+        entrez le mot de passe \"itremedy.pro\" et appuyez sur CONNECTURE</string>
+    <string name="setup_first">Veuillez configurer votre routeur</string>
+    <string name="login">ImProvider vous permet de contrôler les routeurs MikroTik en contrôlant les limites de vitesse des utilisateurs du routeur.
+        Les utilisateurs ne pourront pas se connecter. Comment utiliser : 1. Si vous utilisez un routeur Mikrotik, enregistrez sa configuration avec Winbox et réinitialisez-le.
+        2. Allumez le routeur. 3. Branchez le câble Internet dans le premier port (ETH1). 4. Connectez votre téléphone ou votre tablette avec ImProvider au réseau WiFi \"MikroTik-*****\".
+        * Si votre routeur crée deux réseaux, n\'utilisez pas \"MikroTik-****A\" cette fois en raison de la sécurité WiFi. Nous ne sommes pas responsables des dommages causés par ImProvider.
+        Pour supprimer les paramètres de l\'application sur votre routeur, réinitialisez-le. En appuyant sur CONTINUER, vous reconnaissez avoir lu tout ce qui a été écrit ci-dessus.</string>
+</resources>

@@ -1,9 +1,21 @@
 package com.itremedy.improvidermtfree;
 
+import static com.itremedy.improvidermtfree.ConnectionManager.result;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.snackbar.Snackbar;
+import com.jcraft.jsch.JSchException;
+import com.tapadoo.alerter.Alerter;
+
+import java.io.IOException;
+import java.util.Objects;
 
 public class PortsSelectActivity extends AppCompatActivity {
 

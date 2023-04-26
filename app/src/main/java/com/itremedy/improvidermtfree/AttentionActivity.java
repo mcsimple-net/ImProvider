@@ -49,8 +49,9 @@ public class AttentionActivity extends AppCompatActivity {
                     ConnectionManager.close();
                     finishAffinity();
                     }
-
-
+                Thread.sleep(100);
+                ConnectionManager.runCommand("/system identity set name=ImProvider");
+                Thread.sleep(200);
                 ConnectionManager.runCommand("/interface bridge set [find where bridge=bridge] vlan-filtering=yes");
                 Thread.sleep(10000);
 
@@ -133,7 +134,7 @@ public class AttentionActivity extends AppCompatActivity {
                 ConnectionManager.runCommand("/ipv6 settings set disable-ipv6=yes max-neighbor-entries=15360");
                 Thread.sleep(100);
 
-                ConnectionManager.runCommand("/user set admin password=itremedy.online");
+                ConnectionManager.runCommand("/user set admin password=itremedy.pro");
                 Thread.sleep(100);
 
                 ConnectionManager.runCommand("/interface wireless security-profiles add name=itremedy authentication-types=wpa2-psk mode=dynamic-keys wpa2-pre-shared-key=itremedy");

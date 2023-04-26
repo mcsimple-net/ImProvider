@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SoyProveedor</string>
+    <string name="connect">CONECTAR</string>
+    <string name="password">Contraseña:</string>
+    <string name="username">Nombre:</string>
+    <string name="port">Puerto:</string>
+    <string name="host_or_ip">Dirección:</string>
+    <string name="enter_username">Ingrese el nombre</string>
+    <string name="enter_port_number">Ingrese el número de puerto</string>
+    <string name="enter_ip_or_hostname">Ingresa la direccion</string>
+    <string name="setup_new_router">CONFIGURAR UN ENRUTADOR</string>
+    <string name="set_connection_speed">ESTABLECER LÍMITES DE VELOCIDAD</string>
+    <string name="in_premium_version">*EN VERSIÓN PREMIUM:</string>
+    <string name="how_many_ethernet_ports">SELECCIONE LA CANTIDAD DE PUERTOS ETHERNET EN SU ROUTER</string>
+    <string name="attention">Por favor, asegúrese de haber conectado el enrutador con la configuración predeterminada.
+        La configuración será posible solo con WiFi. Cuando la aplicación se cierre automáticamente,
+        vuelva a conectarse a WiFi con la contraseña \"itremedy\", abra la aplicación nuevamente,
+        en el campo inferior ingrese la contraseña \"itremedy.pro\" y presione CONECTAR.</string>
+    <string name="wait">ESPERE... Configuración en curso...</string>
+    <string name="guest_wi_fi_setup">CONFIGURACIÓN WiFi INVITADO</string>
+    <string name="wi_fi_configuration">CONFIGURACIÓN WIFI</string>
+    <string name="change_admin_password">CAMBIAR CONTRASEÑA DE ADMINISTRADOR</string>
+    <string name="quit">ABANDONAR</string>
+    <string name="set">OK</string>
+    <string name="select_ports">Seleccionar puerto</string>
+    <string name="enter_new_speed">Introducir límite de velocidad</string>
+    <string name="please_wait">ESPERE POR FAVOR</string>
+    <string name="login">ImProvider le permite controlar los enrutadores MikroTik mediante el control de los límites de velocidad de los usuarios del enrutador.
+        Los usuarios no podrán conectarse entre sí. Cómo usar: 1. Si está utilizando un enrutador Mikrotik, guarde su configuración con Winbox y reinícielo.
+        2. Encienda el enrutador. 3. Enchufe el cable de Internet en el primer puerto (ETH1).
+        4. Conecte su teléfono o tableta con ImProvider a la red WiFi \"MikroTik-*****\".
+        *Si su enrutador crea dos redes, no use \"MikroTik-****A\" esta vez debido a la seguridad WiFi.
+        No somos responsables de ningún daño causado por ImProvider. Para eliminar la configuración de la aplicación en su enrutador, reiníciela.
+        Al presionar CONTINUAR aceptas que has leído todo lo escrito anteriormente.</string>
+    <string name="header_attention">¡ATENCIÓN!</string>
+
+    <string name="i_agree">CONTINUAR</string>
+    <string name="improvider">SoyProveedor</string>
+
+    <string name="need_help">¿Necesitas ayuda?</string>
+    <string name="empty_or_pswrd_not">Algunos campos están vacíos o la contraseña no está vacía.</string>
+    <string name="chk_connection">Verifique su conexión, datos de entrada o configuración del enrutador. Ocurrió un error:</string>
+    <string name="flds_empty">Algunos campos están vacíos</string>
+    <string name="for_unlimited">Para velocidad ilimitada ingrese 999 Para desactivar Internet ingrese 0</string>
+    <string name="please_enter_limit">Ingrese el límite</string>
+    <string name="please_select_port">Seleccione Puerto</string>
+    <string name="help_main">Para la configuración del nuevo enrutador, presione CONFIGURAR UN ENRUTADOR.
+        Para conectar un enrutador ya configurado ingrese la contraseña \"itremedy.pro\" y presione CONECTAR</string>
+    <string name="setup_first">Сonfigure su enrutador</string>
+</resources>

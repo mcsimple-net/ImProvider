@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ImProvider</string>
-    <string name="hyperlink" translatable="false"><a href="https://itremedy.online/">by ITRemedy</a></string>
+    <string name="hyperlink" translatable="false"><a href="https://itremedy.pro/">by ITRemedy</a></string>
     <string name="connect">CONNECT</string>
     <string name="password">Password :</string>
     <string name="username">Username :</string>
@@ -11,54 +11,41 @@
     <string name="enter_ip_or_hostname">Enter IP or hostname</string>
     <string name="setup_new_router">SET UP A NEW ROUTER</string>
     <string name="set_connection_speed">SET SPEED LIMITS</string>
-    <string name="in_premium_version">*IN PREMIUM VERSION :</string>
+    <string name="in_premium_version">*IN PREMIUM VERSION:</string>
     <string name="how_many_ethernet_ports">SELECT QUANTITY OF ETHERNET PORTS IN YOUR ROUTER</string>
-    <string name="attention">Please, make sure that you have connected the router with default settings. Configuration will be possible with WiFi only. When the app closes automatically, reconnect to WiFi with the password \"itremedy\", open the app again, in the bottom field enter the password \"itremedy.online\" and press CONNECT.</string>
-    <string name="wait">WAIT…\n Configuration in progress…</string>
-    <string name="guest_wi_fi_setup">GUEST Wi-Fi SETUP</string>
+    <string name="attention">Please, make sure that you have connected the router with default settings.
+        Configuration will be possible with WiFi only. When the app closes automatically,
+        reconnect to WiFi with the password \"itremedy\", open the app again, enter the password \"itremedy.pro\" in the bottom field and press CONNECT.</string>
+    <string name="wait">WAIT…  Configuration in progress…</string>
+    <string name="guest_wi_fi_setup">GUEST WiFi SETUP</string>
     <string name="wi_fi_configuration">Wi-Fi CONFIGURATION</string>
     <string name="change_admin_password">CHANGE ADMIN\'S PASSWORD</string>
     <string name="quit">QUIT</string>
-    <string name="set">SET</string>
+    <string name="set">OK</string>
     <string name="select_ports">Select Port</string>
-    <string name="enter_new_speed">Enter Speed Limit</string>
+    <string name="enter_new_speed">Enter Limit</string>
     <string name="please_wait">PLEASE WAIT</string>
-    <string name="login">
-    ImProvider enables you to control MikroTik routers
-    through controlling router users\' speed limits.\n
-    The users won\'t be able to connect each other.\n
-\n
-    How to use:\n
-\n
-    1. If you are using a Mikrotik router save its
-    configuration with Winbox and reset it.\n
-    2. Turn on the router.\n
-    3. Plug the internet cable into the first port.\n
-    4. Connect your phone or tablet with ImProvider to WiFi
-    network \t\"MikroTik-*****\".\n
-\n
-    *If your router creates two networks,
-    do not use \t\"MikroTik-****A\"\t due to WiFi security.\n
-\n
-    We are not responsible for any harm done by ImProvider.\n
-    To delete the app settings on your router reset it.\n
-    Pressing CONTINUE you agree that you\'ve read all
-    that was written above.
-    </string>
     <string name="header_attention">ATTENTION!</string>
     <string name="i_agree">CONTINUE</string>
     <string name="improvider">ImProvider</string>
     <string name="need_help">Need Help?</string>
-    <string name="default_password" translatable="false">itremedy.online</string>
+    <string name="default_password" translatable="false">itremedy.pro</string>
     <string name="_192_168_88_1" translatable="false">192.168.88.1</string>
     <string name="_22" translatable="false">22</string>
     <string name="admin" translatable="false">admin</string>
-    <string name="empty_or_pswrd_not">Some fields are empty or password is not empty.</string>
+    <string name="empty_or_pswrd_not">Some fields are empty or password is not empty</string>
     <string name="chk_connection">Check your connection, input data or router settings. An error occurred: </string>
-    <string name="flds_empty">Some fields are empty</string>
-    <string name="for_unlimited">For unlimited speed enter 999\nTo turn the internet off enter 0</string>
+    <string name="for_unlimited">For unlimited speed enter 999 To turn the Internet off enter 0</string>
     <string name="please_enter_limit">Please Enter Limit</string>
     <string name="please_select_port">Please Select Port</string>
-    <string name="help_main">For the new router setup press SETUP NEW ROUTER.\nTo connect already configured router enter the password \"itremedy.online\" and press CONNECT</string>
-
+    <string name="help_main">For the new router setup press SETUP NEW ROUTER. To connect already configured router enter the password \"itremedy.pro\" and press CONNECT</string>
+    <string name="setup_first">Please set up your router</string>
+    <string name="login">ImProvider enables you to control MikroTik routers through controlling router users\' speed limits.
+        The users won\'t be able to connect each other. How to use: 1. If you are using a Mikrotik router save its configuration with Winbox and reset it.
+        2. Turn on the router. 3. Plug the internet cable into the first port (ETH1).
+        4. Connect your phone or tablet with ImProvider to WiFi network \"MikroTik-*****\" .
+        *If your router creates two networks, do not use \"MikroTik-****A\" this time due to WiFi security.
+        We are not responsible for any harm done by ImProvider. To delete the app settings on your router reset it.
+        Pressing CONTINUE you agree that you\'ve read all that was written above.</string>
+    <string name="flds_empty">Some fields are empty</string>
 </resources>

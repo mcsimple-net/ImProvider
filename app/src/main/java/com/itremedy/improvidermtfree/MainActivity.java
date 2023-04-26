@@ -87,12 +87,13 @@ public class MainActivity extends AppCompatActivity {
 
                 final Handler handler = new Handler();
                     handler.postDelayed(() -> {
-                        @SuppressLint("ResourceAsColor") Thread t = new Thread(() -> {
+                        Thread t = new Thread(() -> {
                             try {
                                 ConnectionManager.open();
+
                             } catch (JSchException e)
                             {
-                                Alerter.hide();
+
                                 Alerter.create(this,R.layout.alerter_custom_layout)
                                         .setTitle(R.string.chk_connection)
                                         .setText(Objects.requireNonNull(e.getMessage()))
