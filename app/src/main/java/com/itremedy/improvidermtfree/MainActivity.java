@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     Button connect;
     Button setup;
     TextView help_m;
-
+    SharedPreferences prefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,13 +45,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+       prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         boolean previouslyStarted = prefs.getBoolean(getString(R.string.pref_previously_started), false);
         if(!previouslyStarted) {
-            SharedPreferences.Editor edit = prefs.edit();
-            edit.putBoolean(getString(R.string.pref_previously_started),TRUE);
-            edit.commit();
+
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         }
@@ -162,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
             if (hostname_input.isEmpty() || username_input.isEmpty())
             {
                 Alerter.create(this,R.layout.alerter_custom_layout)
-                        .setTitle(R.string.empty_or_pswrd_not)
+                        .setTitle(R.string.flds_empty)
                         .setBackgroundColorRes(R.color.for_improvider)
                         .enableSwipeToDismiss()
                         .show();
@@ -215,5 +212,9 @@ public class MainActivity extends AppCompatActivity {
                     }, 1000);
             }
         });
+        if (getIntent().getBooleanExtra("EXIT", false)) {
+            finishAffinity();
+            return;
+        }
     }
 }

@@ -45,7 +45,7 @@
         For other models/functions use the premium or mobile version of the app.
         How to use:
         1. If you already use a Mikrotik router save its configuration with Winbox and reset it.
-        2. Turn on the router. 3. Plug the internet cable into the first port (ETH1).
+        2. Turn on the router. 3. Plug the internet cable from provider\'s router into the first port (ETH1).
         4. Connect your phone or tablet with ImProvider to WiFi network \"MikroTik-*****\" .
         *If your router creates two networks, do not use \"MikroTik-****A\" during setup due to WiFi security.
         To delete the app settings on your router reset it.
