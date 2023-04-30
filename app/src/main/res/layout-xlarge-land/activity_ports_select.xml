@@ -9,22 +9,21 @@
 
     <TextView
         android:id="@+id/textViewInPremium"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:gravity="center"
         android:text="@string/in_premium_version"
         android:textColor="@color/text_color"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout10ports"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5ports" />
 
     <TextView
         android:id="@+id/textViewHeader"
         android:layout_width="800dp"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:gravity="center"
         android:text="@string/how_many_ethernet_ports"
@@ -36,12 +35,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5ports"
-        android:layout_width="500dp"
+        android:layout_width="550dp"
         android:layout_height="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/dark_background_card_view"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewHeader">
 
@@ -49,179 +49,128 @@
             android:id="@+id/textView5ports"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="40dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:gravity="center_vertical|end"
-            android:text="5"
+            android:gravity="center"
+            android:text="hAP series"
             android:textColor="@color/text_color"
-            android:textSize="60sp" />
+            android:textSize="24sp" />
 
         <ImageView
             android:id="@+id/imageView5ports"
-            android:layout_width="250dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginEnd="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
             app:srcCompat="@drawable/_5_port" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout8ports"
-        android:layout_width="500dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/linearLayout10ports"
+        android:layout_width="550dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/dark_background_card_view"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewInPremium">
-
-        <TextView
-            android:id="@+id/textView8ports"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="40dp"
-            android:layout_weight="1"
-            android:gravity="center_vertical|end"
-            android:text="8"
-            android:textColor="@color/text_color"
-            android:textSize="60sp" />
-
-        <ImageView
-            android:id="@+id/imageView8ports"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginEnd="50dp"
-            app:srcCompat="@drawable/_8_port" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout10ports"
-        android:layout_width="500dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/dark_background_card_view"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout8ports"
         app:layout_constraintTop_toBottomOf="@+id/textViewInPremium">
 
         <TextView
             android:id="@+id/textView10ports"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="40dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:gravity="center_vertical|end"
-            android:text="10"
+            android:gravity="center"
+            android:text="RB2011-2HnD"
             android:textColor="@color/text_color"
-            android:textSize="60sp" />
+            android:textSize="24sp" />
 
         <ImageView
             android:id="@+id/imageView10ports"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="130dp"
             android:layout_gravity="center"
-            android:layout_marginEnd="50dp"
-            app:srcCompat="@drawable/_10_port" />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:srcCompat="@drawable/_10_port_wifi" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout12ports"
-        android:layout_width="500dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/dark_background_card_view"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8ports">
+        android:id="@+id/linearLayoutChateau"
+        android:layout_width="550dp"
+        android:layout_height="180dp"
 
-        <TextView
-            android:id="@+id/textView12ports"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="40dp"
-            android:layout_weight="1"
-            android:gravity="center_vertical|end"
-            android:text="12"
-            android:textColor="@color/text_color"
-            android:textSize="60sp" />
-
-        <ImageView
-            android:id="@+id/imageView12ports"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginEnd="50dp"
-            app:srcCompat="@drawable/_12_port" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout16ports"
-        android:layout_width="500dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:background="@drawable/dark_background_card_view"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout12ports"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10ports">
+        app:layout_constraintStart_toEndOf="@+id/linearLayout10ports"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInPremium">
 
         <TextView
-            android:id="@+id/textView16ports"
+            android:id="@+id/textViewChateau"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="40dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:gravity="center_vertical|end"
-            android:text="16"
+            android:gravity="center"
+            android:text="Chateau LTE/5G"
             android:textColor="@color/text_color"
-            android:textSize="60sp" />
+            android:textSize="24sp" />
 
         <ImageView
-            android:id="@+id/imageView16ports"
-            android:layout_width="250dp"
+            android:id="@+id/imageViewChateau"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginEnd="50dp"
-            app:srcCompat="@drawable/_16_port" />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:srcCompat="@drawable/chateau" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout24ports"
-        android:layout_width="500dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="20dp"
+        android:layout_width="550dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/dark_background_card_view"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout12ports">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10ports">
 
         <TextView
             android:id="@+id/textView24ports"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="40dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:gravity="center_vertical|end"
-            android:text="24"
+            android:gravity="center"
+            android:text="CRS125-2HnD"
             android:textColor="@color/text_color"
-            android:textSize="60sp" />
+            android:textSize="24sp" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
             android:layout_gravity="center"
-            android:layout_marginEnd="50dp"
-            app:srcCompat="@drawable/_24_port" />
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:srcCompat="@drawable/_24_port_wifi" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

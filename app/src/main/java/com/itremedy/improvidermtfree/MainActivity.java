@@ -1,12 +1,16 @@
 package com.itremedy.improvidermtfree;
 
 
+import static java.lang.Boolean.TRUE;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -38,6 +42,19 @@ public class MainActivity extends AppCompatActivity {
         connect = findViewById(R.id.connect);
         setup = findViewById(R.id.new_router_setup);
         help_m = findViewById(R.id.help_m);
+
+
+
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        boolean previouslyStarted = prefs.getBoolean(getString(R.string.pref_previously_started), false);
+        if(!previouslyStarted) {
+            SharedPreferences.Editor edit = prefs.edit();
+            edit.putBoolean(getString(R.string.pref_previously_started),TRUE);
+            edit.commit();
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        }
 
         help_m.setOnClickListener(v ->
                 Alerter.create(this, R.layout.alerter_custom_layout)
@@ -142,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                 ConnectionManager.setPort(22);
             }
 
-            if (hostname_input.isEmpty() || username_input.isEmpty() || !password_input.isEmpty())
+            if (hostname_input.isEmpty() || username_input.isEmpty())
             {
                 Alerter.create(this,R.layout.alerter_custom_layout)
                         .setTitle(R.string.empty_or_pswrd_not)

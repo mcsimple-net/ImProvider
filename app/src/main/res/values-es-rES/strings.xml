@@ -13,10 +13,17 @@
     <string name="set_connection_speed">ESTABLECER LÍMITES DE VELOCIDAD</string>
     <string name="in_premium_version">*EN VERSIÓN PREMIUM:</string>
     <string name="how_many_ethernet_ports">SELECCIONE LA CANTIDAD DE PUERTOS ETHERNET EN SU ROUTER</string>
-    <string name="attention">Por favor, asegúrese de haber conectado el enrutador con la configuración predeterminada.
-        La configuración será posible solo con WiFi. Cuando la aplicación se cierre automáticamente,
-        vuelva a conectarse a WiFi con la contraseña \"itremedy\", abra la aplicación nuevamente,
-        en el campo inferior ingrese la contraseña \"itremedy.pro\" y presione CONECTAR.</string>
+    <string name="attention">ImProvider le permite controlar los enrutadores MikroTik mediante el control
+        de los límites de velocidad de Internet de los usuarios del enrutador. Los usuarios no podrán conectarse entre sí.
+        Esta versión es adecuada para enrutadores de 5 puertos de la serie MikroTik hAP.
+        Para otros modelos/funciones, use la versión premium o móvil de la aplicación.
+        Cómo usar: 1. Si ya usa un enrutador Mikrotik, guarde su configuración con Winbox y reinícielo.
+        2. Encienda el enrutador. 3. Enchufe el cable de Internet en el primer puerto (ETH1).
+        4. Conecte su teléfono o tableta con ImProvider a la red WiFi \"MikroTik-*****\".
+        *Si su enrutador crea dos redes, no use \"MikroTik-****A\" durante la configuración debido a la seguridad WiFi.
+        Si tiene preguntas o desea informar sobre un problema, escriba a customercare@itremedy.pro.
+        Para eliminar la configuración de la aplicación en su enrutador, reiníciela.
+        No somos responsables de ningún daño causado por el uso de ImProvider. Pulsando CONTINUAR estás de acuerdo.</string>
     <string name="wait">ESPERE... Configuración en curso...</string>
     <string name="guest_wi_fi_setup">CONFIGURACIÓN WiFi INVITADO</string>
     <string name="wi_fi_configuration">CONFIGURACIÓN WIFI</string>
@@ -42,7 +49,7 @@
     <string name="empty_or_pswrd_not">Algunos campos están vacíos o la contraseña no está vacía.</string>
     <string name="chk_connection">Verifique su conexión, datos de entrada o configuración del enrutador. Ocurrió un error:</string>
     <string name="flds_empty">Algunos campos están vacíos</string>
-    <string name="for_unlimited">Para velocidad ilimitada ingrese 999 Para desactivar Internet ingrese 0</string>
+    <string name="for_unlimited">Seleccione el puerto, ingrese el límite de velocidad en megabits y presione OK. Para velocidad ilimitada ingrese 999 Para desactivar Internet ingrese 0</string>
     <string name="please_enter_limit">Ingrese el límite</string>
     <string name="please_select_port">Seleccione Puerto</string>
     <string name="help_main">Para la configuración del nuevo enrutador, presione CONFIGURAR UN ENRUTADOR.

@@ -32,16 +32,19 @@
     <string name="empty_or_pswrd_not">Alguns campos estão vazios ou a senha não está vazia.</string>
     <string name="chk_connection">Verifique sua conexão, dados de entrada ou configurações do roteador. Um erro ocorreu:</string>
     <string name="flds_empty">Alguns campos estão vazios</string>
-    <string name="for_unlimited">Para velocidade ilimitada digite 999 Para desligar a internet digite 0</string>
+    <string name="for_unlimited">Selecione a porta, insira o limite de velocidade em megabits e pressione OK. Para velocidade ilimitada digite 999 Para desligar a internet digite 0</string>
     <string name="please_enter_limit">Insira o limite</string>
     <string name="please_select_port">Selecione a porta</string>
     <string name="help_main">Para a configuração do novo roteador, pressione CONFIGURAR UM NOVO ROTEADOR.
         Para conectar roteador já configurado digite a senha \"itremedy.pro\" e pressione CONECTAR</string>
     <string name="setup_first">Por favor, configure seu roteador</string>
-    <string name="login">O ImProvider permite que você controle os roteadores MikroTik controlando os limites de velocidade dos usuários do roteador.
-        Os usuários não poderão se conectar. Como usar: 1. Se você estiver usando um roteador Mikrotik, salve sua configuração com o Winbox e reinicie-o.
-        2. Ligue o roteador. 3. Conecte o cabo de internet na primeira porta (ETH1).
-        4. Conecte seu telefone ou tablet com ImProvider à rede WiFi \"MikroTik-*****\". *Se o seu roteador criar duas redes,
-        não use \"MikroTik-****A\" desta vez devido à segurança WiFi. Não somos responsáveis por qualquer dano causado pelo ImProvider.
-        Para excluir as configurações do aplicativo em seu roteador, redefina-o. Pressionando CONTINUAR você concorda que leu tudo o que foi escrito acima.</string>
+    <string name="login">O ImProvider permite que você controle os roteadores MikroTik controlando os limites de velocidade da Internet dos usuários do roteador.
+        Os usuários não poderão se conectar. Esta versão é adequada para roteadores de 5 portas da série MikroTik hAP.
+        outros modelos/funções, use a versão premium ou móvel do aplicativo. Como usar:
+        1. Se você já usa um roteador Mikrotik, salve sua configuração com o Winbox e redefina-o. 2. Ligue o roteador.
+        3. Conecte o cabo de Internet na primeira porta (ETH1). 4. Conecte seu telefone ou tablet com ImProvider à rede WiFi \"MikroTik-*****\".
+        *Se o seu roteador criar duas redes, não use \"MikroTik-****A\" durante a configuração devido à segurança WiFi.
+        Se você tiver dúvidas ou quiser relatar um erro, escreva para customercare@itremedy.pro.
+        Para excluir as configurações do aplicativo em seu roteador, redefina-o. Não somos responsáveis por qualquer dano causado pelo uso do ImProvider.
+        Pressionando CONTINUAR você concorda com isso.</string>
 </resources>
