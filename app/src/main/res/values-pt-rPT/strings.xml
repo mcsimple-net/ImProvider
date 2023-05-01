@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">EusouProvedor</string>
+    <string name="app_name">ImProvider</string>
     <string name="connect">CONECTAR</string>
     <string name="password">Senha :</string>
     <string name="username">nome :</string>
-    <string name="port">Porta:</string>
-    <string name="host_or_ip">Endereço de IP :</string>
+    <string name="port">Porta :</string>
+    <string name="host_or_ip">Endereço :</string>
     <string name="enter_username">Insira nome de usuário</string>
     <string name="enter_port_number">Insira o número da porta</string>
     <string name="enter_ip_or_hostname">Insira o IP ou o nome do host</string>
     <string name="setup_new_router">CONFIGURAR UM NOVO ROTEADOR</string>
     <string name="set_connection_speed">DEFINIR LIMITES DE VELOCIDADE</string>
     <string name="in_premium_version">*NA VERSÃO PREMIUM:</string>
-    <string name="how_many_ethernet_ports">SELECIONE A QUANTIDADE DE PORTAS ETHERNET EM SEU ROTEADOR</string>
+    <string name="how_many_ethernet_ports">SELECIONE SEU ROTEADOR</string>
     <string name="attention">Por favor, certifique-se de ter conectado o roteador com as configurações padrão.
-        A configuração será possível apenas com WiFi. Quando o aplicativo fechar automaticamente, reconecte-se ao WiFi com a senha \"itremedy\",
-        abra o aplicativo novamente, no campo inferior digite a senha \"itremedy.pro\" e pressione CONNECTAR.</string>
-    <string name="wait">AGUARDE... Configuração em andamento...</string>
+        A configuração será possível apenas por WiFi. Quando o aplicativo fechar automaticamente,
+        reconecte-se ao WiFi com a senha \"itremedy\". \nPara definir os limites de velocidade,
+        abra o aplicativo novamente, digite a senha \"itremedy.pro\" e pressione CONNECTAR.</string>
+    <string name="wait">AGUARDE... Configuração em andamento... \nNão afaste o telefone do roteador</string>
     <string name="guest_wi_fi_setup">CONFIGURAÇÃO DE WiFi CONVIDADO</string>
     <string name="wi_fi_configuration">CONFIGURAÇÃO DE WiFi</string>
     <string name="change_admin_password">ALTERAR A SENHA DO ADMIN</string>
@@ -27,24 +28,31 @@
     <string name="please_wait">POR FAVOR, AGUARDE</string>
     <string name="header_attention">ATENÇÃO!</string>
     <string name="i_agree">CONTINUAR</string>
-    <string name="improvider">EusouProvedor</string>
+    <string name="improvider">ImProvider</string>
     <string name="need_help">Preciso de ajuda?</string>
-    <string name="empty_or_pswrd_not">Alguns campos estão vazios ou a senha não está vazia.</string>
+    <string name="hyperlink">Página inicial</string>
     <string name="chk_connection">Verifique sua conexão, dados de entrada ou configurações do roteador. Um erro ocorreu:</string>
     <string name="flds_empty">Alguns campos estão vazios</string>
-    <string name="for_unlimited">Selecione a porta, insira o limite de velocidade em megabits e pressione OK. Para velocidade ilimitada digite 999 Para desligar a internet digite 0</string>
-    <string name="please_enter_limit">Insira o limite</string>
-    <string name="please_select_port">Selecione a porta</string>
+    <string name="for_unlimited">Selecione a porta, insira o limite de velocidade em megabits e pressione OK.
+        Para velocidade ilimitada digite 999. Para desligar a internet digite 0.</string>
+    <string name="please_enter_limit">\n\nInsira o limite</string>
+    <string name="please_select_port">\n\nSelecione a porta</string>
     <string name="help_main">Para a configuração do novo roteador, pressione CONFIGURAR UM NOVO ROTEADOR.
         Para conectar roteador já configurado digite a senha \"itremedy.pro\" e pressione CONECTAR</string>
     <string name="setup_first">Por favor, configure seu roteador</string>
-    <string name="login">O ImProvider permite que você controle os roteadores MikroTik controlando os limites de velocidade da Internet dos usuários do roteador.
-        Os usuários não poderão se conectar. Esta versão é adequada para roteadores de 5 portas da série MikroTik hAP.
-        outros modelos/funções, use a versão premium ou móvel do aplicativo. Como usar:
-        1. Se você já usa um roteador Mikrotik, salve sua configuração com o Winbox e redefina-o. 2. Ligue o roteador.
-        3. Conecte o cabo de Internet na primeira porta (ETH1). 4. Conecte seu telefone ou tablet com ImProvider à rede WiFi \"MikroTik-*****\".
-        *Se o seu roteador criar duas redes, não use \"MikroTik-****A\" durante a configuração devido à segurança WiFi.
-        Se você tiver dúvidas ou quiser relatar um erro, escreva para customercare@itremedy.pro.
-        Para excluir as configurações do aplicativo em seu roteador, redefina-o. Não somos responsáveis por qualquer dano causado pelo uso do ImProvider.
-        Pressionando CONTINUAR você concorda com isso.</string>
+    <string name="login">O ImProvider permite que você controle os roteadores MikroTik através do controle dos limites de velocidade da Internet dos usuários do roteador.
+         Os usuários não poderão se conectar. Esta versão é adequada para roteadores de 5 portas da série MikroTik hAP.
+         Para outros modelos/funções, use a versão premium do aplicativo.\n
+         Como usar:\n
+         1. Se você já usa um roteador Mikrotik, salve sua configuração com o Winbox e redefina-o.\n
+         2. Ligue o roteador.\n
+         3. Conecte o cabo de internet do roteador do provedor na primeira porta (ETH1).\n
+         4. Conecte seu telefone ou tablet com ImProvider à rede WiFi \"MikroTik-*****\".\n
+         *Se o seu roteador criar duas redes, não use \"MikroTik-****A\" durante a configuração devido à segurança WiFi.\n
+         Para excluir as configurações do aplicativo em seu roteador, redefina-o.\n
+         Você pode encontrar mais informações sobre o ImProvider em <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider/</u></a>
+         Se você tiver dúvidas ou quiser relatar um problema, escreva para <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue"
+            target="_top">customercare@itremedy.pro</a> \n
+        Não somos responsáveis por qualquer dano causado pelo uso do ImProvider.
+         Pressionando CONTINUAR você concorda com isso.</string>
 </resources>

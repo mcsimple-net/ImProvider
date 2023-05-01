@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">JesuisFournisseur</string>
+    <string name="app_name">ImProvider</string>
     <string name="connect">CONNECTER</string>
 
     <string name="password">Mot de passe :</string>
-    <string name="username">nom :</string>
+    <string name="username">Nom :</string>
     <string name="port">Port :</string>
-    <string name="host_or_ip">IP ou nom d\'hôte :</string>
+    <string name="host_or_ip">Adresse :</string>
     <string name="enter_username">Saisissez votre nom d\'utilisateur</string>
 
     <string name="enter_port_number">Entrez le numéro de port</string>
@@ -17,13 +17,13 @@
 
     <string name="in_premium_version">*EN VERSION PREMIUM :</string>
 
-    <string name="how_many_ethernet_ports">SÉLECTIONNEZ LA QUANTITÉ DE PORTS ETHERNET DANS VOTRE ROUTEUR</string>
+    <string name="how_many_ethernet_ports">SÉLECTIONNEZ VOTRE ROUTEUR</string>
 
     <string name="attention">Veuillez vous assurer que vous avez connecté le routeur avec les paramètres par défaut.
-        La configuration ne sera possible qu\'avec le WiFi. Lorsque l\'application se ferme automatiquement,
-        reconnectez-vous au WiFi avec le mot de passe \"itremedy\", ouvrez à nouveau l\'application, dans le champ du bas,
-        entrez le mot de passe \"itremedy.pro\" et appuyez sur CONNECTER.</string>
-    <string name="wait">ATTENDRE… Configuration en cours…</string>
+        La configuration ne sera possible qu\'en Wi-Fi. Lorsque l\'application se ferme automatiquement,
+        reconnectez-vous au WiFi avec le mot de passe \"itremedy\".
+        Pour définir les limites de vitesse, ouvrez à nouveau l\'application, entrez le mot de passe \"itremedy.pro\" et appuyez sur CONNECTER.</string>
+    <string name="wait">ATTENDRE… Configuration en cours… \n Ne retirez pas votre téléphone du routeur</string>
     <string name="guest_wi_fi_setup">CONFIGURATION WiFi INVITÉ</string>
     <string name="wi_fi_configuration">CONFIGURATION WiFi</string>
     <string name="change_admin_password">MODIFIER LE MOT DE PASSE DE L\'ADMINISTRATEUR</string>
@@ -39,28 +39,31 @@
     <string name="header_attention">ATTENTION!</string>
     <string name="i_agree">CONTINUER</string>
 
-    <string name="improvider">JesuisFournisseur</string>
+    <string name="improvider">ImProvider</string>
 
     <string name="need_help">Besoin d\'aide?</string>
-    <string name="empty_or_pswrd_not">Certains champs sont vides ou le mot de passe n\'est pas vide.</string>
+    <string name="hyperlink">Page de démarrage</string>
     <string name="chk_connection">Vérifiez votre connexion, les données d\'entrée ou les paramètres du routeur. Une erreur s\'est produite :</string>
     <string name="flds_empty">Certains champs sont vides</string>
-    <string name="for_unlimited">Sélectionnez le port, entrez la limite de vitesse en mégabits et appuyez sur OK. Pour une vitesse illimitée, entrez 999 Pour désactiver Internet, entrez 0</string>
-    <string name="please_enter_limit">Veuillez entrer la limite</string>
-    <string name="please_select_port">Veuillez sélectionner le port</string>
-    <string name="help_main">Pour la configuration du nouveau routeur, appuyez sur SETUP NEW ROUTER. Pour connecter un routeur déjà configuré,
+    <string name="for_unlimited">Sélectionnez le port, entrez la limite de vitesse en mégabits et appuyez sur OK.\n Pour une vitesse illimitée, entrez 999. Pour désactiver Internet, entrez 0.</string>
+    <string name="please_enter_limit">\n\nVeuillez entrer la limite</string>
+    <string name="please_select_port">\n\nVeuillez sélectionner le port</string>
+    <string name="help_main">Pour la configuration du nouveau routeur, appuyez sur CONFIGURER UN NOUVEAU ROUTEUR.\n Pour connecter un routeur déjà configuré,
         entrez le mot de passe \"itremedy.pro\" et appuyez sur CONNECTURE</string>
     <string name="setup_first">Veuillez configurer votre routeur</string>
-    <string name="login">ImProvider vous permet de contrôler les routeurs MikroTik en contrôlant les limites de
-        vitesse Internet des utilisateurs du routeur. Les utilisateurs ne pourront pas se connecter. Cette version
-        convient aux routeurs à 5 ports de la série MikroTik hAP. Pour les autres modèles/fonctions,
-        utilisez la version premium ou mobile de l\'application. Mode d\'emploi : 1. Si vous utilisez déjà un routeur Mikrotik,
-        enregistrez sa configuration avec Winbox et réinitialisez-le. 2. Allumez le routeur.
-        3. Branchez le câble Internet dans le premier port (ETH1).
-        4. Connectez votre téléphone ou votre tablette avec ImProvider au réseau WiFi \"MikroTik-*****\".
-        * Si votre routeur crée deux réseaux, n\'utilisez pas \"MikroTik-****A\" lors de la configuration en raison de la sécurité WiFi.
-        Si vous avez des questions ou souhaitez signaler une erreur, veuillez écrire à customercare@itremedy.pro.
-        Pour supprimer les paramètres de l\'application sur votre routeur, réinitialisez-le.
+    <string name="login">ImProvider vous permet de contrôler les routeurs MikroTik en contrôlant les limites de vitesse Internet des utilisateurs du routeur.\n
+         Les utilisateurs ne pourront pas se connecter. Cette version convient aux routeurs à 5 ports de la série MikroTik hAP.
+         Pour les autres modèles/fonctions, utilisez la version premium de l\'application.\n
+         Comment utiliser:\n
+         1. Si vous utilisez déjà un routeur Mikrotik, enregistrez sa configuration avec Winbox et réinitialisez-le.\n
+         2. Allumez le routeur. \n
+         3. Branchez le câble Internet du routeur du fournisseur sur le premier port (ETH1).\n
+         4. Connectez votre téléphone ou votre tablette avec ImProvider au réseau WiFi \"MikroTik-*****\".\n
+         *Si votre routeur crée deux réseaux, n\'utilisez pas \"MikroTik-****A\" lors de la configuration en raison de la sécurité WiFi.\n
+         Pour supprimer les paramètres de l\'application sur votre routeur, réinitialisez-le.\n
+         Vous pouvez trouver plus d\'informations sur ImProvider sur <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider/</u></a>
+         Si vous avez des questions ou souhaitez signaler un problème, veuillez écrire à <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue"
+            target="_top">customercare@itremedy.pro</a> \n
         Nous ne sommes pas responsables des dommages causés par l\'utilisation d\'ImProvider.
-        En appuyant sur CONTINUER, vous êtes d\'accord avec cela.</string>
+         En appuyant sur CONTINUER, vous êtes d\'accord avec cela.</string>
 </resources>

@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     EditText username;
     EditText password;
     Button connect;
-    Button setup;
+    Button setup, start_page;
     TextView help_m;
     SharedPreferences prefs;
     @Override
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         connect = findViewById(R.id.connect);
         setup = findViewById(R.id.new_router_setup);
         help_m = findViewById(R.id.help_m);
-
+        start_page = findViewById(R.id.start_page);
 
 
        prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -62,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
                 .setTitle(R.string.help_main)
                 .show());
 
+        start_page.setOnClickListener(v -> {
+
+            Intent instruction = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(instruction);
+
+        });
 
         connect.setOnClickListener(v -> {
 

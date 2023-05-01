@@ -41,6 +41,8 @@
                 android:id="@+id/agree_login"
                 android:layout_width="400dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
                 android:backgroundTint="@color/for_improvider"
                 android:text="@string/i_agree"
                 android:textSize="34sp" />

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">ЯПровайдер</string>
     <string name="connect">ПОДКЛЮЧЕНИЕ</string>
     <string name="password">Пароль:</string>
@@ -13,13 +12,13 @@
     <string name="setup_new_router">НАСТРОИТЬ НОВЫЙ РОУТЕР</string>
     <string name="set_connection_speed">УСТАНОВИТЬ ЛИМИТЫ СКОРОСТИ</string>
     <string name="in_premium_version">*В ПРЕМИУМ ВЕРСИИ:</string>
-    <string name="how_many_ethernet_ports">ВЫБЕРИТЕ КОЛИЧЕСТВО ПОРТОВ ВАШЕГО РОУТЕРА</string>
+    <string name="how_many_ethernet_ports">ВЫБЕРИТЕ ВАШ РОУТЕР</string>
     <string name="attention">
     <br>Пожалуйста убедитесь, что вы подключили роутер с настройками по умолчанию.\n</br>
-    <br>Настройка будет возможна только через WiFi.\n</br>
-    Когда приложение автоматически закроется, переподключитесь к WiFi с паролем \"itremedy\",
-    откройте приложение снова, введите в нижнее поле пароль \"itremedy.pro\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
-    <string name="wait">ПОДОЖДИТЕ... ИДЁТ НАСТРОЙКА...</string>
+    <br>Настройка будет возможна только через WiFi.
+    По окончании настройки приложение автоматически закроется. После этого переподключитесь к WiFi с паролем \"itremedy\".\n</br>
+    Для установки лимитов скорости откройте приложение снова, введите пароль \"itremedy.pro\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
+    <string name="wait">ПОДОЖДИТЕ... ИДЁТ НАСТРОЙКА... Не уносите телефон от роутера</string>
     <string name="guest_wi_fi_setup">НАСТРОЙКА ГОСТЕВОЙ WiFi СЕТИ</string>
     <string name="wi_fi_configuration">НАСТРОЙКА WiFi СЕТИ</string>
     <string name="change_admin_password">СМЕНА ПАРОЛЯ АДМИНИСТРАТОРА</string>
@@ -34,7 +33,7 @@
     Также, после первоначальной настройки,
     сетевой доступ между пользователями
     будет отключён. Эта версия подходит для 5-портовых роутеров серии MikroTik hAP.
-        Для других моделей/функций используйте премиум или мобильную версию приложения.\n</br>
+        Для других моделей/функций используйте премиум версию приложения.\n</br>
         <br>\n</br>
     <br>Инструкция:\n</br>
  <br>\n</br>
@@ -54,23 +53,24 @@
         <br>Чтобы удалить установленную программой
     конфигурацию, выполните сброс настроек
     до начальных.\n</br>
-        <br>Более подробную информацию о подключении вы можете найти по адресу <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider/</u></a>.
-            Если у вас остались вопросы или вы хотите сообщить об ошибке, пишите на почту <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue" target="_top">customercare@itremedy.pro</a></br>
+        <br>Более подробную информацию о приложении вы можете найти по адресу <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider/</u></a>.
+            Если у вас остались вопросы или вы хотите сообщить об ошибке,
+            пишите на почту <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue" target="_top">customercare@itremedy.pro</a>\n</br>
     <br>Мы не несём ответственность за ущерб
-        причинённый при использовании ЯПровайдер.</br>
-    <br>Нажимая ПРОДОЛЖИТЬ вы соглашаетесь с этим.\n</br></string>
+        причинённый при использовании ЯПровайдер.
+    Нажимая ПРОДОЛЖИТЬ вы соглашаетесь с этим.\n</br></string>
     <string name="header_attention">ВНИМАНИЕ!</string>
     <string name="i_agree">ПРОДОЛЖИТЬ</string>
     <string name="improvider">ЯПровайдер</string>
     <string name="help_main"><br>Для настройки нового роутера нажмите НАСТРОИТЬ НОВЫЙ РОУТЕР.\n</br>
     Для подключения к уже настроенному, наберите пароль \"itremedy.pro\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
     <string name="need_help">Нужна Помощь?</string>
-    <string name="empty_or_pswrd_not">Некоторые поля не заполнены или заполнен пароль.</string>
     <string name="chk_connection">Проверьте подключение, введённые данные или настройки роутера. Произошла ошибка:</string>
     <string name="flds_empty">Некоторые поля не заполнены</string>
-    <string name="for_unlimited"><br>Выберите порт, введите ограничение скорости в мегабитах и нажмите OK.\n</br><br>Для снятия ограничения наберите 999 \n</br>
-        <br>Для отключения Интернет наберите 0</br></string>
-    <string name="please_enter_limit">Пожалуйста введите максимальную скорость</string>
-    <string name="please_select_port">Пожалуйста выберите порт</string>
+    <string name="for_unlimited"><br>Выберите порт, введите ограничение скорости в мегабитах и нажмите OK.\n</br><br>Для снятия ограничения наберите 999. \n</br>
+        <br>Для отключения Интернет наберите 0.</br></string>
+    <string name="please_enter_limit">\n\nПожалуйста введите максимальную скорость</string>
+    <string name="please_select_port">\n\nПожалуйста выберите порт</string>
     <string name="setup_first">Требуется настройка роутера</string>
+    <string name="hyperlink">Стартовая Страница</string>
 </resources>
