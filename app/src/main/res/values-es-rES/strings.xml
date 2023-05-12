@@ -55,4 +55,6 @@
     <string name="help_main">Para la configuración del nuevo enrutador, presione CONFIGURAR UN ENRUTADOR.
         Para conectar un enrutador ya configurado ingrese la contraseña \"itremedy.pro\" y presione CONECTAR</string>
     <string name="setup_first">Сonfigure su enrutador</string>
+    <string name="save">ahorrar</string>
+    <string name="enter_password">Introducir la contraseña</string>
 </resources>

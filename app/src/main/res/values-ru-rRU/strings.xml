@@ -73,4 +73,6 @@
     <string name="please_select_port">\n\nПожалуйста выберите порт</string>
     <string name="setup_first">Требуется настройка роутера</string>
     <string name="hyperlink">Стартовая Страница</string>
+    <string name="save">Сохранить</string>
+    <string name="enter_password">Введите пароль</string>
 </resources>

@@ -55,4 +55,6 @@
             target="_top">customercare@itremedy.pro</a> \n
         Não somos responsáveis por qualquer dano causado pelo uso do ImProvider.
          Pressionando CONTINUAR você concorda com isso.</string>
+    <string name="save">salvar</string>
+    <string name="enter_password">Digite a senha</string>
 </resources>

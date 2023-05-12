@@ -39,7 +39,6 @@
             android:ems="10"
             android:hint="@string/enter_ip_or_hostname"
             android:inputType="text"
-            android:text="@string/_192_168_88_1"
             android:textColor="#C8C8C8"
             android:textColorHighlight="#1D2D50"
             android:textColorHint="#464646"
@@ -81,7 +80,6 @@
             android:ems="10"
             android:hint="@string/enter_port_number"
             android:inputType="number"
-            android:text="@string/_22"
             android:textColor="#C8C8C8"
             android:textColorHighlight="#1D2D50"
             android:textColorHint="#464646"
@@ -123,7 +121,6 @@
             android:ems="10"
             android:hint="@string/enter_username"
             android:inputType="text"
-            android:text="@string/admin"
             android:textColor="#C8C8C8"
             android:textColorHighlight="#1D2D50"
             android:textColorHint="#464646"
@@ -163,8 +160,8 @@
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="@string/default_password"
             android:inputType="textPassword"
+            android:hint="@string/enter_password"
             android:textColor="#C8C8C8"
             android:textColorHighlight="#1D2D50"
             android:textColorHint="#464646"
@@ -178,7 +175,7 @@
         android:id="@+id/connect"
         android:layout_width="400dp"
         android:layout_height="100dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:backgroundTint="#E2703A"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/connect"
@@ -230,5 +227,17 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="550dp"
+        android:onClick="itemClicked"
+        android:text="@string/save"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

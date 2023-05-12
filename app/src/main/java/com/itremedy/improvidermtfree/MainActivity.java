@@ -4,6 +4,8 @@ package com.itremedy.improvidermtfree;
 import static java.lang.Boolean.TRUE;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.security.crypto.EncryptedSharedPreferences;
+import androidx.security.crypto.MasterKey;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -13,12 +15,15 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
 
+import java.io.IOException;
+import java.security.GeneralSecurityException;
 import java.util.Objects;
 
 
@@ -32,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
     Button setup, start_page;
     TextView help_m;
     SharedPreferences prefs;
+    CheckBox checkBox;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
         setup = findViewById(R.id.new_router_setup);
         help_m = findViewById(R.id.help_m);
         start_page = findViewById(R.id.start_page);
+        checkBox = findViewById(R.id.checkBox);
+
+
+
 
 
        prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -53,6 +65,21 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         }
+
+
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String hostname_shared = sharedPreferences.getString("host", "192.168.88.1"); // Second parameter is the default value.
+        String port_shared = sharedPreferences.getString("port", "22");
+        String username_shared = sharedPreferences.getString("login", "admin");
+        String password_shared = sharedPreferences.getString("password", "");
+
+        hostname.setText(hostname_shared);
+        port.setText(port_shared);
+        username.setText(username_shared);
+        password.setText(password_shared);
+
+
 
         help_m.setOnClickListener(v ->
                 Alerter.create(this, R.layout.alerter_custom_layout)
@@ -222,6 +249,41 @@ public class MainActivity extends AppCompatActivity {
         if (getIntent().getBooleanExtra("EXIT", false)) {
             finishAffinity();
             return;
+        }
+    }
+    public void itemClicked(View v) {
+        //code to check if this checkbox is checked!
+        CheckBox checkBox = (CheckBox)v;
+        if(checkBox.isChecked()) {
+
+            MasterKey masterKey = null;
+            try {
+                masterKey = new MasterKey.Builder(this)
+                        .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+                        .build();
+            } catch (GeneralSecurityException | IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            SharedPreferences sharedPreferences;
+            try {
+                sharedPreferences = EncryptedSharedPreferences.create(
+                        this,
+                        "secret_shared_prefs",
+                        masterKey,
+                        EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                        EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+                );
+            } catch (GeneralSecurityException | IOException e) {
+                throw new RuntimeException(e);
+            }
+           sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("host", hostname.getText().toString());
+            editor.putString("port", port.getText().toString());
+            editor.putString("login", username.getText().toString());
+            editor.putString("password", password.getText().toString());
+            editor.apply();
         }
     }
 }

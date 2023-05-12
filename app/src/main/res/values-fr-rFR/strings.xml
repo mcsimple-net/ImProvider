@@ -66,4 +66,6 @@
             target="_top">customercare@itremedy.pro</a> \n
         Nous ne sommes pas responsables des dommages causés par l\'utilisation d\'ImProvider.
          En appuyant sur CONTINUER, vous êtes d\'accord avec cela.</string>
+    <string name="save">sauvegarder</string>
+    <string name="enter_password">Entrer le mot de passe</string>
 </resources>
