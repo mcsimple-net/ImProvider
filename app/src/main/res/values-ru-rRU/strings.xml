@@ -19,8 +19,8 @@
     По окончании настройки приложение автоматически закроется. После этого переподключитесь к WiFi с паролем \"itremedy\".\n</br>
     Для установки лимитов скорости откройте приложение снова, введите пароль \"itremedy.pro\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
     <string name="wait">ПОДОЖДИТЕ... ИДЁТ НАСТРОЙКА... Не уносите телефон от роутера</string>
-    <string name="guest_wi_fi_setup">НАСТРОЙКА ГОСТЕВОЙ WiFi СЕТИ</string>
-    <string name="wi_fi_configuration">НАСТРОЙКА WiFi СЕТИ</string>
+    <string name="guest_wi_fi_setup">НАСТРОЙКА ГОСТЕВОЙ Wi-Fi СЕТИ</string>
+    <string name="wi_fi_configuration">НАСТРОЙКА Wi-Fi СЕТИ</string>
     <string name="change_admin_password">СМЕНА ПАРОЛЯ АДМИНИСТРАТОРА</string>
     <string name="quit">ВЫХОД</string>
     <string name="set">OK</string>
@@ -75,8 +75,10 @@
     <string name="hyperlink">Стартовая Страница</string>
     <string name="save">Сохранить</string>
     <string name="enter_password">Введите пароль</string>
-    <string name="guest_help">Введите новое имя и пароль гостевой сети Wi-Fi или оставьте значения по умолчанию, введите максимальный лимит скорости в мегабитах и нажмите OK. Для неограниченной скорости введите 999. Чтобы отключить Интернет, введите 0.</string>
+    <string name="guest_help">Введите новое имя и пароль гостевой сети Wi-Fi или оставьте значения по умолчанию, введите максимальный лимит скорости в мегабитах и нажмите OK. Для неограниченной скорости введите 999. Чтобы отключить Интернет, введите 0. Вы не сможете управлять Mikrotik из гостевой Wi-Fi.</string>
     <string name="guest_ready">Ваша гостевая Wi-Fi сеть готова. Пожалуйста, проверьте её.</string>
     <string name="network_name">Имя</string>
+    <string name="remove_guest_wi_fi">Удалить гостевой Wi-Fi</string>
+    <string name="guest_attention">После автоматического закрытия приложения снова подключитесь к сети Wi-Fi (если это не было сделано автоматически), подключитесь к роутеру и снова нажмите НАСТРОЙКА ГОСТЕВОЙ WI-FI СЕТИ, чтобы завершить настройку.</string>
 
 </resources>

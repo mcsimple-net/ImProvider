@@ -24,8 +24,8 @@
         reconnectez-vous au WiFi avec le mot de passe \"itremedy\".
         Pour définir les limites de vitesse, ouvrez à nouveau l\'application, entrez le mot de passe \"itremedy.pro\" et appuyez sur CONNECTER.</string>
     <string name="wait">ATTENDRE… Configuration en cours… \n Ne retirez pas votre téléphone du routeur</string>
-    <string name="guest_wi_fi_setup">CONFIGURATION WiFi INVITÉ</string>
-    <string name="wi_fi_configuration">CONFIGURATION WiFi</string>
+    <string name="guest_wi_fi_setup">CONFIGURATION Wi-Fi INVITÉ</string>
+    <string name="wi_fi_configuration">CONFIGURATION Wi-Fi</string>
     <string name="change_admin_password">MODIFIER LE MOT DE PASSE DE L\'ADMINISTRATEUR</string>
 
     <string name="quit">ARRÊTER</string>
@@ -68,8 +68,10 @@
          En appuyant sur CONTINUER, vous êtes d\'accord avec cela.</string>
     <string name="save">sauvegarder</string>
     <string name="enter_password">Entrer le mot de passe</string>
-    <string name="guest_help">Entrez le nouveau nom et mot de passe du réseau Wi-Fi invité ou laissez les valeurs par défaut, entrez la limite de vitesse maximale en mégabits et appuyez sur OK. \nPour une vitesse illimitée, entrez 999. Pour désactiver Internet, entrez 0.</string>
+    <string name="guest_help">Entrez le nouveau nom et mot de passe du réseau Wi-Fi invité ou laissez les valeurs par défaut, entrez la limite de vitesse maximale en mégabits et appuyez sur OK. \nPour une vitesse illimitée, entrez 999. Pour désactiver Internet, entrez 0. Vous ne pouvez pas gérer MikroTik via le Wi-Fi invité.</string>
     <string name="guest_ready">Votre réseau Wi-Fi invité est prêt. S\'il te plaît vérifie le.</string>
     <string name="network_name">Nom</string>
+    <string name="remove_guest_wi_fi">Supprimer le Wi-Fi invité</string>
+    <string name="guest_attention">Après avoir automatisé la fermeture de l\'application, reconnectez-vous au réseau Wi-Fi (si cela n\'a pas été fait automatiquement), connectez-vous au routeur et appuyez à nouveau sur CONFIGURATION Wi-Fi INVITÉ pour terminer la configuration.</string>
 
 </resources>

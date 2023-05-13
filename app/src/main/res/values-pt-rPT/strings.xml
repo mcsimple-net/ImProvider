@@ -18,8 +18,8 @@
         reconecte-se ao WiFi com a senha \"itremedy\". \nPara definir os limites de velocidade,
         abra o aplicativo novamente, digite a senha \"itremedy.pro\" e pressione CONNECTAR.</string>
     <string name="wait">AGUARDE... Configuração em andamento... \nNão afaste o telefone do roteador</string>
-    <string name="guest_wi_fi_setup">CONFIGURAÇÃO DE WiFi CONVIDADO</string>
-    <string name="wi_fi_configuration">CONFIGURAÇÃO DE WiFi</string>
+    <string name="guest_wi_fi_setup">CONFIGURAÇÃO DE Wi-Fi CONVIDADO</string>
+    <string name="wi_fi_configuration">CONFIGURAÇÃO DE Wi-Fi</string>
     <string name="change_admin_password">ALTERAR A SENHA DO ADMIN</string>
     <string name="quit">DESISTIR</string>
     <string name="set">OK</string>
@@ -57,8 +57,10 @@
          Pressionando CONTINUAR você concorda com isso.</string>
     <string name="save">salvar</string>
     <string name="enter_password">Digite a senha</string>
-    <string name="guest_help">Insira o novo nome e senha da rede Wi-Fi para convidados ou deixe o padrão, insira o limite máximo de velocidade em megabits e pressione OK. \nPara velocidade ilimitada, digite 999. Para desligar a Internet, digite 0.</string>
+    <string name="guest_help">Insira o novo nome e senha da rede Wi-Fi para convidados ou deixe o padrão, insira o limite máximo de velocidade em megabits e pressione OK. \nPara velocidade ilimitada, digite 999. Para desligar a Internet, digite 0. Você não pode gerenciar o MikroTik pelo Wi-Fi convidado.</string>
     <string name="guest_ready">Sua rede Wi-Fi convidada está pronta. Por favor verifique isto.</string>
     <string name="network_name">Nome</string>
+    <string name="remove_guest_wi_fi">Remover Wi-Fi convidado</string>
+    <string name="guest_attention">Depois de fechar automaticamente o aplicativo, reconecte-se à rede Wi-Fi (caso não tenha sido feito automaticamente), conecte-se ao roteador e pressione CONFIGURAÇÃO DE Wi-Fi CONVIDADO novamente para finalizar a configuração.</string>
 
 </resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="remove_guest_wi_fi">Remove Guest Wi-Fi</string>
+    <string name="guest_attention">After automate closing the application, reconnect to Wifi network (if it wasnot done automaticly), connect to the router and press GUEST Wi-Fi SETUP again to finish configuration.</string>
+</resources>
