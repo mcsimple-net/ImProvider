@@ -75,4 +75,8 @@
     <string name="hyperlink">Стартовая Страница</string>
     <string name="save">Сохранить</string>
     <string name="enter_password">Введите пароль</string>
+    <string name="guest_help">Введите новое имя и пароль гостевой сети Wi-Fi или оставьте значения по умолчанию, введите максимальный лимит скорости в мегабитах и нажмите OK. Для неограниченной скорости введите 999. Чтобы отключить Интернет, введите 0.</string>
+    <string name="guest_ready">Ваша гостевая Wi-Fi сеть готова. Пожалуйста, проверьте её.</string>
+    <string name="network_name">Имя</string>
+
 </resources>

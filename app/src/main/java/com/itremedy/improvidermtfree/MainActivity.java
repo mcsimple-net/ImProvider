@@ -1,8 +1,6 @@
 package com.itremedy.improvidermtfree;
 
 
-import static java.lang.Boolean.TRUE;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKey;
@@ -50,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         connect = findViewById(R.id.connect);
         setup = findViewById(R.id.new_router_setup);
-        help_m = findViewById(R.id.help_m);
+        help_m = findViewById(R.id.help_guest);
         start_page = findViewById(R.id.start_page);
         checkBox = findViewById(R.id.checkBox);
 

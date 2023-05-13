@@ -4,6 +4,7 @@
     <string name="connect">CONNECT</string>
     <string name="password">Password :</string>
     <string name="username">Username :</string>
+    <string name="network_name">Name</string>
     <string name="port">Port :</string>
     <string name="host_or_ip">Host or IP :</string>
     <string name="enter_username">Enter username</string>
@@ -54,4 +55,9 @@
     <string name="flds_empty">Some fields are empty</string>
     <string name="pref_previously_started" translatable="false">false</string>
     <string name="save">Save</string>
+    <string name="guest_help">Enter new Guest Wi-Fi network name and password or leave default,
+        enter the maximum speed limit in megabits and press OK. \nFor unlimited speed enter 999.
+        To turn the Internet off enter 0.</string>
+    <string name="guest_ready">Your guest Wi-Fi network is ready. Please check it.</string>
+
 </resources>

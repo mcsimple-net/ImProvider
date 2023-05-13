@@ -44,6 +44,7 @@
 
     <string name="i_agree">CONTINUAR</string>
     <string name="improvider">ImProvider</string>
+    <string name="network_name">Nombre</string>
 
     <string name="need_help">¿Necesitas ayuda?</string>
     <string name="hyperlink">Página de inicio</string>
@@ -57,4 +58,7 @@
     <string name="setup_first">Сonfigure su enrutador</string>
     <string name="save">ahorrar</string>
     <string name="enter_password">Introducir la contraseña</string>
+    <string name="guest_help">Ingrese el nuevo nombre y contraseña de la red Wi-Fi para invitados o deje el valor predeterminado, ingrese el límite de velocidad máxima en megabits y presione OK. \nPara velocidad ilimitada, ingrese 999. Para desactivar Internet, ingrese 0.</string>
+    <string name="guest_ready">Su red Wi-Fi para invitados está lista. Compruébelo por favor.</string>
+
 </resources>

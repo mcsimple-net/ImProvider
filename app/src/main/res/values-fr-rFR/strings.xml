@@ -68,4 +68,8 @@
          En appuyant sur CONTINUER, vous êtes d\'accord avec cela.</string>
     <string name="save">sauvegarder</string>
     <string name="enter_password">Entrer le mot de passe</string>
+    <string name="guest_help">Entrez le nouveau nom et mot de passe du réseau Wi-Fi invité ou laissez les valeurs par défaut, entrez la limite de vitesse maximale en mégabits et appuyez sur OK. \nPour une vitesse illimitée, entrez 999. Pour désactiver Internet, entrez 0.</string>
+    <string name="guest_ready">Votre réseau Wi-Fi invité est prêt. S\'il te plaît vérifie le.</string>
+    <string name="network_name">Nom</string>
+
 </resources>

@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import com.google.android.material.snackbar.Snackbar;
+
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
 
@@ -27,27 +27,22 @@ public class SpeedActivity extends AppCompatActivity  {
     TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5, help_s;
 
 
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speed);
-        speed = findViewById(R.id.EnterSpeed);
+        speed = findViewById(R.id.GuestSpeed);
         set = findViewById(R.id.buttonSet);
         quit = findViewById(R.id.buttonQuit);
         radio2 = findViewById(R.id.radio2);
         radio3 = findViewById(R.id.radio3);
         radio4 = findViewById(R.id.radio4);
         radio5 = findViewById(R.id.radio5);
-        textViewSpeed2 = findViewById(R.id.textViewSpeed2);
-        textViewSpeed3 = findViewById(R.id.textViewSpeed3);
+        textViewSpeed2 = findViewById(R.id.textViewGuestName);
+        textViewSpeed3 = findViewById(R.id.textViewGuestPassword);
         textViewSpeed4 = findViewById(R.id.textViewSpeed4);
         textViewSpeed5 = findViewById(R.id.textViewSpeed5);
-        help_s = findViewById(R.id.help_m);
+        help_s = findViewById(R.id.help_guest);
 
         help_s.setOnClickListener(v -> {
 
