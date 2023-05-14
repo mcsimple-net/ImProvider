@@ -62,5 +62,8 @@
     <string name="guest_ready">Su red Wi-Fi para invitados está lista. Compruébelo por favor.</string>
     <string name="remove_guest_wi_fi">Eliminar Wi-Fi para invitados</string>
     <string name="guest_attention">Después de cerrar automáticamente la aplicación, vuelva a conectarse a la red Wi-Fi (si no se hizo automáticamente), conéctese al enrutador y presione CONFIGURACIÓN Wi-Fi INVITADO nuevamente para finalizar la configuración.</string>
+    <string name="wifi_help">Después de hacer clic en Aceptar, el programa enviará la configuración y se cerrará automáticamente. Si después del primer intento el nombre de la red no ha cambiado, ejecute el proceso por segunda vez y el trabajo estará hecho.</string>
+    <string name="minimum_8_characters">minimum 8 characters</string>
+
 
 </resources>

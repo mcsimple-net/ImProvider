@@ -73,5 +73,8 @@
     <string name="network_name">Nom</string>
     <string name="remove_guest_wi_fi">Supprimer le Wi-Fi invité</string>
     <string name="guest_attention">Après avoir automatisé la fermeture de l\'application, reconnectez-vous au réseau Wi-Fi (si cela n\'a pas été fait automatiquement), connectez-vous au routeur et appuyez à nouveau sur CONFIGURATION Wi-Fi INVITÉ pour terminer la configuration.</string>
+    <string name="wifi_help">Après avoir cliqué sur OK, le programme enverra les paramètres et se fermera automatiquement. Si après la première tentative, le nom du réseau n\'a pas changé, exécutez le processus une deuxième fois et le travail sera terminé.</string>
+    <string name="minimum_8_characters">minimum 8 characters</string>
+
 
 </resources>

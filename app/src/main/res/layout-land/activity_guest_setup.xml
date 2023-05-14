@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonQuit"
+        android:id="@+id/WiFiPasswordOK"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginStart="64dp"
@@ -30,11 +30,11 @@
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/quit"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/buttonRemove"
+        app:layout_constraintStart_toEndOf="@+id/WiFiNameOK"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
-        android:id="@+id/buttonRemove"
+        android:id="@+id/WiFiNameOK"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_marginStart="175dp"
@@ -73,7 +73,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextGuestName"
+            android:id="@+id/editTextWName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -81,7 +81,8 @@
             android:background="@null"
             android:ems="10"
             android:inputType="textPersonName"
-            android:textColor="@color/text_color" />
+            android:textColor="@color/text_color"
+            android:maxLength="32" />
     </LinearLayout>
 
     <LinearLayout
@@ -111,7 +112,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextGuestPassword"
+            android:id="@+id/editTextWPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -119,7 +120,9 @@
             android:background="@null"
             android:ems="10"
             android:inputType="textVisiblePassword"
-            android:textColor="@color/text_color" />
+            android:textColor="@color/text_color"
+            android:textColorHint="#8F9193"
+            android:hint="@string/minimum_8_characters" />
     </LinearLayout>
 
     <LinearLayout
@@ -162,7 +165,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/help_guest"
+        android:id="@+id/help_wifi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

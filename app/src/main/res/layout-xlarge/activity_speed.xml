@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonQuit"
+        android:id="@+id/WiFiPasswordOK"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="100dp"
@@ -249,7 +249,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/help_guest"
+        android:id="@+id/help_wifi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

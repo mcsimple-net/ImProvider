@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
 import android.view.KeyEvent;
 import android.view.View;
@@ -27,12 +28,13 @@ public class LoginActivity extends AppCompatActivity {
         textViewLogin = findViewById(R.id.textViewLogin);
         login = findViewById(R.id.agree_login);
         set_prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-        Linkify.addLinks(textViewLogin,Linkify.ALL);
+        Linkify.addLinks(textViewLogin,Linkify.EMAIL_ADDRESSES | Linkify.WEB_URLS);
+        //textViewLogin.setMovementMethod(LinkMovementMethod.getInstance());
 
         login.setOnClickListener(v -> {
             SharedPreferences.Editor edit = set_prefs.edit();
             edit.putBoolean(getString(R.string.pref_previously_started),TRUE);
-            edit.commit();
+            edit.apply();
             Intent i = new Intent(LoginActivity.this,MainActivity.class);
             startActivity(i);
 

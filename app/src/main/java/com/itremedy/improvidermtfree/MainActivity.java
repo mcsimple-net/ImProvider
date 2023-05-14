@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         connect = findViewById(R.id.connect);
         setup = findViewById(R.id.new_router_setup);
-        help_m = findViewById(R.id.help_guest);
+        help_m = findViewById(R.id.help_wifi);
         start_page = findViewById(R.id.start_page);
         checkBox = findViewById(R.id.checkBox);
 

@@ -38,9 +38,6 @@ public class GuestAttention extends AppCompatActivity {
             warning.setVisibility(View.GONE);
             textViewWait.setVisibility(View.VISIBLE);
 
-
-
-
             final Handler handler = new Handler();
             handler.postDelayed(() -> {
                 Thread t = new Thread(() -> {
@@ -49,12 +46,12 @@ public class GuestAttention extends AppCompatActivity {
                         Thread.sleep(100);
                         ConnectionManager.runCommand("/system identity set name=GuestSetup");
                         Thread.sleep(200);
-                        ConnectionManager.runCommand("/interface wireless security-profiles remove [find where name=Security-Profile-Guest]");
+                        ConnectionManager.runCommand("/interface wireless security-profiles set wpa2-pre-shared-key=" + guestpassword + " [find where name=Security-Profile-Guest]");
                         Thread.sleep(1000);
                         ConnectionManager.runCommand("/interface wireless security-profiles add authentication-types=wpa2-psk eap-methods=\"\" group-key-update=1h management-protection=allowed mode=dynamic-keys name=Security-Profile-Guest supplicant-identity=\"\" wpa2-pre-shared-key=" + guestpassword);
                         Thread.sleep(1000);
                         ConnectionManager.runCommand("/interface bridge add arp=reply-only name=Bridge-Guest");
-                        Thread.sleep(500);
+                        Thread.sleep(1000);
                         ConnectionManager.runCommand("/ip address add address=10.10.10.1/24 interface=Bridge-Guest network=10.10.10.0");
                         Thread.sleep(100);
                         ConnectionManager.runCommand("/ip dhcp-server network add address=10.10.10.0/24 dns-server=1.1.1.1,8.8.8.8 gateway=10.10.10.1");
@@ -70,7 +67,11 @@ public class GuestAttention extends AppCompatActivity {
                         ConnectionManager.runCommand("/interface wireless set security-profile=Security-Profile-Guest [find where name=wlan3]");
                         Thread.sleep(300);
                         ConnectionManager.runCommand("/interface wireless add default-forwarding=no disabled=no keepalive-frames=disabled  master-interface=wlan1 multicast-buffering=disabled name=wlan3 security-profile=Security-Profile-Guest ssid=" + guestname + " wds-cost-range=0 wds-default-cost=0 wps-mode=disabled");
-
+                        Thread.sleep(300);
+                        runOnUiThread(() -> {
+                            ConnectionManager.close();
+                            finishAffinity();
+                        });
                     } catch (JSchException | IOException e) {
                         Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "An error occurred: " + e.getMessage(), 8000);
                         View snackbarView = snackbar.getView();
@@ -94,9 +95,9 @@ public class GuestAttention extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     Snackbar.make(findViewById(android.R.id.content), "Sorry for all", Snackbar.LENGTH_SHORT).show();
                 }
-                ConnectionManager.close();
+                /*ConnectionManager.close();
 
-                finishAffinity();
+                finishAffinity();*/
 
                 Log.d("Handler", "Running Handler");}, 1000);
         });

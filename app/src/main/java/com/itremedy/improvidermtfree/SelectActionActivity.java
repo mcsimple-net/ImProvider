@@ -24,7 +24,7 @@ public class SelectActionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_action);
         Button set_speed = findViewById(R.id.buttonConnectionSpeed);
         Button guest = findViewById(R.id.GuestWifiSetup);
-
+        Button wifisetup = findViewById(R.id.wifisetup);
 
         set_speed.setOnClickListener(v -> {
 
@@ -70,6 +70,11 @@ public class SelectActionActivity extends AppCompatActivity {
         guest.setOnClickListener(v1 -> {
 
             Intent i = new Intent(SelectActionActivity.this,GuestSetupActivity.class);
+            startActivity(i);
+        });
+        wifisetup.setOnClickListener(v2 -> {
+
+            Intent i = new Intent(SelectActionActivity.this,WiFiSetup.class);
             startActivity(i);
         });
     }

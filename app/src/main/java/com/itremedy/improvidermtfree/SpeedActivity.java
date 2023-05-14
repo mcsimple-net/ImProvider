@@ -33,7 +33,7 @@ public class SpeedActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_speed);
         speed = findViewById(R.id.GuestSpeed);
         set = findViewById(R.id.buttonSet);
-        quit = findViewById(R.id.buttonQuit);
+        quit = findViewById(R.id.WiFiPasswordOK);
         radio2 = findViewById(R.id.radio2);
         radio3 = findViewById(R.id.radio3);
         radio4 = findViewById(R.id.radio4);
@@ -42,7 +42,7 @@ public class SpeedActivity extends AppCompatActivity  {
         textViewSpeed3 = findViewById(R.id.textViewGuestPassword);
         textViewSpeed4 = findViewById(R.id.textViewSpeed4);
         textViewSpeed5 = findViewById(R.id.textViewSpeed5);
-        help_s = findViewById(R.id.help_guest);
+        help_s = findViewById(R.id.help_wifi);
 
         help_s.setOnClickListener(v -> {
 

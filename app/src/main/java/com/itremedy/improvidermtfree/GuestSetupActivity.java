@@ -37,17 +37,17 @@ public class GuestSetupActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_guest_setup);
         guest_speed = findViewById(R.id.GuestSpeed);
         set = findViewById(R.id.buttonSet);
-        quit = findViewById(R.id.buttonQuit);
-        guest_name = findViewById(R.id.editTextGuestName);
-        guest_password = findViewById(R.id.editTextGuestPassword);
-        remove = findViewById(R.id.buttonRemove);
+        quit = findViewById(R.id.WiFiPasswordOK);
+        guest_name = findViewById(R.id.editTextWName);
+        guest_password = findViewById(R.id.editTextWPassword);
+        remove = findViewById(R.id.WiFiNameOK);
 
-        help_guest = findViewById(R.id.help_guest);
+        help_guest = findViewById(R.id.help_wifi);
 
         help_guest.setOnClickListener(v -> {
 
             Alerter.create(this, R.layout.alerter_custom_layout)
-                    .setDuration(5000)
+                    .setDuration(10000)
                     .setIcon(R.drawable.help)
                     .setBackgroundColorRes(R.color.for_improvider)
                     .enableSwipeToDismiss()
@@ -127,12 +127,12 @@ public class GuestSetupActivity extends AppCompatActivity  {
             Thread guest_setup_finish = new Thread(() -> {
                 try {
                     ConnectionManager.runCommand("/interface bridge port add bridge=Bridge-Guest interface=wlan3");
-                    Thread.sleep(100);
+                    Thread.sleep(200);
                     ConnectionManager.runCommand("/system identity set name=ImProvider");
-                    Thread.sleep(100);
+                    Thread.sleep(200);
 
-                    ConnectionManager.runCommand("/interface wireless set ssid=" + guestname_shared + " [find where name=wlan3]");
-                    Thread.sleep(300);
+                   ConnectionManager.runCommand("/interface wireless set ssid=" + guestname_shared + " [find where name=wlan3]");
+                   Thread.sleep(300);
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
