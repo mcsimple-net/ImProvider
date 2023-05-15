@@ -57,13 +57,15 @@
          Pressionando CONTINUAR você concorda com isso.</string>
     <string name="save">salvar</string>
     <string name="enter_password">Digite a senha</string>
-    <string name="guest_help">Insira o novo nome e senha da rede Wi-Fi para convidados ou deixe o padrão, insira o limite máximo de velocidade em megabits e pressione OK. \nPara velocidade ilimitada, digite 999. Para desligar a Internet, digite 0. Você não pode gerenciar o MikroTik pelo Wi-Fi convidado.</string>
+    <string name="guest_help">Insira o novo nome e senha da rede Wi-Fi (a senha pode ficar em branco), insira o limite máximo de velocidade em megabits e pressione OK. \nPara velocidade ilimitada, digite 999. Para desligar a Internet, digite 0. Você não pode gerenciar o MikroTik pelo Wi-Fi convidado.</string>
     <string name="guest_ready">Sua rede Wi-Fi convidada está pronta. Por favor verifique isto.</string>
     <string name="network_name">Nome</string>
     <string name="remove_guest_wi_fi">Remover Wi-Fi convidado</string>
     <string name="guest_attention">Depois de fechar automaticamente o aplicativo, reconecte-se à rede Wi-Fi (caso não tenha sido feito automaticamente), conecte-se ao roteador e pressione CONFIGURAÇÃO DE Wi-Fi CONVIDADO novamente para finalizar a configuração.</string>
     <string name="wifi_help">Após clicar em OK, o programa enviará as configurações e fechará automaticamente. Se após a primeira tentativa o nome da rede não mudou, execute o processo uma segunda vez e o trabalho será feito.</string>
-    <string name="minimum_8_characters">minimum 8 characters</string>
+    <string name="minimum_8_characters">mínimo de 8 caracteres</string>
+    <string name="new_password_was_set">A nova senha foi definida</string>
+    <string name="enter_new_password">Insira a nova senha</string>
 
 
 </resources>

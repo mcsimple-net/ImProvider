@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:gravity="center_horizontal"
     android:background="@drawable/orange"
+    android:gravity="center_horizontal"
     tools:context=".GuestAttention">
 
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="0dp"
+        android:id="@+id/textViewGuestAttention"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/abhaya_libre_semibold"
@@ -26,12 +26,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewWarning"
+        android:id="@+id/textViewGuestWarning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/alata"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
@@ -40,13 +38,13 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewGuestAttention" />
 
     <Button
-        android:id="@+id/buttonIagree"
+        android:id="@+id/buttonGuestIagree"
         android:layout_width="200dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:gravity="center"
@@ -55,13 +53,13 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewWarning" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewGuestWarning" />
 
     <TextView
-        android:id="@+id/textViewWait"
-        android:layout_width="match_parent"
+        android:id="@+id/textViewGuestWait"
+        android:layout_width="411dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="76dp"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:gravity="center_horizontal"
         android:paddingStart="20dp"
@@ -70,8 +68,7 @@
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewWarning" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewGuestAttention" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -58,12 +58,14 @@
     <string name="setup_first">Сonfigure su enrutador</string>
     <string name="save">ahorrar</string>
     <string name="enter_password">Introducir la contraseña</string>
-    <string name="guest_help">Ingrese el nuevo nombre y contraseña de la red Wi-Fi para invitados o deje el valor predeterminado, ingrese el límite de velocidad máxima en megabits y presione OK. \nPara velocidad ilimitada, ingrese 999. Para desactivar Internet, ingrese 0. No puede administrar MikroTik a través de Wi-Fi para invitados.</string>
+    <string name="guest_help">Ingrese el nuevo nombre y contraseña de la red Wi-Fi (la contraseña puede estar en blanco), ingrese el límite de velocidad máxima en megabits y presione OK. \nPara velocidad ilimitada, ingrese 999. Para desactivar Internet, ingrese 0. No puede administrar MikroTik a través de Wi-Fi para invitados.</string>
     <string name="guest_ready">Su red Wi-Fi para invitados está lista. Compruébelo por favor.</string>
     <string name="remove_guest_wi_fi">Eliminar Wi-Fi para invitados</string>
     <string name="guest_attention">Después de cerrar automáticamente la aplicación, vuelva a conectarse a la red Wi-Fi (si no se hizo automáticamente), conéctese al enrutador y presione CONFIGURACIÓN Wi-Fi INVITADO nuevamente para finalizar la configuración.</string>
     <string name="wifi_help">Después de hacer clic en Aceptar, el programa enviará la configuración y se cerrará automáticamente. Si después del primer intento el nombre de la red no ha cambiado, ejecute el proceso por segunda vez y el trabajo estará hecho.</string>
-    <string name="minimum_8_characters">minimum 8 characters</string>
+    <string name="minimum_8_characters">mínimo 8 caracteres</string>
+    <string name="new_password_was_set">Se estableció una nueva contraseña</string>
+    <string name="enter_new_password">Ingrese nueva contraseña</string>
 
 
 </resources>

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.ImProviderMikroTik"
         tools:targetApi="33">
         <activity
+            android:name=".AdminPassword"
+            android:exported="false" />
+        <activity
             android:name=".WiFiSetup"
             android:exported="false" />
         <activity

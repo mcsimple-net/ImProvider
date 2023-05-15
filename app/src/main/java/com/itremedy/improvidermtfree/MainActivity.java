@@ -6,6 +6,7 @@ import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKey;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String hostname_shared = sharedPreferences.getString("host", "192.168.88.1"); // Second parameter is the default value.
         String port_shared = sharedPreferences.getString("port", "22");
         String username_shared = sharedPreferences.getString("login", "admin");
@@ -158,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
 
                         if (ConnectionManager.getFlag() == 0) {
                             password.getText().clear();
-                            Intent intent = new Intent(this, SelectActionActivity.class);
+                            Intent intent = new Intent(MainActivity.this, SelectActionActivity.class);
                             startActivity(intent);
                         }
                         else t.interrupt();
@@ -237,7 +238,7 @@ public class MainActivity extends AppCompatActivity {
                         if (ConnectionManager.getFlag() == 0)
                         {
                             password.getText().clear();
-                            Intent intent = new Intent(this, PortsSelectActivity.class);
+                            Intent intent = new Intent(MainActivity.this, PortsSelectActivity.class);
                             startActivity(intent);
                         }
                         else t1.interrupt();
@@ -275,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
             } catch (GeneralSecurityException | IOException e) {
                 throw new RuntimeException(e);
             }
-           sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+           sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("host", hostname.getText().toString());
             editor.putString("port", port.getText().toString());

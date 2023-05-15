@@ -78,6 +78,9 @@ public class WiFiSetup extends AppCompatActivity {
                     .show();
         });
 
+
+            //for setting password
+
         sharedPreferencesW = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String password_w = sharedPreferencesW.getString("password_w", "itremedy");
         wpassword.setText(password_w);
@@ -85,33 +88,43 @@ public class WiFiSetup extends AppCompatActivity {
         wifiname.setOnClickListener(v -> {
 
             String wifiname = wname.getText().toString();
-            final Handler handler = new Handler();
-            handler.postDelayed(() -> {
-                Thread guest_setup_finish = new Thread(() -> {
+            if (wifiname.isEmpty()){
+
+                Alerter.create(this,R.layout.alerter_custom_layout)
+                        .setTitle(R.string.flds_empty)
+                        .setBackgroundColorRes(R.color.for_improvider)
+                        .enableSwipeToDismiss()
+                        .show();
+
+            }else {
+                final Handler handler = new Handler();
+                handler.postDelayed(() -> {
+                    Thread t3 = new Thread(() -> {
+                        try {
+                            ConnectionManager.runCommand("/interface wireless disable wlan2");
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand("/interface wireless set ssid=" + wifiname + " [find where name=wlan2]");
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand("/interface wireless enable wlan2");
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand("/interface wireless set ssid=" + wifiname + " [find where name=wlan1]");
+                            Thread.sleep(300);
+                            runOnUiThread(() -> {
+                                ConnectionManager.close();
+                                finishAffinity();
+                            });
+                        } catch (JSchException | IOException | InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
+                    t3.start();
                     try {
-                        ConnectionManager.runCommand("/interface wireless disable wlan2");
-                        Thread.sleep(300);
-                        ConnectionManager.runCommand("/interface wireless set ssid=" + wifiname + " [find where name=wlan2]");
-                        Thread.sleep(300);
-                        ConnectionManager.runCommand("/interface wireless enable wlan2");
-                        Thread.sleep(300);
-                        ConnectionManager.runCommand("/interface wireless set ssid=" + wifiname + " [find where name=wlan1]");
-                        Thread.sleep(300);
-                        runOnUiThread(() -> {
-                            ConnectionManager.close();
-                            finishAffinity();
-                        });
-                    } catch (JSchException | IOException | InterruptedException e) {
+                        t3.join();
+                    } catch (InterruptedException e) {
                         throw new RuntimeException(e);
                     }
-                });
-                guest_setup_finish.start();
-                try {
-                    guest_setup_finish.join();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            }, 1000);
+                }, 1000);
+            }
 
         });
 
@@ -145,22 +158,55 @@ public class WiFiSetup extends AppCompatActivity {
         editor_wifi.apply();
 
         String wpass = wpassword.getText().toString();
+
+        if (wpass.isEmpty()){
+            final Handler handler = new Handler();
+            handler.postDelayed(() -> {
+                Thread t1 = new Thread(() -> {
+                    try {
+
+                        ConnectionManager.runCommand("/interface wireless security-profiles remove [find where name=Security-Profile-Guest]");
+                        Thread.sleep(300);
+
+                        runOnUiThread(() -> {
+                            ConnectionManager.close();
+                            finishAffinity();
+                        });
+                    } catch (JSchException | IOException e) {
+                        Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "An error occurred: " + e.getMessage(), 8000);
+                        View snackbarView = snackbar.getView();
+                        TextView tv = snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
+                        tv.setMaxLines(5);
+                        snackbar.show();
+                    } catch (RuntimeException runtimeException) {
+                        Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "The server is disconnected. An error occurred: " + runtimeException.getMessage(), 8000);
+                        View snackbarView = snackbar.getView();
+                        TextView tv = snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
+                        tv.setMaxLines(5);
+                        snackbar.show();
+                    } catch (Exception ignored) {
+                    }
+
+                });
+
+                try {
+                    t1.start();
+                    t1.join();
+                } catch (InterruptedException e) {
+                    Snackbar.make(findViewById(android.R.id.content), "Sorry for all", Snackbar.LENGTH_SHORT).show();
+                }
+
+
+                Log.d("Handler", "Running Handler");}, 1000);
+
+        }else {
             final Handler handler = new Handler();
             handler.postDelayed(() -> {
                 Thread t = new Thread(() -> {
                     try {
-                       // ConnectionManager.runCommand("/interface wireless disable wlan2");
-                      //  Thread.sleep(300);
+
                         ConnectionManager.runCommand("/interface wireless security-profiles set wpa2-pre-shared-key=" + wpass + " [find where name=itremedy]");
                         Thread.sleep(300);
-                         /*ConnectionManager.runCommand("/interface wireless security-profiles add authentication-types=wpa2-psk eap-methods=\"\" group-key-update=1h management-protection=allowed mode=dynamic-keys name=itremedy supplicant-identity=\"\" wpa2-pre-shared-key=" + wpass );
-                        Thread.sleep(300);
-                        ConnectionManager.runCommand("/interface wireless set security-profile=itremedy [find where name=wlan2]");
-                        Thread.sleep(300);
-                        ConnectionManager.runCommand("/interface wireless enable wlan2");
-                        Thread.sleep(300);
-                        ConnectionManager.runCommand("/interface wireless set security-profile=itremedy [find where name=wlan1]");
-                        Thread.sleep(300);*/
 
                         runOnUiThread(() -> {
                             ConnectionManager.close();
@@ -189,9 +235,9 @@ public class WiFiSetup extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     Snackbar.make(findViewById(android.R.id.content), "Sorry for all", Snackbar.LENGTH_SHORT).show();
                 }
-
-
-                Log.d("Handler", "Running Handler");}, 1000);
+                Log.d("Handler", "Running Handler");
+            }, 1000);
+        }
         });
     }
 }

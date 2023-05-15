@@ -25,6 +25,7 @@ public class SelectActionActivity extends AppCompatActivity {
         Button set_speed = findViewById(R.id.buttonConnectionSpeed);
         Button guest = findViewById(R.id.GuestWifiSetup);
         Button wifisetup = findViewById(R.id.wifisetup);
+        Button cap = findViewById(R.id.changeAdminPass);
 
         set_speed.setOnClickListener(v -> {
 
@@ -55,15 +56,7 @@ public class SelectActionActivity extends AppCompatActivity {
                         .show();}
 
 
-           /* else if (!result.contains("GuestSetup")) {
-                Alerter.create(this, R.layout.alerter_custom_layout)
-                        .setTitle(R.string.setup_first)
-                        .setDuration(10000)
-                        .setBackgroundColorRes(R.color.for_improvider)
-                        .enableSwipeToDismiss()
-                        .show();
-
-            }*/else {Intent intent = new Intent(SelectActionActivity.this,SpeedActivity.class);
+            else {Intent intent = new Intent(SelectActionActivity.this,SpeedActivity.class);
             startActivity(intent);}
 
         });
@@ -74,8 +67,15 @@ public class SelectActionActivity extends AppCompatActivity {
         });
         wifisetup.setOnClickListener(v2 -> {
 
-            Intent i = new Intent(SelectActionActivity.this,WiFiSetup.class);
-            startActivity(i);
+            Intent u = new Intent(SelectActionActivity.this,WiFiSetup.class);
+            startActivity(u);
+        });
+
+        cap.setOnClickListener(v3 -> {
+
+            Intent f = new Intent(SelectActionActivity.this,AdminPassword.class);
+            startActivity(f);
+
         });
     }
 }
