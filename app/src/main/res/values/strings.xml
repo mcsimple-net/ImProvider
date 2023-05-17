@@ -63,5 +63,9 @@
     <string name="minimum_8_characters">minimum 8 characters</string>
     <string name="new_password_was_set">New password was set</string>
     <string name="enter_new_password">Enter new password</string>
+    <string name="done">Done</string>
+    <string name="help_merge">Select ports to add to your own network to connect TV / network printer / computer / access point by ethernet cable. Reconnect or reboot connected device after switching.</string>
+    <string name="merge_ethernet_ports">MERGE ETHERNET PORTS</string>
+
 
 </resources>

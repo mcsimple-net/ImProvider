@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".SpeedActivity">
+    tools:context=".MergePorts">
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/select_ports"
         android:textColor="@color/text_color"
@@ -21,28 +21,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/quitApp"
+        android:id="@+id/buttonMerge"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="169dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/abhaya_libre_semibold"
-        android:text="@string/quit"
+        android:text="@android:string/ok"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/dark_background_card_view"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8">
 
@@ -50,7 +49,7 @@
             android:id="@+id/radio2"
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center|start"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
@@ -59,29 +58,17 @@
             android:textColor="@color/text_color"
             android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textViewGuestName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:layout_marginBottom="14dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/aldrich"
-            android:gravity="center|start"
-            android:text=""
-            android:textColor="@color/text_color"
-            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/dark_background_card_view"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
@@ -98,29 +85,17 @@
             android:textColor="@color/text_color"
             android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textViewGuestPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:layout_marginBottom="14dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/aldrich"
-            android:gravity="center|start"
-            android:text=""
-            android:textColor="@color/text_color"
-            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/dark_background_card_view"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
@@ -137,29 +112,17 @@
             android:textColor="@color/text_color"
             android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textViewSpeed4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:layout_marginBottom="14dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/aldrich"
-            android:gravity="center|start"
-            android:text=""
-            android:textColor="@color/text_color"
-            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout5"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/dark_background_card_view"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
@@ -176,73 +139,10 @@
             android:textColor="@color/text_color"
             android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textViewSpeed5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:layout_marginBottom="14dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/aldrich"
-            android:gravity="center|start"
-            android:text=""
-            android:textColor="@color/text_color"
-            android:textSize="16sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="340dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/abhaya_libre_semibold"
-            android:gravity="center"
-            android:text="@string/enter_new_speed"
-            android:textColor="@color/text_color"
-            android:textSize="16sp" />
-
-        <EditText
-            android:id="@+id/GuestSpeed"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:ems="10"
-            android:fontFamily="@font/orbitron_medium"
-            android:gravity="center"
-            android:inputType="number|numberDecimal"
-            android:maxLength="3"
-            android:textSize="28sp" />
-
-        <Button
-            android:id="@+id/buttonSet"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/for_improvider"
-            android:fontFamily="@font/abhaya_libre_semibold"
-            android:text="@string/set"
-            android:textSize="14sp" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/help_wifi"
+        android:id="@+id/help_merge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

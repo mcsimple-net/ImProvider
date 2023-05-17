@@ -77,6 +77,9 @@
     <string name="minimum_8_characters">minimum 8 caractères</string>
     <string name="new_password_was_set">Un nouveau mot de passe a été défini</string>
     <string name="enter_new_password">Entrez un nouveau mot de passe</string>
+    <string name="done">Fait</string>
+    <string name="help_merge">Sélectionnez les ports à ajouter à votre propre réseau pour connecter TV/imprimante réseau/ordinateur/point d\'accès par câble Ethernet. Reconnectez ou redémarrez l\'appareil connecté après la commutation.</string>
+    <string name="merge_ethernet_ports">FUSIONNER LES PORTS ETHERNET</string>
 
 
 </resources>

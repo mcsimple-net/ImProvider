@@ -26,6 +26,7 @@ public class SelectActionActivity extends AppCompatActivity {
         Button guest = findViewById(R.id.GuestWifiSetup);
         Button wifisetup = findViewById(R.id.wifisetup);
         Button cap = findViewById(R.id.changeAdminPass);
+        Button merge = findViewById(R.id.mergePorts);
 
         set_speed.setOnClickListener(v -> {
 
@@ -74,6 +75,13 @@ public class SelectActionActivity extends AppCompatActivity {
         cap.setOnClickListener(v3 -> {
 
             Intent f = new Intent(SelectActionActivity.this,AdminPassword.class);
+            startActivity(f);
+
+        });
+
+        merge.setOnClickListener(v4 -> {
+
+            Intent f = new Intent(SelectActionActivity.this,MergePorts.class);
             startActivity(f);
 
         });

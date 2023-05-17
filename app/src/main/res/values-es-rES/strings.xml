@@ -66,6 +66,9 @@
     <string name="minimum_8_characters">mínimo 8 caracteres</string>
     <string name="new_password_was_set">Se estableció una nueva contraseña</string>
     <string name="enter_new_password">Ingrese nueva contraseña</string>
+    <string name="done">Hecho</string>
+    <string name="help_merge">Seleccione puertos para agregar a su propia red para conectar TV/impresora de red/computadora/punto de acceso por cable ethernet. Vuelva a conectar o reinicie el dispositivo conectado después de cambiar.</string>
+    <string name="merge_ethernet_ports">COMBINAR PUERTOS ETHERNET</string>
 
 
 </resources>

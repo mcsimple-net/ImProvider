@@ -84,4 +84,8 @@
     <string name="minimum_8_characters">минимум 8 символов</string>
     <string name="new_password_was_set">Был установлен новый пароль</string>
     <string name="enter_new_password">Введите новый пароль</string>
+    <string name="done">Готово</string>
+    <string name="help_merge">Выберите порты для добавления в собственную сеть для подключения телевизора/сетевого принтера/компьютера/точки доступа с помощью кабеля Ethernet. Повторно подключите или перезагрузите подключенное устройство после переключения.</string>
+    <string name="merge_ethernet_ports">ОБЪЕДИНЕНИЕ СЕТЕВЫХ ПОРТОВ</string>
+
 </resources>
