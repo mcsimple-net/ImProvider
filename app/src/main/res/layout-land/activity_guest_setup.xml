@@ -11,34 +11,20 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="69dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/guest_wi_fi_setup"
         android:textColor="@color/text_color"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/WiFiPasswordOK"
+        android:id="@+id/RemoveGuestWiFi"
         android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="@color/for_improvider"
-        android:fontFamily="@font/abhaya_libre_semibold"
-        android:text="@string/quit"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/WiFiNameOK"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <Button
-        android:id="@+id/WiFiNameOK"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="31dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/remove_guest_wi_fi"
@@ -60,7 +46,7 @@
 
         <TextView
             android:id="@+id/textViewGuestName"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="14dp"
@@ -99,7 +85,7 @@
 
         <TextView
             android:id="@+id/textViewGuestPassword"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="14dp"
@@ -113,16 +99,16 @@
 
         <EditText
             android:id="@+id/editTextWPassword"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:background="@null"
             android:ems="10"
+            android:hint="@string/minimum_8_characters"
             android:inputType="textVisiblePassword"
             android:textColor="@color/text_color"
-            android:textColorHint="#8F9193"
-            android:hint="@string/minimum_8_characters" />
+            android:textColorHint="#8F9193" />
     </LinearLayout>
 
     <LinearLayout
@@ -161,7 +147,7 @@
             android:backgroundTint="@color/for_improvider"
             android:fontFamily="@font/abhaya_libre_semibold"
             android:text="@string/set"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <TextView
@@ -180,13 +166,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="416dp"
         android:layout_marginTop="48dp"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/enter_new_speed"
         android:textColor="@color/text_color"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent" />
 
 

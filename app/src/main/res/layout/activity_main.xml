@@ -143,7 +143,7 @@
 
         <TextView
             android:id="@+id/textViewPassword"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center|end"
@@ -153,20 +153,20 @@
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="150dp"
+            android:layout_width="160dp"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:autofillHints="itremedy.pro"
+            android:background="@null"
             android:ems="10"
-            android:inputType="textPassword"
             android:hint="@string/enter_password"
+            android:inputType="textPassword"
             android:textColor="#C8C8C8"
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#464646"
             android:textColorLink="#000000"
-            android:textSize="16sp"
-            android:background="@null"/>
+            android:textSize="16sp" />
     </LinearLayout>
 
     <Button
@@ -227,12 +227,11 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
         android:onClick="itemClicked"
         android:text="@string/save"
         android:textColor="@color/text_color"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/LayoutPassword"
         app:layout_constraintTop_toBottomOf="@+id/LayoutPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

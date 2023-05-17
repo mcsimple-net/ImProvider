@@ -47,7 +47,7 @@
         2. Turn on the router. \n
         3. Plug the internet cable from provider\'s router into the first port (ETH1). \n
         4. Connect your phone or tablet with ImProvider to WiFi network \"MikroTik-*****\" . \n
-        *If your router creates two networks, do not use \"MikroTik-****A\" during setup due to WiFi security. \n
+        *If your router creates two networks, do not use \"MikroTik-****A\"/\"MikroTik-****5\" during setup due to WiFi security. \n
         To delete the app settings on your router reset it. \n
         You can find more information about ImProvider at <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider</u></a>.
         If you have questions or want to report about an issue please write to <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue" target="_top">customercare@itremedy.pro</a>. \n

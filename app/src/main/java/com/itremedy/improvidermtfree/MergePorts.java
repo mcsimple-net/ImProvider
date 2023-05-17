@@ -148,6 +148,7 @@ public class MergePorts extends AppCompatActivity {
                     .setTitle(R.string.help_merge)
                     .setBackgroundColorRes(R.color.for_improvider)
                     .enableSwipeToDismiss()
+                    .setDuration(10000)
                     .show();
 
         });

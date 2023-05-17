@@ -26,7 +26,7 @@ public class GuestSetupActivity extends AppCompatActivity  {
 
 
     EditText guest_name, guest_password, guest_speed;
-    Button set,quit,remove;
+    Button set,remove;
     TextView help_guest;
    SharedPreferences sharedPreferencesGuest;
 
@@ -37,10 +37,9 @@ public class GuestSetupActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_guest_setup);
         guest_speed = findViewById(R.id.GuestSpeed);
         set = findViewById(R.id.buttonSet);
-        quit = findViewById(R.id.WiFiPasswordOK);
         guest_name = findViewById(R.id.editTextWName);
         guest_password = findViewById(R.id.editTextWPassword);
-        remove = findViewById(R.id.WiFiNameOK);
+        remove = findViewById(R.id.RemoveGuestWiFi);
 
         help_guest = findViewById(R.id.help_wifi);
 
@@ -55,10 +54,7 @@ public class GuestSetupActivity extends AppCompatActivity  {
                     .show();
         });
 
-        quit.setOnClickListener(v1 -> {
-            ConnectionManager.close();
-            finishAffinity();
-        });
+
 
         remove.setOnClickListener(v2 -> {
 

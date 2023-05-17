@@ -35,7 +35,7 @@
         android:id="@+id/wifisetup"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/alata"
         android:text="@string/wi_fi_configuration"

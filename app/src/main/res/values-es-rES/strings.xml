@@ -13,10 +13,7 @@
     <string name="set_connection_speed">ESTABLECER LÍMITES DE VELOCIDAD</string>
     <string name="in_premium_version">*EN VERSIÓN PREMIUM:</string>
     <string name="how_many_ethernet_ports">SELECCIONA TU ENRUTADOR</string>
-    <string name="attention">Por favor, asegúrese de haber conectado el enrutador con la configuración predeterminada.
-        La configuración será posible solo a través de WiFi. Cuando la aplicación se cierre automáticamente,
-        vuelva a conectarse a WiFi con la contraseña \"itremedy\". Para establecer los límites de velocidad,
-        abra la aplicación nuevamente, ingrese la contraseña \"itremedy.pro\" y presione CONECTAR.</string>
+    <string name="attention">Por favor, asegúrese de haber conectado el enrutador con la configuración predeterminada. La configuración será posible solo a través de WiFi. Cuando la aplicación se cierre automáticamente, vuelva a conectarse a WiFi con la contraseña \"itremedy\". Para establecer los límites de velocidad, abra la aplicación nuevamente, ingrese la contraseña \"itremedy.pro\" y presione CONECTAR.</string>
     <string name="wait">ESPERE... Configuración en curso...\n No quites tu teléfono del enrutador</string>
     <string name="guest_wi_fi_setup">CONFIGURACIÓN Wi-Fi INVITADO</string>
     <string name="wi_fi_configuration">CONFIGURACIÓN WI-FI</string>
@@ -34,7 +31,7 @@
          2. Encienda el enrutador.\n
          3. Conecte el cable de Internet del enrutador del proveedor al primer puerto (ETH1).\n
          4. Conecte su teléfono o tableta con ImProvider a la red WiFi \"MikroTik-*****\".\n
-         *Si su enrutador crea dos redes, no use \"MikroTik-****A\" durante la configuración debido a la seguridad WiFi.\n
+         *Si su enrutador crea dos redes, no use \"MikroTik-****A\"/\"MikroTik-****5\" durante la configuración debido a la seguridad WiFi.\n
          Para eliminar la configuración de la aplicación en su enrutador, reiníciela.\n
          Puede encontrar más información sobre ImProvider en <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider/</u></a>
          Si tiene preguntas o desea informar sobre un problema, escriba a <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue"
@@ -44,7 +41,7 @@
 
     <string name="i_agree">CONTINUAR</string>
     <string name="improvider">ImProvider</string>
-    <string name="network_name">Nombre</string>
+    <string name="network_name">Nombre:</string>
 
     <string name="need_help">¿Necesitas ayuda?</string>
     <string name="hyperlink">Página de inicio</string>
@@ -53,8 +50,7 @@
     <string name="for_unlimited">Seleccione el puerto, ingrese el límite de velocidad en megabits y presione OK. Para velocidad ilimitada ingrese 999. Para desactivar Internet ingrese 0.</string>
     <string name="please_enter_limit">\n\nIngrese el límite</string>
     <string name="please_select_port">\n\nSeleccione Puerto</string>
-    <string name="help_main">Para la configuración del nuevo enrutador, presione CONFIGURAR UN ENRUTADOR.
-        Para conectar un enrutador ya configurado ingrese la contraseña \"itremedy.pro\" y presione CONECTAR</string>
+    <string name="help_main">Para la configuración del nuevo enrutador, presione CONFIGURAR UN ENRUTADOR. Para conectar un enrutador ya configurado ingrese la contraseña \"itremedy.pro\" y presione CONECTAR</string>
     <string name="setup_first">Сonfigure su enrutador</string>
     <string name="save">ahorrar</string>
     <string name="enter_password">Introducir la contraseña</string>

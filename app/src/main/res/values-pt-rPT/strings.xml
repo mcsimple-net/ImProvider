@@ -3,7 +3,7 @@
     <string name="app_name">ImProvider</string>
     <string name="connect">CONECTAR</string>
     <string name="password">Senha :</string>
-    <string name="username">nome :</string>
+    <string name="username">Nome :</string>
     <string name="port">Porta :</string>
     <string name="host_or_ip">Endereço :</string>
     <string name="enter_username">Insira nome de usuário</string>
@@ -33,12 +33,10 @@
     <string name="hyperlink">Página inicial</string>
     <string name="chk_connection">Verifique sua conexão, dados de entrada ou configurações do roteador. Um erro ocorreu:</string>
     <string name="flds_empty">Alguns campos estão vazios</string>
-    <string name="for_unlimited">Selecione a porta, insira o limite de velocidade em megabits e pressione OK.
-        Para velocidade ilimitada digite 999. Para desligar a internet digite 0.</string>
+    <string name="for_unlimited">Selecione a porta, insira o limite de velocidade em megabits e pressione OK. Para velocidade ilimitada digite 999. Para desligar a internet digite 0.</string>
     <string name="please_enter_limit">\n\nInsira o limite</string>
     <string name="please_select_port">\n\nSelecione a porta</string>
-    <string name="help_main">Para a configuração do novo roteador, pressione CONFIGURAR UM NOVO ROTEADOR.
-        Para conectar roteador já configurado digite a senha \"itremedy.pro\" e pressione CONECTAR</string>
+    <string name="help_main">Para a configuração do novo roteador, pressione CONFIGURAR UM NOVO ROTEADOR. Para conectar roteador já configurado digite a senha \"itremedy.pro\" e pressione CONECTAR</string>
     <string name="setup_first">Por favor, configure seu roteador</string>
     <string name="login">O ImProvider permite que você controle os roteadores MikroTik através do controle dos limites de velocidade da Internet dos usuários do roteador.
          Os usuários não poderão se conectar. Esta versão é adequada para roteadores de 5 portas da série MikroTik hAP.
@@ -48,7 +46,7 @@
          2. Ligue o roteador.\n
          3. Conecte o cabo de internet do roteador do provedor na primeira porta (ETH1).\n
          4. Conecte seu telefone ou tablet com ImProvider à rede WiFi \"MikroTik-*****\".\n
-         *Se o seu roteador criar duas redes, não use \"MikroTik-****A\" durante a configuração devido à segurança WiFi.\n
+         *Se o seu roteador criar duas redes, não use \"MikroTik-****A\"/\"MikroTik-****5\" durante a configuração devido à segurança WiFi.\n
          Para excluir as configurações do aplicativo em seu roteador, redefina-o.\n
          Você pode encontrar mais informações sobre o ImProvider em <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider/</u></a>
          Se você tiver dúvidas ou quiser relatar um problema, escreva para <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue"
@@ -59,7 +57,7 @@
     <string name="enter_password">Digite a senha</string>
     <string name="guest_help">Insira o novo nome e senha da rede Wi-Fi (a senha pode ficar em branco), insira o limite máximo de velocidade em megabits e pressione OK. \nPara velocidade ilimitada, digite 999. Para desligar a Internet, digite 0. Você não pode gerenciar o MikroTik pelo Wi-Fi convidado.</string>
     <string name="guest_ready">Sua rede Wi-Fi convidada está pronta. Por favor verifique isto.</string>
-    <string name="network_name">Nome</string>
+    <string name="network_name">Nome :</string>
     <string name="remove_guest_wi_fi">Remover Wi-Fi convidado</string>
     <string name="guest_attention">Depois de fechar automaticamente o aplicativo, reconecte-se à rede Wi-Fi (caso não tenha sido feito automaticamente), conecte-se ao roteador e pressione CONFIGURAÇÃO DE Wi-Fi CONVIDADO novamente para finalizar a configuração.</string>
     <string name="wifi_help">Após clicar em OK, o programa enviará as configurações e fechará automaticamente. Se após a primeira tentativa o nome da rede não mudou, execute o processo uma segunda vez e o trabalho será feito.</string>

@@ -59,7 +59,7 @@
          2. Allumez le routeur. \n
          3. Branchez le câble Internet du routeur du fournisseur sur le premier port (ETH1).\n
          4. Connectez votre téléphone ou votre tablette avec ImProvider au réseau WiFi \"MikroTik-*****\".\n
-         *Si votre routeur crée deux réseaux, n\'utilisez pas \"MikroTik-****A\" lors de la configuration en raison de la sécurité WiFi.\n
+         *Si votre routeur crée deux réseaux, n\'utilisez pas \"MikroTik-****A\"/\"MikroTik-****5\" lors de la configuration en raison de la sécurité WiFi.\n
          Pour supprimer les paramètres de l\'application sur votre routeur, réinitialisez-le.\n
          Vous pouvez trouver plus d\'informations sur ImProvider sur <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider/</u></a>
          Si vous avez des questions ou souhaitez signaler un problème, veuillez écrire à <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue"
@@ -70,7 +70,7 @@
     <string name="enter_password">Entrer le mot de passe</string>
     <string name="guest_help">Entrez le nouveau nom et mot de passe du réseau Wi-Fi (le mot de passe peut être vide), entrez la limite de vitesse maximale en mégabits et appuyez sur OK. \nPour une vitesse illimitée, entrez 999. Pour désactiver Internet, entrez 0. Vous ne pouvez pas gérer MikroTik via le Wi-Fi invité.</string>
     <string name="guest_ready">Votre réseau Wi-Fi invité est prêt. S\'il te plaît vérifie le.</string>
-    <string name="network_name">Nom</string>
+    <string name="network_name">Nom :</string>
     <string name="remove_guest_wi_fi">Supprimer le Wi-Fi invité</string>
     <string name="guest_attention">Après avoir automatisé la fermeture de l\'application, reconnectez-vous au réseau Wi-Fi (si cela n\'a pas été fait automatiquement), connectez-vous au routeur et appuyez à nouveau sur CONFIGURATION Wi-Fi INVITÉ pour terminer la configuration.</string>
     <string name="wifi_help">Après avoir cliqué sur OK, le programme enverra les paramètres et se fermera automatiquement. Si après la première tentative, le nom du réseau n\'a pas changé, exécutez le processus une deuxième fois et le travail sera terminé.</string>

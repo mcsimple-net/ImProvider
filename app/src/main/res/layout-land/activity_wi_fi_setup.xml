@@ -60,7 +60,7 @@
 
         <TextView
             android:id="@+id/textViewGuestName"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="14dp"
@@ -100,7 +100,7 @@
 
         <TextView
             android:id="@+id/textViewGuestPassword"
-            android:layout_width="110dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="14dp"
@@ -114,7 +114,7 @@
 
         <EditText
             android:id="@+id/editTextWPassword"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_weight="1"
