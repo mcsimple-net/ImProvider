@@ -48,5 +48,11 @@ public class SelectSpeedActivity extends AppCompatActivity {
             Intent intent = new Intent(SelectSpeedActivity.this,Speed24Activity.class);
             startActivity(intent);
         } );
+
+        linearLayoutChateauSpeed.setOnClickListener(v -> {
+
+            Intent intent = new Intent(SelectSpeedActivity.this,SpeedChateauActivity.class);
+            startActivity(intent);
+        } );
     }
 }

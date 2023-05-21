@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/quitApp10"
+        android:id="@+id/quitApp"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="100dp"
@@ -235,7 +235,7 @@
             android:textSize="28sp" />
 
         <Button
-            android:id="@+id/buttonSet10"
+            android:id="@+id/buttonSet"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="10dp"

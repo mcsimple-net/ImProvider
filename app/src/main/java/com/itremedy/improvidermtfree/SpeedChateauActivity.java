@@ -18,32 +18,34 @@ import com.tapadoo.alerter.Alerter;
 import java.io.IOException;
 
 
-public class SpeedActivity extends AppCompatActivity  {
+public class SpeedChateauActivity extends AppCompatActivity  {
 
 
     private EditText speed;
     private Button set, quit;
-    private RadioButton radio5,radio2,radio3,radio4;
-    private TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5;
+    private RadioButton radio5,radio2,radio3,radio4,radio1;
+    private TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5,textViewSpeed1;
     public TextView help_s;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_speed);
-        speed = findViewById(R.id.Speed);
-        set = findViewById(R.id.buttonSet);
-        quit = findViewById(R.id.quitApp);
-        radio2 = findViewById(R.id.radio2);
-        radio3 = findViewById(R.id.radio3);
-        radio4 = findViewById(R.id.radio4);
-        radio5 = findViewById(R.id.radio5);
-        textViewSpeed2 = findViewById(R.id.textViewSpeed2);
-        textViewSpeed3 = findViewById(R.id.textViewSpeed3);
-        textViewSpeed4 = findViewById(R.id.textViewSpeed4);
-        textViewSpeed5 = findViewById(R.id.textViewSpeed5);
-        help_s = findViewById(R.id.help_wifi);
+        setContentView(R.layout.activity_speed_chateau);
+        speed = findViewById(R.id.SpeedC);
+        set = findViewById(R.id.buttonSetC);
+        quit = findViewById(R.id.quitAppC);
+        radio1 = findViewById(R.id.radio1C);
+        radio2 = findViewById(R.id.radio2C);
+        radio3 = findViewById(R.id.radio3C);
+        radio4 = findViewById(R.id.radio4C);
+        radio5 = findViewById(R.id.radio5C);
+        textViewSpeed1 = findViewById(R.id.textViewSpeed1C);
+        textViewSpeed2 = findViewById(R.id.textViewSpeed2C);
+        textViewSpeed3 = findViewById(R.id.textViewSpeed3C);
+        textViewSpeed4 = findViewById(R.id.textViewSpeed4C);
+        textViewSpeed5 = findViewById(R.id.textViewSpeed5C);
+        help_s = findViewById(R.id.help_chateau);
 
         help_s.setOnClickListener(v -> {
 
@@ -64,12 +66,27 @@ public class SpeedActivity extends AppCompatActivity  {
 
         //threads for setting start limits
 
-        Thread lim = new Thread(() -> {
+        Thread limC = new Thread(() -> {
             try {
                 Thread.sleep(200);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+
+            Thread l1 = new Thread(() -> {
+                try {
+                    ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan201] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
+                    Thread.sleep(300);
+
+                } catch (JSchException | IOException | InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                runOnUiThread(() -> {
+                    textViewSpeed1.setText("");
+                    textViewSpeed1.setText(result);
+                });
+            });
+
             Thread l2 = new Thread(() -> {
                 try {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
@@ -127,19 +144,21 @@ public class SpeedActivity extends AppCompatActivity  {
             });
 
             try {
-            l2.start();
-            l2.join();
-            l3.start();
-            l3.join();
-            l4.start();
-            l4.join();
-            l5.start();
-            l5.join();
+                l1.start();
+                l1.join();
+                l2.start();
+                l2.join();
+                l3.start();
+                l3.join();
+                l4.start();
+                l4.join();
+                l5.start();
+                l5.join();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         });
-            lim.start();
+        limC.start();
 
 
         // on click SET Button
@@ -159,6 +178,36 @@ public class SpeedActivity extends AppCompatActivity  {
             else {
                 boolean b = command.equals("999");
                 int flg = 0;
+
+                if (radio1.isChecked()) {
+                    flg = 1;
+                    Thread s1 = new Thread(() -> {
+                        try {
+                            if (b) {
+                                ConnectionManager.runCommand("/queue simple remove [find where name=1]");
+                                runOnUiThread(() -> {
+                                    textViewSpeed1.setText("");
+                                    radio1.setChecked(false);
+                                    speed.setText(null);
+                                });
+                            } else {
+                                ConnectionManager.runCommand("/queue simple remove [find where name=1]");
+                                ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=1 target=bridge-vlan201");
+
+                                runOnUiThread(() -> {
+                                    textViewSpeed1.setText("");
+                                    textViewSpeed1.setText(command + "M/" + command + "M");
+                                    radio1.setChecked(false);
+                                    speed.setText(null);
+                                });
+                            }
+                        } catch (JSchException | IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
+                    s1.start();
+                }
+
                 if (radio2.isChecked()) {
                     flg = 1;
                     Thread s2 = new Thread(() -> {
@@ -287,8 +336,8 @@ public class SpeedActivity extends AppCompatActivity  {
     //on-off switching radio buttons
 
     public static class ToggleableRadioButton extends androidx.appcompat.widget.AppCompatRadioButton { public ToggleableRadioButton(Context context) {
-            super(context);
-        }
+        super(context);
+    }
         public ToggleableRadioButton(Context context, AttributeSet attrs) {
             super(context, attrs);
         }

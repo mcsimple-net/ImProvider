@@ -48,5 +48,11 @@ public class PortsSelectActivity extends AppCompatActivity {
             Intent intent = new Intent(PortsSelectActivity.this,Attention24Activity.class);
             startActivity(intent);
         } );
+
+        linearLayoutChateau.setOnClickListener(v -> {
+
+            Intent intent = new Intent(PortsSelectActivity.this,AttentionChateauActivity.class);
+            startActivity(intent);
+        } );
     }
 }

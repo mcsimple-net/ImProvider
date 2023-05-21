@@ -15,6 +15,12 @@
         android:theme="@style/Theme.ImProviderMikroTik"
         tools:targetApi="33">
         <activity
+            android:name=".AttentionChateauActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SpeedChateauActivity"
+            android:exported="false" />
+        <activity
             android:name=".Speed24Activity"
             android:exported="false" />
         <activity
