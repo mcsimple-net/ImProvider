@@ -28,14 +28,14 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText hostname;
-    EditText port;
-    EditText username;
-    EditText password;
-    Button connect;
-    Button setup, start_page;
-    TextView help_m;
-    SharedPreferences prefs;
+    private EditText hostname;
+    private EditText port;
+    private EditText username;
+    private EditText password;
+    private Button connect;
+    private Button setup, start_page;
+    private TextView help_m;
+    private SharedPreferences prefs;
     CheckBox checkBox;
 
 
@@ -54,9 +54,6 @@ public class MainActivity extends AppCompatActivity {
         checkBox = findViewById(R.id.checkBox);
 
 
-
-
-
        prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         boolean previouslyStarted = prefs.getBoolean(getString(R.string.pref_previously_started), false);
         if(!previouslyStarted) {
@@ -64,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         }
-
-
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String hostname_shared = sharedPreferences.getString("host", "192.168.88.1"); // Second parameter is the default value.
@@ -77,8 +72,6 @@ public class MainActivity extends AppCompatActivity {
         port.setText(port_shared);
         username.setText(username_shared);
         password.setText(password_shared);
-
-
 
         help_m.setOnClickListener(v ->
                 Alerter.create(this, R.layout.alerter_custom_layout)

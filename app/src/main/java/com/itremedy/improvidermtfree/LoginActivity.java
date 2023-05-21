@@ -17,9 +17,9 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button login;
-    SharedPreferences set_prefs;
-    TextView textViewLogin;
+    private Button login;
+    private SharedPreferences set_prefs;
+    private TextView textViewLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

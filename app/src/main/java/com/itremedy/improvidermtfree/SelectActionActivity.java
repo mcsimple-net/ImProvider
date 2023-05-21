@@ -57,7 +57,7 @@ public class SelectActionActivity extends AppCompatActivity {
                         .show();}
 
 
-            else {Intent intent = new Intent(SelectActionActivity.this,SpeedActivity.class);
+            else {Intent intent = new Intent(SelectActionActivity.this,SelectSpeedActivity.class);
             startActivity(intent);}
 
         });
@@ -80,9 +80,36 @@ public class SelectActionActivity extends AppCompatActivity {
         });
 
         merge.setOnClickListener(v4 -> {
+            Thread t = new Thread(() -> {
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                try {
+                    ConnectionManager.runCommand("/system identity print");
+                } catch (JSchException | IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+            t.start();
+            try {
+                t.join();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            if (!result.contains("ImProvider")) {
+                Alerter.create(this, R.layout.alerter_custom_layout)
+                        .setTitle(R.string.setup_first)
+                        .setDuration(10000)
+                        .setBackgroundColorRes(R.color.for_improvider)
+                        .enableSwipeToDismiss()
+                        .show();}
 
-            Intent f = new Intent(SelectActionActivity.this,MergePorts.class);
+            else {
+                Intent f = new Intent(SelectActionActivity.this,MergePorts.class);
             startActivity(f);
+            }
 
         });
     }

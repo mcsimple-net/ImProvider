@@ -15,6 +15,21 @@
         android:theme="@style/Theme.ImProviderMikroTik"
         tools:targetApi="33">
         <activity
+            android:name=".Speed24Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Attention24Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Attention10Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectSpeedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Speed10Activity"
+            android:exported="false" />
+        <activity
             android:name=".MergePorts"
             android:exported="false" />
         <activity

@@ -25,9 +25,9 @@ import java.security.GeneralSecurityException;
 public class GuestSetupActivity extends AppCompatActivity  {
 
 
-    EditText guest_name, guest_password, guest_speed;
-    Button set,remove;
-    TextView help_guest;
+    private EditText guest_name, guest_password, guest_speed;
+    private Button set,remove;
+    private TextView help_guest;
    SharedPreferences sharedPreferencesGuest;
 
 
@@ -36,7 +36,7 @@ public class GuestSetupActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guest_setup);
         guest_speed = findViewById(R.id.GuestSpeed);
-        set = findViewById(R.id.buttonSet);
+        set = findViewById(R.id.buttonSet10);
         guest_name = findViewById(R.id.editTextWName);
         guest_password = findViewById(R.id.editTextWPassword);
         remove = findViewById(R.id.RemoveGuestWiFi);
@@ -78,7 +78,6 @@ public class GuestSetupActivity extends AppCompatActivity  {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            finishAffinity();
         });
 
      sharedPreferencesGuest = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());

@@ -16,8 +16,8 @@ import java.io.IOException;
 
 public class AdminPassword extends AppCompatActivity {
 
-    EditText new_password;
-    Button admin_ok;
+    private EditText new_password;
+    private Button admin_ok;
 
 
     @Override

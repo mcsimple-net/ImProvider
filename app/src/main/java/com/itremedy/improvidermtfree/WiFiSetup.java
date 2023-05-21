@@ -25,10 +25,10 @@ import java.security.GeneralSecurityException;
 
 public class WiFiSetup extends AppCompatActivity {
 
-    EditText wname,wpassword;
-    Button wifipass, wifiname;
-    TextView help_wifi;
-    SharedPreferences sharedPreferencesW;
+    private EditText wname,wpassword;
+    private Button wifipass, wifiname;
+    private TextView help_wifi;
+    private SharedPreferences sharedPreferencesW;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/quitApp"
+        android:id="@+id/quitApp10"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="110dp"
@@ -58,7 +58,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textViewGuestName"
+            android:id="@+id/textViewSpeed2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
@@ -98,7 +98,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textViewGuestPassword"
+            android:id="@+id/textViewSpeed3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
@@ -204,7 +204,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <EditText
-            android:id="@+id/GuestSpeed"
+            android:id="@+id/Speed"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
@@ -221,7 +221,7 @@
             android:textSize="28sp" />
 
         <Button
-            android:id="@+id/buttonSet"
+            android:id="@+id/buttonSet10"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"

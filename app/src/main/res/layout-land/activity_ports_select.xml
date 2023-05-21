@@ -93,7 +93,6 @@
         android:background="@drawable/dark_background_card_view"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout8ports"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5ports">
 
         <TextView
@@ -141,7 +140,7 @@
             android:textSize="18sp" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageView24ports"
             android:layout_width="150dp"
             android:layout_height="70dp"
             android:layout_gravity="center"

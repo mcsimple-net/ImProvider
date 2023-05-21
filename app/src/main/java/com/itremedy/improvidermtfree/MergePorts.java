@@ -45,7 +45,7 @@ public class MergePorts extends AppCompatActivity {
                 try {
                     ConnectionManager.runCommand("/interface bridge port print where pvid=202");
                     Thread.sleep(300);
-                    if (!result.contains("Columns:")){
+                    if (!result.contains("bridge")){
                         runOnUiThread(() -> {
                             m_radio2.setChecked(true);
                         });
@@ -67,7 +67,7 @@ public class MergePorts extends AppCompatActivity {
                     ConnectionManager.runCommand("/interface bridge port print where pvid=203");
                     Thread.sleep(300);
 
-                    if (!result.contains("Columns:")){
+                    if (!result.contains("bridge")){
                         runOnUiThread(() -> {
                             m_radio3.setChecked(true);
                         });
@@ -89,7 +89,7 @@ public class MergePorts extends AppCompatActivity {
                     ConnectionManager.runCommand("/interface bridge port print where pvid=204");
                     Thread.sleep(300);
 
-                    if (!result.contains("Columns:")){
+                    if (!result.contains("bridge")){
                         runOnUiThread(() -> {
                             m_radio4.setChecked(true);
                         });
@@ -111,7 +111,7 @@ public class MergePorts extends AppCompatActivity {
                     ConnectionManager.runCommand("/interface bridge port print where pvid=205");
                     Thread.sleep(300);
 
-                    if (!result.contains("Columns:")){
+                    if (!result.contains("bridge")){
                         runOnUiThread(() -> {
                             m_radio5.setChecked(true);
                         });

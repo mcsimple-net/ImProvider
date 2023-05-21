@@ -21,25 +21,26 @@ import java.io.IOException;
 public class SpeedActivity extends AppCompatActivity  {
 
 
-    EditText speed;
-    Button set, quit;
-    RadioButton radio5,radio2,radio3,radio4;
-    TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5, help_s;
+    private EditText speed;
+    private Button set, quit;
+    private RadioButton radio5,radio2,radio3,radio4;
+    private TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5;
+    public TextView help_s;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speed);
-        speed = findViewById(R.id.GuestSpeed);
-        set = findViewById(R.id.buttonSet);
-        quit = findViewById(R.id.quitApp);
+        speed = findViewById(R.id.Speed);
+        set = findViewById(R.id.buttonSet10);
+        quit = findViewById(R.id.quitApp10);
         radio2 = findViewById(R.id.radio2);
         radio3 = findViewById(R.id.radio3);
         radio4 = findViewById(R.id.radio4);
         radio5 = findViewById(R.id.radio5);
-        textViewSpeed2 = findViewById(R.id.textViewGuestName);
-        textViewSpeed3 = findViewById(R.id.textViewGuestPassword);
+        textViewSpeed2 = findViewById(R.id.textViewSpeed2);
+        textViewSpeed3 = findViewById(R.id.textViewSpeed3);
         textViewSpeed4 = findViewById(R.id.textViewSpeed4);
         textViewSpeed5 = findViewById(R.id.textViewSpeed5);
         help_s = findViewById(R.id.help_wifi);

@@ -16,8 +16,8 @@ import java.io.IOException;
 
 public class GuestAttention extends AppCompatActivity {
 
-    Button button;
-    TextView textViewGuestWait, GuestWarning;
+    private Button button;
+    private TextView textViewGuestWait, GuestWarning;
 
 
     @Override
