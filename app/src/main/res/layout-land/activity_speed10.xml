@@ -87,7 +87,7 @@
     <ScrollView
         android:id="@+id/scrollView10"
         android:layout_width="0dp"
-        android:layout_height="270dp"
+        android:layout_height="220dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:foregroundGravity="center_horizontal"
