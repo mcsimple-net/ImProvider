@@ -16,22 +16,21 @@
         android:text="@string/select_ports"
         android:textColor="@color/text_color"
         android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="@+id/linearLayout2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/quitApp"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="280dp"
+        android:layout_height="70dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="230dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/quit"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
@@ -204,7 +203,8 @@
         android:gravity="bottom|center_horizontal"
         android:text="@string/enter_new_speed"
         android:textColor="@color/text_color"
-        android:textSize="30sp"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -249,7 +249,7 @@
             android:backgroundTint="@color/for_improvider"
             android:fontFamily="@font/abhaya_libre_semibold"
             android:text="@string/set"
-            android:textSize="34sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 
     <TextView

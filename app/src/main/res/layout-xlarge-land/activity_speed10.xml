@@ -15,51 +15,39 @@
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/select_ports"
         android:textColor="@color/text_color"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView10"
+        app:layout_constraintStart_toStartOf="@+id/scrollView10"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/quitApp10"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="70dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/quit"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutSelectSpeed10"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutSelectSpeed10"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutSelectSpeed10" />
 
     <LinearLayout
         android:id="@+id/linearLayoutSelectSpeed10"
         android:layout_width="340dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="70dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView10">
-
-        <TextView
-            android:id="@+id/textViewEnterLimit10"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/abhaya_libre_semibold"
-            android:gravity="center"
-            android:text="@string/enter_new_speed"
-            android:textColor="@color/text_color"
-            android:textSize="16sp" />
+        app:layout_constraintStart_toEndOf="@+id/scrollView10"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEnterLimit10">
 
         <EditText
             android:id="@+id/Speed10"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:background="@color/white"
@@ -72,7 +60,7 @@
 
         <Button
             android:id="@+id/buttonSet10"
-            android:layout_width="80dp"
+            android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -81,7 +69,7 @@
             android:backgroundTint="@color/for_improvider"
             android:fontFamily="@font/abhaya_libre_semibold"
             android:text="@string/set"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 
     <TextView
@@ -92,17 +80,17 @@
         android:layout_marginEnd="9dp"
         android:text="@string/need_help"
         android:textColor="@color/text_color"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:id="@+id/scrollView10"
         android:layout_width="0dp"
-        android:layout_height="270dp"
+        android:layout_height="460dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:foregroundGravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSelectPort10">
 
@@ -114,8 +102,8 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout210"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -131,7 +119,7 @@
                     android:fontFamily="@font/aldrich"
                     android:text="ETH2"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed210"
@@ -144,13 +132,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout310"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -166,7 +154,7 @@
                     android:gravity="center|start"
                     android:text="ETH3"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed310"
@@ -179,13 +167,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout410"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -201,7 +189,7 @@
                     android:gravity="center|start"
                     android:text="ETH4"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed410"
@@ -214,13 +202,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout510"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -236,7 +224,7 @@
                     android:gravity="center|start"
                     android:text="ETH5"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed510"
@@ -249,13 +237,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout610"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -271,7 +259,7 @@
                     android:gravity="center|start"
                     android:text="ETH6"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed610"
@@ -284,13 +272,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout710"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -306,7 +294,7 @@
                     android:gravity="center|start"
                     android:text="ETH7"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed710"
@@ -319,13 +307,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout810"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -341,7 +329,7 @@
                     android:gravity="center|start"
                     android:text="ETH8"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed810"
@@ -354,13 +342,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout910"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -376,7 +364,7 @@
                     android:gravity="center|start"
                     android:text="ETH9"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed910"
@@ -389,13 +377,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout1010"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -411,7 +399,7 @@
                     android:gravity="center|start"
                     android:text="ETH10"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed1010"
@@ -424,10 +412,25 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/textViewEnterLimit10"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/abhaya_libre_semibold"
+        android:gravity="center"
+        android:text="@string/enter_new_speed"
+        android:textColor="@color/text_color"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutSelectSpeed10"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutSelectSpeed10"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

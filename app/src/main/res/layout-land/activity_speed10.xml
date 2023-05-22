@@ -16,45 +16,33 @@
         android:text="@string/select_ports"
         android:textColor="@color/text_color"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView10"
+        app:layout_constraintStart_toStartOf="@+id/scrollView10"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/quitApp10"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/quit"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutSelectSpeed10"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutSelectSpeed10"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutSelectSpeed10" />
 
     <LinearLayout
         android:id="@+id/linearLayoutSelectSpeed10"
-        android:layout_width="340dp"
+        android:layout_width="240dp"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView10">
-
-        <TextView
-            android:id="@+id/textViewEnterLimit10"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/abhaya_libre_semibold"
-            android:gravity="center"
-            android:text="@string/enter_new_speed"
-            android:textColor="@color/text_color"
-            android:textSize="16sp" />
+        app:layout_constraintStart_toEndOf="@+id/scrollView10"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEnterLimit10">
 
         <EditText
             android:id="@+id/Speed10"
@@ -100,9 +88,9 @@
         android:id="@+id/scrollView10"
         android:layout_width="0dp"
         android:layout_height="270dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:foregroundGravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSelectPort10">
 
@@ -428,6 +416,21 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/textViewEnterLimit10"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/abhaya_libre_semibold"
+        android:gravity="center"
+        android:text="@string/enter_new_speed"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutSelectSpeed10"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutSelectSpeed10"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

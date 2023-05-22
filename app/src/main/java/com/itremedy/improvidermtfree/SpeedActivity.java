@@ -48,7 +48,7 @@ public class SpeedActivity extends AppCompatActivity  {
         help_s.setOnClickListener(v -> {
 
             Alerter.create(this, R.layout.alerter_custom_layout)
-                    .setDuration(5000)
+                    .setDuration(7000)
                     .setIcon(R.drawable.help)
                     .setBackgroundColorRes(R.color.for_improvider)
                     .enableSwipeToDismiss()

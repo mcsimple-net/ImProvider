@@ -16,45 +16,32 @@
         android:text="@string/select_ports"
         android:textColor="@color/text_color"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView24"
+        app:layout_constraintStart_toStartOf="@+id/scrollView24"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/quitApp24"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/quit"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutSelectSpeed24"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutSelectSpeed24"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutSelectSpeed24" />
 
     <LinearLayout
         android:id="@+id/linearLayoutSelectSpeed24"
-        android:layout_width="340dp"
+        android:layout_width="200dp"
         android:layout_height="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView24">
-
-        <TextView
-            android:id="@+id/textViewEnterLimit24"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/abhaya_libre_semibold"
-            android:gravity="center"
-            android:text="@string/enter_new_speed"
-            android:textColor="@color/text_color"
-            android:textSize="16sp" />
+        app:layout_constraintStart_toEndOf="@+id/scrollView24"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEnterLimit24">
 
         <EditText
             android:id="@+id/Speed24"
@@ -99,10 +86,9 @@
     <ScrollView
         android:id="@+id/scrollView24"
         android:layout_width="0dp"
-        android:layout_height="270dp"
+        android:layout_height="230dp"
         android:layout_marginTop="20dp"
         android:foregroundGravity="center_horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSelectPort24">
 
@@ -919,6 +905,21 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/textViewEnterLimit24"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="70dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/abhaya_libre_semibold"
+        android:gravity="center"
+        android:text="@string/enter_new_speed"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutSelectSpeed24"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutSelectSpeed24"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,48 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".Speed24Activity">
+    tools:context=".Speed10Activity">
 
     <TextView
-        android:id="@+id/textViewSelectPort24"
+        android:id="@+id/textViewSelectPort10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/select_ports"
         android:textColor="@color/text_color"
-        android:textSize="20sp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/quitApp24"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="49dp"
+        android:id="@+id/quitApp10"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="70dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/quit"
-        android:textSize="16sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSelectSpeed24" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSelectSpeed10" />
 
     <LinearLayout
-        android:id="@+id/linearLayoutSelectSpeed24"
-        android:layout_width="340dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="30dp"
+        android:id="@+id/linearLayoutSelectSpeed10"
+        android:layout_width="540dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="70dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView24">
+        app:layout_constraintTop_toBottomOf="@+id/scrollView10">
 
         <TextView
-            android:id="@+id/textViewEnterLimit24"
-            android:layout_width="80dp"
+            android:id="@+id/textViewEnterLimit10"
+            android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
@@ -54,12 +54,12 @@
             android:gravity="center"
             android:text="@string/enter_new_speed"
             android:textColor="@color/text_color"
-            android:textSize="16sp" />
+            android:textSize="34sp" />
 
         <EditText
-            android:id="@+id/Speed24"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:id="@+id/Speed10"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:background="@color/white"
@@ -71,8 +71,8 @@
             android:textSize="28sp" />
 
         <Button
-            android:id="@+id/buttonSet24"
-            android:layout_width="80dp"
+            android:id="@+id/buttonSet10"
+            android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
@@ -81,7 +81,7 @@
             android:backgroundTint="@color/for_improvider"
             android:fontFamily="@font/abhaya_libre_semibold"
             android:text="@string/set"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 
     <TextView
@@ -92,19 +92,19 @@
         android:layout_marginEnd="9dp"
         android:text="@string/need_help"
         android:textColor="@color/text_color"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:id="@+id/scrollView24"
+        android:id="@+id/scrollView10"
         android:layout_width="0dp"
-        android:layout_height="270dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="460dp"
+        android:layout_marginTop="50dp"
         android:foregroundGravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSelectPort24">
+        app:layout_constraintTop_toBottomOf="@+id/textViewSelectPort10">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -114,8 +114,8 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout242"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -131,7 +131,7 @@
                     android:fontFamily="@font/aldrich"
                     android:text="ETH2"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed242"
@@ -144,13 +144,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout243"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -166,7 +166,7 @@
                     android:gravity="center|start"
                     android:text="ETH3"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed243"
@@ -179,13 +179,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout244"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -201,7 +201,7 @@
                     android:gravity="center|start"
                     android:text="ETH4"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed244"
@@ -214,13 +214,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout245"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -236,7 +236,7 @@
                     android:gravity="center|start"
                     android:text="ETH5"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed245"
@@ -249,13 +249,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout246"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -271,7 +271,7 @@
                     android:gravity="center|start"
                     android:text="ETH6"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed246"
@@ -284,13 +284,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout247"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -306,7 +306,7 @@
                     android:gravity="center|start"
                     android:text="ETH7"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed247"
@@ -319,13 +319,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout248"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -341,7 +341,7 @@
                     android:gravity="center|start"
                     android:text="ETH8"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed248"
@@ -354,13 +354,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout249"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -376,7 +376,7 @@
                     android:gravity="center|start"
                     android:text="ETH9"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed249"
@@ -389,13 +389,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2410"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -411,7 +411,7 @@
                     android:gravity="center|start"
                     android:text="ETH10"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2410"
@@ -424,13 +424,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2411"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -446,7 +446,7 @@
                     android:gravity="center|start"
                     android:text="ETH11"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2411"
@@ -459,14 +459,14 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2412"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -482,7 +482,7 @@
                     android:gravity="center|start"
                     android:text="ETH12"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2412"
@@ -495,13 +495,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2413"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -517,7 +517,7 @@
                     android:gravity="center|start"
                     android:text="ETH13"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2413"
@@ -530,13 +530,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2414"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -552,7 +552,7 @@
                     android:gravity="center|start"
                     android:text="ETH14"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2414"
@@ -565,13 +565,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2415"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -587,7 +587,7 @@
                     android:gravity="center|start"
                     android:text="ETH15"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2415"
@@ -600,13 +600,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2416"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -622,7 +622,7 @@
                     android:gravity="center|start"
                     android:text="ETH16"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2416"
@@ -635,13 +635,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2417"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -657,7 +657,7 @@
                     android:gravity="center|start"
                     android:text="ETH17"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2417"
@@ -670,13 +670,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2418"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -692,7 +692,7 @@
                     android:gravity="center|start"
                     android:text="ETH18"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2418"
@@ -705,13 +705,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2419"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -727,7 +727,7 @@
                     android:gravity="center|start"
                     android:text="ETH19"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2419"
@@ -740,13 +740,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2420"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -762,7 +762,7 @@
                     android:gravity="center|start"
                     android:text="ETH20"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2420"
@@ -775,13 +775,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2421"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -797,7 +797,7 @@
                     android:gravity="center|start"
                     android:text="ETH21"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2421"
@@ -810,13 +810,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2422"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -832,7 +832,7 @@
                     android:gravity="center|start"
                     android:text="ETH22"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2422"
@@ -845,13 +845,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2423"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -867,7 +867,7 @@
                     android:gravity="center|start"
                     android:text="ETH23"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2423"
@@ -880,13 +880,13 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout2424"
-                android:layout_width="300dp"
-                android:layout_height="50dp"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
                 android:background="@drawable/dark_background_card_view"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -902,7 +902,7 @@
                     android:gravity="center|start"
                     android:text="ETH24"
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewSpeed2424"
@@ -915,7 +915,7 @@
                     android:gravity="center|start"
                     android:text=""
                     android:textColor="@color/text_color"
-                    android:textSize="16sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

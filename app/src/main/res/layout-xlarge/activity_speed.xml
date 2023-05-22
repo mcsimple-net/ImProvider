@@ -245,7 +245,7 @@
             android:backgroundTint="@color/for_improvider"
             android:fontFamily="@font/abhaya_libre_semibold"
             android:text="@string/set"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 
     <TextView

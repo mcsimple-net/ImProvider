@@ -109,7 +109,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
             Alerter.create(this,R.layout.alerter_custom_layout)
                     .setTitle(R.string.please_wait)
-                    .setDuration(10000)
+                    .setDuration(7000)
                     .enableProgress(true)
                     .setBackgroundColorRes(R.color.for_improvider)
                     .enableSwipeToDismiss()
