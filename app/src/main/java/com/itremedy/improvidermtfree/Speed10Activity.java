@@ -87,8 +87,10 @@ public class Speed10Activity extends AppCompatActivity  {
 
             Thread l2 = new Thread(() -> {
                 try {
+
+                    Thread.sleep(200);
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(300);
+
 
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
@@ -102,8 +104,10 @@ public class Speed10Activity extends AppCompatActivity  {
 
             Thread l3 = new Thread(() -> {
                 try {
+
+                    Thread.sleep(200);
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan203] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(300);
+
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -116,8 +120,9 @@ public class Speed10Activity extends AppCompatActivity  {
 
             Thread l4 = new Thread(() -> {
                 try {
+                    Thread.sleep(200);
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan204] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(300);
+
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -130,8 +135,10 @@ public class Speed10Activity extends AppCompatActivity  {
 
             Thread l5 = new Thread(() -> {
                 try {
+
+                    Thread.sleep(200);
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan205] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(300);
+
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -142,8 +149,10 @@ public class Speed10Activity extends AppCompatActivity  {
             });
             Thread l6 = new Thread(() -> {
                 try {
+
+                    Thread.sleep(200);
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan206] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(300);
+
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -154,8 +163,10 @@ public class Speed10Activity extends AppCompatActivity  {
             });
             Thread l7 = new Thread(() -> {
                 try {
+
+                    Thread.sleep(200);
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan207] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(300);
+
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -166,8 +177,10 @@ public class Speed10Activity extends AppCompatActivity  {
             });
             Thread l8 = new Thread(() -> {
                 try {
+
+                    Thread.sleep(200);
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan208] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(300);
+
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -178,8 +191,10 @@ public class Speed10Activity extends AppCompatActivity  {
             });
             Thread l9 = new Thread(() -> {
                 try {
+
+                    Thread.sleep(200);
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan209] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(300);
+
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -190,8 +205,10 @@ public class Speed10Activity extends AppCompatActivity  {
             });
             Thread l10 = new Thread(() -> {
                 try {
+
+                    Thread.sleep(200);
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan210] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
-                    Thread.sleep(300);
+
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -244,116 +261,146 @@ public class Speed10Activity extends AppCompatActivity  {
             else {
                 boolean b = command.equals("999");
                 int flg = 0;
+
                 if (radio2.isChecked()) {
                     flg = 1;
                     Thread s2 = new Thread(() -> {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=2]");
-                                runOnUiThread(() -> {
-                                    textViewSpeed2.setText("");
-                                    radio2.setChecked(false);
-                                    speed.setText(null);
-                                });
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=2]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=2 target=bridge-vlan202");
-
-                                runOnUiThread(() -> {
-                                    textViewSpeed2.setText("");
-                                    textViewSpeed2.setText(command + "M/" + command + "M");
-                                    radio2.setChecked(false);
-                                    speed.setText(null);
-                                });
                             }
                         } catch (JSchException | IOException e) {
                             throw new RuntimeException(e);
                         }
                     });
                     s2.start();
+
+                    Thread l2 = new Thread(() -> {
+                        try {
+
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
+
+                        } catch (JSchException | IOException | InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        runOnUiThread(() -> {
+                            radio2.setChecked(false);
+                            speed.setText(null);
+                            textViewSpeed2.setText("");
+                            textViewSpeed2.setText(result);
+                        });
+                    });
+                    l2.start();
                 }
+
                 if (radio3.isChecked()) {
                     flg = 1;
                     Thread s3 = new Thread(() -> {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=3]");
-                                runOnUiThread(() -> {
-                                    textViewSpeed3.setText("");
-                                    radio3.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=3]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=3 target=bridge-vlan203");
 
-                                runOnUiThread(() -> {
-                                    textViewSpeed3.setText("");
-                                    textViewSpeed3.setText(command + "M/" + command + "M");
-                                    radio3.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             }
                         } catch (JSchException | IOException e) {
                             throw new RuntimeException(e);
                         }
                     });
                     s3.start();
+
+                    Thread l3 = new Thread(() -> {
+                        try {
+
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan203] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
+
+                        } catch (JSchException | IOException | InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        runOnUiThread(() -> {
+                            radio3.setChecked(false);
+                            speed.setText(null);
+                            textViewSpeed3.setText("");
+                            textViewSpeed3.setText(result);
+                        });
+                    });
+                    l3.start();
                 }
+
                 if (radio4.isChecked()) {
                     flg = 1;
                     Thread s4 = new Thread(() -> {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=4]");
-                                runOnUiThread(() -> {
-                                    textViewSpeed4.setText("");
-                                    radio4.setChecked(false);
-                                    speed.setText(null);
-                                });
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=4]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=4 target=bridge-vlan204");
-
-                                runOnUiThread(() -> {
-                                    textViewSpeed4.setText("");
-                                    textViewSpeed4.setText(command + "M/" + command + "M");
-                                    radio4.setChecked(false);
-                                    speed.setText(null);
-                                });
                             }
                         } catch (JSchException | IOException e) {
                             throw new RuntimeException(e);
                         }
                     });
                     s4.start();
+
+                    Thread l4 = new Thread(() -> {
+                        try {
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan204] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
+
+                        } catch (JSchException | IOException | InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        runOnUiThread(() -> {
+                            radio4.setChecked(false);
+                            speed.setText(null);
+                            textViewSpeed4.setText("");
+                            textViewSpeed4.setText(result);
+                        });
+                    });
+                    l4.start();
                 }
+
                 if (radio5.isChecked()) {
                     flg = 1;
                     Thread s5 = new Thread(() -> {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=5]");
-                                runOnUiThread(() -> {
-                                    textViewSpeed5.setText("");
-                                    radio5.setChecked(false);
-                                    speed.setText(null);
-                                });
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=5]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
-                                runOnUiThread(() -> {
-                                    textViewSpeed5.setText("");
-                                    textViewSpeed5.setText(command + "M/" + command + "M");
-                                    radio5.setChecked(false);
-                                    speed.setText(null);
-                                });
                             }
                         } catch (JSchException | IOException e) {
                             throw new RuntimeException(e);
                         }
                     });
                     s5.start();
+
+                    Thread l5 = new Thread(() -> {
+                        try {
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan205] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
+
+                        } catch (JSchException | IOException | InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        runOnUiThread(() -> {
+                            radio5.setChecked(false);
+                            speed.setText(null);
+                            textViewSpeed5.setText("");
+                            textViewSpeed5.setText(result);
+                        });
+                    });
+                    l5.start();
                 }
 
                 if (radio6.isChecked()) {
@@ -362,27 +409,36 @@ public class Speed10Activity extends AppCompatActivity  {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=6]");
-                                runOnUiThread(() -> {
-                                    textViewSpeed6.setText("");
-                                    radio6.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=6]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=6 target=bridge-vlan206");
-                                runOnUiThread(() -> {
-                                    textViewSpeed6.setText("");
-                                    textViewSpeed6.setText(command + "M/" + command + "M");
-                                    radio6.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             }
                         } catch (JSchException | IOException e) {
                             throw new RuntimeException(e);
                         }
                     });
                     s6.start();
+
+                    Thread l6 = new Thread(() -> {
+                        try {
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan206] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
+
+                        } catch (JSchException | IOException | InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        runOnUiThread(() -> {
+                            radio6.setChecked(false);
+                            speed.setText(null);
+                            textViewSpeed6.setText("");
+                            textViewSpeed6.setText(result);
+                        });
+                    });
+                    l6.start();
                 }
+
 
                 if (radio7.isChecked()) {
                     flg = 1;
@@ -390,26 +446,35 @@ public class Speed10Activity extends AppCompatActivity  {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=7]");
-                                runOnUiThread(() -> {
-                                    textViewSpeed7.setText("");
-                                    radio7.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=7]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=7 target=bridge-vlan207");
-                                runOnUiThread(() -> {
-                                    textViewSpeed7.setText("");
-                                    textViewSpeed7.setText(command + "M/" + command + "M");
-                                    radio7.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             }
                         } catch (JSchException | IOException e) {
                             throw new RuntimeException(e);
                         }
                     });
                     s7.start();
+
+                    Thread l7 = new Thread(() -> {
+                        try {
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan207] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
+
+                        } catch (JSchException | IOException | InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        runOnUiThread(() -> {
+                            radio7.setChecked(false);
+                            speed.setText(null);
+                            textViewSpeed7.setText("");
+                            textViewSpeed7.setText(result);
+                        });
+                    });
+                    l7.start();
+
                 }
 
                 if (radio8.isChecked()) {
@@ -418,26 +483,35 @@ public class Speed10Activity extends AppCompatActivity  {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=8]");
-                                runOnUiThread(() -> {
-                                    textViewSpeed8.setText("");
-                                    radio8.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=8]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=8 target=bridge-vlan208");
-                                runOnUiThread(() -> {
-                                    textViewSpeed8.setText("");
-                                    textViewSpeed8.setText(command + "M/" + command + "M");
-                                    radio8.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             }
                         } catch (JSchException | IOException e) {
                             throw new RuntimeException(e);
                         }
                     });
                     s8.start();
+
+                    Thread l8 = new Thread(() -> {
+                        try {
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan208] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
+
+                        } catch (JSchException | IOException | InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        runOnUiThread(() -> {
+                            radio8.setChecked(false);
+                            speed.setText(null);
+                            textViewSpeed8.setText("");
+                            textViewSpeed8.setText(result);
+                        });
+                    });
+                    l8.start();
+
                 }
 
                 if (radio9.isChecked()) {
@@ -446,26 +520,35 @@ public class Speed10Activity extends AppCompatActivity  {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=9]");
-                                runOnUiThread(() -> {
-                                    textViewSpeed9.setText("");
-                                    radio9.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=9]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=9 target=bridge-vlan209");
-                                runOnUiThread(() -> {
-                                    textViewSpeed9.setText("");
-                                    textViewSpeed9.setText(command + "M/" + command + "M");
-                                    radio9.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             }
                         } catch (JSchException | IOException e) {
                             throw new RuntimeException(e);
                         }
                     });
                     s9.start();
+
+                    Thread l9 = new Thread(() -> {
+                        try {
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan209] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
+
+                        } catch (JSchException | IOException | InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        runOnUiThread(() -> {
+                            radio9.setChecked(false);
+                            speed.setText(null);
+                            textViewSpeed9.setText("");
+                            textViewSpeed9.setText(result);
+                        });
+                    });
+                    l9.start();
+
                 }
 
                 if (radio10.isChecked()) {
@@ -474,26 +557,34 @@ public class Speed10Activity extends AppCompatActivity  {
                         try {
                             if (b) {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=10]");
-                                runOnUiThread(() -> {
-                                    textViewSpeed10.setText("");
-                                    radio10.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=10]");
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=10 target=bridge-vlan210");
-                                runOnUiThread(() -> {
-                                    textViewSpeed10.setText("");
-                                    textViewSpeed10.setText(command + "M/" + command + "M");
-                                    radio10.setChecked(false);
-                                    speed.setText(null);
-                                });
+
                             }
                         } catch (JSchException | IOException e) {
                             throw new RuntimeException(e);
                         }
                     });
                     s10.start();
+
+                    Thread l10 = new Thread(() -> {
+                        try {
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan210] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
+
+                        } catch (JSchException | IOException | InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                        runOnUiThread(() -> {
+                            radio10.setChecked(false);
+                            speed.setText(null);
+                            textViewSpeed10.setText("");
+                            textViewSpeed10.setText(result);
+                        });
+                    });
+                    l10.start();
                 }
 
 //___________end of threads_____________________________
@@ -514,7 +605,7 @@ public class Speed10Activity extends AppCompatActivity  {
 
     //on-off switching radio buttons
 
-    public static class ToggleableRadioButton extends androidx.appcompat.widget.AppCompatRadioButton { public ToggleableRadioButton(Context context) {
+    /* public static class ToggleableRadioButton extends androidx.appcompat.widget.AppCompatRadioButton { public ToggleableRadioButton(Context context) {
         super(context);
     }
         public ToggleableRadioButton(Context context, AttributeSet attrs) {
@@ -532,7 +623,7 @@ public class Speed10Activity extends AppCompatActivity  {
                 setChecked(true);
             }
         }
-    }
+    }*/
 
     //refresh activity if opened second time
 
