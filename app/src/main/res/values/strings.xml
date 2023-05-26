@@ -44,10 +44,10 @@
         This version is suitable for 5-port routers MikroTik hAP series. For other models/functions use the premium version of the app. \n
         How to use: \n
         1. If you already use a Mikrotik router save its configuration with Winbox and reset it. \n
-        2. Turn on the router. \n
-        3. Plug the internet cable from provider\'s router into the first port (ETH1). \n
+        2. Plug the internet cable from provider\'s router into the first port (ETH1) or insert microSIM card (for LTE/5G routers). \n
+        3. Turn on the router. \n
         4. Connect your phone or tablet with ImProvider to WiFi network \"MikroTik-*****\" . \n
-        *If your router creates two networks, do not use \"MikroTik-****A\"/\"MikroTik-****5\" during setup due to WiFi security. \n
+        *If your router creates two networks, do not use \"MikroTik-****A\"/\"MikroTik-****5\" during first setup due to WiFi security. \n
         To delete the app settings on your router reset it. \n
         You can find more information about ImProvider at <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider</u></a>.
         If you have questions or want to report about an issue please write to <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue" target="_top">customercare@itremedy.pro</a>. \n
@@ -64,7 +64,7 @@
     <string name="new_password_was_set">New password was set</string>
     <string name="enter_new_password">Enter new password</string>
     <string name="done">Done</string>
-    <string name="help_merge">Select ports to add to your own network to connect TV / network printer / computer / access point by ethernet cable. Reconnect or reboot connected device after switching.</string>
+    <string name="help_merge">Select ports to add to your own network to connect TV / network printer / computer / access point by ethernet cable and press OK. Reconnect or reboot connected device after switching.</string>
     <string name="merge_ethernet_ports">MERGE ETHERNET PORTS</string>
 
 

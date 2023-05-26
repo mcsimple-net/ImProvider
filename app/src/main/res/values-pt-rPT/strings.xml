@@ -43,8 +43,8 @@
          Para outros modelos/funções, use a versão premium do aplicativo.\n
          Como usar:\n
          1. Se você já usa um roteador Mikrotik, salve sua configuração com o Winbox e redefina-o.\n
-         2. Ligue o roteador.\n
-         3. Conecte o cabo de internet do roteador do provedor na primeira porta (ETH1).\n
+         2. Conecte o cabo de internet do roteador do provedor na primeira porta (ETH1) ou insira o cartão microSIM (para roteadores LTE/5G).\n
+         3. Ligue o roteador.\n
          4. Conecte seu telefone ou tablet com ImProvider à rede WiFi \"MikroTik-*****\".\n
          *Se o seu roteador criar duas redes, não use \"MikroTik-****A\"/\"MikroTik-****5\" durante a configuração devido à segurança WiFi.\n
          Para excluir as configurações do aplicativo em seu roteador, redefina-o.\n
@@ -65,7 +65,7 @@
     <string name="new_password_was_set">A nova senha foi definida</string>
     <string name="enter_new_password">Insira a nova senha</string>
     <string name="done">Feito</string>
-    <string name="help_merge">Selecione as portas para adicionar à sua própria rede para conectar a TV/impressora de rede/computador/ponto de acesso por cabo ethernet. Reconecte ou reinicie o dispositivo conectado após a troca.</string>
+    <string name="help_merge">Selecione as portas para adicionar à sua própria rede para conectar a TV/impressora de rede/computador/ponto de acesso por cabo ethernet e pressione OK. Reconecte ou reinicie o dispositivo conectado após a troca.</string>
     <string name="merge_ethernet_ports">COMERCIAR PORTAS ETHERNET</string>
 
 

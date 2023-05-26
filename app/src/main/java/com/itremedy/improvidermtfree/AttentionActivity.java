@@ -122,17 +122,15 @@ public class AttentionActivity extends AppCompatActivity {
                     Thread.sleep(100);
 
 
-                    ConnectionManager.runCommand("/ip firewall address-list add list=self_net address=192.168.88.0/24");
-                    Thread.sleep(100);
-                    ConnectionManager.runCommand("/ip firewall filter add action=accept chain=input src-address-list=self_net");
+                    ConnectionManager.runCommand("/ip firewall filter add chain=forward action=accept in-interface-list=!WAN out-interface-list=WAN");
                     Thread.sleep(100);
                     ConnectionManager.runCommand("/ip firewall filter remove [find where comment=\"defconf: fasttrack\"]");
                     Thread.sleep(100);
-                    ConnectionManager.runCommand("/ip firewall filter add action=drop chain=input comment=\"defconf: drop all\"");
+                    ConnectionManager.runCommand("/ip firewall filter add action=drop chain=forward comment=\"defconf: drop all\"");
                     Thread.sleep(100);
 
 
-                    ConnectionManager.runCommand("/ipv6 settings set disable-ipv6=yes max-neighbor-entries=15360");
+                    ConnectionManager.runCommand("/ipv6 settings set disable-ipv6=yes");
                     Thread.sleep(100);
 
                     ConnectionManager.runCommand("/user set admin password=itremedy.pro");

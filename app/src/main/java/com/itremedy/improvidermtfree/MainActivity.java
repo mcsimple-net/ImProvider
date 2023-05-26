@@ -12,6 +12,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -277,5 +278,28 @@ public class MainActivity extends AppCompatActivity {
             editor.putString("password", password.getText().toString());
             editor.apply();
         }
+    }
+
+
+    //refresh activity if opened second time
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        finish();
+        overridePendingTransition(0, 0);
+        startActivity(getIntent());
+        overridePendingTransition(0, 0);
+    }
+
+
+
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if (keyCode == KeyEvent.KEYCODE_BACK ) {
+            ConnectionManager.close();
+            this.finish();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

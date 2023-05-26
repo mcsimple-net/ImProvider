@@ -180,6 +180,7 @@ public class GuestAttention extends AppCompatActivity {
                     Log.d("Handler", "Running Handler");
                 }, 1000);
             }
+
         });
 
     }

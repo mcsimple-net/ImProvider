@@ -28,8 +28,8 @@
          Para otros modelos/funciones utilice la versión premium de la aplicación.\n
          Cómo utilizar:\n
          1. Si ya usa un enrutador Mikrotik, guarde su configuración con Winbox y reinícielo.\n
-         2. Encienda el enrutador.\n
-         3. Conecte el cable de Internet del enrutador del proveedor al primer puerto (ETH1).\n
+         2. Conecte el cable de Internet del enrutador del proveedor al primer puerto (ETH1) o inserte la tarjeta microSIM (para enrutadores LTE/5G).\n
+         3. Encienda el enrutador.\n
          4. Conecte su teléfono o tableta con ImProvider a la red WiFi \"MikroTik-*****\".\n
          *Si su enrutador crea dos redes, no use \"MikroTik-****A\"/\"MikroTik-****5\" durante la configuración debido a la seguridad WiFi.\n
          Para eliminar la configuración de la aplicación en su enrutador, reiníciela.\n
@@ -63,7 +63,7 @@
     <string name="new_password_was_set">Se estableció una nueva contraseña</string>
     <string name="enter_new_password">Ingrese nueva contraseña</string>
     <string name="done">Hecho</string>
-    <string name="help_merge">Seleccione puertos para agregar a su propia red para conectar TV/impresora de red/computadora/punto de acceso por cable ethernet. Vuelva a conectar o reinicie el dispositivo conectado después de cambiar.</string>
+    <string name="help_merge">Seleccione puertos para agregar a su propia red para conectar TV/impresora de red/computadora/punto de acceso por cable ethernet y presione OK. Vuelva a conectar o reinicie el dispositivo conectado después de cambiar.</string>
     <string name="merge_ethernet_ports">COMBINAR PUERTOS ETHERNET</string>
 
 
