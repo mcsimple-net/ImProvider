@@ -204,7 +204,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                     Thread l1 = new Thread(() -> {
                         try {
 
-                            Thread.sleep(500);
+                            Thread.sleep(700);
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan201] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
@@ -238,7 +238,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
 
                     Thread l2 = new Thread(() -> {
                         try {
-                            Thread.sleep(500);
+                            Thread.sleep(700);
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
                         } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
@@ -271,7 +271,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
 
                     Thread l3 = new Thread(() -> {
                         try {
-                            Thread.sleep(500);
+                            Thread.sleep(700);
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan203] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
                         } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
@@ -304,7 +304,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
 
                     Thread l4 = new Thread(() -> {
                         try {
-                            Thread.sleep(500);
+                            Thread.sleep(700);
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan204] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
                         } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
@@ -337,7 +337,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
 
                     Thread l5 = new Thread(() -> {
                         try {
-                            Thread.sleep(500);
+                            Thread.sleep(700);
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan205] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
                         } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
