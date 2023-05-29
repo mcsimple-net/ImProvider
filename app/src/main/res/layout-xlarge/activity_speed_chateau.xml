@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/quitApp"
+        android:id="@+id/quitAppC"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="70dp"
@@ -54,7 +54,7 @@
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
             android:fontFamily="@font/aldrich"
-            android:text="ETH2"
+            android:text="ETH1"
             android:textColor="@color/text_color"
             android:textSize="24sp" />
 

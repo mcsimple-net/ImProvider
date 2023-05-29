@@ -24,8 +24,7 @@
     <string name="enter_new_speed">Introducir límite de velocidad</string>
     <string name="please_wait">ESPERE POR FAVOR</string>
     <string name="login">ImProvider le permite controlar los enrutadores MikroTik mediante el control de los límites de velocidad de Internet de los usuarios del enrutador.\n
-         Los usuarios no podrán conectarse entre sí. Esta versión es adecuada para enrutadores de 5 puertos de la serie MikroTik hAP.
-         Para otros modelos/funciones utilice la versión premium de la aplicación.\n
+         Los usuarios no podrán conectarse entre sí.\n
          Cómo utilizar:\n
          1. Si ya usa un enrutador Mikrotik, guarde su configuración con Winbox y reinícielo.\n
          2. Conecte el cable de Internet del enrutador del proveedor al primer puerto (ETH1) o inserte la tarjeta microSIM (para enrutadores LTE/5G).\n

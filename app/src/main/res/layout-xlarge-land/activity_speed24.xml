@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".Speed10Activity">
+    tools:context=".Speed24Activity">
 
     <TextView
-        android:id="@+id/textViewSelectPort10"
+        android:id="@+id/textViewSelectPort24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -16,12 +16,12 @@
         android:text="@string/select_ports"
         android:textColor="@color/text_color"
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/scrollView10"
-        app:layout_constraintStart_toStartOf="@+id/scrollView10"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView24"
+        app:layout_constraintStart_toStartOf="@+id/scrollView24"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/quitApp10"
+        android:id="@+id/quitApp24"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="70dp"
@@ -29,23 +29,23 @@
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/quit"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayoutSelectSpeed10"
-        app:layout_constraintStart_toStartOf="@+id/linearLayoutSelectSpeed10"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSelectSpeed10" />
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutSelectSpeed24"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutSelectSpeed24"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSelectSpeed24" />
 
     <LinearLayout
-        android:id="@+id/linearLayoutSelectSpeed10"
+        android:id="@+id/linearLayoutSelectSpeed24"
         android:layout_width="340dp"
         android:layout_height="150dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="70dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintStart_toEndOf="@+id/scrollView10"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEnterLimit10">
+        app:layout_constraintStart_toEndOf="@+id/scrollView24"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEnterLimit24">
 
         <EditText
-            android:id="@+id/Speed10"
+            android:id="@+id/Speed24"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
@@ -59,7 +59,7 @@
             android:textSize="28sp" />
 
         <Button
-            android:id="@+id/buttonSet10"
+            android:id="@+id/buttonSet24"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
@@ -85,14 +85,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:id="@+id/scrollView10"
+        android:id="@+id/scrollView24"
         android:layout_width="0dp"
         android:layout_height="460dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:foregroundGravity="center_horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSelectPort10">
+        app:layout_constraintTop_toBottomOf="@+id/textViewSelectPort24">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -909,7 +909,7 @@
     </ScrollView>
 
     <TextView
-        android:id="@+id/textViewEnterLimit10"
+        android:id="@+id/textViewEnterLimit24"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
@@ -919,8 +919,8 @@
         android:text="@string/enter_new_speed"
         android:textColor="@color/text_color"
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayoutSelectSpeed10"
-        app:layout_constraintStart_toStartOf="@+id/linearLayoutSelectSpeed10"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutSelectSpeed24"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutSelectSpeed24"
         app:layout_constraintTop_toTopOf="parent" />
 
 

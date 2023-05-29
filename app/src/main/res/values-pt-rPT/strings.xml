@@ -39,8 +39,7 @@
     <string name="help_main">Para a configuração do novo roteador, pressione CONFIGURAR UM NOVO ROTEADOR. Para conectar roteador já configurado digite a senha \"itremedy.pro\" e pressione CONECTAR</string>
     <string name="setup_first">Por favor, configure seu roteador</string>
     <string name="login">O ImProvider permite que você controle os roteadores MikroTik através do controle dos limites de velocidade da Internet dos usuários do roteador.
-         Os usuários não poderão se conectar. Esta versão é adequada para roteadores de 5 portas da série MikroTik hAP.
-         Para outros modelos/funções, use a versão premium do aplicativo.\n
+         Os usuários não poderão se conectar.\n
          Como usar:\n
          1. Se você já usa um roteador Mikrotik, salve sua configuração com o Winbox e redefina-o.\n
          2. Conecte o cabo de internet do roteador do provedor na primeira porta (ETH1) ou insira o cartão microSIM (para roteadores LTE/5G).\n

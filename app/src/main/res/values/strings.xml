@@ -40,8 +40,8 @@
     <string name="help_main">For the new router setup press SETUP NEW ROUTER. \n
         To connect already configured router enter the password \"itremedy.pro\" and press CONNECT</string>
     <string name="setup_first">Please set up your router</string>
-    <string name="login">ImProvider enables you to control MikroTik routers through controlling router users\' Internet speed limits. The users won\'t be able to connect each other.
-        This version is suitable for 5-port routers MikroTik hAP series. For other models/functions use the premium version of the app. \n
+    <string name="login">ImProvider enables you to control MikroTik routers through controlling router users\' Internet speed limits. The users won\'t be able to connect each other.\n
+
         How to use: \n
         1. If you already use a Mikrotik router save its configuration with Winbox and reset it. \n
         2. Plug the internet cable from provider\'s router into the first port (ETH1) or insert microSIM card (for LTE/5G routers). \n

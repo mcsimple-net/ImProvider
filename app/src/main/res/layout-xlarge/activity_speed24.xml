@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".Speed10Activity">
+    tools:context=".Speed24Activity">
 
     <TextView
-        android:id="@+id/textViewSelectPort10"
+        android:id="@+id/textViewSelectPort24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/quitApp10"
+        android:id="@+id/quitApp24"
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_marginTop="70dp"
@@ -31,10 +31,10 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSelectSpeed10" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSelectSpeed24" />
 
     <LinearLayout
-        android:id="@+id/linearLayoutSelectSpeed10"
+        android:id="@+id/linearLayoutSelectSpeed24"
         android:layout_width="540dp"
         android:layout_height="150dp"
         android:layout_marginTop="70dp"
@@ -42,10 +42,10 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView10">
+        app:layout_constraintTop_toBottomOf="@+id/scrollView24">
 
         <TextView
-            android:id="@+id/textViewEnterLimit10"
+            android:id="@+id/textViewEnterLimit24"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
@@ -57,7 +57,7 @@
             android:textSize="34sp" />
 
         <EditText
-            android:id="@+id/Speed10"
+            android:id="@+id/Speed24"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
@@ -71,7 +71,7 @@
             android:textSize="28sp" />
 
         <Button
-            android:id="@+id/buttonSet10"
+            android:id="@+id/buttonSet24"
             android:layout_width="150dp"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
@@ -97,14 +97,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:id="@+id/scrollView10"
+        android:id="@+id/scrollView24"
         android:layout_width="0dp"
         android:layout_height="460dp"
         android:layout_marginTop="50dp"
         android:foregroundGravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSelectPort10">
+        app:layout_constraintTop_toBottomOf="@+id/textViewSelectPort24">
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -52,8 +52,7 @@
         entrez le mot de passe \"itremedy.pro\" et appuyez sur CONNECTURE</string>
     <string name="setup_first">Veuillez configurer votre routeur</string>
     <string name="login">ImProvider vous permet de contrôler les routeurs MikroTik en contrôlant les limites de vitesse Internet des utilisateurs du routeur.\n
-         Les utilisateurs ne pourront pas se connecter. Cette version convient aux routeurs à 5 ports de la série MikroTik hAP.
-         Pour les autres modèles/fonctions, utilisez la version premium de l\'application.\n
+         Les utilisateurs ne pourront pas se connecter.\n
          Comment utiliser:\n
          1. Si vous utilisez déjà un routeur Mikrotik, enregistrez sa configuration avec Winbox et réinitialisez-le.\n
          2. Branchez le câble Internet du routeur du fournisseur sur le premier port (ETH1) ou insérez une carte microSIM (pour les routeurs LTE/5G).\n

@@ -6,19 +6,25 @@ import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKey;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.window.SplashScreen;
 
+import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
 
@@ -53,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         help_m = findViewById(R.id.help_wifi);
         start_page = findViewById(R.id.start_page);
         checkBox = findViewById(R.id.checkBox);
+
+        getUIDs();
 
 
        prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -301,5 +309,23 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    void getUIDs()
+    {
+        AsyncTask.execute(() -> {
+            try {
+                AdvertisingIdClient.Info adInfo = null;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S) {
+                    adInfo = AdvertisingIdClient.getAdvertisingIdInfo(this);
+                }
+                String myId = adInfo != null ? adInfo.getId() : null;
+
+                Log.i("UIDMY", myId);
+            } catch (Exception e) {
+                Toast toast = Toast.makeText(getApplicationContext(), "error occurred ", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
     }
 }
