@@ -29,9 +29,9 @@
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/quit"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutC"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutC"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutC" />
 
     <LinearLayout
         android:id="@+id/linearLayout1C"
@@ -234,7 +234,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayoutC"
         android:layout_width="232dp"
         android:layout_height="100dp"
         android:layout_marginStart="70dp"
@@ -286,12 +286,12 @@
         android:text="@string/enter_new_speed"
         android:textColor="@color/text_color"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutC"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutC"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/help_chateau"
+        android:id="@+id/help_speed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

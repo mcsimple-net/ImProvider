@@ -4,10 +4,7 @@ package com.itremedy.improvidermtfree;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKey;
-
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -22,12 +19,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.window.SplashScreen;
-
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
-
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.Objects;
@@ -323,8 +317,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.i("UIDMY", myId);
             } catch (Exception e) {
-                Toast toast = Toast.makeText(getApplicationContext(), "error occurred ", Toast.LENGTH_SHORT);
-                toast.show();
+               // Toast toast = Toast.makeText(getApplicationContext(), "error occurred ", Toast.LENGTH_SHORT);
+               // toast.show();
             }
         });
     }

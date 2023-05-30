@@ -59,15 +59,18 @@ public class GuestSetupActivity extends AppCompatActivity  {
         remove.setOnClickListener(v2 -> {
 
             Thread remove = new Thread(() -> {
+
                 try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-                try {
-                    Thread.sleep(200);
                     ConnectionManager.runCommand("/interface wireless remove [find where name=wlan3]");
-                    Thread.sleep(200);
+                    Thread.sleep(500);
+
+                    Alerter.create(this, R.layout.alerter_custom_layout)
+                            .setDuration(5000)
+                            .setIcon(R.drawable.help)
+                            .setBackgroundColorRes(R.color.for_improvider)
+                            .enableSwipeToDismiss()
+                            .setTitle(R.string.done)
+                            .show();
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
                 }

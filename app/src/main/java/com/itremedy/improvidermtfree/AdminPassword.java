@@ -1,14 +1,10 @@
 package com.itremedy.improvidermtfree;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
 

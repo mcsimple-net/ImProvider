@@ -3,9 +3,7 @@ package com.itremedy.improvidermtfree;
 import static com.itremedy.improvidermtfree.ConnectionManager.result;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,7 +43,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
         textViewSpeed3 = findViewById(R.id.textViewSpeed3C);
         textViewSpeed4 = findViewById(R.id.textViewSpeed4C);
         textViewSpeed5 = findViewById(R.id.textViewSpeed5C);
-        help_s = findViewById(R.id.help_chateau);
+        help_s = findViewById(R.id.help_speed);
 
         help_s.setOnClickListener(v -> {
 

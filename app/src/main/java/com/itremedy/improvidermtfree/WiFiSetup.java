@@ -108,7 +108,7 @@ public class WiFiSetup extends AppCompatActivity {
                             ConnectionManager.runCommand("/interface wireless enable wlan2");
                             Thread.sleep(300);
                             ConnectionManager.runCommand("/interface wireless set ssid=" + wifiname + " [find where name=wlan1]");
-                            Thread.sleep(300);
+                            Thread.sleep(2000);
                             runOnUiThread(() -> {
                                 ConnectionManager.close();
                                 finishAffinity();
@@ -166,7 +166,7 @@ public class WiFiSetup extends AppCompatActivity {
                     try {
 
                         ConnectionManager.runCommand("/interface wireless security-profiles remove [find where name=Security-Profile-Guest]");
-                        Thread.sleep(300);
+                        Thread.sleep(2000);
 
                         runOnUiThread(() -> {
                             ConnectionManager.close();

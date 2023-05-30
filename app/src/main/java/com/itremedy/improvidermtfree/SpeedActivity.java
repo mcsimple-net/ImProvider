@@ -43,7 +43,7 @@ public class SpeedActivity extends AppCompatActivity  {
         textViewSpeed3 = findViewById(R.id.textViewSpeed3);
         textViewSpeed4 = findViewById(R.id.textViewSpeed4);
         textViewSpeed5 = findViewById(R.id.textViewSpeed5);
-        help_s = findViewById(R.id.help_wifi);
+        help_s = findViewById(R.id.help_speed);
 
         help_s.setOnClickListener(v -> {
 
