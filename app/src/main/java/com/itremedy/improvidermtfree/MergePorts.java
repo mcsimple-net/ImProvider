@@ -36,6 +36,15 @@ public class MergePorts extends AppCompatActivity {
 
         Thread merge = new Thread(() -> {
             try {
+
+                Alerter.create(this,R.layout.alerter_custom_layout)
+                        .setTitle(R.string.please_wait)
+                        .setDuration(2000)
+                        .enableProgress(true)
+                        .setBackgroundColorRes(R.color.for_improvider)
+                        .enableSwipeToDismiss()
+                        .show();
+
                 Thread.sleep(200);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);

@@ -18,7 +18,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
