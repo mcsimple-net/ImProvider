@@ -175,7 +175,7 @@
         android:id="@+id/connect"
         android:layout_width="400dp"
         android:layout_height="100dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="100dp"
         android:backgroundTint="#E2703A"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/connect"

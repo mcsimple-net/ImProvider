@@ -11,7 +11,7 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="150dp"
         android:fontFamily="@font/abhaya_libre_semibold"
         android:text="@string/guest_wi_fi_setup"
         android:textColor="@color/text_color"
@@ -136,7 +136,7 @@
             android:gravity="center"
             android:text="@string/enter_new_speed"
             android:textColor="@color/text_color"
-            android:textSize="28sp" />
+            android:textSize="24sp" />
 
         <EditText
             android:id="@+id/GuestSpeed"
@@ -151,6 +151,8 @@
             android:gravity="center"
             android:inputType="number|numberDecimal"
             android:maxLength="3"
+            android:textColor="@color/black"
+            android:textColorLink="@color/black"
             android:textSize="34sp" />
 
         <Button

@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.IProviderMikrotik" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.IProviderMikrotik" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimaryVariant">@color/for_improvider</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -13,7 +13,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.ImProviderMikroTik" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.ImProviderMikroTik" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimaryVariant">@color/for_improvider</item>
         <item name="colorOnPrimary">@color/white</item>
