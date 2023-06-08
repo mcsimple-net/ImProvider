@@ -36,6 +36,7 @@
                 android:textColor="@color/black"
                 android:textColorLink="@color/for_improvider"
                 android:autoLink="email"
+                android:fontFamily="@font/play"
                 android:text="@string/login"
                 android:textSize="24sp" />
 
@@ -47,6 +48,7 @@
                 android:layout_marginBottom="40dp"
                 android:backgroundTint="@color/for_improvider"
                 android:text="@string/i_agree"
+                android:fontFamily="@font/play"
                 android:textSize="34sp" />
 
         </LinearLayout>
