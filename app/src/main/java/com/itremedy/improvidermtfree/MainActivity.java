@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         start_page = findViewById(R.id.start_page);
         checkBox = findViewById(R.id.checkBox);
 
-        getUIDs();
+        //getUIDs();
 
 
        prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
@@ -305,7 +305,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-    void getUIDs()
+   /* void getUIDs()
     {
         AsyncTask.execute(() -> {
             try {
@@ -321,7 +321,7 @@ public class MainActivity extends AppCompatActivity {
                // toast.show();
             }
         });
-    }
+    }*/
 
 
 }

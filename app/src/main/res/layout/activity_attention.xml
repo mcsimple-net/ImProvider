@@ -50,7 +50,6 @@
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/play"
         android:gravity="center"
-        android:paddingTop="10dp"
         android:text="@string/i_agree"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

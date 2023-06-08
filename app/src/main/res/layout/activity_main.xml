@@ -186,7 +186,7 @@
     <Button
         android:id="@+id/new_router_setup"
         android:layout_width="200dp"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#E2703A"
         android:fontFamily="@font/play"

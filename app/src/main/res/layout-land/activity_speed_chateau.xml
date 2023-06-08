@@ -9,13 +9,14 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/play"
         android:gravity="bottom|center_horizontal"
         android:text="@string/select_ports"
         android:textColor="@color/text_color"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout1C"
         app:layout_constraintStart_toStartOf="@+id/linearLayout1C"
         app:layout_constraintTop_toTopOf="parent" />
@@ -277,15 +278,15 @@
 
     <TextView
         android:id="@+id/textView5C"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:layout_marginTop="70dp"
         android:layout_weight="1"
         android:fontFamily="@font/play"
         android:gravity="center"
         android:text="@string/enter_new_speed"
         android:textColor="@color/text_color"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/linearLayoutC"
         app:layout_constraintStart_toStartOf="@+id/linearLayoutC"
         app:layout_constraintTop_toTopOf="parent" />
