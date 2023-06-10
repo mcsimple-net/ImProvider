@@ -196,6 +196,8 @@ public class Attention10Activity extends AppCompatActivity {
 
                             ConnectionManager.runCommand("/ip firewall filter add chain=forward action=accept in-interface-list=!WAN out-interface-list=WAN");
                             Thread.sleep(100);
+                            ConnectionManager.runCommand("/ip firewall filter add chain=input src-address=192.168.88.0/24 dst-address=192.168.88.1/24 action=accept");
+                            Thread.sleep(100);
                             ConnectionManager.runCommand("/ip firewall filter remove [find where comment=\"defconf: fasttrack\"]");
                             Thread.sleep(100);
                             ConnectionManager.runCommand("/ip firewall filter add action=drop chain=input comment=\"defconf: drop all\"");
@@ -205,13 +207,13 @@ public class Attention10Activity extends AppCompatActivity {
                             ConnectionManager.runCommand("/ipv6 settings set disable-ipv6=yes");
                             Thread.sleep(100);
 
-                            ConnectionManager.runCommand("/user set admin password=itremedy.pro");
+                            ConnectionManager.runCommand("/user set admin password=mcsimple.net");
                             Thread.sleep(100);
 
-                            ConnectionManager.runCommand("/interface wireless security-profiles add name=itremedy authentication-types=wpa2-psk mode=dynamic-keys wpa2-pre-shared-key=itremedy");
+                            ConnectionManager.runCommand("/interface wireless security-profiles add name=mcsimple authentication-types=wpa2-psk mode=dynamic-keys wpa2-pre-shared-key=mcsimple");
                             Thread.sleep(100);
-                            ConnectionManager.runCommand("/interface wireless set [ find default-name=wlan2 ] security-profile=itremedy");
-                            ConnectionManager.runCommand("/interface wireless set [ find default-name=wlan1 ] security-profile=itremedy");
+                            ConnectionManager.runCommand("/interface wireless set [ find default-name=wlan2 ] security-profile=mcsimple");
+                            ConnectionManager.runCommand("/interface wireless set [ find default-name=wlan1 ] security-profile=mcsimple");
                             Thread.sleep(100);
                         }
 

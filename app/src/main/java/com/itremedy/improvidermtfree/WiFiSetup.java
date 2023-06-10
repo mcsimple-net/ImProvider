@@ -82,7 +82,7 @@ public class WiFiSetup extends AppCompatActivity {
             //for setting password
 
         sharedPreferencesW = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        String password_w = sharedPreferencesW.getString("password_w", "itremedy");
+        String password_w = sharedPreferencesW.getString("password_w", "mcsimple");
         wpassword.setText(password_w);
 
         wifiname.setOnClickListener(v -> {
@@ -205,7 +205,7 @@ public class WiFiSetup extends AppCompatActivity {
                 Thread t = new Thread(() -> {
                     try {
 
-                        ConnectionManager.runCommand("/interface wireless security-profiles set wpa2-pre-shared-key=" + wpass + " [find where name=itremedy]");
+                        ConnectionManager.runCommand("/interface wireless security-profiles set wpa2-pre-shared-key=" + wpass + " [find where name=mcsimple]");
                         Thread.sleep(300);
 
                         runOnUiThread(() -> {

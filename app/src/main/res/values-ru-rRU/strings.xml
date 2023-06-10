@@ -16,8 +16,8 @@
     <string name="attention">
     <br>Пожалуйста убедитесь, что вы подключили роутер с настройками по умолчанию.\n</br>
     <br>Настройка будет возможна только через WiFi.
-    По окончании настройки приложение автоматически закроется. После этого переподключитесь к WiFi с паролем \"itremedy\".\n</br>
-    Для установки лимитов скорости откройте приложение снова, введите пароль \"itremedy.pro\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
+    По окончании настройки приложение автоматически закроется. После этого переподключитесь к WiFi с паролем \"mcsimple\".\n</br>
+    Для установки лимитов скорости откройте приложение снова, введите пароль \"mcsimple.net\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
     <string name="wait">ПОДОЖДИТЕ... ИДЁТ НАСТРОЙКА... Не уносите телефон от роутера</string>
     <string name="guest_wi_fi_setup">НАСТРОЙКА ГОСТЕВОЙ Wi-Fi СЕТИ</string>
     <string name="wi_fi_configuration">НАСТРОЙКА Wi-Fi СЕТИ</string>
@@ -53,9 +53,9 @@
         <br>Чтобы удалить установленную программой
     конфигурацию, выполните сброс настроек
     до начальных.\n</br>
-        <br>Более подробную информацию о приложении вы можете найти по адресу <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider/</u></a>.
+        <br>Более подробную информацию о приложении вы можете найти по адресу <a href="https://mcsimple.net/improvider"><u>https://mcsimple.net/improvider/</u></a>.
             Если у вас остались вопросы или вы хотите сообщить об ошибке,
-            пишите на почту <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue" target="_top">customercare@itremedy.pro</a>\n</br>
+            пишите на почту <a href="mailto:customercare@mcsimple.net?Subject=ImProvider%20Issue" target="_top">customercare@mcsimple.net</a>\n</br>
     <br>Мы не несём ответственность за ущерб
         причинённый при использовании ЯПровайдер.
     Нажимая ПРОДОЛЖИТЬ вы соглашаетесь с этим.\n</br></string>
@@ -63,7 +63,7 @@
     <string name="i_agree">ПРОДОЛЖИТЬ</string>
     <string name="improvider">ЯПровайдер</string>
     <string name="help_main"><br>Для настройки нового роутера нажмите НАСТРОИТЬ НОВЫЙ РОУТЕР.\n</br>
-    Для подключения к уже настроенному, наберите пароль \"itremedy.pro\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
+    Для подключения к уже настроенному, наберите пароль \"mcsimple.net\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
     <string name="need_help">Нужна Помощь?</string>
     <string name="chk_connection">Проверьте подключение, введённые данные или настройки роутера. Произошла ошибка:</string>
     <string name="flds_empty">Некоторые поля не заполнены</string>

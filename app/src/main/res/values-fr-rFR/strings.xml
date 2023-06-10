@@ -21,8 +21,8 @@
 
     <string name="attention">Veuillez vous assurer que vous avez connecté le routeur avec les paramètres par défaut.
         La configuration ne sera possible qu\'en Wi-Fi. Lorsque l\'application se ferme automatiquement,
-        reconnectez-vous au WiFi avec le mot de passe \"itremedy\".
-        Pour définir les limites de vitesse, ouvrez à nouveau l\'application, entrez le mot de passe \"itremedy.pro\" et appuyez sur CONNECTER.</string>
+        reconnectez-vous au WiFi avec le mot de passe \"mcsimple\".
+        Pour définir les limites de vitesse, ouvrez à nouveau l\'application, entrez le mot de passe \"mcsimple.net\" et appuyez sur CONNECTER.</string>
     <string name="wait">ATTENDRE… Configuration en cours… \n Ne retirez pas votre téléphone du routeur</string>
     <string name="guest_wi_fi_setup">CONFIGURATION Wi-Fi INVITÉ</string>
     <string name="wi_fi_configuration">CONFIGURATION Wi-Fi</string>
@@ -49,7 +49,7 @@
     <string name="please_enter_limit">\n\nVeuillez entrer la limite</string>
     <string name="please_select_port">\n\nVeuillez sélectionner le port</string>
     <string name="help_main">Pour la configuration du nouveau routeur, appuyez sur CONFIGURER UN NOUVEAU ROUTEUR.\n Pour connecter un routeur déjà configuré,
-        entrez le mot de passe \"itremedy.pro\" et appuyez sur CONNECTURE</string>
+        entrez le mot de passe \"mcsimple.net\" et appuyez sur CONNECTURE</string>
     <string name="setup_first">Veuillez configurer votre routeur</string>
     <string name="login">ImProvider vous permet de contrôler les routeurs MikroTik en contrôlant les limites de vitesse Internet des utilisateurs du routeur.\n
          Les utilisateurs ne pourront pas se connecter.\n
@@ -60,9 +60,9 @@
          4. Connectez votre téléphone ou votre tablette avec ImProvider au réseau WiFi \"MikroTik-*****\".\n
          *Si votre routeur crée deux réseaux, n\'utilisez pas \"MikroTik-****A\"/\"MikroTik-****5\" lors de la configuration en raison de la sécurité WiFi.\n
          Pour supprimer les paramètres de l\'application sur votre routeur, réinitialisez-le.\n
-         Vous pouvez trouver plus d\'informations sur ImProvider sur <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider/</u></a>
-         Si vous avez des questions ou souhaitez signaler un problème, veuillez écrire à <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue"
-            target="_top">customercare@itremedy.pro</a> \n
+         Vous pouvez trouver plus d\'informations sur ImProvider sur <a href="https://mcsimple.net/improvider"><u>https://mcsimple.net/improvider/</u></a>
+         Si vous avez des questions ou souhaitez signaler un problème, veuillez écrire à <a href="mailto:customercare@mcsimple.net?Subject=ImProvider%20Issue"
+            target="_top">customercare@mcsimple.net</a> \n
         Nous ne sommes pas responsables des dommages causés par l\'utilisation d\'ImProvider.
          En appuyant sur CONTINUER, vous êtes d\'accord avec cela.</string>
     <string name="save">sauvegarder</string>

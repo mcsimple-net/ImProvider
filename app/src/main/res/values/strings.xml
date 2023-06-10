@@ -15,7 +15,7 @@
     <string name="set_connection_speed">SET SPEED LIMITS</string>
     <string name="in_premium_version">*IN PREMIUM VERSION:</string>
     <string name="how_many_ethernet_ports">SELECT YOUR ROUTER</string>
-    <string name="attention">Please, make sure that you have connected the router with default settings. Configuration will be possible over WiFi only. When the app closes automatically, reconnect to WiFi with the password \"itremedy\". To set the speed limits open the app again, enter the password \"itremedy.pro\" and press CONNECT.</string>
+    <string name="attention">Please, make sure that you have connected the router with default settings. Configuration will be possible over WiFi only. When the app closes automatically, reconnect to WiFi with the password \"mcsimple\". To set the speed limits open the app again, enter the password \"mcsimple.net\" and press CONNECT.</string>
     <string name="wait">WAIT…  Configuration in progress…  Do not take the phone away from the router</string>
     <string name="guest_wi_fi_setup">GUEST Wi-Fi SETUP</string>
     <string name="wi_fi_configuration">Wi-Fi CONFIGURATION</string>
@@ -29,7 +29,7 @@
     <string name="i_agree">CONTINUE</string>
     <string name="improvider">ImProvider</string>
     <string name="need_help">Need Help?</string>
-    <string name="default_password" translatable="false">itremedy.pro</string>
+    <string name="default_password" translatable="false">mcsimple.net</string>
     <string name="_192_168_88_1" translatable="false">192.168.88.1</string>
     <string name="_22" translatable="false">22</string>
     <string name="admin" translatable="false">admin</string>
@@ -38,7 +38,7 @@
     <string name="please_enter_limit">\n\nPlease Enter Limit</string>
     <string name="please_select_port">\n\nPlease Select Port</string>
     <string name="help_main">For the new router setup press SETUP NEW ROUTER. \n
-        To connect already configured router enter the password \"itremedy.pro\" and press CONNECT</string>
+        To connect already configured router enter the password \"mcsimple.net\" and press CONNECT</string>
     <string name="setup_first">Please set up your router</string>
     <string name="login">ImProvider enables you to control MikroTik routers through controlling router users\' Internet speed limits. The users won\'t be able to connect each other.\n
 
@@ -49,8 +49,8 @@
         4. Connect your phone or tablet with ImProvider to WiFi network \"MikroTik-*****\" . \n
         *If your router creates two networks, do not use \"MikroTik-****A\"/\"MikroTik-****5\" during first setup due to WiFi security. \n
         To delete the app settings on your router reset it. \n
-        You can find more information about ImProvider at <a href="https://itremedy.pro/improvider"><u>https://itremedy.pro/improvider</u></a>.
-        If you have questions or want to report about an issue please write to <a href="mailto:customercare@itremedy.pro?Subject=ImProvider%20Issue" target="_top">customercare@itremedy.pro</a>. \n
+        You can find more information about ImProvider at <a href="https://mcsimple.net/improvider"><u>https://mcsimple.net/improvider</u></a>.
+        If you have questions or want to report about an issue please write to <a href="mailto:customercare@mcsimple.net?Subject=ImProvider%20Issue" target="_top">customercare@mcsimple.net</a>. \n
         We are not responsible for any harm done by using ImProvider. Pressing CONTINUE you agree with it.</string>
     <string name="flds_empty">Some fields are empty</string>
     <string name="pref_previously_started" translatable="false">false</string>
