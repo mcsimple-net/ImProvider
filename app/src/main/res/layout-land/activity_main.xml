@@ -21,7 +21,7 @@
 
         <TextView
             android:id="@+id/textViewIP"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center|end"
@@ -60,7 +60,7 @@
 
         <TextView
             android:id="@+id/textViewPort"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center|right"
@@ -100,7 +100,7 @@
 
         <TextView
             android:id="@+id/textViewUser"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center|right"
@@ -140,7 +140,7 @@
 
         <TextView
             android:id="@+id/textViewPassword"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center|right"
