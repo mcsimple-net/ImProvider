@@ -196,10 +196,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="232dp"
+        android:layout_width="230dp"
         android:layout_height="100dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="50dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toEndOf="@+id/linearLayout2"
@@ -207,7 +206,7 @@
 
         <EditText
             android:id="@+id/Speed"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="20dp"
             android:layout_marginTop="8dp"
