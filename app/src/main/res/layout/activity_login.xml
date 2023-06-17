@@ -52,6 +52,7 @@
                 android:fontFamily="@font/play"
                 android:textSize="18sp" />
 
+
         </LinearLayout>
     </ScrollView>
 
