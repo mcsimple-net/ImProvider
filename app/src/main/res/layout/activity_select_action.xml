@@ -64,7 +64,6 @@
         android:fontFamily="@font/play"
         android:text="@string/merge_ethernet_ports"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/changeAdminPass" />
 

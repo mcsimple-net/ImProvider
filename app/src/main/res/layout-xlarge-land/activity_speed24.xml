@@ -35,12 +35,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutSelectSpeed24"
-        android:layout_width="340dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="70dp"
+        android:layout_width="420dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="170dp"
         android:gravity="center"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/scrollView24"
         app:layout_constraintTop_toBottomOf="@+id/textViewEnterLimit24">
 
@@ -88,9 +90,9 @@
     <ScrollView
         android:id="@+id/scrollView24"
         android:layout_width="0dp"
-        android:layout_height="460dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="560dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
         android:foregroundGravity="center_horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewSelectPort24">
