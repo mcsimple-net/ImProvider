@@ -85,7 +85,7 @@ public class GuestSetupActivity extends AppCompatActivity  {
 
      sharedPreferencesGuest = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
-        String guestname_shared = sharedPreferencesGuest.getString("guest_name", "Guest-WiFI");
+        String guestname_shared = sharedPreferencesGuest.getString("guest_name", "Guest");
         String guestpassword_shared = sharedPreferencesGuest.getString("guest_password", "12345678");
         String guestspeed_shared = sharedPreferencesGuest.getString("guest_speed", "5");
 
