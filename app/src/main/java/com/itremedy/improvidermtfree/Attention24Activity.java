@@ -393,7 +393,7 @@ public class Attention24Activity extends AppCompatActivity {
 
                             ConnectionManager.runCommand("/ip firewall filter add chain=forward action=accept in-interface-list=!WAN out-interface-list=WAN");
                             Thread.sleep(100);
-                            ConnectionManager.runCommand("/ip firewall filter add chain=input src-address=192.168.88.0/24 dst-address=192.168.88.1/24 action=accept");
+                            ConnectionManager.runCommand("/ip firewall filter add chain=input src-address=192.168.88.0/24 dst-address=192.168.88.1 action=accept");
                             Thread.sleep(100);
                             ConnectionManager.runCommand("/ip firewall filter remove [find where comment=\"defconf: fasttrack\"]");
                             Thread.sleep(100);
