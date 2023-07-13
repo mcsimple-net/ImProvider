@@ -34,6 +34,8 @@ public class GuestAttention extends AppCompatActivity {
         String guestpassword = i.getStringExtra("guest_password");
         String guestspeed = i.getStringExtra("guest_speed");
 
+
+
         button.setOnClickListener(v -> {
 
             button.setVisibility(View.GONE);
@@ -74,24 +76,24 @@ public class GuestAttention extends AppCompatActivity {
                          ConnectionManager.runCommand("/interface bridge add arp=reply-only name=Bridge-Guest");
                          Thread.sleep(1000);
                          ConnectionManager.runCommand("/ip address add address=10.10.10.1/24 interface=Bridge-Guest network=10.10.10.0");
-                         Thread.sleep(100);
+                         Thread.sleep(200);
                          ConnectionManager.runCommand("/ip dhcp-server network add address=10.10.10.0/24 dns-server=1.1.1.1,8.8.8.8 gateway=10.10.10.1");
-                         Thread.sleep(100);
+                         Thread.sleep(200);
                          ConnectionManager.runCommand("/ip pool add name=guest-pool ranges=10.10.10.2-10.10.10.254");
-                         Thread.sleep(100);
+                         Thread.sleep(200);
                          ConnectionManager.runCommand("/ip dhcp-server add add-arp=yes address-pool=guest-pool disabled=no interface=Bridge-Guest lease-time=4h name=dhcp1");
-                         Thread.sleep(100);
+                         Thread.sleep(200);
                          ConnectionManager.runCommand("/queue simple remove [find where name=Guest-WiFi]");
-                         Thread.sleep(100);
+                         Thread.sleep(200);
                          ConnectionManager.runCommand("/queue simple add max-limit=" + guestspeed + "M/" + guestspeed + "M name=Guest-WiFi target=Bridge-Guest");
-                         Thread.sleep(100);
+                         Thread.sleep(300);
                          ConnectionManager.runCommand("/interface wireless set security-profile=Security-Profile-Guest [find where name=wlan3]");
                          Thread.sleep(300);
                          ConnectionManager.runCommand("/interface wireless add default-forwarding=no disabled=no keepalive-frames=disabled  master-interface=wlan1 multicast-buffering=disabled name=wlan3 security-profile=Security-Profile-Guest ssid=" + guestname + " wds-cost-range=0 wds-default-cost=0 wps-mode=disabled");
                          Thread.sleep(300);
                          runOnUiThread(() -> {
                              ConnectionManager.close();
-                             finishAffinity();
+                             restartApp();
                          });
                      } catch (JSchException | IOException e) {
                          Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "An error occurred: " + e.getMessage(), 8000);
@@ -135,24 +137,24 @@ public class GuestAttention extends AppCompatActivity {
                             ConnectionManager.runCommand("/interface bridge add arp=reply-only name=Bridge-Guest");
                             Thread.sleep(1000);
                             ConnectionManager.runCommand("/ip address add address=10.10.10.1/24 interface=Bridge-Guest network=10.10.10.0");
-                            Thread.sleep(100);
+                            Thread.sleep(300);
                             ConnectionManager.runCommand("/ip dhcp-server network add address=10.10.10.0/24 dns-server=1.1.1.1,8.8.8.8 gateway=10.10.10.1");
-                            Thread.sleep(100);
+                            Thread.sleep(300);
                             ConnectionManager.runCommand("/ip pool add name=guest-pool ranges=10.10.10.2-10.10.10.254");
-                            Thread.sleep(100);
+                            Thread.sleep(300);
                             ConnectionManager.runCommand("/ip dhcp-server add add-arp=yes address-pool=guest-pool disabled=no interface=Bridge-Guest lease-time=4h name=dhcp1");
-                            Thread.sleep(100);
+                            Thread.sleep(300);
                             ConnectionManager.runCommand("/queue simple remove [find where name=Guest-WiFi]");
-                            Thread.sleep(100);
+                            Thread.sleep(300);
                             ConnectionManager.runCommand("/queue simple add max-limit=" + guestspeed + "M/" + guestspeed + "M name=Guest-WiFi target=Bridge-Guest");
-                            Thread.sleep(100);
+                            Thread.sleep(300);
                             ConnectionManager.runCommand("/interface wireless set security-profile=Security-Profile-Guest [find where name=wlan3]");
                             Thread.sleep(300);
                             ConnectionManager.runCommand("/interface wireless add default-forwarding=no disabled=no keepalive-frames=disabled  master-interface=wlan1 multicast-buffering=disabled name=wlan3 security-profile=Security-Profile-Guest ssid=" + guestname + " wds-cost-range=0 wds-default-cost=0 wps-mode=disabled");
                             Thread.sleep(300);
                             runOnUiThread(() -> {
                                 ConnectionManager.close();
-                                finishAffinity();
+                                restartApp();
                             });
                         } catch (JSchException | IOException e) {
                             Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "An error occurred: " + e.getMessage(), 8000);
@@ -183,5 +185,10 @@ public class GuestAttention extends AppCompatActivity {
 
         });
 
+    }
+    public void restartApp() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
     }
 }

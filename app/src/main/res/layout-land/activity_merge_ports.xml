@@ -33,6 +33,19 @@
         app:layout_constraintStart_toEndOf="@+id/linearLayout3"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/quitApp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/for_improvider"
+        android:fontFamily="@font/play"
+        android:text="@string/quit"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMerge"
+        app:layout_constraintStart_toStartOf="@+id/buttonMerge"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMerge" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="300dp"

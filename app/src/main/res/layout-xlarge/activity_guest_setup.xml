@@ -24,15 +24,27 @@
         android:id="@+id/RemoveGuestWiFi"
         android:layout_width="300dp"
         android:layout_height="80dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/play"
         android:text="@string/remove_guest_wi_fi"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/quitApp"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/for_improvider"
+        android:fontFamily="@font/play"
+        android:text="@string/quit"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RemoveGuestWiFi" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"

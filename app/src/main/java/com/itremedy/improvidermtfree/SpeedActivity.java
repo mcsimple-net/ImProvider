@@ -22,7 +22,7 @@ public class SpeedActivity extends AppCompatActivity  {
 
 
     private EditText speed;
-    private Button set, quit;
+    public Button quit;
     private RadioButton radio5,radio2,radio3,radio4;
     private TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5;
     public TextView help_s;
@@ -33,7 +33,7 @@ public class SpeedActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speed);
         speed = findViewById(R.id.Speed);
-        set = findViewById(R.id.buttonSet);
+        Button set = findViewById(R.id.buttonSet);
         quit = findViewById(R.id.quitApp);
         radio2 = findViewById(R.id.radio2);
         radio3 = findViewById(R.id.radio3);

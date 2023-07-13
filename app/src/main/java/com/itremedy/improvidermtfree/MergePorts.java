@@ -19,7 +19,7 @@ import java.io.IOException;
 public class MergePorts extends AppCompatActivity {
 
     RadioButton m_radio5,m_radio2,m_radio3,m_radio4;
-    Button buttonMerge;
+    Button buttonMerge, quit;
     TextView help_merge;
 
     @Override
@@ -33,6 +33,12 @@ public class MergePorts extends AppCompatActivity {
         m_radio5 = findViewById(R.id.radio5);
         buttonMerge = findViewById(R.id.buttonMerge);
         help_merge = findViewById(R.id.help_merge);
+        quit = findViewById(R.id.quitApp);
+
+        quit.setOnClickListener(v -> {
+            ConnectionManager.close();
+            finishAffinity();
+        });
 
         Thread merge = new Thread(() -> {
             try {

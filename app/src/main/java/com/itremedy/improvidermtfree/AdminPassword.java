@@ -13,7 +13,7 @@ import java.io.IOException;
 public class AdminPassword extends AppCompatActivity {
 
     private EditText new_password;
-    private Button admin_ok;
+    private Button admin_ok, quit;
 
 
     @Override
@@ -22,8 +22,12 @@ public class AdminPassword extends AppCompatActivity {
         setContentView(R.layout.activity_admin_password);
         new_password = findViewById(R.id.editTextAdminPassword);
         admin_ok = findViewById(R.id.AdminPasswordOK);
+        quit = findViewById(R.id.quitApp);
 
-
+        quit.setOnClickListener(v -> {
+            ConnectionManager.close();
+            finishAffinity();
+        });
 
 
         admin_ok.setOnClickListener(v -> {

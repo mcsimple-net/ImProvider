@@ -47,7 +47,8 @@
             android:exported="false" />
         <activity
             android:name=".GuestAttention"
-            android:exported="false" />
+            android:exported="false"
+            android:noHistory="true"/>
         <activity
             android:name=".GuestSetupActivity"
             android:exported="false" />

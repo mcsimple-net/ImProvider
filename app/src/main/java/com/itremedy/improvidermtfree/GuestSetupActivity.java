@@ -26,7 +26,7 @@ public class GuestSetupActivity extends AppCompatActivity  {
 
 
     private EditText guest_name, guest_password, guest_speed;
-    private Button set,remove;
+    private Button quit,set,remove;
     private TextView help_guest;
    SharedPreferences sharedPreferencesGuest;
 
@@ -40,8 +40,14 @@ public class GuestSetupActivity extends AppCompatActivity  {
         guest_name = findViewById(R.id.editTextWName);
         guest_password = findViewById(R.id.editTextWPassword);
         remove = findViewById(R.id.RemoveGuestWiFi);
+        quit = findViewById(R.id.quitApp);
 
         help_guest = findViewById(R.id.help_wifi);
+
+        quit.setOnClickListener(v -> {
+            ConnectionManager.close();
+            finishAffinity();
+        });
 
         help_guest.setOnClickListener(v -> {
 
@@ -151,17 +157,9 @@ public class GuestSetupActivity extends AppCompatActivity  {
                     .enableSwipeToDismiss()
                     .show();
 
-            final Handler handler1 = new Handler();
-            handler1.postDelayed(() -> {
-                Thread finish = new Thread(this::finishAffinity);
-                finish.start();
-                try {
-                    finish.join();
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            }, 5000);
         }
+
+
         set.setOnClickListener(v3 -> {
 
             MasterKey masterKey = null;
@@ -175,7 +173,7 @@ public class GuestSetupActivity extends AppCompatActivity  {
 
             SharedPreferences sharedPreferencesGuest;
             try {
-                sharedPreferencesGuest = EncryptedSharedPreferences.create(
+                EncryptedSharedPreferences.create(
                         this,
                         "secret_shared_prefs",
                         masterKey,
