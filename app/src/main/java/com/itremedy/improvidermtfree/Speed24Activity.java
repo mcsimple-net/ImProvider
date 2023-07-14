@@ -537,9 +537,10 @@ public class Speed24Activity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=2]");
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=2]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=2 target=bridge-vlan202");
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -573,11 +574,12 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=3]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=3 target=bridge-vlan203");
 
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -610,9 +612,10 @@ public class Speed24Activity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=4]");
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=4]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=4 target=bridge-vlan204");
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -644,9 +647,10 @@ public class Speed24Activity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=5]");
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=5]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -679,10 +683,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=6]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=6 target=bridge-vlan206");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -716,10 +721,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=7]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=7 target=bridge-vlan207");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -753,10 +759,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=8]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=8 target=bridge-vlan208");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -790,10 +797,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=9]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=9 target=bridge-vlan209");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -827,10 +835,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=10]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=10 target=bridge-vlan210");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -863,10 +872,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=11]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=11 target=bridge-vlan211");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -899,10 +909,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=12]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=12 target=bridge-vlan212");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -935,10 +946,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=13]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=13 target=bridge-vlan213");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -971,10 +983,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=14]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=14 target=bridge-vlan214");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -1007,10 +1020,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=15]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=15 target=bridge-vlan215");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -1043,10 +1057,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=16]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=16 target=bridge-vlan216");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -1079,10 +1094,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=17]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=17 target=bridge-vlan217");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -1115,10 +1131,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=18]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=18 target=bridge-vlan218");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -1151,10 +1168,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=19]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=19 target=bridge-vlan219");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -1187,10 +1205,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=20]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=20 target=bridge-vlan220");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -1222,10 +1241,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=21]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=21 target=bridge-vlan221");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -1258,10 +1278,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=22]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=22 target=bridge-vlan222");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -1294,10 +1315,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=23]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=23 target=bridge-vlan223");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -1330,10 +1352,11 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=24]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=24 target=bridge-vlan224");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });

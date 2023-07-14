@@ -190,10 +190,11 @@ public class SpeedChateauActivity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=1]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=1 target=bridge-vlan201");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -226,9 +227,10 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=2]");
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=2]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=2 target=bridge-vlan202");
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -259,9 +261,10 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=3]");
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=3]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=3 target=bridge-vlan203");
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -292,9 +295,10 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=4]");
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=4]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=4 target=bridge-vlan204");
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -325,9 +329,10 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=5]");
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=5]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });

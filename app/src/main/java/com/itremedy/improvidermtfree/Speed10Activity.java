@@ -267,9 +267,10 @@ public class Speed10Activity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=2]");
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=2]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=2 target=bridge-vlan202");
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -303,11 +304,12 @@ public class Speed10Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=3]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=3 target=bridge-vlan203");
 
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -340,9 +342,10 @@ public class Speed10Activity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=4]");
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=4]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=4 target=bridge-vlan204");
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -374,9 +377,10 @@ public class Speed10Activity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=5]");
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=5]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -409,10 +413,11 @@ public class Speed10Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=6]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=6 target=bridge-vlan206");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -446,10 +451,11 @@ public class Speed10Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=7]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=7 target=bridge-vlan207");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -483,10 +489,11 @@ public class Speed10Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=8]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=8 target=bridge-vlan208");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -520,10 +527,11 @@ public class Speed10Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=9]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=9 target=bridge-vlan209");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
@@ -557,10 +565,11 @@ public class Speed10Activity extends AppCompatActivity  {
 
                             } else {
                                 ConnectionManager.runCommand("/queue simple remove [find where name=10]");
+                                Thread.sleep(200);
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=10 target=bridge-vlan210");
 
                             }
-                        } catch (JSchException | IOException e) {
+                        } catch (JSchException | IOException | InterruptedException e) {
                             throw new RuntimeException(e);
                         }
                     });
