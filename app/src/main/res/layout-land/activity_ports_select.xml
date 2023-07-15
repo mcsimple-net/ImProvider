@@ -26,22 +26,12 @@
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/dark_background_card_view"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewHeader">
-
-        <TextView
-            android:id="@+id/textView5ports"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="hAP series"
-            android:textColor="@color/text_color"
-            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/imageView5ports"
@@ -59,20 +49,10 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/dark_background_card_view"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5ports">
-
-        <TextView
-            android:id="@+id/textView10ports"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="RB2011-2HnD"
-            android:textColor="@color/text_color"
-            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/imageView10ports"
@@ -91,20 +71,10 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/dark_background_card_view"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5ports">
-
-        <TextView
-            android:id="@+id/textViewChateau"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Chateau LTE/5G"
-            android:textColor="@color/text_color"
-            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/imageViewChateau"
@@ -124,20 +94,10 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/dark_background_card_view"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10ports">
-
-        <TextView
-            android:id="@+id/textView24ports"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="CRS125-2HnD"
-            android:textColor="@color/text_color"
-            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/imageView24ports"
