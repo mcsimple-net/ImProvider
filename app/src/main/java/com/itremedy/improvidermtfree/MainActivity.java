@@ -1,17 +1,18 @@
 package com.itremedy.improvidermtfree;
 
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKey;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.AsyncTask;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.util.Log;
+
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +26,6 @@ import com.tapadoo.alerter.Alerter;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.Objects;
-
 
 public class MainActivity extends AppCompatActivity {
 

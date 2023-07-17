@@ -22,7 +22,7 @@
 
     <Button
         android:id="@+id/RemoveGuestWiFi"
-        android:layout_width="300dp"
+        android:layout_width="500dp"
         android:layout_height="80dp"
         android:layout_marginTop="100dp"
         android:backgroundTint="@color/for_improvider"
@@ -35,7 +35,7 @@
 
     <Button
         android:id="@+id/quitApp"
-        android:layout_width="300dp"
+        android:layout_width="500dp"
         android:layout_height="80dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/for_improvider"

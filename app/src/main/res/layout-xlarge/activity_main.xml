@@ -173,8 +173,8 @@
 
     <Button
         android:id="@+id/connect"
-        android:layout_width="400dp"
-        android:layout_height="100dp"
+        android:layout_width="500dp"
+        android:layout_height="70dp"
         android:layout_marginTop="100dp"
         android:backgroundTint="#E2703A"
         android:fontFamily="@font/play"
@@ -188,8 +188,8 @@
 
     <Button
         android:id="@+id/new_router_setup"
-        android:layout_width="400dp"
-        android:layout_height="100dp"
+        android:layout_width="500dp"
+        android:layout_height="70dp"
         android:layout_marginTop="50dp"
         android:backgroundTint="#E2703A"
         android:fontFamily="@font/play"
@@ -203,8 +203,8 @@
 
     <Button
         android:id="@+id/start_page"
-        android:layout_width="400dp"
-        android:layout_height="100dp"
+        android:layout_width="500dp"
+        android:layout_height="70dp"
         android:layout_marginTop="50dp"
         android:backgroundTint="#E2703A"
         android:fontFamily="@font/play"

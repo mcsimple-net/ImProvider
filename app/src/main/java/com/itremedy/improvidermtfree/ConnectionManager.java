@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+
 public class ConnectionManager {
     private static Session session;
     private static String hostname;
@@ -13,22 +14,6 @@ public class ConnectionManager {
     private static String password;
     public static String result;
     private static int flag = -1;
-
-    /*public ConnectionManager() {
-    }
-
-    public ConnectionManager(String hostname, String username, String password) {
-        ConnectionManager.hostname = hostname;
-        ConnectionManager.username = username;
-        ConnectionManager.password = password;
-    }
-
-    public ConnectionManager(String hostname, String username, String password, int port) {
-        ConnectionManager.hostname = hostname;
-        ConnectionManager.username = username;
-        ConnectionManager.password = password;
-        ConnectionManager.port = port;
-    }*/
 
     public static void setHostname(String hostname) {
         ConnectionManager.hostname = hostname;

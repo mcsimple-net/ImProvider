@@ -22,10 +22,10 @@
 
     <Button
         android:id="@+id/buttonMerge"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="169dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="140dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/play"
         android:text="@android:string/ok"
@@ -35,7 +35,7 @@
 
     <Button
         android:id="@+id/quitApp"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:backgroundTint="@color/for_improvider"

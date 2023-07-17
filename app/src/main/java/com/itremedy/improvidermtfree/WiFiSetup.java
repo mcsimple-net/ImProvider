@@ -48,7 +48,7 @@ public class WiFiSetup extends AppCompatActivity {
             Thread twname = new Thread(() -> {
                 try {
                     ConnectionManager.runCommand(":put [/in wireless get wlan1 ssid]");
-                    Thread.sleep(200);
+                    Thread.sleep(500);
 
                 } catch (JSchException | IOException | InterruptedException e) {
                     throw new RuntimeException(e);
