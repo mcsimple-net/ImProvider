@@ -39,6 +39,7 @@ public class AttentionChateauActivity extends AppCompatActivity {
                 Thread t = new Thread(() -> {
                     try {
                         ConnectionManager.runCommand("/system routerboard print");
+                        Thread.sleep(200);
                         if (!result.contains("routerboard: yes")) {
                             Snackbar snackbar = Snackbar.make(findViewById(android.R.id.content), "Please check the address of your MikroTik router ", 8000);
                             View snackbarView = snackbar.getView();
@@ -51,7 +52,7 @@ public class AttentionChateauActivity extends AppCompatActivity {
                         }
                         else {
                             Thread.sleep(200);
-                            ConnectionManager.runCommand("/system identity set name=ImProvider");
+                            ConnectionManager.runCommand("/system identity set name=ImProviderLTE");
                             Thread.sleep(200);
                             ConnectionManager.runCommand("/interface bridge set [find where bridge=bridge] vlan-filtering=yes");
                             Thread.sleep(10000);

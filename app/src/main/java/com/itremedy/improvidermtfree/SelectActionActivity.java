@@ -45,17 +45,37 @@ public class SelectActionActivity extends AppCompatActivity {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            if (!result.contains("ImProvider")) {
+            if (result.contains("ImProvider5"))
+                {
+                    Intent intent = new Intent(SelectActionActivity.this, SpeedActivity.class);
+                    startActivity(intent);
+                }
+           else if (result.contains("ImProvider10"))
+                {
+                    Intent intent = new Intent(SelectActionActivity.this, Speed10Activity.class);
+                    startActivity(intent);
+                }
+
+            else if (result.contains("ImProvider24"))
+                {
+                    Intent intent = new Intent(SelectActionActivity.this, Speed24Activity.class);
+                    startActivity(intent);
+                }
+
+            else if (result.contains("ImProviderLTE"))
+                {
+                    Intent intent = new Intent(SelectActionActivity.this, SpeedChateauActivity.class);
+                    startActivity(intent);
+
+            }
+            else {
                 Alerter.create(this, R.layout.alerter_custom_layout)
                         .setTitle(R.string.setup_first)
                         .setDuration(10000)
                         .setBackgroundColorRes(R.color.for_improvider)
                         .enableSwipeToDismiss()
-                        .show();}
-
-
-            else {Intent intent = new Intent(SelectActionActivity.this,SelectSpeedActivity.class);
-            startActivity(intent);}
+                        .show();
+            }
 
         });
         guest.setOnClickListener(v1 -> {

@@ -1,23 +1,35 @@
 package com.itremedy.improvidermtfree;
 
+import static com.google.android.material.internal.ContextUtils.getActivity;
+
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+
+
 import com.google.android.material.snackbar.Snackbar;
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
 
 import java.io.IOException;
 
+
+
 public class GuestAttention extends AppCompatActivity {
+
+
 
     private Button button;
     private TextView textViewGuestWait, GuestWarning;
+
 
 
     @Override
@@ -33,6 +45,11 @@ public class GuestAttention extends AppCompatActivity {
         String guestname = i.getStringExtra("guest_name");
         String guestpassword = i.getStringExtra("guest_password");
         String guestspeed = i.getStringExtra("guest_speed");
+
+
+
+
+
 
 
 
@@ -64,13 +81,14 @@ public class GuestAttention extends AppCompatActivity {
             }
             else if (guestpassword.isEmpty()) {
 
-             final Handler handler = new Handler();
+                save("guestSetup","1",getApplicationContext());
+
+                final Handler handler = new Handler();
              handler.postDelayed(() -> {
                  Thread t = new Thread(() -> {
                      try {
 
-                         ConnectionManager.runCommand("/system identity set name=GuestSetup");
-                         Thread.sleep(200);
+
                          ConnectionManager.runCommand("/interface wireless security-profiles remove [find where name=Security-Profile-Guest]");
                          Thread.sleep(200);
                          ConnectionManager.runCommand("/interface bridge add arp=reply-only name=Bridge-Guest");
@@ -122,13 +140,15 @@ public class GuestAttention extends AppCompatActivity {
              }, 1000);
             }
             else {
+
+                save("guestSetup","1",getApplicationContext());
+
                 final Handler handler1 = new Handler();
                 handler1.postDelayed(() -> {
                     Thread t = new Thread(() -> {
                         try {
 
-                            Thread.sleep(100);
-                            ConnectionManager.runCommand("/system identity set name=GuestSetup");
+
                             Thread.sleep(200);
                             ConnectionManager.runCommand("/interface wireless security-profiles set wpa2-pre-shared-key=" + guestpassword + " [find where name=Security-Profile-Guest]");
                             Thread.sleep(1000);
@@ -191,4 +211,13 @@ public class GuestAttention extends AppCompatActivity {
         startActivity(Intent.makeRestartActivityTask(i.getComponent()));
         Runtime.getRuntime().exit(0);
     }
+
+    public static void save(String key, String value, Context context) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(key, value);
+        editor.apply(); // or editor.commit() in case you want to write data instantly
+    }
+
+
 }

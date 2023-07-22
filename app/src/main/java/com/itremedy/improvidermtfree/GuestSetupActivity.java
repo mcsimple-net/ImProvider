@@ -1,11 +1,11 @@
 package com.itremedy.improvidermtfree;
 
-import static com.itremedy.improvidermtfree.ConnectionManager.result;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKey;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -20,15 +20,16 @@ import com.tapadoo.alerter.Alerter;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
+import java.util.Scanner;
 
 
-public class GuestSetupActivity extends AppCompatActivity  {
+public class GuestSetupActivity extends AppCompatActivity {
 
 
     private EditText guest_name, guest_password, guest_speed;
-    private Button quit,set,remove;
+    private Button quit, set, remove;
     private TextView help_guest;
-   SharedPreferences sharedPreferencesGuest;
+    SharedPreferences sharedPreferencesGuest,prefs;
 
 
     @Override
@@ -49,6 +50,7 @@ public class GuestSetupActivity extends AppCompatActivity  {
             finishAffinity();
         });
 
+
         help_guest.setOnClickListener(v -> {
 
             Alerter.create(this, R.layout.alerter_custom_layout)
@@ -59,7 +61,6 @@ public class GuestSetupActivity extends AppCompatActivity  {
                     .setTitle(R.string.guest_help)
                     .show();
         });
-
 
 
         remove.setOnClickListener(v2 -> {
@@ -89,7 +90,8 @@ public class GuestSetupActivity extends AppCompatActivity  {
             }
         });
 
-     sharedPreferencesGuest = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
+        sharedPreferencesGuest = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         String guestname_shared = sharedPreferencesGuest.getString("guest_name", "Guest");
         String guestpassword_shared = sharedPreferencesGuest.getString("guest_password", "12345678");
@@ -99,6 +101,7 @@ public class GuestSetupActivity extends AppCompatActivity  {
         guest_password.setText(guestpassword_shared);
         guest_speed.setText(guestspeed_shared);
 
+        /*
         Thread t = new Thread(() -> {
             try {
                 Thread.sleep(500);
@@ -116,87 +119,200 @@ public class GuestSetupActivity extends AppCompatActivity  {
             t.join();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
-        }
-        if (result.contains("GuestSetup")) {
+        }*/
 
-            Alerter.create(this,R.layout.alerter_custom_layout)
+       // SharedPreferences prefs = getSharedPreferences("guestSetup",0);
+        //String str = prefs.getString("guestSetup", "");
+
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        String str = preferences.getString("guestSetup", "0");
+        if (str.equals("1")) {
+
+            preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            preferences.edit().putString("guestSetup", "0").apply();
+
+            Alerter.create(this, R.layout.alerter_custom_layout)
                     .setTitle(R.string.please_wait)
                     .enableProgress(true)
                     .setBackgroundColorRes(R.color.for_improvider)
                     .enableSwipeToDismiss()
                     .show();
 
+
+
             final Handler handler = new Handler();
             handler.postDelayed(() -> {
-            Thread guest_setup_finish = new Thread(() -> {
+                Thread guest_setup_finish = new Thread(() -> {
+                    try {
+                        ConnectionManager.runCommand("/interface bridge port add bridge=Bridge-Guest interface=wlan3");
+                        Thread.sleep(500);
+                        ConnectionManager.runCommand("/interface wireless set ssid=" + guestname_shared + " [find where name=wlan3]");
+                        Thread.sleep(300);
+                    } catch (JSchException | IOException | InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+                guest_setup_finish.start();
                 try {
-                    ConnectionManager.runCommand("/interface bridge port add bridge=Bridge-Guest interface=wlan3");
-                    Thread.sleep(200);
-                    ConnectionManager.runCommand("/system identity set name=ImProvider");
-                    Thread.sleep(200);
-
-                   ConnectionManager.runCommand("/interface wireless set ssid=" + guestname_shared + " [find where name=wlan3]");
-                   Thread.sleep(300);
-                } catch (JSchException | IOException | InterruptedException e) {
+                    guest_setup_finish.join();
+                } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-            });
-            guest_setup_finish.start();
-            try {
-                guest_setup_finish.join();
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
             }, 1000);
 
+/*
+            if (result.contains("GuestSetup10")) {
 
-            Alerter.create(this, R.layout.alerter_custom_layout)
-                    .setTitle(R.string.guest_ready)
-                    .setDuration(5000)
-                    .setBackgroundColorRes(R.color.for_improvider)
-                    .enableSwipeToDismiss()
-                    .show();
+                Alerter.create(this, R.layout.alerter_custom_layout)
+                        .setTitle(R.string.please_wait)
+                        .enableProgress(true)
+                        .setBackgroundColorRes(R.color.for_improvider)
+                        .enableSwipeToDismiss()
+                        .show();
+
+                final Handler handler10 = new Handler();
+                handler10.postDelayed(() -> {
+                    Thread guest_setup_finish = new Thread(() -> {
+                        try {
+                            ConnectionManager.runCommand("/interface bridge port add bridge=Bridge-Guest interface=wlan3");
+                            Thread.sleep(200);
+                            ConnectionManager.runCommand("/system identity set name=ImProvider10");
+                            Thread.sleep(200);
+
+                            ConnectionManager.runCommand("/interface wireless set ssid=" + guestname_shared + " [find where name=wlan3]");
+                            Thread.sleep(300);
+                        } catch (JSchException | IOException | InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
+                    guest_setup_finish.start();
+                    try {
+                        guest_setup_finish.join();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }, 1000);
+
+                if (guestSetup = 1){
+
+                    Alerter.create(this, R.layout.alerter_custom_layout)
+                            .setTitle(R.string.please_wait)
+                            .enableProgress(true)
+                            .setBackgroundColorRes(R.color.for_improvider)
+                            .enableSwipeToDismiss()
+                            .show();
+
+                    final Handler handler24 = new Handler();
+                    handler24.postDelayed(() -> {
+                        Thread guest_setup_finish = new Thread(() -> {
+                            try {
+                                ConnectionManager.runCommand("/interface bridge port add bridge=Bridge-Guest interface=wlan3");
+                                Thread.sleep(200);
+                                ConnectionManager.runCommand("/system identity set name=ImProvider24");
+                                Thread.sleep(200);
+
+                                ConnectionManager.runCommand("/interface wireless set ssid=" + guestname_shared + " [find where name=wlan3]");
+                                Thread.sleep(300);
+                            } catch (JSchException | IOException | InterruptedException e) {
+                                throw new RuntimeException(e);
+                            }
+                        });
+                        guest_setup_finish.start();
+                        try {
+                            guest_setup_finish.join();
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }, 1000);
+
+                    if (result.contains("GuestSetup5")) {
+
+                        Alerter.create(this, R.layout.alerter_custom_layout)
+                                .setTitle(R.string.please_wait)
+                                .enableProgress(true)
+                                .setBackgroundColorRes(R.color.for_improvider)
+                                .enableSwipeToDismiss()
+                                .show();
+
+                        final Handler handlerLTE = new Handler();
+                        handlerLTE.postDelayed(() -> {
+                            Thread guest_setup_finish = new Thread(() -> {
+                                try {
+                                    ConnectionManager.runCommand("/interface bridge port add bridge=Bridge-Guest interface=wlan3");
+                                    Thread.sleep(200);
+                                    ConnectionManager.runCommand("/system identity set name=ImProvider5");
+                                    Thread.sleep(200);
+
+                                    ConnectionManager.runCommand("/interface wireless set ssid=" + guestname_shared + " [find where name=wlan3]");
+                                    Thread.sleep(300);
+                                } catch (JSchException | IOException | InterruptedException e) {
+                                    throw new RuntimeException(e);
+                                }
+                            });
+                            guest_setup_finish.start();
+                            try {
+                                guest_setup_finish.join();
+                            } catch (InterruptedException e) {
+                                throw new RuntimeException(e);
+                            }
+                        }, 1000);
+*/
+
+                        Alerter.create(this, R.layout.alerter_custom_layout)
+                                .setTitle(R.string.guest_ready)
+                                .setDuration(5000)
+                                .setBackgroundColorRes(R.color.for_improvider)
+                                .enableSwipeToDismiss()
+                                .show();
+
+                    }
+        else {
 
         }
 
 
-        set.setOnClickListener(v3 -> {
+                    set.setOnClickListener(v3 -> {
 
-            MasterKey masterKey = null;
-            try {
-                masterKey = new MasterKey.Builder(this)
-                        .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
-                        .build();
-            } catch (GeneralSecurityException | IOException e) {
-                throw new RuntimeException(e);
-            }
+                        MasterKey masterKey = null;
+                        try {
+                            masterKey = new MasterKey.Builder(this)
+                                    .setKeyScheme(MasterKey.KeyScheme.AES256_GCM)
+                                    .build();
+                        } catch (GeneralSecurityException | IOException e) {
+                            throw new RuntimeException(e);
+                        }
 
-            SharedPreferences sharedPreferencesGuest;
-            try {
-                EncryptedSharedPreferences.create(
-                        this,
-                        "secret_shared_prefs",
-                        masterKey,
-                        EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
-                        EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
-                );
-            } catch (GeneralSecurityException | IOException e) {
-                throw new RuntimeException(e);
-            }
-            sharedPreferencesGuest = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-            SharedPreferences.Editor editor_guest = sharedPreferencesGuest.edit();
+                        SharedPreferences sharedPreferencesGuest;
+                        try {
+                            EncryptedSharedPreferences.create(
+                                    this,
+                                    "secret_shared_prefs",
+                                    masterKey,
+                                    EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
+                                    EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
+                            );
+                        } catch (GeneralSecurityException | IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        sharedPreferencesGuest = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                        SharedPreferences.Editor editor_guest = sharedPreferencesGuest.edit();
 
-            editor_guest.putString("guest_name", guest_name.getText().toString());
-            editor_guest.putString("guest_password", guest_password.getText().toString());
-            editor_guest.putString("guest_speed", guest_speed.getText().toString());
-            editor_guest.apply();
+                        editor_guest.putString("guest_name", guest_name.getText().toString());
+                        editor_guest.putString("guest_password", guest_password.getText().toString());
+                        editor_guest.putString("guest_speed", guest_speed.getText().toString());
+                        editor_guest.apply();
 
-            Intent intent = new Intent(GuestSetupActivity.this,GuestAttention.class);
-            intent.putExtra ("guest_name", guest_name.getText().toString());
-            intent.putExtra("guest_password", guest_password.getText().toString());
-            intent.putExtra("guest_speed", guest_speed.getText().toString());
-            startActivity(intent);
-        });
-    }
+                        Intent intent = new Intent(GuestSetupActivity.this, GuestAttention.class);
+                        intent.putExtra("guest_name", guest_name.getText().toString());
+                        intent.putExtra("guest_password", guest_password.getText().toString());
+                        intent.putExtra("guest_speed", guest_speed.getText().toString());
+                        startActivity(intent);
+                    });
+                }
 
+   /* public static String str(String key, Context context) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getString(key, null);
+    }*/
 }

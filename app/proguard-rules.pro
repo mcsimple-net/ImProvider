@@ -20,6 +20,7 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--printconfiguration ~/tmp/full-r8-config.txt
 
 -keep class com.jcraft.**
+
+
