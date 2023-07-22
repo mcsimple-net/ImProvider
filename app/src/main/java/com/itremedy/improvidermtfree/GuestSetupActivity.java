@@ -159,112 +159,14 @@ public class GuestSetupActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-            }, 1000);
-
-/*
-            if (result.contains("GuestSetup10")) {
-
                 Alerter.create(this, R.layout.alerter_custom_layout)
-                        .setTitle(R.string.please_wait)
-                        .enableProgress(true)
+                        .setTitle(R.string.guest_ready)
+                        .setDuration(5000)
                         .setBackgroundColorRes(R.color.for_improvider)
                         .enableSwipeToDismiss()
                         .show();
 
-                final Handler handler10 = new Handler();
-                handler10.postDelayed(() -> {
-                    Thread guest_setup_finish = new Thread(() -> {
-                        try {
-                            ConnectionManager.runCommand("/interface bridge port add bridge=Bridge-Guest interface=wlan3");
-                            Thread.sleep(200);
-                            ConnectionManager.runCommand("/system identity set name=ImProvider10");
-                            Thread.sleep(200);
-
-                            ConnectionManager.runCommand("/interface wireless set ssid=" + guestname_shared + " [find where name=wlan3]");
-                            Thread.sleep(300);
-                        } catch (JSchException | IOException | InterruptedException e) {
-                            throw new RuntimeException(e);
-                        }
-                    });
-                    guest_setup_finish.start();
-                    try {
-                        guest_setup_finish.join();
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
-                }, 1000);
-
-                if (guestSetup = 1){
-
-                    Alerter.create(this, R.layout.alerter_custom_layout)
-                            .setTitle(R.string.please_wait)
-                            .enableProgress(true)
-                            .setBackgroundColorRes(R.color.for_improvider)
-                            .enableSwipeToDismiss()
-                            .show();
-
-                    final Handler handler24 = new Handler();
-                    handler24.postDelayed(() -> {
-                        Thread guest_setup_finish = new Thread(() -> {
-                            try {
-                                ConnectionManager.runCommand("/interface bridge port add bridge=Bridge-Guest interface=wlan3");
-                                Thread.sleep(200);
-                                ConnectionManager.runCommand("/system identity set name=ImProvider24");
-                                Thread.sleep(200);
-
-                                ConnectionManager.runCommand("/interface wireless set ssid=" + guestname_shared + " [find where name=wlan3]");
-                                Thread.sleep(300);
-                            } catch (JSchException | IOException | InterruptedException e) {
-                                throw new RuntimeException(e);
-                            }
-                        });
-                        guest_setup_finish.start();
-                        try {
-                            guest_setup_finish.join();
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
-                        }
-                    }, 1000);
-
-                    if (result.contains("GuestSetup5")) {
-
-                        Alerter.create(this, R.layout.alerter_custom_layout)
-                                .setTitle(R.string.please_wait)
-                                .enableProgress(true)
-                                .setBackgroundColorRes(R.color.for_improvider)
-                                .enableSwipeToDismiss()
-                                .show();
-
-                        final Handler handlerLTE = new Handler();
-                        handlerLTE.postDelayed(() -> {
-                            Thread guest_setup_finish = new Thread(() -> {
-                                try {
-                                    ConnectionManager.runCommand("/interface bridge port add bridge=Bridge-Guest interface=wlan3");
-                                    Thread.sleep(200);
-                                    ConnectionManager.runCommand("/system identity set name=ImProvider5");
-                                    Thread.sleep(200);
-
-                                    ConnectionManager.runCommand("/interface wireless set ssid=" + guestname_shared + " [find where name=wlan3]");
-                                    Thread.sleep(300);
-                                } catch (JSchException | IOException | InterruptedException e) {
-                                    throw new RuntimeException(e);
-                                }
-                            });
-                            guest_setup_finish.start();
-                            try {
-                                guest_setup_finish.join();
-                            } catch (InterruptedException e) {
-                                throw new RuntimeException(e);
-                            }
-                        }, 1000);
-*/
-
-                        Alerter.create(this, R.layout.alerter_custom_layout)
-                                .setTitle(R.string.guest_ready)
-                                .setDuration(5000)
-                                .setBackgroundColorRes(R.color.for_improvider)
-                                .enableSwipeToDismiss()
-                                .show();
+            }, 1000);
 
                     }
         else {
@@ -311,8 +213,4 @@ public class GuestSetupActivity extends AppCompatActivity {
                     });
                 }
 
-   /* public static String str(String key, Context context) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        return preferences.getString(key, null);
-    }*/
 }
