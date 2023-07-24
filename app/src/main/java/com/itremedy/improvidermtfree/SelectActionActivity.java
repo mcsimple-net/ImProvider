@@ -27,12 +27,9 @@ public class SelectActionActivity extends AppCompatActivity {
 
         set_speed.setOnClickListener(v -> {
 
+
             Thread t = new Thread(() -> {
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+
                 try {
                     ConnectionManager.runCommand("/system identity print");
                 } catch (JSchException | IOException e) {
@@ -45,11 +42,17 @@ public class SelectActionActivity extends AppCompatActivity {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            if (result.contains("ImProvider5"))
-                {
-                    Intent intent = new Intent(SelectActionActivity.this, SpeedActivity.class);
-                    startActivity(intent);
-                }
+            if (result.contains("ImProviderLTE"))
+            {
+                Intent intent = new Intent(SelectActionActivity.this, SpeedChateauActivity.class);
+                startActivity(intent);
+
+            }
+            else if (result.contains("ImProvider5"))
+            {
+                Intent intent = new Intent(SelectActionActivity.this, SpeedActivity.class);
+                startActivity(intent);
+            }
            else if (result.contains("ImProvider10"))
                 {
                     Intent intent = new Intent(SelectActionActivity.this, Speed10Activity.class);
@@ -62,11 +65,17 @@ public class SelectActionActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
 
-            else if (result.contains("ImProviderLTE"))
-                {
-                    Intent intent = new Intent(SelectActionActivity.this, SpeedChateauActivity.class);
-                    startActivity(intent);
-
+            else if
+            (result.contains("ImProvider"))
+            {
+                Intent intent = new Intent(SelectActionActivity.this, SelectSpeedActivity.class);
+                startActivity(intent);
+            }
+            else if
+            (result.contains("GuestSetup"))
+            {
+                Intent intent = new Intent(SelectActionActivity.this, GuestSetupActivity.class);
+                startActivity(intent);
             }
             else {
                 Alerter.create(this, R.layout.alerter_custom_layout)

@@ -1,16 +1,18 @@
 package com.itremedy.improvidermtfree;
 
 
+import static com.itremedy.improvidermtfree.ConnectionManager.result;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKey;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,7 +22,7 @@ import com.tapadoo.alerter.Alerter;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
-import java.util.Scanner;
+
 
 
 public class GuestSetupActivity extends AppCompatActivity {
@@ -29,7 +31,7 @@ public class GuestSetupActivity extends AppCompatActivity {
     private EditText guest_name, guest_password, guest_speed;
     private Button quit, set, remove;
     private TextView help_guest;
-    SharedPreferences sharedPreferencesGuest,prefs;
+    SharedPreferences sharedPreferencesGuest;
 
 
     @Override
@@ -101,16 +103,13 @@ public class GuestSetupActivity extends AppCompatActivity {
         guest_password.setText(guestpassword_shared);
         guest_speed.setText(guestspeed_shared);
 
-        /*
+
         Thread t = new Thread(() -> {
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+
             try {
                 ConnectionManager.runCommand("/system identity print");
-            } catch (JSchException | IOException e) {
+                Thread.sleep(300);
+            } catch (JSchException | IOException | InterruptedException e) {
                 throw new RuntimeException(e);
             }
         });
@@ -119,18 +118,11 @@ public class GuestSetupActivity extends AppCompatActivity {
             t.join();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
-        }*/
-
-       // SharedPreferences prefs = getSharedPreferences("guestSetup",0);
-        //String str = prefs.getString("guestSetup", "");
+        }
 
 
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        String str = preferences.getString("guestSetup", "0");
-        if (str.equals("1")) {
+        if (result.contains("GuestSetup")) {
 
-            preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-            preferences.edit().putString("guestSetup", "0").apply();
 
             Alerter.create(this, R.layout.alerter_custom_layout)
                     .setTitle(R.string.please_wait)
@@ -140,11 +132,12 @@ public class GuestSetupActivity extends AppCompatActivity {
                     .show();
 
 
-
             final Handler handler = new Handler();
             handler.postDelayed(() -> {
                 Thread guest_setup_finish = new Thread(() -> {
                     try {
+                        ConnectionManager.runCommand("/system identity set name=ImProvider");
+                        Thread.sleep(200);
                         ConnectionManager.runCommand("/interface bridge port add bridge=Bridge-Guest interface=wlan3");
                         Thread.sleep(500);
                         ConnectionManager.runCommand("/interface wireless set ssid=" + guestname_shared + " [find where name=wlan3]");
@@ -168,7 +161,7 @@ public class GuestSetupActivity extends AppCompatActivity {
 
             }, 1000);
 
-                    }
+        }
         else {
 
         }

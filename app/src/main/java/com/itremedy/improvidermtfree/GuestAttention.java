@@ -1,6 +1,5 @@
 package com.itremedy.improvidermtfree;
 
-import static com.google.android.material.internal.ContextUtils.getActivity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -48,11 +47,6 @@ public class GuestAttention extends AppCompatActivity {
 
 
 
-
-
-
-
-
         button.setOnClickListener(v -> {
 
             button.setVisibility(View.GONE);
@@ -81,7 +75,7 @@ public class GuestAttention extends AppCompatActivity {
             }
             else if (guestpassword.isEmpty()) {
 
-                save("guestSetup","1",getApplicationContext());
+
 
                 final Handler handler = new Handler();
              handler.postDelayed(() -> {
@@ -90,20 +84,22 @@ public class GuestAttention extends AppCompatActivity {
 
 
                          ConnectionManager.runCommand("/interface wireless security-profiles remove [find where name=Security-Profile-Guest]");
-                         Thread.sleep(200);
+                         Thread.sleep(300);
                          ConnectionManager.runCommand("/interface bridge add arp=reply-only name=Bridge-Guest");
                          Thread.sleep(1000);
                          ConnectionManager.runCommand("/ip address add address=10.10.10.1/24 interface=Bridge-Guest network=10.10.10.0");
-                         Thread.sleep(200);
+                         Thread.sleep(300);
                          ConnectionManager.runCommand("/ip dhcp-server network add address=10.10.10.0/24 dns-server=1.1.1.1,8.8.8.8 gateway=10.10.10.1");
-                         Thread.sleep(200);
+                         Thread.sleep(300);
                          ConnectionManager.runCommand("/ip pool add name=guest-pool ranges=10.10.10.2-10.10.10.254");
-                         Thread.sleep(200);
+                         Thread.sleep(300);
                          ConnectionManager.runCommand("/ip dhcp-server add add-arp=yes address-pool=guest-pool disabled=no interface=Bridge-Guest lease-time=4h name=dhcp1");
-                         Thread.sleep(200);
+                         Thread.sleep(300);
                          ConnectionManager.runCommand("/queue simple remove [find where name=Guest-WiFi]");
-                         Thread.sleep(200);
+                         Thread.sleep(300);
                          ConnectionManager.runCommand("/queue simple add max-limit=" + guestspeed + "M/" + guestspeed + "M name=Guest-WiFi target=Bridge-Guest");
+                         Thread.sleep(300);
+                         ConnectionManager.runCommand("/system identity set name=GuestSetup");
                          Thread.sleep(300);
                          ConnectionManager.runCommand("/interface wireless set security-profile=Security-Profile-Guest [find where name=wlan3]");
                          Thread.sleep(300);
@@ -141,7 +137,6 @@ public class GuestAttention extends AppCompatActivity {
             }
             else {
 
-                save("guestSetup","1",getApplicationContext());
 
                 final Handler handler1 = new Handler();
                 handler1.postDelayed(() -> {
@@ -167,6 +162,8 @@ public class GuestAttention extends AppCompatActivity {
                             ConnectionManager.runCommand("/queue simple remove [find where name=Guest-WiFi]");
                             Thread.sleep(300);
                             ConnectionManager.runCommand("/queue simple add max-limit=" + guestspeed + "M/" + guestspeed + "M name=Guest-WiFi target=Bridge-Guest");
+                            Thread.sleep(300);
+                            ConnectionManager.runCommand("/system identity set name=GuestSetup");
                             Thread.sleep(300);
                             ConnectionManager.runCommand("/interface wireless set security-profile=Security-Profile-Guest [find where name=wlan3]");
                             Thread.sleep(300);
@@ -210,13 +207,6 @@ public class GuestAttention extends AppCompatActivity {
         Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
         startActivity(Intent.makeRestartActivityTask(i.getComponent()));
         Runtime.getRuntime().exit(0);
-    }
-
-    public static void save(String key, String value, Context context) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(key, value);
-        editor.apply(); // or editor.commit() in case you want to write data instantly
     }
 
 
