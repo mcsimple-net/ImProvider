@@ -1,24 +1,14 @@
 <resources>
     <string name="app_name">ImProvider</string>
     <string name="hyperlink">Start Page</string>
-    <string name="connect">CONNECT</string>
     <string name="password">Password :</string>
     <string name="username">Username :</string>
     <string name="network_name">Name :</string>
-    <string name="port">Port :</string>
-    <string name="host_or_ip">Host or IP :</string>
     <string name="enter_username">Enter username</string>
-    <string name="enter_port_number">Enter port number</string>
     <string name="enter_password">Enter password</string>
-    <string name="enter_ip_or_hostname">Enter IP or hostname</string>
-    <string name="setup_new_router">SET UP A NEW ROUTER</string>
     <string name="set_connection_speed">SET SPEED LIMITS</string>
-    <string name="in_premium_version">*IN PREMIUM VERSION:</string>
     <string name="how_many_ethernet_ports">SELECT YOUR ROUTER</string>
-    <string name="attention">Please, make sure that you have connected the router with default settings. Configuration will be possible over WiFi only. When the app closes automatically, reconnect to WiFi with the password \"mcsimple\". To set the speed limits open the app again, enter the password \"mcsimple.net\" and press CONNECT.</string>
-    <string name="wait">WAIT…  Configuration in progress…  Do not take the phone away from the router</string>
-    <string name="guest_wi_fi_setup">GUEST Wi-Fi SETUP</string>
-    <string name="wi_fi_configuration">Wi-Fi CONFIGURATION</string>
+    <string name="wait">"WAIT…  Configuration in progress…  "</string>
     <string name="change_admin_password">CHANGE ADMIN\'S PASSWORD</string>
     <string name="quit">QUIT</string>
     <string name="set">OK</string>
@@ -30,43 +20,75 @@
     <string name="improvider">ImProvider</string>
     <string name="need_help">Need Help?</string>
     <string name="default_password" translatable="false">mcsimple.net</string>
-    <string name="_192_168_88_1" translatable="false">192.168.88.1</string>
-    <string name="_22" translatable="false">22</string>
-    <string name="admin" translatable="false">admin</string>
     <string name="chk_connection">Check your connection, input data or router settings. An error occurred: </string>
     <string name="for_unlimited">Select a port, enter the maximum limit in megabits and press OK. \nFor unlimited speed enter 999. To turn the Internet off enter 0.</string>
     <string name="please_enter_limit">\n\nPlease Enter Limit</string>
     <string name="please_select_port">\n\nPlease Select Port</string>
-    <string name="help_main">For the new router setup press SETUP NEW ROUTER. \n
-        To connect already configured router enter the password \"mcsimple.net\" and press CONNECT</string>
-    <string name="setup_first">Please set up your router</string>
-    <string name="login">ImProvider enables you to control MikroTik routers through controlling router users\' Internet speed limits. The users won\'t be able to connect each other.\n
+    <string name="flds_empty">Some fields are empty</string>
+    <string name="pref_previously_started" translatable="false">false</string>
+    <string name="save">Save</string>
+    <string name="minimum_8_characters">minimum 8 characters</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="done">Done</string>
+    <string name="help_merge">Select ports to add to parent network to connect TV / network printer / computer / access point by ethernet cable. Reconnect or reboot connected device after switching.</string>
+    <string name="help_mergeH">To connect the port to the Hotspot network press the button with a selected port name. Reconnect or reboot connected device after switching. If you turn off the selected port it will be in the parent network. </string>
 
+    <string name="subscribe">Subscribe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="login">ImProvider enables you to control MikroTik routers through controlling router users\' Internet speed limits. You can also create a Hotspot to connect users by tickets.\n
+        \n
         How to use: \n
         1. If you already use a Mikrotik router save its configuration with Winbox and reset it. \n
         2. Plug the internet cable from provider\'s router into the first port (ETH1) or insert microSIM card (for LTE/5G routers). \n
         3. Turn on the router. \n
         4. Connect your phone or tablet with ImProvider to WiFi network \"MikroTik-*****\" . \n
-        *If your router creates two networks, do not use \"MikroTik-****A\"/\"MikroTik-****5\" during first setup due to WiFi security. \n
+        \n
+        \n**********************
+        \n
         To delete the app settings on your router reset it. \n
         You can find more information about ImProvider at <a href="https://mcsimple.net/improvider"><u>https://mcsimple.net/improvider</u></a>.
-        If you have questions or want to report about an issue please write to <a href="mailto:customercare@mcsimple.net?Subject=ImProvider%20Issue" target="_top">customercare@mcsimple.net</a>. \n
+        If you have questions or want to report about an issue write to <a href="mailto:customercare@mcsimple.net?Subject=ImProvider%20Issue" target="_top">customercare@mcsimple.net</a>. \n
         We are not responsible for any harm done by using ImProvider. Pressing CONTINUE you agree with it.</string>
-    <string name="flds_empty">Some fields are empty</string>
-    <string name="pref_previously_started" translatable="false">false</string>
-    <string name="save">Save</string>
-    <string name="guest_help">Enter new Guest Wi-Fi network name and password (password can be blank), enter the maximum speed limit in megabits and press OK. \nFor unlimited speed enter 999. To turn the Internet off enter 0. You cannot manage MikroTik over guest Wi-Fi.</string>
-    <string name="guest_ready">Your guest Wi-Fi network is ready. Please check it.</string>
-    <string name="remove_guest_wi_fi">Remove Guest Wi-Fi</string>
-    <string name="guest_attention">After automate closing the application, reconnect to Wi-fi network (if it was not done automatically), connect to the router and press GUEST Wi-Fi SETUP again to finish configuration.</string>
-    <string name="wifi_help">After clicking OK, the program will send the settings and close automatically. If after the first attempt the network name has not changed, run the process a second time and the job will be done.</string>
-    <string name="minimum_8_characters">minimum 8 characters</string>
-    <string name="new_password_was_set">New password was set</string>
-    <string name="enter_new_password">Enter new password</string>
-    <string name="done">Done</string>
-    <string name="help_merge">Select ports to add to your own network to connect TV / network printer / computer / access point by ethernet cable and press OK. Reconnect or reboot connected device after switching.</string>
-    <string name="merge_ethernet_ports">MERGE ETHERNET PORTS</string>
-
-
-
+    <string name="admin_s_password">Admin\'s password</string>
+    <string name="ports_speed_limit">network ports management</string>
+    <string name="hotspot_configuration">Hotspot management</string>
+    <string name="router_configuration">Router management</string>
+    <string name="guest_help">Enter Hotspot Wi-Fi network name, the maximum speed limit in megabits and press OK.  For unlimited speed enter 999.  To turn the Internet off enter 0.  You cannot manage your router over Hotspot Wi-Fi.</string>
+    <string name="help_main">To set up a new router, click \nROUTER MANAGEMENT button.\n\nNeed help?</string>
+    <string name="create_hotspot_network">Create hotspot network</string>
+    <string name="Hotspot_creation">* A Wi-Fi network where you can add users and manage their access time using a ticket system. The speed limit will be the same for every user. You can add network ports to connect access points and increase the range of the network.</string>
+    <string name="back">Back</string>
+    <string name="create_separate">Create separate network on each port</string>
+    <string name="about_separate_networks">*Create a separate network on each port of your router. You can control the speed limits. The networks are separated from each other and the parent network. You cannot manage your router from them. It is possible to reassign some ports to the parent network.</string>
+    <string name="router_setup">Here you can configure Wi-Fi part of your parent network and admin\'s password. You can enter a new name, a wi-fi password and an admin\'s password or leave them as they are and press OK</string>
+    <string name="add_ports_to_hotspot_network">add ports to hotspot network</string>
+    <string name="add_ports_to_parent_network">add ports to parent network</string>
+    <string name="setup">Setup</string>
+    <string name="wi_fi_name">Wi-Fi network name</string>
+    <string name="wi_fi_password">WiFi network Password</string>
+    <string name="hotspot_network_configuration">Hotspot Network Configuration</string>
+    <string name="enable_disable_hotspot_wi_fi">Enable / Disable Hotspot Wi-Fi</string>
+    <string name="hotspot_username">Hotspot Username</string>
+    <string name="hotspot_password">Hotspot Password</string>
+    <string name="number_of_devices">Number of devices</string>
+    <string name="enter_time_limit_in_hours">Time limit in hours</string>
+    <string name="create">create</string>
+    <string name="add_hotspot_user">Add Hotspot User</string>
+    <string name="hotspot_wi_fi_setup">Hotspot Wi-Fi Setup</string>
+    <string name="enter_speed_limit">Enter Speed Limit</string>
+    <string name="already_disabled">Hotspot Wi-Fi is already disabled</string>
+    <string name="already_enabled">Hotspot Wi-Fi is already enabled</string>
+    <string name="disable">Disable</string>
+    <string name="enable">Enable</string>
+    <string name="https_mcsimple_net_improvider" translatable="false"><u>https://mcsimple.net/improvider</u></string>
+    <string name="whatsapp_19897850101" translatable="false"><u>Whatsapp: +19897850101</u></string>
+    <string name="email_customercare_mcsimple_net" translatable="false"><u>Email: customercare@mcsimple.net</u></string>
+    <string name="print">Print</string>
+    <string name="monthly_subscription">Monthly Subscription</string>
+    <string name="enable_hotspot">Please enable hotspot Wi-Fi</string>
+    <string name="configure_mikrotik">Please configure your MikroTik router</string>
+    <string name="setup_networks">Please setup networks on ports</string>
+    <string name="setup_hotspot">Please setup hotspot network</string>
+    <string name="mikrotik_address">Your router is not MikroTik</string>
+    <string name="new_ticket">new ticket</string>
 </resources>

@@ -15,16 +15,15 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button login;
     private SharedPreferences set_prefs;
-    private TextView textViewLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        textViewLogin = findViewById(R.id.textViewLogin);
-        login = findViewById(R.id.agree_login);
+        TextView textViewLogin = findViewById(R.id.textViewLogin);
+        Button login = findViewById(R.id.agree_login);
         set_prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         Linkify.addLinks(textViewLogin,Linkify.EMAIL_ADDRESSES | Linkify.WEB_URLS);
         //textViewLogin.setMovementMethod(LinkMovementMethod.getInstance());

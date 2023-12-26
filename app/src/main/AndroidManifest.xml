@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
-
+    <!-- <uses-permission android:name="com.android.vending.BILLING" /> -->
 
 
     <application
@@ -16,59 +16,82 @@
         android:label="@string/improvider"
         android:supportsRtl="true"
         android:theme="@style/Theme.ImProviderMikroTik"
-        tools:targetApi="33">
+        tools:targetApi="34">
+        <activity
+            android:name=".Speed4LteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Speed4Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Attention4LteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Attention4Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Speed8Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Attention8Activity"
+            android:exported="true" />
+        <activity
+            android:name=".HotspotSetupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".FirstSetupActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MergePortsHotspot"
+            android:exported="true" />
+        <activity
+            android:name=".PrintActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CreateUserActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PortsConfigActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Subs"
+            android:exported="true" />
         <activity
             android:name=".AttentionChateauActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SpeedChateauActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Speed24Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Attention24Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Attention10Activity"
-            android:exported="false" />
-        <activity
-            android:name=".SelectSpeedActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Speed10Activity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MergePorts"
-            android:exported="false" />
-        <activity
-            android:name=".AdminPassword"
-            android:exported="false" />
-        <activity
-            android:name=".WiFiSetup"
-            android:exported="false" />
-        <activity
-            android:name=".GuestAttention"
-            android:exported="false"
-            android:noHistory="true"/>
+            android:exported="true" />
         <activity
             android:name=".GuestSetupActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
             android:name=".SpeedActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".AttentionActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".PortsSelectActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SelectActionActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -82,6 +105,16 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
     </application>
 
 </manifest>

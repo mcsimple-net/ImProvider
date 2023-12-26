@@ -7,13 +7,30 @@
     android:background="@color/black"
     tools:context=".MergePorts">
 
-    <TextView
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:fontFamily="@font/play"
-        android:text="@string/select_ports"
+        android:text="@string/add_ports_to_parent_network"
         android:textColor="@color/text_color"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,37 +38,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonMerge"
-        android:layout_width="500dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="69dp"
-        android:backgroundTint="@color/for_improvider"
-        android:fontFamily="@font/play"
-        android:text="@android:string/ok"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
-
-    <Button
         android:id="@+id/quitApp"
         android:layout_width="500dp"
         android:layout_height="70dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="230dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/play"
         android:text="@string/quit"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMerge" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="500dp"
         android:layout_height="80dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/dark_background_card_view"
         android:gravity="center"
         android:orientation="horizontal"
@@ -62,7 +65,7 @@
         <view
             android:id="@+id/radio2"
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center|start"
             android:layout_weight="1"
@@ -78,7 +81,7 @@
         android:id="@+id/linearLayout3"
         android:layout_width="500dp"
         android:layout_height="80dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/dark_background_card_view"
         android:gravity="center"
         android:orientation="horizontal"
@@ -89,7 +92,7 @@
         <view
             android:id="@+id/radio3"
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
@@ -105,7 +108,7 @@
         android:id="@+id/linearLayout4"
         android:layout_width="500dp"
         android:layout_height="80dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/dark_background_card_view"
         android:gravity="center"
         android:orientation="horizontal"
@@ -116,7 +119,7 @@
         <view
             android:id="@+id/radio4"
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
@@ -132,7 +135,7 @@
         android:id="@+id/linearLayout5"
         android:layout_width="500dp"
         android:layout_height="80dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/dark_background_card_view"
         android:gravity="center"
         android:orientation="horizontal"
@@ -143,7 +146,7 @@
         <view
             android:id="@+id/radio5"
             class="com.itremedy.improvidermtfree.SpeedActivity$ToggleableRadioButton"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:buttonTint="@color/for_improvider"
@@ -168,5 +171,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

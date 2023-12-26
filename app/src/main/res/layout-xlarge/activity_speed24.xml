@@ -7,7 +7,10 @@
     android:background="@color/black"
     tools:context=".Speed24Activity">
 
-    <TextView
+
+
+
+        <TextView
         android:id="@+id/textViewSelectPort24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +31,7 @@
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/play"
         android:text="@string/quit"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutSelectSpeed24" />
@@ -52,7 +55,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/play"
             android:gravity="center"
-            android:text="@string/enter_new_speed"
+            android:text="@string/enter_speed_limit"
             android:textColor="@color/text_color"
             android:textSize="24sp" />
 
@@ -68,7 +71,9 @@
             android:gravity="center"
             android:inputType="number|numberDecimal"
             android:maxLength="3"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:autofillHints=""
+            tools:ignore="LabelFor" />
 
         <Button
             android:id="@+id/buttonSet24"
@@ -920,6 +925,34 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+            <EditText
+                android:id="@+id/editTextDescriptionS"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:ems="10"
+                android:hint="add-description-without-spaces"
+                android:inputType="textPersonName"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/for_improvider"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/buttonSetDesc"
+                app:layout_constraintHorizontal_bias="0.813"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quitApp24" />
+
+            <Button
+                android:id="@+id/buttonSetDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:backgroundTint="@color/for_improvider"
+                android:text="@android:string/ok"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/editTextDescriptionS"
+                app:layout_constraintTop_toTopOf="@+id/editTextDescriptionS" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

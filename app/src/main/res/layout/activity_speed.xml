@@ -7,7 +7,9 @@
     android:background="@color/black"
     tools:context=".SpeedActivity">
 
-    <TextView
+
+
+        <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -209,7 +211,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/play"
             android:gravity="center"
-            android:text="@string/enter_new_speed"
+            android:text="@string/enter_speed_limit"
             android:textColor="@color/text_color"
             android:textSize="18sp" />
 
@@ -226,7 +228,9 @@
             android:gravity="center"
             android:inputType="number|numberDecimal"
             android:maxLength="3"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:autofillHints=""
+            tools:ignore="LabelFor" />
 
         <Button
             android:id="@+id/buttonSet"
@@ -254,6 +258,8 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

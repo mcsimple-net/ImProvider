@@ -3,6 +3,7 @@ package com.itremedy.improvidermtfree;
 import static com.itremedy.improvidermtfree.ConnectionManager.result;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.Button;
@@ -20,7 +21,6 @@ public class SpeedChateauActivity extends AppCompatActivity  {
 
 
     private EditText speed;
-    private Button set, quit;
     private RadioButton radio5,radio2,radio3,radio4,radio1;
     private TextView textViewSpeed2,textViewSpeed3,textViewSpeed4,textViewSpeed5,textViewSpeed1;
     public TextView help_s;
@@ -31,8 +31,8 @@ public class SpeedChateauActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speed_chateau);
         speed = findViewById(R.id.SpeedC);
-        set = findViewById(R.id.buttonSetC);
-        quit = findViewById(R.id.quitAppC);
+        Button set = findViewById(R.id.buttonSetC);
+        Button quit = findViewById(R.id.quitAppC);
         radio1 = findViewById(R.id.radio1C);
         radio2 = findViewById(R.id.radio2C);
         radio3 = findViewById(R.id.radio3C);
@@ -46,19 +46,21 @@ public class SpeedChateauActivity extends AppCompatActivity  {
         help_s = findViewById(R.id.help_speed);
 
         help_s.setOnClickListener(v -> {
-
-            Alerter.create(this, R.layout.alerter_custom_layout)
-                    .setDuration(7000)
-                    .setIcon(R.drawable.help)
-                    .setBackgroundColorRes(R.color.for_improvider)
-                    .enableSwipeToDismiss()
-                    .setTitle(R.string.for_unlimited)
-                    .show();
+                    runOnUiThread(() -> {
+                        Alerter.create(this, R.layout.alerter_custom_layout)
+                                .setDuration(7000)
+                                .setIcon(R.drawable.help)
+                                .setBackgroundColorRes(R.color.for_improvider)
+                                .enableSwipeToDismiss()
+                                .setTitle(R.string.for_unlimited)
+                                .show();
+                    });
         });
 
         quit.setOnClickListener(v -> {
-            ConnectionManager.close();
-            finishAffinity();
+
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         });
 
 
@@ -74,7 +76,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan201] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                    throw new RuntimeException(e);
+                      new RestartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed1.setText("");
@@ -89,7 +91,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                    throw new RuntimeException(e);
+                      new RestartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed2.setText("");
@@ -105,7 +107,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan203] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                    throw new RuntimeException(e);
+                      new RestartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed3.setText("");
@@ -121,7 +123,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan204] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                    throw new RuntimeException(e);
+                      new RestartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed4.setText("");
@@ -137,7 +139,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan205] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                    throw new RuntimeException(e);
+                      new RestartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed5.setText("");
@@ -157,7 +159,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                 l5.start();
                 l5.join();
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                  new RestartApp();
             }
         });
         limC.start();
@@ -171,11 +173,13 @@ public class SpeedChateauActivity extends AppCompatActivity  {
 
             if(command.equals(""))
             {
-                Alerter.create(this,R.layout.alerter_custom_layout)
-                        .setTitle(R.string.please_enter_limit)
-                        .setBackgroundColorRes(R.color.for_improvider)
-                        .enableSwipeToDismiss()
-                        .show();
+                runOnUiThread(() -> {
+                    Alerter.create(this, R.layout.alerter_custom_layout)
+                            .setTitle(R.string.please_enter_limit)
+                            .setBackgroundColorRes(R.color.for_improvider)
+                            .enableSwipeToDismiss()
+                            .show();
+                });
             }
             else {
                 boolean b = command.equals("999");
@@ -195,7 +199,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                            throw new RuntimeException(e);
+                              new RestartApp();
                         }
                     });
                     s1.start();
@@ -207,7 +211,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan201] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                            throw new RuntimeException(e);
+                              new RestartApp();
                         }
                         runOnUiThread(() -> {
                             radio1.setChecked(false);
@@ -231,7 +235,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=2 target=bridge-vlan202");
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                            throw new RuntimeException(e);
+                              new RestartApp();
                         }
                     });
                     s2.start();
@@ -241,7 +245,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                             Thread.sleep(700);
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
                         } catch (JSchException | IOException | InterruptedException e) {
-                            throw new RuntimeException(e);
+                              new RestartApp();
                         }
                         runOnUiThread(() -> {
                             radio2.setChecked(false);
@@ -265,7 +269,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=3 target=bridge-vlan203");
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                            throw new RuntimeException(e);
+                              new RestartApp();
                         }
                     });
                     s3.start();
@@ -275,7 +279,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                             Thread.sleep(700);
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan203] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
                         } catch (JSchException | IOException | InterruptedException e) {
-                            throw new RuntimeException(e);
+                              new RestartApp();
                         }
                         runOnUiThread(() -> {
                             radio3.setChecked(false);
@@ -299,7 +303,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=4 target=bridge-vlan204");
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                            throw new RuntimeException(e);
+                              new RestartApp();
                         }
                     });
                     s4.start();
@@ -309,7 +313,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                             Thread.sleep(700);
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan204] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
                         } catch (JSchException | IOException | InterruptedException e) {
-                            throw new RuntimeException(e);
+                              new RestartApp();
                         }
                         runOnUiThread(() -> {
                             radio4.setChecked(false);
@@ -333,7 +337,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                            throw new RuntimeException(e);
+                              new RestartApp();
                         }
                     });
                     s5.start();
@@ -343,7 +347,7 @@ public class SpeedChateauActivity extends AppCompatActivity  {
                             Thread.sleep(700);
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan205] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
                         } catch (JSchException | IOException | InterruptedException e) {
-                            throw new RuntimeException(e);
+                              new RestartApp();
                         }
                         runOnUiThread(() -> {
                             radio5.setChecked(false);
@@ -357,11 +361,13 @@ public class SpeedChateauActivity extends AppCompatActivity  {
 
                 if(flg == 0)
                 {
-                    Alerter.create(this,R.layout.alerter_custom_layout)
-                            .setTitle(R.string.please_select_port)
-                            .setBackgroundColorRes(R.color.for_improvider)
-                            .enableSwipeToDismiss()
-                            .show();
+                    runOnUiThread(() -> {
+                        Alerter.create(this, R.layout.alerter_custom_layout)
+                                .setTitle(R.string.please_select_port)
+                                .setBackgroundColorRes(R.color.for_improvider)
+                                .enableSwipeToDismiss()
+                                .show();
+                    });
                 }
             }
 
@@ -401,4 +407,5 @@ public class SpeedChateauActivity extends AppCompatActivity  {
         }
         return super.onKeyDown(keyCode, event);
     }
+
 }

@@ -7,7 +7,24 @@
     android:background="@color/black"
     tools:context=".SpeedChateauActivity">
 
-    <TextView
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +45,7 @@
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/play"
         android:text="@string/quit"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutC" />
@@ -253,9 +270,9 @@
             android:layout_weight="1"
             android:fontFamily="@font/play"
             android:gravity="center"
-            android:text="@string/enter_new_speed"
+            android:text="@string/enter_speed_limit"
             android:textColor="@color/text_color"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/SpeedC"
@@ -272,7 +289,9 @@
             android:gravity="center"
             android:inputType="number|numberDecimal"
             android:maxLength="3"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:autofillHints=""
+            tools:ignore="LabelFor" />
 
         <Button
             android:id="@+id/buttonSetC"
@@ -300,5 +319,8 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="150dp"
         android:fontFamily="@font/play"
-        android:text="@string/guest_wi_fi_setup"
+        android:text="@string/hotspot_wi_fi_setup"
         android:textColor="@color/text_color"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,30 +21,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/RemoveGuestWiFi"
-        android:layout_width="500dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="100dp"
-        android:backgroundTint="@color/for_improvider"
-        android:fontFamily="@font/play"
-        android:text="@string/remove_guest_wi_fi"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <Button
         android:id="@+id/quitApp"
         android:layout_width="500dp"
         android:layout_height="80dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="200dp"
         android:backgroundTint="@color/for_improvider"
         android:fontFamily="@font/play"
         android:text="@string/quit"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RemoveGuestWiFi" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -65,10 +52,10 @@
             android:layout_marginStart="10dp"
             android:layout_weight="1"
             android:fontFamily="@font/play"
-            android:gravity="center|end"
-            android:text="@string/network_name"
+            android:gravity="center"
+            android:text="@string/wi_fi_name"
             android:textColor="@color/text_color"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/editTextWName"
@@ -78,65 +65,27 @@
             android:layout_marginTop="12dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
+            android:autofillHints=""
             android:background="@null"
             android:ems="10"
+            android:gravity="center"
             android:inputType="textPersonName"
             android:maxLength="32"
             android:textColor="@color/text_color"
-            android:textSize="24sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="500dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/dark_background_card_view"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-        <TextView
-            android:id="@+id/textViewGuestPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/play"
-            android:gravity="center|end"
-            android:text="@string/password"
-            android:textColor="@color/text_color"
-            android:textSize="24sp" />
-
-        <EditText
-            android:id="@+id/editTextWPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="@null"
-            android:ems="10"
-            android:hint="@string/minimum_8_characters"
-            android:inputType="textVisiblePassword"
-            android:textColor="@color/text_color"
-            android:textColorHint="#8F9193"
-            android:textSize="24sp" />
+            android:textSize="20sp"
+            tools:ignore="LabelFor" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="600dp"
         android:layout_height="150dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="140dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <TextView
             android:id="@+id/textView5"
@@ -146,9 +95,9 @@
             android:layout_weight="1"
             android:fontFamily="@font/play"
             android:gravity="center"
-            android:text="@string/enter_new_speed"
+            android:text="@string/enter_speed_limit"
             android:textColor="@color/text_color"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/GuestSpeed"
@@ -178,7 +127,7 @@
             android:backgroundTint="@color/for_improvider"
             android:fontFamily="@font/play"
             android:text="@string/set"
-            android:textSize="34sp" />
+            android:textSize="24sp" />
     </LinearLayout>
 
     <TextView

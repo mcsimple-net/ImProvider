@@ -1,55 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ЯПровайдер</string>
-    <string name="connect">ПОДКЛЮЧЕНИЕ</string>
     <string name="password">Пароль:</string>
     <string name="username">Имя:</string>
-    <string name="port">Порт:</string>
-    <string name="host_or_ip">IP Адрес:</string>
     <string name="enter_username">Введите имя пользователя</string>
-    <string name="enter_port_number">Введите номер порта</string>
-    <string name="enter_ip_or_hostname">Введите IP адрес</string>
-    <string name="setup_new_router">НАСТРОИТЬ НОВЫЙ РОУТЕР</string>
     <string name="set_connection_speed">УСТАНОВИТЬ ЛИМИТЫ СКОРОСТИ</string>
-    <string name="in_premium_version">*В ПРЕМИУМ ВЕРСИИ:</string>
-    <string name="how_many_ethernet_ports">ВЫБЕРИТЕ ВАШ РОУТЕР</string>
-    <string name="attention">
-    <br>Пожалуйста убедитесь, что вы подключили роутер с настройками по умолчанию.\n</br>
-    <br>Настройка будет возможна только через WiFi.
-    По окончании настройки приложение автоматически закроется. После этого переподключитесь к WiFi с паролем \"mcsimple\".\n</br>
-    Для установки лимитов скорости откройте приложение снова, введите пароль \"mcsimple.net\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
-    <string name="wait">ПОДОЖДИТЕ... ИДЁТ НАСТРОЙКА... Не уносите телефон от роутера</string>
-    <string name="guest_wi_fi_setup">НАСТРОЙКА ГОСТЕВОЙ Wi-Fi СЕТИ</string>
-    <string name="wi_fi_configuration">НАСТРОЙКА Wi-Fi СЕТИ</string>
+    <string name="how_many_ethernet_ports">ВЫБЕРИТЕ ВАШ МАРШРУТИЗАТОР</string>
+    <string name="wait">ПОДОЖДИТЕ… ИДЁТ НАСТРОЙКА…</string>
     <string name="change_admin_password">СМЕНА ПАРОЛЯ АДМИНИСТРАТОРА</string>
     <string name="quit">ВЫХОД</string>
     <string name="set">OK</string>
     <string name="select_ports">Выберите порт</string>
     <string name="enter_new_speed">Введите ограничение</string>
-    <string name="please_wait">ПОЖАЛУЙСТА ПОДОЖДИТЕ</string>
+    <string name="please_wait">ПОЖАЛУЙСТА, ПОДОЖДИТЕ</string>
+    <string name="header_attention">ВНИМАНИЕ!</string>
+    <string name="i_agree">ПРОДОЛЖИТЬ</string>
+    <string name="improvider">ЯПровайдер</string>
+    <string name="need_help">Нужна Помощь?</string>
+    <string name="chk_connection">Проверьте подключение, введённые данные или настройки маршрутизатора. Произошла ошибка:</string>
+    <string name="flds_empty">Некоторые поля не заполнены</string>
+    <string name="for_unlimited"><br>Выберите порт, введите ограничение скорости в мегабитах и нажмите OK.\n</br><br>Для снятия ограничения наберите 999. \n</br>
+        <br>Для отключения Интернет наберите 0.</br></string>
+    <string name="please_enter_limit">\n\nПожалуйста введите максимальную скорость</string>
+    <string name="please_select_port">\n\nПожалуйста выберите порт</string>
+    <string name="help_main"><br>Для настройки нового маршрутизатора нажмите кнопку \n</br><br>УПРАВЛЕНИЕ МАРШРУТИЗАТОРОМ.\n</br><br>\n</br><br>Нужна помощь?\n</br></string>
+    <string name="hyperlink">Стартовая Страница</string>
+    <string name="save">Сохранить</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="network_name">Имя:</string>
+    <string name="guest_help">Введите название сети Wi-Fi Hotspot, максимальное ограничение скорости в мегабитах и нажмите OK. \\для получения неограниченной скорости введите 999. Чтобы отключить Интернет, введите 0. Вы не можете управлять MikroTik через  Hotspot Wi-Fi .</string>
+    <string name="minimum_8_characters">минимум 8 символов</string>
+    <string name="enter_new_password">Введите новый пароль</string>
+    <string name="done">Готово</string>
+    <string name="help_merge">Выберите порт для добавления в родительскую сеть для подключения телевизора/сетевого принтера/компьютера/точки доступа с помощью кабеля Ethernet. Повторно подключите или перезагрузите подключенное устройство после переключения.</string>
+    <string name="subscribe">Подписаться</string>
+    <string name="admin_s_password">пароль администратора</string>
+    <string name="ports_speed_limit">управление сетевыми портами</string>
+    <string name="hotspot_configuration">управление hotspot</string>
+    <string name="router_configuration">управление маршрутизатором</string>
+    <string name="create_hotspot_network">Создать сеть Hotspot</string>
+    <string name="Hotspot_creation">* Сеть Wi-Fi, где вы можете добавлять пользователей и управлять их временем доступа с помощью системы тикетов. Ограничение скорости будет одинаковым для каждого пользователя. Вы можете добавить сетевые порты для подключения точек доступа и увеличения дальности действия сети.</string>
+    <string name="back">назад</string>
+    <string name="create_separate">Создайте отдельную сеть на каждом порту</string>
+    <string name="about_separate_networks">*Создайте отдельную сеть на каждом порту вашего маршрутизатора. Вы можете контролировать ограничения скорости. Сети отделены друг от друга и родительской сети. Вы не можете управлять своим маршрутизатором из них. Можно переназначить некоторые порты в родительскую сеть.</string>
+    <string name="router_setup">Здесь вы можете настроить Wi-Fi-часть вашей родительской сети и пароль администратора. Введите новое имя, пароль Wi-Fi и пароль администратора или оставьте как есть и нажмите OK</string>
+
     <string name="login">
     <br>ЯПровайдер позволяет контролировать скорость
-    подключения пользователей роутеров MikroTik.
-    Также, после первоначальной настройки,
-    сетевой доступ между пользователями
-    будет отключён.\n</br>
+    подключения пользователей маршрутизаторов MikroTik.
+    Также вы можете создать Hotspot для подключения пользователей по билетам.\n</br>
         <br>\n</br>
     <br>Инструкция:\n</br>
  <br>\n</br>
-    <br>1. Если вы уже пользуетесь роутером MikroTik,
+    <br>1. Если вы уже пользуетесь маршрутизатором MikroTik,
     сохраните конфигурацию с помощью Winbox и
     выполните сброс настроек до начальных.\n</br>
-    <br>2. Подключите провод с интернет из роутера провайдера
+    <br>2. Подключите провод с интернет из маршрутизатора провайдера
     в 1ый порт (ETH1) или вставьте карту microSIM (для роутеров LTE/5G).\n</br>
-        <br>3. Включите роутер.\n</br>
+        <br>3. Включите маршрутизатор.\n</br>
     <br>4.Подключите ваш телефон или планшет с
     ЯПровайдер к WiFi сети  \"MikroTik-*****\".\n</br>
 <br>\n</br>
-    <br>*Если ваш роутер создаёт 2 WiFi сети,
-    не подключайтесь к сети   \"MikroTik-****A\"/\"MikroTik-****5\"  в этот раз,
-    так как возможны проблемы с настройкой
-    безопасности.\n</br>
-<br>\n</br>
+<br>*******************\n</br>
+        <br>\n</br>
         <br>Чтобы удалить установленную программой
     конфигурацию, выполните сброс настроек
     до начальных.\n</br>
@@ -59,33 +72,34 @@
     <br>Мы не несём ответственность за ущерб
         причинённый при использовании ЯПровайдер.
     Нажимая ПРОДОЛЖИТЬ вы соглашаетесь с этим.\n</br></string>
-    <string name="header_attention">ВНИМАНИЕ!</string>
-    <string name="i_agree">ПРОДОЛЖИТЬ</string>
-    <string name="improvider">ЯПровайдер</string>
-    <string name="help_main"><br>Для настройки нового роутера нажмите НАСТРОИТЬ НОВЫЙ РОУТЕР.\n</br>
-    Для подключения к уже настроенному, наберите пароль \"mcsimple.net\" и нажмите ПОДКЛЮЧЕНИЕ.</string>
-    <string name="need_help">Нужна Помощь?</string>
-    <string name="chk_connection">Проверьте подключение, введённые данные или настройки роутера. Произошла ошибка:</string>
-    <string name="flds_empty">Некоторые поля не заполнены</string>
-    <string name="for_unlimited"><br>Выберите порт, введите ограничение скорости в мегабитах и нажмите OK.\n</br><br>Для снятия ограничения наберите 999. \n</br>
-        <br>Для отключения Интернет наберите 0.</br></string>
-    <string name="please_enter_limit">\n\nПожалуйста введите максимальную скорость</string>
-    <string name="please_select_port">\n\nПожалуйста выберите порт</string>
-    <string name="setup_first">Требуется настройка роутера</string>
-    <string name="hyperlink">Стартовая Страница</string>
-    <string name="save">Сохранить</string>
-    <string name="enter_password">Введите пароль</string>
-    <string name="guest_help">Введите новое имя и пароль гостевой сети Wi-Fi (пароль может быть пустым), введите максимальный лимит скорости в мегабитах и нажмите OK. Для неограниченной скорости введите 999. Чтобы отключить Интернет, введите 0. Вы не сможете управлять Mikrotik из гостевой Wi-Fi.</string>
-    <string name="guest_ready">Ваша гостевая Wi-Fi сеть готова. Пожалуйста, проверьте её.</string>
-    <string name="network_name">Имя:</string>
-    <string name="remove_guest_wi_fi">Удалить гостевой Wi-Fi</string>
-    <string name="guest_attention">После автоматического закрытия приложения снова подключитесь к сети Wi-Fi (если это не было сделано автоматически), подключитесь к роутеру и снова нажмите НАСТРОЙКА ГОСТЕВОЙ WI-FI СЕТИ, чтобы завершить настройку.</string>
-    <string name="wifi_help">После нажатия ОК программа отправит настройки и закроется автоматически. Если после первой попытки имя сети не изменилось, запустите процесс второй раз и работа будет сделана.</string>
-    <string name="minimum_8_characters">минимум 8 символов</string>
-    <string name="new_password_was_set">Был установлен новый пароль</string>
-    <string name="enter_new_password">Введите новый пароль</string>
-    <string name="done">Готово</string>
-    <string name="help_merge">Выберите порты для добавления в собственную сеть для подключения телевизора/сетевого принтера/компьютера/точки доступа с помощью кабеля Ethernet и нажмите OK. Повторно подключите или перезагрузите подключенное устройство после переключения.</string>
-    <string name="merge_ethernet_ports">ОБЪЕДИНЕНИЕ СЕТЕВЫХ ПОРТОВ</string>
+    <string name="add_ports_to_hotspot_network">добавление портов в сеть Hotspot</string>
+    <string name="add_ports_to_parent_network">добавление портов в родительскую сеть</string>
+    <string name="setup">настройка</string>
+    <string name="wi_fi_name">имя Wi-Fi сети</string>
+    <string name="wi_fi_password">пароль Wi-Fi сети</string>
+    <string name="hotspot_network_configuration">Конфигурация сети Hotspot</string>
+    <string name="enable_disable_hotspot_wi_fi">Включение/выключение Hotspot Wi-Fi</string>
+    <string name="hotspot_username">Имя пользователя Hotspot</string>
+    <string name="hotspot_password">Пароль Hotspot</string>
+    <string name="number_of_devices">Количество устройств</string>
+    <string name="enter_time_limit_in_hours">Ограничение по времени в часах</string>
+    <string name="create">создать</string>
+    <string name="add_hotspot_user">Добавить пользователя Hotspot</string>
+    <string name="hotspot_wi_fi_setup">Настройка Hotspot Wi-Fi</string>
+    <string name="enter_speed_limit">Введите ограничение скорости</string>
+    <string name="already_disabled">Hotspot Wi-Fi уже отключена</string>
+    <string name="already_enabled">Hotspot Wi-Fi уже включена</string>
+    <string name="disable">Отключить</string>
+    <string name="enable">Включить</string>
+    <string name="help_mergeH">Чтобы подключить порт к сети Hotspot, нажмите кнопку с именем порта. Повторно подключите или перезагрузите подключенное устройство после переключения. Если вы отключите порт, он будет находиться в родительской сети.</string>
+    <string name="print">Печать</string>
+    <string name="monthly_subscription">Ежемесячная подписка</string>
+    <string name="enable_hotspot">Пожалуйста, включите hotspot Wi-Fi</string>
+    <string name="configure_mikrotik">Пожалуйста, настройте ваш маршрутизатор Mikrotik</string>
+    <string name="mikrotik_address">Ваш маршрутизатор не Mikrotik</string>
+    <string name="setup_networks">Пожалуйста, настройте сети на портах</string>
+    <string name="setup_hotspot">Пожалуйста, настройте сеть hotspot</string>
+    <string name="new_ticket">новый билет</string>
+
 
 </resources>

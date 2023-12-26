@@ -1,41 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ImProvider</string>
-    <string name="connect">CONECTAR</string>
     <string name="password">Contraseña :</string>
     <string name="username">Nombre :</string>
-    <string name="port">Puerto :</string>
-    <string name="host_or_ip">Dirección :</string>
     <string name="enter_username">Ingrese el nombre</string>
-    <string name="enter_port_number">Ingrese el número de puerto</string>
-    <string name="enter_ip_or_hostname">Ingresa la direccion</string>
-    <string name="setup_new_router">CONFIGURAR UN ENRUTADOR</string>
     <string name="set_connection_speed">ESTABLECER LÍMITES DE VELOCIDAD</string>
-    <string name="in_premium_version">*EN VERSIÓN PREMIUM:</string>
     <string name="how_many_ethernet_ports">SELECCIONA TU ENRUTADOR</string>
-    <string name="attention">Por favor, asegúrese de haber conectado el enrutador con la configuración predeterminada. La configuración será posible solo a través de WiFi. Cuando la aplicación se cierre automáticamente, vuelva a conectarse a WiFi con la contraseña \"mcsimple\". Para establecer los límites de velocidad, abra la aplicación nuevamente, ingrese la contraseña \"mcsimple.net\" y presione CONECTAR.</string>
-    <string name="wait">ESPERE... Configuración en curso...\n No quites tu teléfono del enrutador</string>
-    <string name="guest_wi_fi_setup">CONFIGURACIÓN Wi-Fi INVITADO</string>
-    <string name="wi_fi_configuration">CONFIGURACIÓN WI-FI</string>
+    <string name="wait">ESPERE… Configuración en curso…</string>
     <string name="change_admin_password">CAMBIAR CONTRASEÑA DE ADMINISTRADOR</string>
     <string name="quit">ABANDONAR</string>
     <string name="set">OK</string>
     <string name="select_ports">Seleccionar puerto</string>
     <string name="enter_new_speed">Introducir límite de velocidad</string>
     <string name="please_wait">ESPERE POR FAVOR</string>
-    <string name="login">ImProvider le permite controlar los enrutadores MikroTik mediante el control de los límites de velocidad de Internet de los usuarios del enrutador.\n
-         Los usuarios no podrán conectarse entre sí.\n
-         Cómo utilizar:\n
-         1. Si ya usa un enrutador Mikrotik, guarde su configuración con Winbox y reinícielo.\n
-         2. Conecte el cable de Internet del enrutador del proveedor al primer puerto (ETH1) o inserte la tarjeta microSIM (para enrutadores LTE/5G).\n
-         3. Encienda el enrutador.\n
-         4. Conecte su teléfono o tableta con ImProvider a la red WiFi \"MikroTik-*****\".\n
-         *Si su enrutador crea dos redes, no use \"MikroTik-****A\"/\"MikroTik-****5\" durante la configuración debido a la seguridad WiFi.\n
-         Para eliminar la configuración de la aplicación en su enrutador, reiníciela.\n
-         Puede encontrar más información sobre ImProvider en <a href="https://mcsimple.net/improvider"><u>https://mcsimple.net/improvider/</u></a>
-         Si tiene preguntas o desea informar sobre un problema, escriba a <a href="mailto:customercare@mcsimple.net?Subject=ImProvider%20Issue"
-            target="_top">customercare@mcsimple.net</a>\n
-        No somos responsables de ningún daño causado por el uso de ImProvider. Pulsando CONTINUAR estás de acuerdo.</string>
     <string name="header_attention">¡ATENCIÓN!</string>
 
     <string name="i_agree">CONTINUAR</string>
@@ -49,21 +26,70 @@
     <string name="for_unlimited">Seleccione el puerto, ingrese el límite de velocidad en megabits y presione OK. Para velocidad ilimitada ingrese 999. Para desactivar Internet ingrese 0.</string>
     <string name="please_enter_limit">\n\nIngrese el límite</string>
     <string name="please_select_port">\n\nSeleccione Puerto</string>
-    <string name="help_main">Para la configuración del nuevo enrutador, presione CONFIGURAR UN ENRUTADOR. Para conectar un enrutador ya configurado ingrese la contraseña \"mcsimple.net\" y presione CONECTAR</string>
-    <string name="setup_first">Сonfigure su enrutador</string>
+    <string name="help_main">Para configurar el nuevo enrutador, presione \nGESTIÓN DEL ENRUTADOR. \n\n¿Necesitas Ayuda? </string>
     <string name="save">ahorrar</string>
     <string name="enter_password">Introducir la contraseña</string>
-    <string name="guest_help">Ingrese el nuevo nombre y contraseña de la red Wi-Fi (la contraseña puede estar en blanco), ingrese el límite de velocidad máxima en megabits y presione OK. \nPara velocidad ilimitada, ingrese 999. Para desactivar Internet, ingrese 0. No puede administrar MikroTik a través de Wi-Fi para invitados.</string>
-    <string name="guest_ready">Su red Wi-Fi para invitados está lista. Compruébelo por favor.</string>
-    <string name="remove_guest_wi_fi">Eliminar Wi-Fi para invitados</string>
-    <string name="guest_attention">Después de cerrar automáticamente la aplicación, vuelva a conectarse a la red Wi-Fi (si no se hizo automáticamente), conéctese al enrutador y presione CONFIGURACIÓN Wi-Fi INVITADO nuevamente para finalizar la configuración.</string>
-    <string name="wifi_help">Después de hacer clic en Aceptar, el programa enviará la configuración y se cerrará automáticamente. Si después del primer intento el nombre de la red no ha cambiado, ejecute el proceso por segunda vez y el trabajo estará hecho.</string>
+    <string name="guest_help">Ingrese el nombre de la red Wi-Fi del punto de acceso, el límite máximo de velocidad en megabits y presione OK. Para velocidad ilimitada, ingrese 999. Para desactivar Internet, ingrese 0. No puede administrar su enrutador a través de Hotspot Wi-Fi.</string>
     <string name="minimum_8_characters">mínimo 8 caracteres</string>
-    <string name="new_password_was_set">Se estableció una nueva contraseña</string>
     <string name="enter_new_password">Ingrese nueva contraseña</string>
     <string name="done">Hecho</string>
-    <string name="help_merge">Seleccione puertos para agregar a su propia red para conectar TV/impresora de red/computadora/punto de acceso por cable ethernet y presione OK. Vuelva a conectar o reinicie el dispositivo conectado después de cambiar.</string>
-    <string name="merge_ethernet_ports">COMBINAR PUERTOS ETHERNET</string>
+    <string name="help_merge">Seleccione el puerto que desea agregar a la red principal para conectar el televisor/impresora de red/computadora/punto de acceso mediante un cable Ethernet. Vuelva a conectar o reinicie el dispositivo conectado después de cambiar.</string>
+    <string name="subscribe">Subscribir</string>
+    <string name="admin_s_password">contraseña de administrador</string>
+    <string name="ports_speed_limit">administración de puertos de red</string>
+    <string name="hotspot_configuration">Gestión de Hotspots</string>
+    <string name="router_configuration">Gestión del enrutador</string>
+    <string name="create_hotspot_network">Crear red de hotspot</string>
+    <string name="Hotspot_creation">* Una red Wi-Fi donde puedes agregar usuarios y administrar su tiempo de acceso mediante un sistema de tickets. El límite de velocidad será el mismo para todos los usuarios. Puede agregar puertos de red para conectar puntos de acceso y aumentar el alcance de la red.</string>
+    <string name="back">espalda</string>
+    <string name="create_separate">Cree una red separada en cada puerto</string>
+    <string name="about_separate_networks">*Cree una red separada en cada puerto de su enrutador. Puedes controlar los límites de velocidad. Las redes están separadas entre sí y de la red principal. No puedes administrar tu enrutador desde ellos. Es posible reasignar algunos puertos a la red principal.</string>
+    <string name="router_setup">Aquí puede configurar la parte Wi-Fi de su red principal y la contraseña de administrador. Puedes ingresar un nuevo nombre, una contraseña de wi-fi y una contraseña de administrador o dejarlas como están y presionar OK</string>
+
+    <string name="login">ImProvider le permite controlar los enrutadores MikroTik mediante el control de los límites de velocidad de Internet de los usuarios del enrutador.\n
+         También puede crear un Hotspot para conectar usuarios a través de entradas.\n
+         \n
+         Cómo utilizar:\n
+         1. Si ya usa un enrutador Mikrotik, guarde su configuración con Winbox y reinícielo.\n
+         2. Conecte el cable de Internet del enrutador del proveedor al primer puerto (ETH1) o inserte la tarjeta microSIM (para enrutadores LTE/5G).\n
+         3. Encienda el enrutador.\n
+         4. Conecte su teléfono o tableta con ImProvider a la red WiFi \"MikroTik-*****\".\n
+        \n
+        \n**********************
+        \n
+         Para eliminar la configuración de la aplicación en su enrutador, reiníciela.\n
+         Puede encontrar más información sobre ImProvider en <a href="https://mcsimple.net/improvider"><u>https://mcsimple.net/improvider/</u></a>
+         Si tiene preguntas o desea informar sobre un problema, escriba a <a href="mailto:customercare@mcsimple.net?Subject=ImProvider%20Issue"
+            target="_top">customercare@mcsimple.net</a>\n
+        No somos responsables de ningún daño causado por el uso de ImProvider. Pulsando CONTINUAR estás de acuerdo.</string>
+    <string name="add_ports_to_hotspot_network">agregar puertos a la red de hotspot</string>
+    <string name="add_ports_to_parent_network">agregar puertos a la red principal</string>
+    <string name="setup">configuración</string>
+    <string name="wi_fi_name">Nombre de la red Wi-Fi</string>
+    <string name="wi_fi_password">Contraseña de red WiFi</string>
+    <string name="hotspot_network_configuration">Configuración de Red de Hotspot</string>
+    <string name="enable_disable_hotspot_wi_fi">Habilitar / Deshabilitar de Hotspot Wi-Fi</string>
+    <string name="hotspot_username">Nombre de Usuario de Hotspot</string>
+    <string name="hotspot_password">Contraseña de Hotspot</string>
+    <string name="number_of_devices">Número de dispositivos</string>
+    <string name="enter_time_limit_in_hours">Límite de tiempo en horas</string>
+    <string name="create">crear</string>
+    <string name="add_hotspot_user">Agregar Usuario de Hotspot</string>
+    <string name="hotspot_wi_fi_setup">Configuración de Hotspot Wi-Fi</string>
+    <string name="enter_speed_limit">Introduzca el Límite de Velocidad</string>
+    <string name="already_disabled">El punto de acceso Wi-Fi ya está deshabilitado</string>
+    <string name="already_enabled">El Hotspot Wi-Fi ya está habilitado</string>
+    <string name="disable">Desactivar</string>
+    <string name="enable">Habilitar</string>
+    <string name="help_mergeH">Para conectar el puerto a la red Hotspot, presione el botón con el nombre del puerto seleccionado. Vuelva a conectar o reinicie el dispositivo conectado después de cambiar. Si desactiva el puerto seleccionado, estará en la red principal.</string>
+    <string name="print">Imprimir</string>
+    <string name="monthly_subscription">Suscripción Mensual</string>
+    <string name="enable_hotspot">Por favor habilite el hotspot Wi-Fi</string>
+    <string name="configure_mikrotik">Por favor configure su enrutador MikroTik</string>
+    <string name="mikrotik_address">Tu router no es MikroTik</string>
+    <string name="setup_networks">Por favor configure redes en los puertos</string>
+    <string name="setup_hotspot">Por favor configure la red de hotspot</string>
+    <string name="new_ticket">nuevo billete</string>
 
 
 </resources>

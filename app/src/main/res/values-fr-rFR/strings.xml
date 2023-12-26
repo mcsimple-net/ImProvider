@@ -1,31 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ImProvider</string>
-    <string name="connect">CONNECTER</string>
 
     <string name="password">Mot de passe :</string>
     <string name="username">Nom :</string>
-    <string name="port">Port :</string>
-    <string name="host_or_ip">Adresse :</string>
     <string name="enter_username">Saisissez votre nom d\'utilisateur</string>
 
-    <string name="enter_port_number">Entrez le numéro de port</string>
-
-    <string name="enter_ip_or_hostname">Entrez l\'IP ou le nom d\'hôte</string>
-    <string name="setup_new_router">CONFIGURER UN NOUVEAU ROUTEUR</string>
     <string name="set_connection_speed">RÉGLER LES LIMITES DE VITESSE</string>
-
-    <string name="in_premium_version">*EN VERSION PREMIUM :</string>
 
     <string name="how_many_ethernet_ports">SÉLECTIONNEZ VOTRE ROUTEUR</string>
 
-    <string name="attention">Veuillez vous assurer que vous avez connecté le routeur avec les paramètres par défaut.
-        La configuration ne sera possible qu\'en Wi-Fi. Lorsque l\'application se ferme automatiquement,
-        reconnectez-vous au WiFi avec le mot de passe \"mcsimple\".
-        Pour définir les limites de vitesse, ouvrez à nouveau l\'application, entrez le mot de passe \"mcsimple.net\" et appuyez sur CONNECTER.</string>
-    <string name="wait">ATTENDRE… Configuration en cours… \n Ne retirez pas votre téléphone du routeur</string>
-    <string name="guest_wi_fi_setup">CONFIGURATION Wi-Fi INVITÉ</string>
-    <string name="wi_fi_configuration">CONFIGURATION Wi-Fi</string>
+    <string name="wait">ATTENDRE… Configuration en cours…</string>
     <string name="change_admin_password">MODIFIER LE MOT DE PASSE DE L\'ADMINISTRATEUR</string>
 
     <string name="quit">ARRÊTER</string>
@@ -48,37 +33,71 @@
     <string name="for_unlimited">Sélectionnez le port, entrez la limite de vitesse en mégabits et appuyez sur OK.\n Pour une vitesse illimitée, entrez 999. Pour désactiver Internet, entrez 0.</string>
     <string name="please_enter_limit">\n\nVeuillez entrer la limite</string>
     <string name="please_select_port">\n\nVeuillez sélectionner le port</string>
-    <string name="help_main">Pour la configuration du nouveau routeur, appuyez sur CONFIGURER UN NOUVEAU ROUTEUR.\n Pour connecter un routeur déjà configuré,
-        entrez le mot de passe \"mcsimple.net\" et appuyez sur CONNECTURE</string>
-    <string name="setup_first">Veuillez configurer votre routeur</string>
+    <string name="help_main">Pour la configuration du nouveau routeur, appuyez sur \nGESTION DU ROUTER. \n\nBesoin d\'Aide? </string>
+    <string name="save">sauvegarder</string>
+    <string name="enter_password">Entrer le mot de passe</string>
+    <string name="network_name">Nom :</string>
+    <string name="guest_help">Entrez le nom du réseau Wi-Fi Hotspot, la limite de vitesse maximale en mégabits et appuyez sur OK. Pour une vitesse illimitée, saisissez 999. Pour désactiver Internet, saisissez 0. Vous ne pouvez pas gérer votre routeur via Hotspot Wi-Fi.</string>
+    <string name="minimum_8_characters">minimum 8 caractères</string>
+    <string name="enter_new_password">Entrez un nouveau mot de passe</string>
+    <string name="done">Fait</string>
+    <string name="help_merge">Sélectionnez le port à ajouter au réseau parent pour connecter votre téléviseur/imprimante réseau/ordinateur/point d\'accès à l\'aide d\'un câble Ethernet. Reconnectez ou redémarrez l\'appareil connecté après avoir basculé.</string>
+    <string name="subscribe">S\'inscrire</string>
+    <string name="admin_s_password">mot de passe de l\'administrateur</string>
+    <string name="ports_speed_limit">gestion des ports réseau</string>
+    <string name="hotspot_configuration">Gestion du hotspot</string>
+    <string name="router_configuration">Gestion du routeur</string>
+    <string name="create_hotspot_network">Créer un réseau de Hotspot</string>
+    <string name="Hotspot_creation">* Un réseau Wi-Fi où vous pouvez ajouter des utilisateurs et gérer leur temps d\'accès à l\'aide d\'un système de tickets. La limite de vitesse sera la même pour chaque utilisateur. Vous pouvez ajouter des ports réseau pour connecter des points d\'accès et augmenter la portée du réseau.</string>
+    <string name="back">retour</string>
+    <string name="create_separate">Créer un réseau distinct sur chaque port</string>
+    <string name="about_separate_networks">*Créez un réseau distinct sur chaque port de votre routeur. Vous pouvez contrôler les limites de vitesse. Les réseaux sont séparés les uns des autres et du réseau parent. Vous ne pouvez pas gérer votre routeur à partir d\'eux. Il est possible de réattribuer certains ports au réseau parent.</string>
+    <string name="router_setup">Ici, vous pouvez configurer la partie Wi-Fi de votre réseau parent et le mot de passe administrateur. Vous pouvez saisir un nouveau nom, un mot de passe Wi-Fi et un mot de passe administrateur ou les laisser tels quels et appuyer sur OK</string>
+
     <string name="login">ImProvider vous permet de contrôler les routeurs MikroTik en contrôlant les limites de vitesse Internet des utilisateurs du routeur.\n
-         Les utilisateurs ne pourront pas se connecter.\n
+         Vous pouvez également créer un Hotspot pour connecter les utilisateurs avec des billets.\n
+         \n
          Comment utiliser:\n
          1. Si vous utilisez déjà un routeur Mikrotik, enregistrez sa configuration avec Winbox et réinitialisez-le.\n
          2. Branchez le câble Internet du routeur du fournisseur sur le premier port (ETH1) ou insérez une carte microSIM (pour les routeurs LTE/5G).\n
          3. Allumez le routeur. \n
          4. Connectez votre téléphone ou votre tablette avec ImProvider au réseau WiFi \"MikroTik-*****\".\n
-         *Si votre routeur crée deux réseaux, n\'utilisez pas \"MikroTik-****A\"/\"MikroTik-****5\" lors de la configuration en raison de la sécurité WiFi.\n
+        \n
+        \n**********************
+        \n
          Pour supprimer les paramètres de l\'application sur votre routeur, réinitialisez-le.\n
          Vous pouvez trouver plus d\'informations sur ImProvider sur <a href="https://mcsimple.net/improvider"><u>https://mcsimple.net/improvider/</u></a>
          Si vous avez des questions ou souhaitez signaler un problème, veuillez écrire à <a href="mailto:customercare@mcsimple.net?Subject=ImProvider%20Issue"
             target="_top">customercare@mcsimple.net</a> \n
         Nous ne sommes pas responsables des dommages causés par l\'utilisation d\'ImProvider.
          En appuyant sur CONTINUER, vous êtes d\'accord avec cela.</string>
-    <string name="save">sauvegarder</string>
-    <string name="enter_password">Entrer le mot de passe</string>
-    <string name="guest_help">Entrez le nouveau nom et mot de passe du réseau Wi-Fi (le mot de passe peut être vide), entrez la limite de vitesse maximale en mégabits et appuyez sur OK. \nPour une vitesse illimitée, entrez 999. Pour désactiver Internet, entrez 0. Vous ne pouvez pas gérer MikroTik via le Wi-Fi invité.</string>
-    <string name="guest_ready">Votre réseau Wi-Fi invité est prêt. S\'il te plaît vérifie le.</string>
-    <string name="network_name">Nom :</string>
-    <string name="remove_guest_wi_fi">Supprimer le Wi-Fi invité</string>
-    <string name="guest_attention">Après avoir automatisé la fermeture de l\'application, reconnectez-vous au réseau Wi-Fi (si cela n\'a pas été fait automatiquement), connectez-vous au routeur et appuyez à nouveau sur CONFIGURATION Wi-Fi INVITÉ pour terminer la configuration.</string>
-    <string name="wifi_help">Après avoir cliqué sur OK, le programme enverra les paramètres et se fermera automatiquement. Si après la première tentative, le nom du réseau n\'a pas changé, exécutez le processus une deuxième fois et le travail sera terminé.</string>
-    <string name="minimum_8_characters">minimum 8 caractères</string>
-    <string name="new_password_was_set">Un nouveau mot de passe a été défini</string>
-    <string name="enter_new_password">Entrez un nouveau mot de passe</string>
-    <string name="done">Fait</string>
-    <string name="help_merge">Sélectionnez les ports à ajouter à votre propre réseau pour connecter TV/imprimante réseau/ordinateur/point d\'accès par câble Ethernet et appuyez sur OK. Reconnectez ou redémarrez l\'appareil connecté après la commutation.</string>
-    <string name="merge_ethernet_ports">FUSIONNER LES PORTS ETHERNET</string>
-
+    <string name="add_ports_to_hotspot_network">ajouter des ports au réseau hotspot</string>
+    <string name="add_ports_to_parent_network">ajouter des ports au réseau parent</string>
+    <string name="setup">configuration</string>
+    <string name="wi_fi_name">Nom du réseau Wi-Fi</string>
+    <string name="wi_fi_password">Mot de passe du réseau WiFi</string>
+    <string name="hotspot_network_configuration">Configuration du Réseau Hotspot</string>
+    <string name="enable_disable_hotspot_wi_fi">Activer / Désactiver de Hotspot Wi-Fi</string>
+    <string name="hotspot_username">Nom d\'Utilisateur de Hotspot</string>
+    <string name="hotspot_password">Mot de Passe de Hotspot</string>
+    <string name="number_of_devices">Nombre d\'appareils</string>
+    <string name="enter_time_limit_in_hours">Limite de temps en heures</string>
+    <string name="create">créer</string>
+    <string name="add_hotspot_user">Ajouter un Utilisateur de Hotspot</string>
+    <string name="hotspot_wi_fi_setup">Configuration de Hotspot Wi-Fi</string>
+    <string name="enter_speed_limit">Entrez la Limite de Vitesse</string>
+    <string name="already_disabled">Le Wi-Fi Hotspot est déjà désactivé</string>
+    <string name="already_enabled">Le Wi-Fi Hotspot est déjà activé</string>
+    <string name="disable">Désactiver</string>
+    <string name="enable">Activer</string>
+    <string name="help_mergeH">Pour connecter le port au réseau Hotspot, appuyez sur le bouton portant le nom du port sélectionné. Reconnectez ou redémarrez l\'appareil connecté après la commutation. Si vous désactivez le port sélectionné, il sera dans le réseau parent.</string>
+    <string name="print">Imprimer</string>
+    <string name="monthly_subscription">Abonnement Mensuel</string>
+    <string name="enable_hotspot">Veuillez activer le hotspot Wi-Fi</string>
+    <string name="configure_mikrotik">Veuillez configurer votre routeur MikroTik</string>
+    <string name="mikrotik_address">Votre routeur n\'est pas MikroTik</string>
+    <string name="setup_networks">Veuillez configurer les réseaux sur les ports</string>
+    <string name="setup_hotspot">Veuillez configurer le réseau hotspot</string>
+    <string name="new_ticket">nouveau billet</string>
 
 </resources>
