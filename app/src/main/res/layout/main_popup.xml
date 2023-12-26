@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/descriptionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/improvider_background_card_view">
+
+
+    <TextView
+        android:id="@+id/textViewHelpMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/play"
+        android:gravity="center"
+        android:text="@string/help_main"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewManual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contextClickable="false"
+        android:elegantTextHeight="true"
+        android:fontFamily="@font/play"
+        android:gravity="center"
+        android:text="@string/https_mcsimple_net_improvider"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHelpMain" />
+
+   <!--
+    <TextView
+        android:id="@+id/textViewWhatsapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:contextClickable="false"
+        android:elegantTextHeight="true"
+        android:fontFamily="@font/play"
+        android:gravity="center"
+        android:text="@string/whatsapp_19897850101"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewManual"
+        app:layout_constraintStart_toStartOf="@+id/textViewManual"
+        app:layout_constraintTop_toBottomOf="@+id/textViewManual" />
+
+        -->
+
+    <TextView
+        android:id="@+id/textViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:contextClickable="false"
+        android:elegantTextHeight="true"
+        android:fontFamily="@font/play"
+        android:gravity="center"
+        android:text="@string/email_customercare_mcsimple_net"
+        android:textColor="@color/text_color"
+        android:textColorHighlight="@color/for_improvider"
+        android:textIsSelectable="false"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewManual"
+        app:layout_constraintStart_toStartOf="@+id/textViewManual"
+        app:layout_constraintTop_toBottomOf="@+id/textViewManual" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".CreateUserActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="500dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonQuitCH"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/for_improvider"
+                android:fontFamily="@font/play"
+                android:text="@string/hotspot_network_configuration"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCreateUser" />
+
+            <Button
+                android:id="@+id/buttonEnableDisable"
+                android:layout_width="500dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="@color/for_improvider"
+                android:fontFamily="@font/play"
+                android:text="@string/enable_disable_hotspot_wi_fi"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonQuitCH" />
+
+            <LinearLayout
+                android:id="@+id/LayoutHotspotUserName"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/dark_background_card_view"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                <TextView
+                    android:id="@+id/textViewHotspotUsername"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/hotspot_username"
+                    android:textColor="#C8C8C8"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextHotspotUsername"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:textColor="#C8C8C8"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorHint="#464646"
+                    android:textColorLink="#000000"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutHotspotPassport"
+                android:layout_width="500dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/dark_background_card_view"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutHotspotUserName">
+
+                <TextView
+                    android:id="@+id/textViewHotspotPassword"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/hotspot_password"
+                    android:textColor="#C8C8C8"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/editTextHotspotPassword"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:textColor="#C8C8C8"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorHint="#464646"
+                    android:textColorLink="#000000"
+                    android:textSize="24sp"
+                    tools:ignore="TextFields" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LayoutHotspotTextNumber"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/dark_background_card_view"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutHotspotPassport">
+
+                <TextView
+                    android:id="@+id/textViewHotspotNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/number_of_devices"
+                    android:textColor="#C8C8C8"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="46dp"
+                    tools:layout_editor_absoluteY="161dp" />
+
+                <LinearLayout
+                    android:id="@+id/LayoutHotspotNumber"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="5dp"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:layout_editor_absoluteX="157dp"
+                    tools:layout_editor_absoluteY="161dp">
+
+                    <com.itremedy.improvidermtfree.HorizontalNumberPicker
+                        android:id="@+id/np_channel_nr"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:gravity="center_vertical" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutHotspotTextLimit"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/dark_background_card_view"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutHotspotTextNumber">
+
+                <TextView
+                    android:id="@+id/textViewHotspotLimit"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/play"
+                    android:gravity="center"
+                    android:text="@string/enter_time_limit_in_hours"
+                    android:textColor="@color/text_color"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="62dp"
+                    tools:layout_editor_absoluteY="261dp" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutLimit"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:layout_editor_absoluteX="237dp"
+                    tools:layout_editor_absoluteY="261dp">
+
+                    <EditText
+                        android:id="@+id/editTextHotspotLimit"
+                        android:layout_width="0dp"
+                        android:layout_height="65dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:fontFamily="@font/orbitron_medium"
+                        android:gravity="center"
+                        android:inputType="number|numberDecimal"
+                        android:maxLength="3"
+                        android:text="1"
+                        android:textSize="28sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonCreateUser"
+                android:layout_width="500dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="100dp"
+                android:backgroundTint="@color/for_improvider"
+                android:fontFamily="@font/play"
+                android:text="@string/create"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutHotspotTextLimit" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="@string/add_hotspot_user"
+                android:textColor="@color/text_color"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "34295526296",
+    "project_id": "pc-api-5671661027132055694-381",
+    "storage_bucket": "pc-api-5671661027132055694-381.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34295526296:android:8cb5a6ed11ad877294f1ed",
+        "android_client_info": {
+          "package_name": "com.itremedy.improvidermtfree"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpAhRjEo0xoElgB3lgx8bankw07z5nNhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

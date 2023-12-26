@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.itremedy.improvidermtfree.MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/LayoutPassword"
+                android:layout_width="500dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/dark_background_card_view"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewPassword"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/play"
+                    android:gravity="center"
+                    android:paddingStart="5dp"
+                    android:text="@string/admin_s_password"
+                    android:textColor="#C8C8C8"
+                    android:textSize="20sp"
+                    tools:ignore="RtlHardcoded" />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:background="@null"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="textPassword"
+                    android:textColor="#C8C8C8"
+                    android:textColorHighlight="#1D2D50"
+                    android:textColorLink="#000000"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/connect"
+                android:layout_width="700dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="100dp"
+                android:backgroundTint="#E2703A"
+                android:fontFamily="@font/play"
+                android:text="@string/ports_speed_limit"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutPassword" />
+
+            <Button
+                android:id="@+id/new_router_setup"
+                android:layout_width="700dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="#E2703A"
+                android:fontFamily="@font/play"
+                android:text="@string/hotspot_configuration"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/connect" />
+
+            <Button
+                android:id="@+id/start_page"
+                android:layout_width="700dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="50dp"
+                android:backgroundTint="#E2703A"
+                android:fontFamily="@font/play"
+                android:text="@string/router_configuration"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_router_setup" />
+
+            <Button
+                android:id="@+id/quitApp10"
+                android:layout_width="700dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/for_improvider"
+                android:fontFamily="@font/play"
+                android:text="@string/quit"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_page" />
+
+            <TextView
+                android:id="@+id/help_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/play"
+                android:text="@string/need_help"
+                android:textColor="@color/text_color"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="itemClicked"
+                android:text="@string/save"
+                android:textColor="@color/text_color"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/LayoutPassword"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
