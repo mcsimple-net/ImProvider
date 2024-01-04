@@ -1,24 +1,15 @@
 package com.itremedy.improvidermtfree;
 
 import static com.itremedy.improvidermtfree.ConnectionManager.result;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.AttributeSet;
-import android.util.Log;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
-
 import java.io.IOException;
 
 public class MergePorts extends AppCompatActivity {

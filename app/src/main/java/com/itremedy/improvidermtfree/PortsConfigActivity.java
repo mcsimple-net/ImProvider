@@ -4,13 +4,9 @@ import static com.itremedy.improvidermtfree.ConnectionManager.result;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import com.google.android.material.snackbar.Snackbar;
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
-
 import java.io.IOException;
 
 public class PortsConfigActivity extends AppCompatActivity {

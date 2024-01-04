@@ -1,27 +1,16 @@
 package com.itremedy.improvidermtfree;
 
-
 import static com.itremedy.improvidermtfree.ConnectionManager.result;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.security.crypto.EncryptedSharedPreferences;
-import androidx.security.crypto.MasterKey;
-
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
-
 import java.io.IOException;
-import java.security.GeneralSecurityException;
 import java.util.Base64;
 
 

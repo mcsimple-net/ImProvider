@@ -3,12 +3,8 @@ package com.itremedy.improvidermtfree;
 import static com.itremedy.improvidermtfree.ConnectionManager.result;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import android.annotation.SuppressLint;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;

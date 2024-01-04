@@ -1,31 +1,18 @@
 package com.itremedy.improvidermtfree;
 
 import static com.itremedy.improvidermtfree.ConnectionManager.result;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-
-import com.google.android.material.snackbar.Snackbar;
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
-
 import java.io.IOException;
 import java.util.Base64;
-import java.util.List;
-import java.util.Objects;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class FirstSetupActivity extends AppCompatActivity {
 
@@ -34,8 +21,6 @@ public class FirstSetupActivity extends AppCompatActivity {
     }
     EditText wifiName, wifiPass, adminPass;
     Button setup, hotspot, parent;
-    boolean isPremium= true;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,12 +71,6 @@ public class FirstSetupActivity extends AppCompatActivity {
 
         setup.setOnClickListener(v -> {
 
-            //String nameWiFi = String.valueOf(wifiName);
-            //String passWiFi = String.valueOf(wifiPass);
-            //String passAdmin = String.valueOf(adminPass);
-
-
-
                 Thread test = new Thread(() -> {
                     try {
                         ConnectionManager.runCommand("/system routerboard print");
@@ -106,7 +85,6 @@ public class FirstSetupActivity extends AppCompatActivity {
                                                 .enableSwipeToDismiss()
                                                 .show();
                             });
-
 
                         } else {
 
@@ -168,8 +146,6 @@ public class FirstSetupActivity extends AppCompatActivity {
 
         parent.setOnClickListener(v -> {
 
-            if (isPremium) {
-
             Thread count = new Thread(() -> {
                 try {
                     ConnectionManager.runCommand(":put [/in vlan get bridge-vlan202 name]");
@@ -201,18 +177,11 @@ public class FirstSetupActivity extends AppCompatActivity {
             } catch (InterruptedException e) {
                   new RestartApp();
             }
-            }else
-            {
-                Intent intent = new Intent(this, Subs.class);
-                startActivity(intent);
-            }
+
 
         });
 
         hotspot.setOnClickListener(v -> {
-
-            if (isPremium) {
-
 
             Thread testH = new Thread(() -> {
                 try {
@@ -245,11 +214,7 @@ public class FirstSetupActivity extends AppCompatActivity {
             } catch (InterruptedException e) {
                   new RestartApp();
             }
-            }else
-            {
-                Intent intent = new Intent(this, Subs.class);
-                startActivity(intent);
-            }
+
         });
     }
 

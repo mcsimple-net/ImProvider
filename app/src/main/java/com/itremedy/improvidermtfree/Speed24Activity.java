@@ -1,26 +1,18 @@
 package com.itremedy.improvidermtfree;
 
 import static com.itremedy.improvidermtfree.ConnectionManager.result;
-import static java.security.AccessController.getContext;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
-
 import com.jcraft.jsch.JSchException;
 import com.tapadoo.alerter.Alerter;
-
 import java.io.IOException;
 
 

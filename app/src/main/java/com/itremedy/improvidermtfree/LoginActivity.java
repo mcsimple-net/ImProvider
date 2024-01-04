@@ -1,9 +1,7 @@
 package com.itremedy.improvidermtfree;
 
 import static java.lang.Boolean.TRUE;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
