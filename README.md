@@ -5,7 +5,7 @@ Using this app you can control your MikroTik router. See https://mcsimple.net/im
 [![MCSimple](https://img.shields.io/badge/MCSimple-ImProvider-brightgreen?logo=MCSimple&link=https%3A%2F%2Fmcsimple.net
 )](https://mcsimple.net)
 
-<p align="center"><img src="app/assets/improvider_main.jpg" width=30% height=30% /></p>
+<p align="center"><img src="assets/improvider_main.jpg" width=30% height=30% /></p>
 
 **Requirements**
 - Android studio last version
