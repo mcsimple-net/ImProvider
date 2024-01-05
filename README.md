@@ -9,10 +9,7 @@ Using this app you can control your MikroTik router. See https://mcsimple.net/im
 
 **Requirements**
 - Android studio last version
-- JDK 8
-- Android SDK 31
 - Supports API Level 28+
-- Material Components 1.11.0
 
 **Highlights**
 - JSCH library
