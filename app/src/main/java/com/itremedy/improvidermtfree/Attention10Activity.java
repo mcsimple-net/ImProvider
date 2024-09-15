@@ -1,6 +1,8 @@
 package com.itremedy.improvidermtfree;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -109,11 +111,11 @@ public class Attention10Activity extends AppCompatActivity {
                         ConnectionManager.runCommand("/system script run script77");
                         ConnectionManager.runCommand("/system script run script79");
                         ConnectionManager.close();
-                        new RestartApp();
+                        restartApp();
 
 
                     } catch (JSchException | IOException | RuntimeException | InterruptedException e) {
-                        new RestartApp();
+                        restartApp();
                     }
 
                 });
@@ -122,6 +124,12 @@ public class Attention10Activity extends AppCompatActivity {
 
                 Log.d("Handler", "Running Handler");}, 500);
 
+    }
+
+    public void restartApp() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
     }
 
     public native String string97();

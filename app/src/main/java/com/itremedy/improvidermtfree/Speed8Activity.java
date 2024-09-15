@@ -88,7 +88,7 @@ public class Speed8Activity extends AppCompatActivity {
 
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed2.setText("");
@@ -104,7 +104,7 @@ public class Speed8Activity extends AppCompatActivity {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan203] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed3.setText("");
@@ -119,7 +119,7 @@ public class Speed8Activity extends AppCompatActivity {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan204] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                    new RestartApp();
+                    restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed4.setText("");
@@ -135,7 +135,7 @@ public class Speed8Activity extends AppCompatActivity {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan205] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                     new RestartApp();
+                     restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed5.setText("");
@@ -149,7 +149,7 @@ public class Speed8Activity extends AppCompatActivity {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan206] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                    new RestartApp();
+                    restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed6.setText("");
@@ -163,7 +163,7 @@ public class Speed8Activity extends AppCompatActivity {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan207] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                     new RestartApp();
+                     restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed7.setText("");
@@ -177,7 +177,7 @@ public class Speed8Activity extends AppCompatActivity {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan208] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                    new RestartApp();
+                    restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed8.setText("");
@@ -202,7 +202,7 @@ public class Speed8Activity extends AppCompatActivity {
                 l8.join();
 
             } catch (InterruptedException e) {
-                new RestartApp();
+                restartApp();
             }
         });
         lim10.start();
@@ -240,7 +240,7 @@ public class Speed8Activity extends AppCompatActivity {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=2 target=bridge-vlan202");
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                             new RestartApp();
+                             restartApp();
                         }
                     });
                     s2.start();
@@ -252,7 +252,7 @@ public class Speed8Activity extends AppCompatActivity {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                             new RestartApp();
+                             restartApp();
                         }
                         runOnUiThread(() -> {
                             radio2.setChecked(false);
@@ -279,7 +279,7 @@ public class Speed8Activity extends AppCompatActivity {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                             new RestartApp();
+                             restartApp();
                         }
                     });
                     s3.start();
@@ -291,7 +291,7 @@ public class Speed8Activity extends AppCompatActivity {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan203] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                            new RestartApp();
+                            restartApp();
                         }
                         runOnUiThread(() -> {
                             radio3.setChecked(false);
@@ -315,7 +315,7 @@ public class Speed8Activity extends AppCompatActivity {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=4 target=bridge-vlan204");
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s4.start();
@@ -326,7 +326,7 @@ public class Speed8Activity extends AppCompatActivity {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan204] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio4.setChecked(false);
@@ -350,7 +350,7 @@ public class Speed8Activity extends AppCompatActivity {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s5.start();
@@ -361,7 +361,7 @@ public class Speed8Activity extends AppCompatActivity {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan205] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio5.setChecked(false);
@@ -387,7 +387,7 @@ public class Speed8Activity extends AppCompatActivity {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s6.start();
@@ -398,7 +398,7 @@ public class Speed8Activity extends AppCompatActivity {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan206] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio6.setChecked(false);
@@ -425,7 +425,7 @@ public class Speed8Activity extends AppCompatActivity {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s7.start();
@@ -436,7 +436,7 @@ public class Speed8Activity extends AppCompatActivity {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan207] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio7.setChecked(false);
@@ -463,7 +463,7 @@ public class Speed8Activity extends AppCompatActivity {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s8.start();
@@ -474,7 +474,7 @@ public class Speed8Activity extends AppCompatActivity {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan208] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio8.setChecked(false);
@@ -513,5 +513,11 @@ public class Speed8Activity extends AppCompatActivity {
             return false;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    public void restartApp() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
     }
 }

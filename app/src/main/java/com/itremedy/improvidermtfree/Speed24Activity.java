@@ -133,7 +133,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed2.setText("");
@@ -149,7 +149,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan203] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed3.setText("");
@@ -164,7 +164,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan204] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed4.setText("");
@@ -180,7 +180,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan205] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed5.setText("");
@@ -194,7 +194,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan206] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed6.setText("");
@@ -208,7 +208,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan207] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed7.setText("");
@@ -222,7 +222,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan208] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed8.setText("");
@@ -236,7 +236,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan209] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed9.setText("");
@@ -250,7 +250,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan210] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed10.setText("");
@@ -265,7 +265,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan211] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed11.setText("");
@@ -280,7 +280,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan212] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed12.setText("");
@@ -295,7 +295,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan213] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed13.setText("");
@@ -329,7 +329,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
  */
                 } catch (JSchException | IOException | InterruptedException e) {
-                     new RestartApp();
+                     restartApp();
                 }
             });
 
@@ -340,7 +340,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan215] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed15.setText("");
@@ -355,7 +355,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan216] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed16.setText("");
@@ -370,7 +370,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan217] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed17.setText("");
@@ -385,7 +385,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan218] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed18.setText("");
@@ -400,7 +400,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan219] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed19.setText("");
@@ -415,7 +415,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan220] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed20.setText("");
@@ -430,7 +430,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan221] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed21.setText("");
@@ -445,7 +445,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan222] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed22.setText("");
@@ -460,7 +460,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan223] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed23.setText("");
@@ -475,7 +475,7 @@ public class Speed24Activity extends AppCompatActivity  {
                     ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan224] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
                 runOnUiThread(() -> {
                     textViewSpeed24.setText("");
@@ -532,7 +532,7 @@ public class Speed24Activity extends AppCompatActivity  {
                 l24.join();
 
             } catch (InterruptedException e) {
-                  new RestartApp();
+                  restartApp();
             }
         });
         lim24.start();
@@ -599,7 +599,7 @@ public class Speed24Activity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=2 target=bridge-vlan202");
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s2.start();
@@ -611,7 +611,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan202] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio2.setChecked(false);
@@ -638,7 +638,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s3.start();
@@ -650,7 +650,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan203] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio3.setChecked(false);
@@ -674,7 +674,7 @@ public class Speed24Activity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=4 target=bridge-vlan204");
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s4.start();
@@ -685,7 +685,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan204] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio4.setChecked(false);
@@ -709,7 +709,7 @@ public class Speed24Activity extends AppCompatActivity  {
                                 ConnectionManager.runCommand("/queue simple add max-limit=" + command + "M/" + command + "M name=5 target=bridge-vlan205");
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s5.start();
@@ -720,7 +720,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan205] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio5.setChecked(false);
@@ -746,7 +746,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s6.start();
@@ -757,7 +757,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan206] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio6.setChecked(false);
@@ -784,7 +784,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s7.start();
@@ -795,7 +795,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan207] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio7.setChecked(false);
@@ -822,7 +822,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s8.start();
@@ -833,7 +833,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan208] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio8.setChecked(false);
@@ -860,7 +860,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s9.start();
@@ -871,7 +871,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan209] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio9.setChecked(false);
@@ -898,7 +898,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s10.start();
@@ -909,7 +909,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan210] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio10.setChecked(false);
@@ -935,7 +935,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s11.start();
@@ -946,7 +946,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan211] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio11.setChecked(false);
@@ -972,7 +972,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s12.start();
@@ -983,7 +983,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan212] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio12.setChecked(false);
@@ -1009,7 +1009,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s13.start();
@@ -1020,7 +1020,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan213] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio13.setChecked(false);
@@ -1046,7 +1046,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s14.start();
@@ -1061,7 +1061,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan214] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio14.setChecked(false);
@@ -1088,7 +1088,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s15.start();
@@ -1099,7 +1099,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan215] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio15.setChecked(false);
@@ -1125,7 +1125,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s16.start();
@@ -1136,7 +1136,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan216] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio16.setChecked(false);
@@ -1162,7 +1162,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s17.start();
@@ -1173,7 +1173,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan217] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio17.setChecked(false);
@@ -1199,7 +1199,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s18.start();
@@ -1210,7 +1210,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan218] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio18.setChecked(false);
@@ -1236,7 +1236,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s19.start();
@@ -1247,7 +1247,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan219] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio19.setChecked(false);
@@ -1273,7 +1273,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s20.start();
@@ -1284,7 +1284,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan220] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio20.setChecked(false);
@@ -1309,7 +1309,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s21.start();
@@ -1320,7 +1320,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan221] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio21.setChecked(false);
@@ -1346,7 +1346,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s22.start();
@@ -1357,7 +1357,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan222] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio22.setChecked(false);
@@ -1383,7 +1383,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s23.start();
@@ -1394,7 +1394,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan223] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio23.setChecked(false);
@@ -1420,7 +1420,7 @@ public class Speed24Activity extends AppCompatActivity  {
 
                             }
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                     });
                     s24.start();
@@ -1431,7 +1431,7 @@ public class Speed24Activity extends AppCompatActivity  {
                             ConnectionManager.runCommand(":foreach i in=[/queue simple find where target=bridge-vlan224] do={:local qmax [/queue simple get $i max-limit]; :put \"$qmax\"}");
 
                         } catch (JSchException | IOException | InterruptedException e) {
-                              new RestartApp();
+                              restartApp();
                         }
                         runOnUiThread(() -> {
                             radio24.setChecked(false);
@@ -1469,6 +1469,12 @@ public class Speed24Activity extends AppCompatActivity  {
             return false;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    public void restartApp() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
     }
 
 }

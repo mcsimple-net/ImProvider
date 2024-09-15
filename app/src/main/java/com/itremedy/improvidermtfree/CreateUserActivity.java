@@ -46,7 +46,6 @@ public class CreateUserActivity extends AppCompatActivity {
 
 
 
-
         hotspotUsername.setText(str1);
         hotspotPassword.setText(str2);
 
@@ -57,7 +56,7 @@ public class CreateUserActivity extends AppCompatActivity {
                 Thread.sleep(100);
 
             } catch (JSchException | IOException | InterruptedException e) {
-                new RestartApp();
+                restartApp();
             }
         });
         t1.start();
@@ -83,14 +82,14 @@ public class CreateUserActivity extends AppCompatActivity {
                     }
 
                 } catch (JSchException | InterruptedException | IOException e) {
-                      new RestartApp();
+                      restartApp();
                 }
             });
             t11.start();
             try {
                 t11.join();
             } catch (InterruptedException e) {
-                  new RestartApp();
+                  restartApp();
             }
         });
 
@@ -127,7 +126,7 @@ public class CreateUserActivity extends AppCompatActivity {
                                 ConnectionManager.runCommand("/ip hotspot user add name=" + hotspotUsername_input + " password=" + hotspotPassword_input + " limit-uptime=" + hotspotLimit_input + "h" + " profile=improvider" + devices + " comment=" + tleft);
 
                             } catch (JSchException | IOException e) {
-                            new RestartApp();
+                            restartApp();
                         }
 
                     });
@@ -187,7 +186,7 @@ public class CreateUserActivity extends AppCompatActivity {
                     if (result.contains("true")) {
                         ConnectionManager.runCommand(key8);
                         ConnectionManager.runCommand("/system script run script8");
-                        new RestartApp();
+                        restartApp();
                     }else {
 
 
@@ -202,14 +201,14 @@ public class CreateUserActivity extends AppCompatActivity {
                     }
 
                         } catch (JSchException | InterruptedException | IOException e) {
-                              new RestartApp();
+                             restartApp();
                         }
                     });
                     t11.start();
                     try {
                         t11.join();
                     } catch (InterruptedException e) {
-                          new RestartApp();
+                          restartApp();
                     }
         });
 
@@ -225,7 +224,7 @@ public class CreateUserActivity extends AppCompatActivity {
 
                             ConnectionManager.runCommand(key7);
                             ConnectionManager.runCommand("/system script run script7");
-                            new RestartApp();
+                            restartApp();
 
                         } else {
                             runOnUiThread(() -> {
@@ -238,16 +237,22 @@ public class CreateUserActivity extends AppCompatActivity {
                             });
                         }
                     } catch (JSchException | IOException | InterruptedException e) {
-                          new RestartApp();
+                          restartApp();
                     }
                 });
                 t10.start();
                 try {
                     t10.join();
                 } catch (InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
         });
+    }
+
+    public void restartApp() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
     }
     public native String string8();
     public native String string7();

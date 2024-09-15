@@ -2,6 +2,8 @@ package com.itremedy.improvidermtfree;
 
 import static com.itremedy.improvidermtfree.ConnectionManager.result;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,6 +28,7 @@ public class GuestSetupActivity extends AppCompatActivity {
     }
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,7 +105,7 @@ public class GuestSetupActivity extends AppCompatActivity {
 
                             ConnectionManager.runCommand("/system script add dont-require-permissions=no name=script2 owner=admin policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon source={/ip hotspot user profile set [find add-mac-cookie=yes] rate-limit=" + guestspeed + "M/" + guestspeed + "M; /interface wireless set ssid=" + guestname + " [find name=wlan4] ; /interface wireless set ssid=" + guestname + " [find name=wlan3] ; :delay 5; /system script remove script2;}");
                             ConnectionManager.runCommand("/system script run script2");
-                            new RestartApp();
+                            restartApp();
                         }
 
                         else {
@@ -142,10 +145,10 @@ public class GuestSetupActivity extends AppCompatActivity {
                             ConnectionManager.runCommand("/system script add dont-require-permissions=no name=script1 owner=admin policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon source={:delay 15; /system script remove script3; /ip firewall filter remove [find comment=1]; /system script remove script1;}");
                             ConnectionManager.runCommand("/system script run script1");
                             ConnectionManager.runCommand("/system script run script3");
-                            new RestartApp();
+                            restartApp();
                         }
                     } catch (JSchException | IOException | InterruptedException e) {
-                        new RestartApp();
+                        restartApp();
                     }
 
                 });
@@ -154,13 +157,25 @@ public class GuestSetupActivity extends AppCompatActivity {
                 try {
                     t.join();
                 } catch (InterruptedException e) {
-                    new RestartApp();
+                    restartApp();
                 }
                 }, 500);
             }
 
         });
 
+    }
+
+    public void restartApplication() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
+    }
+
+    public void restartApp() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
     }
 
     public native String string34();

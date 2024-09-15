@@ -60,7 +60,7 @@ public class FirstSetupActivity extends AppCompatActivity {
                     });
 
                 } catch (JSchException | IOException | InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
 
             });
@@ -114,10 +114,10 @@ public class FirstSetupActivity extends AppCompatActivity {
                                         ConnectionManager.runCommand(key43 + setName + key44 + setName + key45 + setPass + key46 + setAdmin + key47);
                                         ConnectionManager.runCommand("/system script run script9");
                                         
-                                        new RestartApp();
+                                        restartApp();
                                     } catch (JSchException | IOException e) {
                                         
-                                        new RestartApp();
+                                       restartApp();
                                     }
                                 });
                                 t.start();
@@ -125,7 +125,7 @@ public class FirstSetupActivity extends AppCompatActivity {
                                     t.join();
                                 } catch (InterruptedException e) {
                                     
-                                    new RestartApp();
+                                   restartApp();
                                 }
                             }
 
@@ -140,7 +140,7 @@ public class FirstSetupActivity extends AppCompatActivity {
                     test.join();
                 } catch (InterruptedException e) {
                     
-                    new RestartApp();
+                    restartApp();
                 }
         });
 
@@ -168,14 +168,14 @@ public class FirstSetupActivity extends AppCompatActivity {
                     }
 
                 } catch (JSchException | IOException | java.lang.InterruptedException InterruptedException ) {
-                      new RestartApp();
+                      restartApp();
                 }
             });
             count.start();
             try {
                 count.join();
             } catch (InterruptedException e) {
-                  new RestartApp();
+                  restartApp();
             }
 
 
@@ -205,17 +205,23 @@ public class FirstSetupActivity extends AppCompatActivity {
                     });
                 }
                 } catch (JSchException | InterruptedException | IOException e) {
-                          new RestartApp();
+                          restartApp();
                     }
                 });
                 testH.start();
             try {
                 testH.join();
             } catch (InterruptedException e) {
-                  new RestartApp();
+                  restartApp();
             }
 
         });
+    }
+
+    public void restartApp() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
     }
 
     public native String string43();

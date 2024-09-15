@@ -80,7 +80,7 @@ public class PortsConfigActivity extends AppCompatActivity {
 
                                 } catch (JSchException | IOException | InterruptedException e) {
                                     ConnectionManager.close();
-                                    new RestartApp();
+                                    restartApp();
                                 }
                             });
                             countLTE.start();
@@ -105,7 +105,7 @@ public class PortsConfigActivity extends AppCompatActivity {
                                     }
                                 } catch (JSchException | IOException | InterruptedException e) {
                                     ConnectionManager.close();
-                                    new RestartApp();
+                                    restartApp();
                                 }
                             });
                             countLTE4.start();
@@ -119,7 +119,7 @@ public class PortsConfigActivity extends AppCompatActivity {
 
                     } catch(JSchException | InterruptedException ignored){
                     } catch(IOException e){
-                         ConnectionManager.close(); new RestartApp();
+                         ConnectionManager.close(); restartApp();
                     }
 
             });
@@ -133,5 +133,11 @@ public class PortsConfigActivity extends AppCompatActivity {
             startActivity(main);
 
         });
+    }
+
+    public void restartApp() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
     }
 }

@@ -51,7 +51,7 @@ public class PrintActivity extends AppCompatActivity {
                 ConnectionManager.runCommand(":foreach i in=[/interface wireless find where name=wlan3] do={:local net [/interface wireless get $i ssid]; :put \"$net\"}");
                 Thread.sleep(300);
             } catch (JSchException | IOException | InterruptedException e) {
-                new RestartApp();
+                restartApp();
             }
             runOnUiThread(() -> {
                 net.setText(result);
@@ -132,6 +132,12 @@ public class PrintActivity extends AppCompatActivity {
     private Bitmap getBitmapFromView(View viewTicket) {
         viewTicket.setDrawingCacheEnabled(true);
         return viewTicket.getDrawingCache();
+    }
+
+    public void restartApp() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
     }
 
     protected void onRestoreInstanceState (@NonNull Bundle savedInstanceState){

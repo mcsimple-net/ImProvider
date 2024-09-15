@@ -24,7 +24,7 @@ Using this app you can control your MikroTik router. See https://mcsimple.net/im
 
 # License
 
-    Copyright 2023 Vladimir Kvachevski
+    Copyright 2024 Vladimir Kvachevski
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

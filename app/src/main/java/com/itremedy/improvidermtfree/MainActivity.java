@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         boolean previouslyStarted = prefs.getBoolean(getString(R.string.pref_previously_started), false);
+
         if (!previouslyStarted) {
 
             Intent intent = new Intent(this, LoginActivity.class);
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                     t.join();
                 } catch (InterruptedException e) {
 
-                    new RestartApp();
+                    restartApp();
                 }
 
                 if (ConnectionManager.getFlag() == 0) {
@@ -179,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
                             });
                         } catch (IOException | InterruptedException e) {
 
-                            new RestartApp();
+                            restartApp();
                         }
 
                     });
@@ -189,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
                         t1.join();
                     } catch (InterruptedException e) {
 
-                        new RestartApp();
+                        restartApp();
                     }
 
                 }, 500);
@@ -276,7 +277,7 @@ public class MainActivity extends AppCompatActivity {
                         });
                     } catch (IOException | java.lang.InterruptedException InterruptedException) {
 
-                        new RestartApp();
+                        restartApp();
                     }
                 });
                 t.start();
@@ -284,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
                     t.join();
                 } catch (InterruptedException e) {
 
-                    new RestartApp();
+                    restartApp();
                 }
 
             }, 500);
@@ -310,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
                         .build();
             } catch (GeneralSecurityException | IOException e) {
 
-                new RestartApp();
+                restartApp();
             }
 
             SharedPreferences sharedPreferences;
@@ -325,7 +326,7 @@ public class MainActivity extends AppCompatActivity {
                 );
             } catch (GeneralSecurityException | IOException e) {
 
-                new RestartApp();
+                restartApp();
             }
             sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
             SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -522,4 +523,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
  */
+
+    public void restartApp() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
+    }
 }

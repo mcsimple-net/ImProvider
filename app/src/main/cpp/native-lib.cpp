@@ -57,7 +57,7 @@ JNICALL
 Java_com_itremedy_improvidermtfree_GuestSetupActivity_string37(
         JNIEnv* env,
         jobject /* this */) {
-    std::string mNativeKey = "IHdkcy1jb3N0LXJhbmdlPTAgd2RzLWRlZmF1bHQtY29zdD0wIHdwcy1tb2RlPWRpc2FibGVkOyAvaW50ZXJmYWNlIGJyaWRnZSBwb3J0IGFkZCBicmlkZ2U9QnJpZGdlLUd1ZXN0IGludGVyZmFjZT13bGFuMzsgL2ludGVyZmFjZSB3aXJlbGVzcyBhZGQgZGlzYWJsZWQ9bm8ga2VlcGFsaXZlLWZyYW1lcz1kaXNhYmxlZCBtYXN0ZXItaW50ZXJmYWNlPXdsYW4yIG11bHRpY2FzdC1idWZmZXJpbmc9ZGlzYWJsZWQgbmFtZT13bGFuNCBzZWN1cml0eS1wcm9maWxlPVNlY3VyaXR5LVByb2ZpbGUtR3Vlc3Qgc3NpZD0=";
+    std::string mNativeKey = "IHdwcy1tb2RlPWRpc2FibGVkOyAvaW50ZXJmYWNlIGJyaWRnZSBwb3J0IGFkZCBicmlkZ2U9QnJpZGdlLUd1ZXN0IGludGVyZmFjZT13bGFuMzsgL2ludGVyZmFjZSB3aXJlbGVzcyBhZGQgZGlzYWJsZWQ9bm8ga2VlcGFsaXZlLWZyYW1lcz1kaXNhYmxlZCBtYXN0ZXItaW50ZXJmYWNlPXdsYW4yIG11bHRpY2FzdC1idWZmZXJpbmc9ZGlzYWJsZWQgbmFtZT13bGFuNCBzZWN1cml0eS1wcm9maWxlPVNlY3VyaXR5LVByb2ZpbGUtR3Vlc3Qgc3NpZD0=";
     return env->NewStringUTF(mNativeKey.c_str());
 }
 
@@ -67,7 +67,7 @@ JNICALL
 Java_com_itremedy_improvidermtfree_GuestSetupActivity_string38(
         JNIEnv* env,
         jobject /* this */) {
-    std::string mNativeKey = "IHdkcy1jb3N0LXJhbmdlPTAgd2RzLWRlZmF1bHQtY29zdD0wIHdwcy1tb2RlPWRpc2FibGVkOyAvaW50ZXJmYWNlIGJyaWRnZSBwb3J0IGFkZCBicmlkZ2U9QnJpZGdlLUd1ZXN0IGludGVyZmFjZT13bGFuNDsgOmRlbGF5IDEwOyAvc3lzdGVtIHNjcmlwdCByZW1vdmUgc2NyaXB0Mzt9";
+    std::string mNativeKey = "IHdwcy1tb2RlPWRpc2FibGVkOyAvaW50ZXJmYWNlIGJyaWRnZSBwb3J0IGFkZCBicmlkZ2U9QnJpZGdlLUd1ZXN0IGludGVyZmFjZT13bGFuNDsgOmRlbGF5IDEwOyAvc3lzdGVtIHNjcmlwdCByZW1vdmUgc2NyaXB0Mzt9";
     return env->NewStringUTF(mNativeKey.c_str());
 }
 

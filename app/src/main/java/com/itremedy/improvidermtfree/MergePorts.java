@@ -71,7 +71,7 @@ public class MergePorts extends AppCompatActivity {
 
                     } catch (JSchException | IOException | InterruptedException e) {
                         
-                        new RestartApp();
+                        restartApp();
                     }
 
                 });
@@ -94,7 +94,7 @@ public class MergePorts extends AppCompatActivity {
 
                     } catch (JSchException | IOException | InterruptedException e) {
                         
-                        new RestartApp();
+                        restartApp();
                     }
 
                 });
@@ -117,7 +117,7 @@ public class MergePorts extends AppCompatActivity {
 
                     } catch (JSchException | IOException | InterruptedException e) {
                         
-                        new RestartApp();
+                        restartApp();
                     }
 
                 });
@@ -140,7 +140,7 @@ public class MergePorts extends AppCompatActivity {
 
                     } catch (JSchException | IOException | InterruptedException e) {
                         
-                        new RestartApp();
+                        restartApp();
                     }
 
                 });
@@ -192,7 +192,7 @@ public class MergePorts extends AppCompatActivity {
                         ConnectionManager.runCommand("/interface bridge port { set [find interface=ether2] bridge=bridge }");
                         ConnectionManager.runCommand("/interface bridge port set [find where interface=ether2] pvid=1");
                     } catch (JSchException | IOException e) {
-                          new RestartApp();
+                          restartApp();
                     }
 
                 });
@@ -200,7 +200,7 @@ public class MergePorts extends AppCompatActivity {
                 try {
                     y2.join();
                 } catch (InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
             } else {
                 Thread n2 = new Thread(() -> {
@@ -208,7 +208,7 @@ public class MergePorts extends AppCompatActivity {
 
                         ConnectionManager.runCommand("/interface bridge port set [find where interface=ether2] pvid=202");
                     } catch (JSchException | IOException e) {
-                          new RestartApp();
+                          restartApp();
                     }
 
                 });
@@ -216,7 +216,7 @@ public class MergePorts extends AppCompatActivity {
                 try {
                     n2.join();
                 } catch (InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
             }
         });
@@ -231,7 +231,7 @@ public class MergePorts extends AppCompatActivity {
                         ConnectionManager.runCommand("/interface bridge port { set [find interface=ether3] bridge=bridge }");
                         ConnectionManager.runCommand("/interface bridge port set [find where interface=ether3] pvid=1");
                     } catch (JSchException | IOException e) {
-                          new RestartApp();
+                          restartApp();
                     }
 
                 });
@@ -239,7 +239,7 @@ public class MergePorts extends AppCompatActivity {
                 try {
                     y3.join();
                 } catch (InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
             } else {
                 Thread n3 = new Thread(() -> {
@@ -247,7 +247,7 @@ public class MergePorts extends AppCompatActivity {
 
                         ConnectionManager.runCommand("/interface bridge port set [find where interface=ether3] pvid=203");
                     } catch (JSchException | IOException e) {
-                          new RestartApp();
+                          restartApp();
                     }
 
                 });
@@ -255,7 +255,7 @@ public class MergePorts extends AppCompatActivity {
                 try {
                     n3.join();
                 } catch (InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
             }
         });
@@ -270,7 +270,7 @@ public class MergePorts extends AppCompatActivity {
                         ConnectionManager.runCommand("/interface bridge port { set [find interface=ether4] bridge=bridge }");
                         ConnectionManager.runCommand("/interface bridge port set [find where interface=ether4] pvid=1");
                     } catch (JSchException | IOException e) {
-                          new RestartApp();
+                          restartApp();
                     }
 
                 });
@@ -278,7 +278,7 @@ public class MergePorts extends AppCompatActivity {
                 try {
                     y4.join();
                 } catch (InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
             } else {
                 Thread n4 = new Thread(() -> {
@@ -286,7 +286,7 @@ public class MergePorts extends AppCompatActivity {
 
                         ConnectionManager.runCommand("/interface bridge port set [find where interface=ether4] pvid=204");
                     } catch (JSchException | IOException e) {
-                          new RestartApp();
+                          restartApp();
                     }
 
                 });
@@ -294,7 +294,7 @@ public class MergePorts extends AppCompatActivity {
                 try {
                     n4.join();
                 } catch (InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
             }
         });
@@ -309,7 +309,7 @@ public class MergePorts extends AppCompatActivity {
                         ConnectionManager.runCommand("/interface bridge port { set [find interface=ether5] bridge=bridge }");
                         ConnectionManager.runCommand("/interface bridge port set [find where interface=ether5] pvid=1");
                     } catch (JSchException | IOException e) {
-                          new RestartApp();
+                          restartApp();
                     }
 
                 });
@@ -317,7 +317,7 @@ public class MergePorts extends AppCompatActivity {
                 try {
                     y5.join();
                 } catch (InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
             } else {
                 Thread n5 = new Thread(() -> {
@@ -325,7 +325,7 @@ public class MergePorts extends AppCompatActivity {
 
                         ConnectionManager.runCommand("/interface bridge port set [find where interface=ether5] pvid=205");
                     } catch (JSchException | IOException e) {
-                          new RestartApp();
+                          restartApp();
                     }
 
                 });
@@ -333,10 +333,16 @@ public class MergePorts extends AppCompatActivity {
                 try {
                     n5.join();
                 } catch (InterruptedException e) {
-                      new RestartApp();
+                      restartApp();
                 }
             }
         });
 
+    }
+
+    public void restartApp() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage( getBaseContext().getPackageName() );
+        startActivity(Intent.makeRestartActivityTask(i.getComponent()));
+        Runtime.getRuntime().exit(0);
     }
 }
